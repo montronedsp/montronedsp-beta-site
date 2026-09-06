@@ -1,0 +1,1295 @@
+<!doctype html>
+<html lang="en" data-product="aurashimmer">
+<head>
+  <meta charset="utf-8" />
+  <script>if(!/Android/i.test(navigator.userAgent||'')&&(/Linux/i.test(navigator.platform||'')||/Linux/i.test(navigator.userAgent||'')))document.documentElement.classList.add('is-linux');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MontroneDSP — Instruments and Effects for Electronic Music</title>
+  <meta name="description" content="MontroneDSP creates focused instruments and effects for electronic music: Martello drum synthesis, Aura shimmer reverb, and Swara XT monosynthesis." />
+  <link rel="canonical" href="https://www.montronedsp.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MontroneDSP" />
+  <meta property="og:title" content="MontroneDSP — Instruments and Effects for Electronic Music" />
+  <meta property="og:description" content="Focused instruments and effects for electronic music, including Martello, Aura, and Swara XT." />
+  <meta property="og:url" content="https://www.montronedsp.com/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MontroneDSP — Instruments and Effects for Electronic Music" />
+  <meta name="twitter:description" content="Focused instruments and effects for electronic music, including Martello, Aura, and Swara XT." />
+  <!-- Google Search Console verification meta tag goes here after domain verification -->
+  <!-- Bing Webmaster Tools verification meta tag goes here after domain verification -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.montronedsp.com/#organization",
+        "name": "MontroneDSP",
+        "url": "https://www.montronedsp.com/",
+        "logo": "https://www.montronedsp.com/assets/montronedsp-logo.svg",
+        "sameAs": [
+          "https://www.instagram.com/montronedsp/",
+          "https://soundcloud.com/montronedsp"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.montronedsp.com/#website",
+        "url": "https://www.montronedsp.com/",
+        "name": "MontroneDSP",
+        "description": "MontroneDSP creates focused audio plugins for electronic music production.",
+        "publisher": { "@id": "https://www.montronedsp.com/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Martello",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "macOS, Windows, Linux",
+        "description": "A focused three-voice drum synthesizer designed for fast electronic rhythm design. Available as a Mac VST3/AU, Windows VST3, and Linux VST3 plugin.",
+        "url": "https://www.montronedsp.com/",
+        "brand": { "@type": "Brand", "name": "MontroneDSP" },
+        "publisher": { "@id": "https://www.montronedsp.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://store.montronedsp.com/l/martello"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MartelloX2",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "macOS, Windows, Linux",
+        "description": "A dual-engine version of Martello with six playable voices, multi-output routing, and a larger dual-module interface. Available as a Mac VST3/AU, Windows VST3, and Linux VST3 plugin.",
+        "url": "https://www.montronedsp.com/",
+        "brand": { "@type": "Brand", "name": "MontroneDSP" },
+        "publisher": { "@id": "https://www.montronedsp.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://store.montronedsp.com/l/martello"
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#120818" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="preload" href="assets/fonts/u001/u001-reg.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="assets/fonts/u001/u001-bol.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Store domain: point store CNAME to domains.gumroad.com in Aruba DNS -->
+  <script src="https://gumroad.com/js/gumroad.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="site">
+    <div class="galleria-atmosphere" aria-hidden="true">
+      <div class="galleria-atmosphere__space"></div>
+      <div class="galleria-atmosphere__haze"></div>
+      <div class="galleria-atmosphere__shaft galleria-atmosphere__shaft--a"></div>
+      <div class="galleria-atmosphere__shaft galleria-atmosphere__shaft--b"></div>
+      <div class="galleria-atmosphere__shaft galleria-atmosphere__shaft--c"></div>
+      <div class="galleria-atmosphere__orb galleria-atmosphere__orb--far"></div>
+      <div class="galleria-atmosphere__orb galleria-atmosphere__orb--mid"></div>
+      <div class="galleria-atmosphere__orb galleria-atmosphere__orb--near"></div>
+      <div class="galleria-atmosphere__floor"></div>
+      <div class="galleria-atmosphere__grain"></div>
+      <div class="galleria-atmosphere__vignette"></div>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand brand-logo-stack" href="./" aria-label="MontroneDSP home" data-i18n-aria="nav.homeAria">
+          <picture class="brand-logo brand-logo-variant brand-logo--full" data-logo="martello"><img src="assets/branding/montrone_dsp_logo_header_martello.svg" alt="" width="190" height="29" /></picture>
+          <picture class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="martello"><img src="assets/branding/montrone_dsp_logo_header_martello_mobile.svg" alt="" width="120" height="19" aria-hidden="true" /></picture>
+          <img class="brand-logo brand-logo-variant brand-logo--mobile is-active" data-logo="aurashimmer" src="assets/branding/montrone_dsp_logo_header_aura_mobile.svg" alt="" width="120" height="19" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--full is-active" data-logo="aurashimmer" src="assets/branding/montrone_dsp_logo_header_aura.svg" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--full" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara.svg" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara_mobile.svg" alt="" width="120" height="19" aria-hidden="true" />
+          
+          <img class="brand-logo brand-logo-variant brand-logo--full" data-logo="laya" src="assets/branding/montrone_dsp_logo_header_swara.svg" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="laya" src="assets/branding/montrone_dsp_logo_header_swara_mobile.svg" alt="" width="120" height="19" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant" data-logo="membrana" src="assets/branding/montrone_dsp_logo_header_aura.svg" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="membrana" src="assets/branding/montrone_dsp_logo_header_aura_mobile.svg" alt="" width="120" height="19" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--full" data-logo="galleria" src="assets/branding/montrone_dsp_logo_header_martello.svg" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="galleria" src="assets/branding/montrone_dsp_logo_header_mobile_noeffect.svg" alt="" width="120" height="19" aria-hidden="true" />
+          <span class="sr-only">MontroneDSP</span>
+        </a>
+        <div class="product-selector-group">
+          <span class="product-selector-label" aria-hidden="true" data-i18n="products.label">Products</span>
+          <div class="product-selector-desktop" data-product-selector-desktop>
+            <button type="button" class="product-selector-desktop-trigger" id="product-selector-desktop-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="product-selector-desktop-list" data-desktop-selector-trigger data-i18n-aria="products.desktopOpenAria">
+              <span class="product-selector-desktop-current">
+                <span class="product-selector-desktop-name" data-desktop-selector-name>Aura Shimmer</span>
+                <span class="product-selector-desktop-type" data-desktop-selector-type data-i18n="products.aurashimmer.type">Reverb</span>
+              </span>
+              <span class="product-selector-desktop-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="product-selector-desktop-panel" id="product-selector-desktop-list" role="listbox" aria-label="Choose product" data-i18n-aria="products.chooseAria" hidden>
+              <button type="button" class="product-selector-option" role="option" id="product-tab-martello" aria-selected="false" aria-controls="hero-panel-martello" data-product="martello" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">Martello</span>
+                <span class="product-selector-option-type" data-i18n="products.martello.type">Drum Synthesizer</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" id="product-tab-membrana" aria-selected="false" aria-controls="hero-panel-membrana" data-product="membrana" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">Membrana</span>
+                <span class="product-selector-option-type" data-i18n="products.membrana.type">Multimodal Synth</span>
+              </button>
+              <button type="button" class="product-selector-option is-active" role="option" id="product-tab-aurashimmer" aria-selected="true" aria-controls="hero-panel-aurashimmer" data-product="aurashimmer" data-product-control data-product-surface="desktop">
+                <span class="product-selector-option-name">Aura Shimmer</span>
+                <span class="product-selector-option-type" data-i18n="products.aurashimmer.type">Reverb</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" id="product-tab-swara" aria-selected="false" aria-controls="hero-panel-swara" data-product="swara" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">Swara XT</span>
+                <span class="product-selector-option-type" data-i18n="products.swara.type">Hybrid Monosynth</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" id="product-tab-laya" aria-selected="false" aria-controls="hero-panel-laya" data-product="laya" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">Laya</span>
+                <span class="product-selector-option-type" data-i18n="products.laya.type">Performance Drum</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" id="product-tab-galleria" aria-selected="false" aria-controls="hero-panel-galleria" data-product="galleria" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
+                <span class="product-selector-option-name">Galleria</span>
+                <span class="product-selector-option-type" data-i18n="products.galleria.type">Environmental Processor</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria">
+          <a class="nav-link" href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a class="nav-link" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.store">Store</a>
+          <a class="nav-link" href="free.html" data-i18n="nav.free">Free</a>
+          <label class="site-lang">
+            <span class="sr-only" data-i18n="lang.label">Language</span>
+            <select class="site-lang-select" aria-label="Language" data-i18n-aria="lang.aria"></select>
+          </label>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main" id="main">
+      <section class="hero" aria-label="Product hero" data-i18n-aria="home.heroAria">
+        <div class="hero-panel" id="hero-panel-martello" data-hero-panel="martello" role="tabpanel" aria-labelledby="product-tab-martello" aria-hidden="true">
+          <div class="container hero-layout">
+            <div class="hero-copy">
+              <h1 id="hero-title" data-i18n="home.martello.title">Mark coming soon</h1>
+              <p class="hero-lead" data-i18n="home.martello.lead">Surgical drum synthesis with classic machine attitude.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="https://store.montronedsp.com/l/martello" target="_blank" rel="noopener noreferrer" data-i18n="home.martello.buy">Buy Now · 50% Off</a>
+                <a class="btn btn-secondary gumroad-button" href="https://montronedsp.gumroad.com/l/martello?wanted=true" data-gumroad-overlay-checkout="true" data-i18n="home.martello.cart">Add to Cart</a>
+                <a class="btn btn-secondary" href="martello-manual.html" data-i18n="home.martello.manual" data-i18n-manual>User Manual</a>
+              </div>
+              <p class="hero-offer-note" data-i18n="home.martello.offerNote">Pay 50% off now and get access to all future updates.</p>
+              <ul class="hero-specs" aria-label="Product highlights" data-i18n-aria="home.highlightsAria">
+                <li data-i18n="home.martello.specUpdate">Update · September</li>
+                <li data-i18n="home.martello.specMac">Mac VST3/AU</li>
+                <li data-i18n="home.martello.specWin">Windows VST3</li>
+                <li data-i18n="home.martello.specLinux">Linux VST3</li>
+              </ul>
+            </div>
+            <figure class="hero-art martello-skin-carousel" data-martello-skins aria-roledescription="carousel" aria-label="MartelloX2 skins" data-i18n-aria="home.martello.skinsCarouselAria">
+              <div class="martello-skin-stage">
+                <img class="martello-skin-slide is-active" src="assets/screenshots/martello/martellopreview.png" alt="Preview of MartelloX2 v1.3.0 — Light Aluminum skin" data-i18n-alt="home.martello.skinAluminumAlt" data-skin="aluminum" width="2560" height="2187" decoding="async" />
+                <img class="martello-skin-slide" src="assets/screenshots/martello/martello_x2drk.png" alt="Preview of MartelloX2 v1.3.0 — Dark skin" data-i18n-alt="home.martello.skinDarkAlt" data-skin="dark" width="2560" height="2187" loading="lazy" decoding="async" aria-hidden="true" />
+              </div>
+              <div class="martello-skin-controls" role="tablist" aria-label="Choose a Martello skin" data-i18n-aria="home.martello.skinsTabsAria">
+                <button type="button" class="martello-skin-tab is-active" role="tab" aria-selected="true" data-skin-tab="aluminum" data-i18n="home.martello.skinAluminum">Light Aluminum</button>
+                <button type="button" class="martello-skin-tab" role="tab" aria-selected="false" data-skin-tab="dark" data-i18n="home.martello.skinDark">Dark</button>
+              </div>
+            </figure>
+          </div>
+          <div class="container hero-below" aria-label="Martello philosophy" data-i18n-aria="home.martello.philosophyAria">
+            <blockquote class="hero-below-quote">
+              <p data-i18n="home.martello.statement">Martello is not a sample pack. It is a synthesized drum instrument with resonator and modal character: dry, direct, and physical.</p>
+            </blockquote>
+            <aside class="hero-listen-card" aria-label="Martello sound previews" data-i18n-aria="home.martello.listenAria">
+              <iframe
+                class="soundcloud-embed soundcloud-embed--playlist-compact"
+                title="Martello Sound Examples  -  MontroneDSP SoundCloud playlist"
+                data-i18n-title="home.martello.audioIframeTitle"
+                width="100%"
+                height="280"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                loading="lazy"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/montronedsp/sets/martello-sound-examples&amp;color=%23c8102e&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false"
+              ></iframe>
+              <a class="hero-listen-link" href="https://soundcloud.com/montronedsp/sets/martello-sound-examples" target="_blank" rel="noopener noreferrer">
+                <img src="assets/soundcloud-white-transparent.svg" alt="" width="16" height="16" loading="lazy" decoding="async" />
+                <span data-i18n="home.martello.audioLink">Open playlist on SoundCloud</span>
+              </a>
+            </aside>
+          </div>
+        </div>
+
+        <div class="hero-panel" id="hero-panel-membrana" data-hero-panel="membrana" role="tabpanel" aria-labelledby="product-tab-membrana" aria-hidden="true">
+          <div class="container hero-layout">
+            <div class="hero-copy">
+              <h1 id="hero-title-membrana">
+                <img class="hero-logo" src="assets/branding/membrana_mark.png" alt="Membrana" width="2048" height="362" decoding="async" />
+              </h1>
+              <p class="hero-lead" data-i18n="home.membrana.lead">Early access ships two of five synthesis engines  -  Marimba and Modern Modal  -  united by exciter physics and resonator geometry.</p>
+              <div class="hero-actions">
+                <span class="btn btn-primary btn-disabled" aria-disabled="true" data-i18n="home.membrana.planned">Early access · 10 September</span>
+                <a class="btn btn-secondary" href="contact.html" data-i18n="home.membrana.notify">Get notified</a>
+              </div>
+              <ul class="hero-specs" aria-label="Product highlights" data-i18n-aria="home.highlightsAria">
+                <li data-i18n="home.membrana.specDate">10 September 2026</li>
+                <li data-i18n="home.membrana.specEngines">2 of 5 engines</li>
+                <li data-i18n="home.membrana.specMarimba">Marimba</li>
+                <li data-i18n="home.membrana.specModal">Modern Modal</li>
+              </ul>
+            </div>
+          </div>
+          <div class="container hero-below" aria-label="Membrana philosophy" data-i18n-aria="home.membrana.philosophyAria">
+            <blockquote class="hero-below-quote">
+              <p data-i18n="home.membrana.statement">One instrument, five engines planned  -  early access starts with Marimba and Modern Modal.</p>
+            </blockquote>
+            <aside class="hero-listen-card" aria-label="Membrana sound previews" data-i18n-aria="home.membrana.listenAria">
+              <iframe
+                class="soundcloud-embed soundcloud-embed--playlist-compact"
+                title="MEMBRANA - Multimodal Synthesizer"
+                data-i18n-title="home.membrana.audioIframeTitle"
+                width="100%"
+                height="280"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                loading="lazy"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/montronedsp/sets/membrana-multimodal&amp;color=%238a63ff&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false"
+              ></iframe>
+              <a class="hero-listen-link" href="https://soundcloud.com/montronedsp/sets/membrana-multimodal" target="_blank" rel="noopener noreferrer">
+                <img src="assets/soundcloud-white-transparent.svg" alt="" width="16" height="16" loading="lazy" decoding="async" />
+                <span data-i18n="home.membrana.audioLink">Open on SoundCloud</span>
+              </a>
+            </aside>
+          </div>
+        </div>
+
+        <div class="hero-panel is-active" id="hero-panel-aurashimmer" data-hero-panel="aurashimmer" role="tabpanel" aria-labelledby="product-tab-aurashimmer" aria-hidden="false">
+          <div class="container hero-layout">
+            <div class="hero-copy">
+              <h1 id="hero-title-aurashimmer">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="assets/branding/aura_mark_mobile.svg" type="image/svg+xml" />
+                  <img class="hero-logo" src="assets/branding/aura_mark.svg" alt="Aura" width="2109" height="480" decoding="async" />
+                </picture>
+              </h1>
+              <p class="hero-lead">Shimmer and space processing with depth, motion, and harmonic bloom.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="https://store.montronedsp.com/l/aura" target="_blank" rel="noopener noreferrer">Buy Aura</a>
+                <a class="btn btn-secondary gumroad-button" href="https://montronedsp.gumroad.com/l/aura?wanted=true" data-gumroad-overlay-checkout="true">Add to Cart</a>
+              </div>
+              <ul class="hero-specs" aria-label="Product highlights">
+                <li data-i18n="home.aurashimmer.storyIndex">v1.1.1</li>
+                <li data-i18n="home.aurashimmer.specMac">Mac VST3</li>
+                <li data-i18n="home.aurashimmer.specWin">Windows VST3</li>
+                <li data-i18n="home.aurashimmer.specLinux">Linux VST3</li>
+              </ul>
+            </div>
+            <div class="hero-art">
+              <img class="hero-art-img" src="assets/screenshots/Aura_Visualizer_Active_Pluginval.png" alt="Aura Shimmer interface with Dual Halo mode and active visualizer" width="2448" height="1508" decoding="async" />
+            </div>
+          </div>
+          <div class="container hero-below" aria-label="Aura philosophy">
+            <blockquote class="hero-below-quote">
+              <p>Reverb that behaves like an instrument  -  preserve the source, then let the tail become its own musical element.</p>
+            </blockquote>
+            <aside class="hero-listen-card" aria-label="Aura sound previews">
+              <iframe
+                class="soundcloud-embed soundcloud-embed--playlist-compact"
+                title="Aura Shimmer  -  Reverb VST3/AU SoundCloud playlist"
+                width="100%"
+                height="280"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                loading="lazy"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/montronedsp/sets/aura-shimmer-reverb-vst3-au&amp;color=%23c026d3&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false"
+              ></iframe>
+              <a class="hero-listen-link" href="https://soundcloud.com/montronedsp/sets/aura-shimmer-reverb-vst3-au" target="_blank" rel="noopener noreferrer">
+                <img src="assets/soundcloud-white-transparent.svg" alt="" width="16" height="16" loading="lazy" decoding="async" />
+                <span>Open playlist on SoundCloud</span>
+              </a>
+            </aside>
+          </div>
+        </div>
+
+        <div class="hero-panel" id="hero-panel-swara" data-hero-panel="swara" role="tabpanel" aria-labelledby="product-tab-swara" aria-hidden="true">
+          <div class="container hero-layout">
+            <div class="hero-copy">
+              <div class="hero-mark-lockup hero-mark-lockup--swara">
+                <h1 id="hero-title-swara">
+                  <img class="hero-logo" src="assets/branding/swara_mark.svg" alt="Swara XT" width="1100" height="220" decoding="async" />
+                </h1>
+                <p class="hero-punchline" data-i18n="home.swara.punchline">In Sanskrit, svara means voice. Give yours a new one.</p>
+              </div>
+              <p class="hero-offer-note" data-i18n="home.swara.offerNote">Official Linux VST3 is available here. Get official builds from the store.</p>
+              <label class="swara-license-accept">
+                <input type="checkbox" class="swara-license-accept-input" data-swara-license-accept />
+                <span class="swara-license-accept-copy" data-i18n="home.swara.linuxLicenseAccept" data-i18n-html>I have read and accept the <a href="swara-license.html">GNU General Public License v3</a> for Swara XT Linux before downloading. You can also read the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer">official GPL text at gnu.org</a>.</span>
+              </label>
+              <div class="hero-actions">
+                <a class="btn btn-primary btn-disabled" href="assets/SwaraXT-Linux-x86_64-v1.2.0.tar.gz" download="SwaraXT-Linux-x86_64-v1.2.0.tar.gz" data-swara-linux-download data-i18n="home.swara.downloadLinux" aria-disabled="true" tabindex="-1">Download Linux · Official</a>
+                <a class="btn btn-secondary" href="https://store.montronedsp.com/l/swara" target="_blank" rel="noopener noreferrer" data-i18n="home.swara.officialBuilds">Official builds</a>
+                <a class="btn btn-secondary" href="swara-xt-manual.html" data-i18n="home.swara.manual" data-i18n-swara-manual>User Manual</a>
+              </div>
+              <p class="hero-download-checksum"><span data-i18n="home.swara.sha256Label">SHA-256</span>: <code data-i18n="home.swara.linuxSha256">7b70c61e46e163b8992f1ee43782835f8715d2e02c35db193a8996785fc1974b</code></p>
+              <ul class="hero-specs" aria-label="Product highlights" data-i18n-aria="home.highlightsAria">
+                <li data-i18n="home.swara.storyIndex">v1.2.0</li>
+                <li data-i18n="home.swara.specType">Hybrid monosynth</li>
+                <li data-i18n="home.swara.specLinux">Linux VST3 · Official</li>
+                <li data-i18n="home.swara.specStore">Official builds · Store</li>
+              </ul>
+            </div>
+            <div class="hero-art swara-skin-carousel" data-swara-skins aria-roledescription="carousel" aria-label="Swara XT colour skins" data-i18n-aria="home.swara.skinsCarouselAria">
+              <div class="swara-skin-stage">
+                <img class="swara-skin-slide is-active" src="assets/screenshots/swara/swara-xt-pastel.png" alt="Swara XT Pastel skin" data-i18n-alt="home.swara.skinPastelAlt" data-skin="pastel" width="2786" height="1304" decoding="async" />
+                <img class="swara-skin-slide" src="assets/screenshots/swara/swara-xt-midnight-gold.png" alt="Swara XT Midnight Gold skin" data-i18n-alt="home.swara.skinMidnightAlt" data-skin="midnight" width="2786" height="1304" loading="lazy" decoding="async" aria-hidden="true" />
+                <img class="swara-skin-slide" src="assets/screenshots/swara/swara-xt-jungle.png" alt="Swara XT Jungle skin" data-i18n-alt="home.swara.skinJungleAlt" data-skin="jungle" width="2786" height="1304" loading="lazy" decoding="async" aria-hidden="true" />
+                <img class="swara-skin-slide" src="assets/screenshots/swara/swara-xt-neon-cobalt.png" alt="Swara XT Neon Cobalt skin" data-i18n-alt="home.swara.skinNeonAlt" data-skin="neon" width="2786" height="1304" loading="lazy" decoding="async" aria-hidden="true" />
+                <img class="swara-skin-slide" src="assets/screenshots/swara/swara-xt-rosso-corsa.png" alt="Swara XT Rosso Corsa skin" data-i18n-alt="home.swara.skinRossoAlt" data-skin="rosso" width="2786" height="1304" loading="lazy" decoding="async" aria-hidden="true" />
+              </div>
+              <div class="swara-skin-controls" role="tablist" aria-label="Choose a colour skin" data-i18n-aria="home.swara.skinsTabsAria">
+                <button type="button" class="swara-skin-tab is-active" role="tab" aria-selected="true" data-skin-tab="pastel" data-i18n="home.swara.skinPastel">Pastel</button>
+                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="midnight" data-i18n="home.swara.skinMidnight">Midnight Gold</button>
+                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="jungle" data-i18n="home.swara.skinJungle">Jungle</button>
+                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="neon" data-i18n="home.swara.skinNeon">Neon Cobalt</button>
+                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="rosso" data-i18n="home.swara.skinRosso">Rosso Corsa</button>
+              </div>
+            </div>
+          </div>
+          <div class="container hero-swara-below hero-below" aria-label="Swara XT philosophy" data-i18n-aria="home.swara.philosophyAria">
+            <blockquote class="hero-swara-quote hero-below-quote">
+              <p data-i18n="home.swara.statement">स्वर — tone as an instrument. Hybrid monosynth design with immediate, musical response.</p>
+            </blockquote>
+            <aside class="swara-listen-card hero-listen-card" aria-label="Swara XT sound previews" data-i18n-aria="home.swara.listenAria">
+              <iframe
+                class="soundcloud-embed soundcloud-embed--playlist-compact"
+                title="SWARA XT - Hybrid Monosynth SoundCloud playlist"
+                data-i18n-title="home.swara.audioIframeTitle"
+                width="100%"
+                height="280"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                loading="lazy"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/montronedsp/sets/swara-xt-monophonic&amp;color=%230d1116&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false"
+              ></iframe>
+              <a class="swara-listen-link hero-listen-link" href="https://on.soundcloud.com/Ywj2pBpqWmt6nlIiF4" target="_blank" rel="noopener noreferrer">
+                <img src="assets/soundcloud-white-transparent.svg" alt="" width="16" height="16" loading="lazy" decoding="async" />
+                <span data-i18n="home.swara.audioLink">Open playlist on SoundCloud</span>
+              </a>
+            </aside>
+          </div>
+        </div>
+
+        <div class="hero-panel" id="hero-panel-laya" data-hero-panel="laya" role="tabpanel" aria-labelledby="product-tab-laya" aria-hidden="true">
+          <div class="container hero-layout">
+            <div class="hero-copy">
+              <div class="hero-mark-lockup hero-mark-lockup--laya">
+                <h1 id="hero-title-laya">
+                  <img class="hero-logo" src="assets/branding/laya_mark.svg" alt="Laya" width="1300" height="220" decoding="async" />
+                </h1>
+                <p class="hero-punchline" data-i18n="home.laya.punchline">In Sanskrit, laya means rhythm. An ever-growing collection of old and new drum-sequencing algorithms in one digital drum machine.</p>
+              </div>
+              <div class="hero-actions">
+                <span class="btn btn-primary btn-disabled" aria-disabled="true" data-i18n="home.laya.planned">Coming soon</span>
+                <a class="btn btn-secondary" href="contact.html" data-i18n="home.laya.notify">Get notified</a>
+              </div>
+              <p class="hero-offer-note" data-i18n="home.laya.offerNote">All Laya builds will be free.</p>
+              <ul class="hero-specs" aria-label="Product highlights" data-i18n-aria="home.highlightsAria">
+                <li data-i18n="home.laya.specFree">All builds free</li>
+                <li data-i18n="home.laya.specType">Lo-fi drum instrument</li>
+                <li data-i18n="home.laya.specSeq">Performance sequencer</li>
+                <li data-i18n="home.laya.specStatus">In development</li>
+              </ul>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="screenshot-placeholder screenshot-placeholder--hero" role="img" aria-label="Screenshots coming soon">
+                <span>Screenshots coming soon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel" id="hero-panel-galleria" data-hero-panel="galleria" role="tabpanel" aria-labelledby="product-tab-galleria" aria-hidden="true">
+          <div class="container hero-layout">
+            <div class="hero-copy">
+              <div class="hero-mark-lockup hero-mark-lockup--galleria">
+                <h1 id="hero-title-galleria">
+                  <img class="hero-logo" src="assets/branding/galleria_mark.svg" alt="Galleria" width="1027" height="137" decoding="async" />
+                </h1>
+                <p class="hero-punchline" data-i18n="home.galleria.punchline">Environmental FX Processor</p>
+              </div>
+              <div class="hero-actions">
+                <span class="btn btn-primary btn-disabled" aria-disabled="true" data-i18n="home.galleria.planned">Releases 1 September 2026</span>
+                <a class="btn btn-secondary" href="contact.html" data-i18n="home.galleria.notify">Get notified</a>
+              </div>
+              <ul class="hero-specs" aria-label="Product highlights" data-i18n-aria="home.highlightsAria">
+                <li data-i18n="home.galleria.specDate">01 September 2026</li>
+                <li data-i18n="home.galleria.specSpace">Space + delay</li>
+                <li data-i18n="home.galleria.specMotion">3D motion</li>
+              </ul>
+            </div>
+            <div class="hero-art galleria-hero-field" aria-hidden="true">
+              <div class="galleria-hero-field__core"></div>
+              <div class="galleria-hero-field__ring"></div>
+              <div class="galleria-hero-field__drift"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="plugin-story" data-product-only="martello" aria-label="Martello product story" data-i18n-aria="home.martello.storyAria">
+
+        <section class="story-open-band" aria-labelledby="story-intro-title">
+          <div class="container">
+            <div class="story-open-grid">
+              <figure class="story-open-shot">
+                <div class="screenshot-placeholder" role="img" aria-label="Screenshots coming soon">
+                  <span data-i18n="home.martello.screenshotsSoon">Screenshots coming soon</span>
+                </div>
+              </figure>
+              <div class="story-open-copy">
+                <p class="story-index"><span data-i18n="home.martello.bundleLabel">Martello Bundle</span><span>v1.2.2</span></p>
+                <h2 id="story-intro-title" class="story-chapter-title" data-i18n="home.martello.introTitle">Built for the grid.</h2>
+                <p class="story-chapter-lede" data-i18n="home.martello.introLede">Martello is built around synthesized drum voices with a strong resonator and modal-synthesis influence.</p>
+                <p class="story-open-body" data-i18n="home.martello.introBody">Its sound is shaped by the idea of struck objects, vibrating bodies, wood, metal, membranes, and physical percussion behavior. Martello and MartelloX2 are focused drum synthesizers, not sample players. Design kicks, snares, hats, and percussion with immediate control, per-voice model selection, and optional dual-engine routing for full-kit patterns in one plugin.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <figure class="story-frame story-frame--strip">
+          <div class="container">
+            <div class="screenshot-placeholder" role="img" aria-label="Screenshots coming soon">
+              <span data-i18n="home.martello.screenshotsSoon">Screenshots coming soon</span>
+            </div>
+          </div>
+        </figure>
+
+        <div class="story-band container" aria-label="Core capabilities" data-i18n-aria="home.martello.capabilitiesAria">
+          <ul class="story-band-list">
+            <li><span class="story-band-key" data-i18n="home.martello.bandModels">Models</span><span class="story-band-val" data-i18n="home.martello.bandModelsVal">25 per voice</span></li>
+            <li><span class="story-band-key" data-i18n="home.martello.bandVoices">Voices</span><span class="story-band-val" data-i18n="home.martello.bandVoicesVal">3 voices · 6 in X2</span></li>
+            <li><span class="story-band-key" data-i18n="home.martello.bandMod">Modulation</span><span class="story-band-val" data-i18n="home.martello.bandModVal">LFO, Envelope, or Knob Wizard</span></li>
+            <li><span class="story-band-key" data-i18n="home.martello.bandThemes">Themes</span><span class="story-band-val" data-i18n="home.martello.bandThemesVal">Dark and light</span></li>
+          </ul>
+        </div>
+
+        <section class="story-moment story-moment--shot container" aria-labelledby="story-models-title">
+          <div class="story-moment-layout story-moment-layout--shot">
+            <div class="story-moment-copy">
+              <p class="story-index"><span data-i18n="home.martello.modelIndex">Model engine</span></p>
+              <h3 id="story-models-title" class="story-moment-title" data-i18n="home.martello.modelTitle">Every voice chooses its own physics.</h3>
+              <p class="story-moment-body" data-i18n="home.martello.modelBody">Classic, Classic Extended, Classic Hats, Digital, Analog, Digital+, Toms, Clap, Wood, Ride, Cymbal, Cowbell, Low Bongo, Mid Bongo, High Bongo, Glass Clave, Tambourine, Maracas, Open Percussion Extension, Charlie, Metallic, Robots, Robots Expert, and the available Expert variants. Switch modes and the control panel instantly reconfigures to expose the parameters of the selected engine.</p>
+            </div>
+            <figure class="story-frame story-frame--inline">
+              <div class="screenshot-placeholder" role="img" aria-label="Screenshots coming soon">
+                <span data-i18n="home.martello.screenshotsSoon">Screenshots coming soon</span>
+              </div>
+            </figure>
+          </div>
+        </section>
+
+        <section class="story-moment container" aria-label="Martello update and legacy offer" data-i18n-aria="home.martello.producersAria">
+          <div class="story-statement-row">
+            <blockquote class="story-statement story-statement--inline story-statement--secondary">
+              <p data-i18n="home.martello.producersStatement">Made for producers who want drums that feel played, tuned, pushed, and shaped. Not just selected from a folder.</p>
+            </blockquote>
+            <aside class="story-demo-card" aria-labelledby="story-update-title">
+              <p class="story-index"><span data-i18n="home.martello.updateLabel">Martello update</span><span data-i18n="home.martello.updateWhen">September 2026</span></p>
+              <h3 id="story-update-title" class="story-demo-title" data-i18n="home.martello.updateTitle">Big improvements on the way.</h3>
+              <p class="story-demo-copy" data-i18n="home.martello.updateCopy">Martello is being updated. A new release arrives in September with major improvements. Meanwhile, buy legacy Martello now at 50% off  -  and you get access to all future updates.</p>
+              <a class="btn btn-primary" href="https://store.montronedsp.com/l/martello" target="_blank" rel="noopener noreferrer" data-i18n="home.martello.updateCta">Buy Now · 50% Off</a>
+            </aside>
+          </div>
+        </section>
+
+      </div>
+
+      <section class="story-release-band" data-product-only="martello" aria-labelledby="martello-release-validation-title">
+        <div class="container">
+          <div class="story-release-inner">
+            <p class="story-index"><span data-i18n="home.martello.validationIndex">Release Validation</span><span data-i18n="home.martello.validationQuality">Quality checks</span></p>
+            <h2 id="martello-release-validation-title" class="story-chapter-title" data-i18n="home.martello.validationTitle">Release Validation</h2>
+            <div class="story-release-copy">
+              <p data-i18n="home.martello.validationP1">Every MontroneDSP release is checked through automated validation, internal signal analysis, stress testing, and human musical testing.</p>
+              <p data-i18n="home.martello.validationP2" data-i18n-html>Validation includes <strong>pluginval correctness level 10</strong>, sample-rate testing up to <strong>192 kHz</strong>, automation stress tests, repeated load/unload checks, multi-instance sessions, save/reload verification, preset recall, MIDI triggering, rapid parameter changes, offline rendering, and internal monitoring for signal integrity.</p>
+              <p data-i18n="home.martello.validationP3">MartelloX2 is additionally tested for dual-engine behavior, multi-output routing, heavier session conditions, and real-world usability inside actual DAW projects.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-feedback-band" data-product-only="martello" aria-labelledby="martello-feedback-title">
+        <div class="container">
+          <p class="story-index"><span data-i18n="home.martello.feedbackIndex">Feedback</span><span data-i18n="home.martello.feedbackSub">From the field</span></p>
+          <h2 id="martello-feedback-title" class="story-chapter-title" data-i18n="home.martello.feedbackTitle">What artists are saying.</h2>
+
+          <div class="feedback-carousel" data-feedback-carousel tabindex="0">
+            <div class="feedback-carousel-viewport">
+              <div class="feedback-carousel-track" data-feedback-track>
+                <article class="feedback-slide" data-feedback-slide>
+                  <blockquote class="feedback-quote">
+                    <p>I tested the Martello device and sounded very nice.</p>
+                    <footer class="feedback-meta">
+                      <cite class="feedback-name">Forest On Stasys</cite>
+                      <span class="feedback-meta-detail">ARG · Danza Nativa, Aura Sonora</span>
+                    </footer>
+                  </blockquote>
+                </article>
+                <article class="feedback-slide" aria-roledescription="slide" data-feedback-slide>
+                  <blockquote class="feedback-quote">
+                    <p data-i18n="home.martello.feedback1Quote">The FM sounds with modulation are really handy. My impression so far is that this is a very well-priced device with good customer support.</p>
+                    <footer class="feedback-meta">
+                      <cite class="feedback-name" data-i18n="home.martello.feedback1Name">Einerlei</cite>
+                      <span class="feedback-meta-detail" data-i18n="home.martello.feedback1Meta">UK · Sungate Records · Art Bei Ton</span>
+                    </footer>
+                  </blockquote>
+                </article>
+              </div>
+            </div>
+            <div class="feedback-carousel-controls" data-feedback-controls hidden>
+              <button type="button" class="feedback-carousel-btn" data-feedback-prev aria-label="Previous feedback" data-i18n-aria="home.martello.feedbackPrev">
+                <span aria-hidden="true">‹</span>
+              </button>
+              <div class="feedback-carousel-dots" data-feedback-dots role="tablist" aria-label="Feedback slides"></div>
+              <button type="button" class="feedback-carousel-btn" data-feedback-next aria-label="Next feedback" data-i18n-aria="home.martello.feedbackNext">
+                <span aria-hidden="true">›</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-dev-band" data-product-only="martello" aria-labelledby="martello-dev-story-title">
+        <div class="container">
+          <p class="story-index"><span data-i18n="home.martello.devIndex">Dev story</span><span data-i18n="home.martello.devSince">Since 2014</span></p>
+          <h2 id="martello-dev-story-title" class="story-chapter-title" data-i18n="home.martello.devTitle">Where Martello came from.</h2>
+          <div class="story-dev-copy">
+            <p data-i18n="home.martello.devP1">Martello is an idea that started forming around 2014, when I was exploring Eurorack synthesis, resonators, and modal synthesis. I was always drawn to those tones because they felt more physical, natural, and alive than many traditional electronic drum sounds. They had the feeling of objects being struck, vibrating, and reacting in a real space.</p>
+            <p data-i18n="home.martello.devP2">For a long time, I tried to reach that feeling with samples, but it never really worked for me.</p>
+            <p data-i18n="home.martello.devP3">Over time, the idea started moving more clearly toward synthesized drums, using resonators and physical approaches rather than relying only on samples.</p>
+            <p data-i18n="home.martello.devP4">That direction became the foundation of Martello: a focused drum instrument made to feel immediate, responsive, and alive. While I was also working on a much more complex instrument, Martello naturally became something more direct, simple to understand, quick to use, and centered on sound.</p>
+            <p data-i18n="home.martello.devP5">The interface follows the same idea: no complicated submenus, with the main controls visible and ready to shape. Martello is built around limitations, but in a creative way, giving artists a starting point to design their own drum kits and then place them inside their own effects, space, and workflow.</p>
+            <h3 id="martello-no-sequencer-title" class="story-dev-subtitle" data-i18n="home.martello.noSeqTitle">Why Martello has no sequencer</h3>
+            <p data-i18n="home.martello.noSeqP1">We deliberately chose not to build a sequencer into Martello. Adding one would have changed the nature of the instrument, shifting attention away from its synthesis panels and toward an internal workflow that could never suit every artist. Martello is meant to remain open: a sound-design instrument that responds naturally to the sequencer, controller, generative system, or performance method you already prefer.</p>
+
+            <div class="story-dev-tip-block">
+              <h4 class="story-dev-tip" data-i18n="home.martello.noSeqTip1Title" data-i18n-html>Tip 1: For Ableton Live users, Martello and Martello X2 pair especially well with <a href="https://www.ableton.com/en/packs/instant-haus/" target="_blank" rel="noopener noreferrer">Instant Haus</a> by Alexkid.</h4>
+              <figure class="story-dev-media">
+                <a href="https://www.ableton.com/en/packs/instant-haus/" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/screenshots/instant-haus.webp" alt="Instant Haus Max for Live device by Alexkid" data-i18n-alt="home.martello.instantHausAlt" width="737" height="278" loading="lazy" decoding="async" />
+                </a>
+              </figure>
+              <p data-i18n="home.martello.noSeqP2" data-i18n-html>This Max for Live device can quickly generate musical drum patterns while still offering detailed control over individual parts, velocity, swing, timing shifts, variation, and randomization. Instead of locking Martello inside a fixed sequencer, this combination lets one device concentrate on rhythm and movement while Martello remains focused entirely on synthesis and sound. <a href="https://www.ableton.com/en/packs/instant-haus/" target="_blank" rel="noopener noreferrer">Instant Haus</a> is now officially discontinued, but it remains an excellent companion for users who already have access to it.</p>
+              <p data-i18n="home.martello.noSeqP3" data-i18n-html>Load Martello after <a href="https://www.ableton.com/en/packs/instant-haus/" target="_blank" rel="noopener noreferrer">Instant Haus</a>, route its generated MIDI notes to the appropriate voices, and an initial groove can emerge almost immediately. From there, every sound can be reshaped directly from Martello’s front panel, turning the generated rhythm into a personal drum kit rather than a finished preset. This reflects the broader idea behind the instrument: provide a strong and immediate starting point, then leave enough space for the artist to transform it.</p>
+            </div>
+
+            <div class="story-dev-tip-block">
+              <h4 class="story-dev-tip" data-i18n="home.martello.noSeqTip2Title">Tip 2: The Kick-and-Bass Trick</h4>
+              <p data-i18n="home.martello.noSeqTip2P1">Load Martello X2 and select the same drum model for Voice 1 and Voice 4. Digital, Analog, and the Legacy synthesis models are especially effective for this technique. Then reduce the Punch control on Voice 4 to nearly zero. Voice 1 can remain the main kick, while Voice 4 becomes a sustained bass layer derived from the same synthesis model.</p>
+              <p data-i18n="home.martello.noSeqTip2P2">Because both sounds come from closely related sources, the kick and bass naturally share the same tonal character. They can be tuned perfectly together for a tight, unified low end, or deliberately separated to create more tension and movement.</p>
+              <p data-i18n="home.martello.noSeqTip2P3">With traditional drum machines, achieving this degree of control often required circuit modifications, resampling, or additional processing. In Martello X2, the same idea is immediate: one voice provides the impact, while the other transforms the underlying drum synthesis into bass.</p>
+              <p data-i18n="home.martello.noSeqTip2P4" data-i18n-html>This technique is the conceptual foundation of the <strong>Jak2</strong> preset, inspired by a nearly forgotten Naughty Dog masterpiece. Load the preset, hear the kick-and-bass relationship in action, then adjust the tuning, decay, and balance to make the room as bass-heavy as you like.</p>
+            </div>
+
+            <div class="story-dev-tip-block">
+              <h4 class="story-dev-tip" data-i18n="home.martello.noSeqTip3Title">Tip 3: Multi-Output Processing</h4>
+              <p data-i18n="home.martello.noSeqTip3P1">We strongly recommend using Martello X2 in multi-output mode. Routing each voice to its own channel gives you much better control over gain staging, balance, automation, and processing, while opening the instrument up to a far more creative multitrack workflow.</p>
+              <p data-i18n="home.martello.noSeqTip3P2">In minimal, abstract, and experimental forms of house and techno, a single percussion sound can become much more than part of the rhythm. It can become the lead instrument, the main hook, or even the defining element of the entire track. With separate outputs, each Martello voice can be treated deliberately with your favourite reverbs, delays, distortion, modulation, or more complex effect chains, allowing the instrument to sit at the centre of the production rather than simply behind it.</p>
+              <p data-i18n="home.martello.noSeqTip3P3">We deliberately chose not to include built-in effects in Martello. We did not want to turn it into another generic all-in-one instrument filled with interchangeable processing. Instead, Martello focuses on synthesis and leaves space for you to shape its sounds using your own effects, your own spaces, and your own signal chains. This allows the instrument to enter your sonic world rather than forcing you into ours.</p>
+            </div>
+
+            <div class="story-dev-tip-block">
+              <h4 class="story-dev-tip" data-i18n="home.martello.noSeqTip4Title">Tip 4: The Analog Stage</h4>
+              <p data-i18n="home.martello.noSeqTip4P1">If your studio includes an analog mixer or other outboard equipment, we strongly recommend routing Martello X2’s individual outputs from your DAW into separate hardware channels. This gives you immediate hands-on control over every voice, while adding the sonic colour, saturation, and natural response of your analog signal path.</p>
+              <p data-i18n="home.martello.noSeqTip4P2">Working this way also makes it possible to manipulate the sounds quickly with hardware EQ, compression, distortion, sends, and external effects. Small movements on the mixer can radically transform the rhythm, opening up an almost endless range of combinations and encouraging a more physical and spontaneous approach to sound design.</p>
+              <p data-i18n="home.martello.noSeqTip4P3">The result is something close to an expandable modular drum machine, but with the affordability and convenience of a multi-instance software instrument. You retain preset storage, complete project recall, automation, and the ability to reopen a session exactly as you left it, while gaining the tactile control and character of an analog studio workflow.</p>
+              <p data-i18n="home.martello.noSeqTip4P4">Martello provides the synthesis engine; the mixer and outboard chain become an extension of the instrument.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <section class="story-close martello-buy-again" data-product-only="martello" aria-labelledby="martello-buy-again-title">
+      <div class="container">
+        <p class="story-index"><span data-i18n="home.martello.buyAgainLabel">Legacy offer</span><span data-i18n="home.martello.buyAgainTag">50% off</span></p>
+        <h2 id="martello-buy-again-title" class="story-moment-title" data-i18n="home.martello.buyAgainTitle">Buy it now.</h2>
+        <p class="story-close-copy" data-i18n="home.martello.buyAgainCopy">Pay 50% off for legacy Martello and get access to all future updates  -  including the September release with big improvements.</p>
+        <div class="story-close-actions">
+          <a class="btn btn-primary" href="https://store.montronedsp.com/l/martello" target="_blank" rel="noopener noreferrer" data-i18n="home.martello.buyAgainCta">Buy Now · 50% Off</a>
+          <a class="btn btn-secondary gumroad-button" href="https://montronedsp.gumroad.com/l/martello?wanted=true" data-gumroad-overlay-checkout="true" data-i18n="home.martello.cart">Add to Cart</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="plugin-story" data-product-only="membrana" aria-label="Membrana product story" data-i18n-aria="home.membrana.storyAria">
+
+      <section class="story-open-band" aria-labelledby="membrana-intro-title">
+        <div class="container">
+          <div class="story-open-copy">
+            <p class="story-index"><span>Membrana</span><time datetime="2026-09-10" data-i18n="home.membrana.introDate">10 September 2026</time></p>
+            <h2 id="membrana-intro-title" class="story-chapter-title" data-i18n="home.membrana.introTitle">Strike, resonate, shape.</h2>
+            <p class="story-chapter-lede" data-i18n="home.membrana.introLede">Early access on 10 September ships two of five planned engines for membranes, bodies, and tuned percussion  -  built around exciter physics and resonator geometry.</p>
+            <p class="story-open-body" data-i18n="home.membrana.introBody">Membrana is a multimodal synthesizer, not a sample player. Marimba brings classic membrane strike and bar resonance. Modern Modal shapes resonant body tone. Three more engines follow in later releases.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-statement-band" aria-label="Membrana philosophy" data-i18n-aria="home.membrana.philosophyAria">
+        <div class="container">
+          <blockquote class="story-statement story-statement--inline">
+            <p data-i18n="home.membrana.statement">One instrument, five engines planned  -  early access starts with Marimba and Modern Modal.</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <div class="story-band container" aria-label="Synthesis engines" data-i18n-aria="home.membrana.modelsAria">
+        <ul class="story-band-list">
+          <li><span class="story-band-key" data-i18n="home.membrana.specMarimba">Marimba</span><span class="story-band-val" data-i18n="home.membrana.bandMarimbaVal">Classic membrane and bar strike</span></li>
+          <li><span class="story-band-key" data-i18n="home.membrana.specModal">Modern Modal</span><span class="story-band-val" data-i18n="home.membrana.bandModalVal">Resonant body geometry</span></li>
+        </ul>
+      </div>
+
+      <section class="story-moment container" aria-labelledby="membrana-marimba-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.membrana.specMarimba">Marimba</span></p>
+          <h3 id="membrana-marimba-title" class="story-moment-title" data-i18n="home.membrana.marimbaTitle">Bars, membranes, physical decay.</h3>
+          <p class="story-moment-body" data-i18n="home.membrana.marimbaBody">Struck membrane and marimba bar synthesis  -  skin tension, body knock, and the raw attack of physical instruments distilled into playable sound. Shape contour, damping, and decay for drums, skins, bars, and tuned percussion.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="membrana-modal-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.membrana.specModal">Modern Modal</span></p>
+          <h3 id="membrana-modal-title" class="story-moment-title" data-i18n="home.membrana.modalTitle">Shape the modes. Tune the body.</h3>
+          <p class="story-moment-body" data-i18n="home.membrana.modalBody">Modal resonator modeling for membranes, plates, and vibrating bodies. Sculpt overtone structure, geometry, and damping with surgical control  -  from dry, focused strike to evolving harmonic bloom and long, singing decay.</p>
+        </div>
+      </section>
+
+      <section class="audio-examples-band soundcloud-feature-band" aria-labelledby="membrana-audio-title">
+        <div class="container">
+          <header class="audio-examples-head">
+            <p class="story-index"><span data-i18n="home.membrana.listenLabel">Listen</span><span>SoundCloud</span></p>
+            <h2 id="membrana-audio-title" class="story-chapter-title" data-i18n="home.membrana.audioTitle">Hear Membrana in context.</h2>
+          </header>
+          <article class="soundcloud-feature-card">
+            <div class="soundcloud-feature-copy">
+              <h3 class="story-moment-title" data-i18n="home.membrana.audioCardTitle">To Zanarkand  -  two Membrana voices</h3>
+              <p class="story-moment-body soundcloud-feature-lede" data-i18n="home.membrana.audioLede" data-i18n-html>Nobuo Uematsu  -  <cite>To Zanarkand</cite> arranged with two Membrana voices and Galleria spatial FX  -  marimba strike, modal body tone, and sculpted hall space in one piece.</p>
+              <a class="soundcloud-feature-link" href="https://soundcloud.com/montronedsp/nobuo-uematsu-to-zanarkand-2" target="_blank" rel="noopener noreferrer">
+                <picture>
+                  <source srcset="assets/soundcloud-white-transparent.svg" type="image/svg+xml" />
+                  <img src="assets/soundcloud-white-transparent-256.png" alt="" width="20" height="20" loading="lazy" decoding="async" />
+                </picture>
+                <span data-i18n="home.membrana.audioLink">Open on SoundCloud</span>
+              </a>
+            </div>
+            <div class="soundcloud-embed-wrap">
+              <iframe
+                class="soundcloud-embed"
+                title="Nobuo Uematsu  -  To Zanarkand: two Membrana voices with Galleria FX" data-i18n-title="home.membrana.audioIframeTitle"
+                width="100%"
+                height="166"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                loading="lazy"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/montronedsp/nobuo-uematsu-to-zanarkand-2&amp;color=%238a63ff&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false"
+              ></iframe>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="plugin-story" data-product-only="aurashimmer" aria-label="Aura product story">
+
+      <section class="story-open-band" aria-labelledby="aurashimmer-intro-title">
+        <div class="container">
+          <div class="story-open-grid">
+            <figure class="story-open-shot">
+              <img src="assets/screenshots/Aura_Paid_Authorized_Pluginval.png" alt="Aura Shimmer full interface in Freeze Wash mode, licensed and ready" width="2448" height="1508" loading="eager" decoding="async" />
+            </figure>
+            <div class="story-open-copy">
+              <p class="story-index"><span>Aura</span><span data-i18n="home.aurashimmer.storyIndex">v1.1.1</span></p>
+              <h2 id="aurashimmer-intro-title" class="story-chapter-title">Shimmer and space, as an instrument.</h2>
+              <p class="story-chapter-lede">Shimmer and space processing with depth, motion, and harmonic bloom.</p>
+              <p class="story-open-body">Aura is a dedicated shimmer and space processor for expansive reverbs, evolving harmonic tails, and deep atmospheric processing without a modular workflow. Long algorithmic spaces, pitch-shifted feedback, dense diffusion, and stereo motion live in one focused panel built for immediate sound shaping.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <figure class="story-frame story-frame--strip">
+        <div class="container">
+          <img src="assets/screenshots/Aura_Header_Detail_Pluginval.png" alt="Aura Shimmer header with preset browser, Wet Lock, and MontroneDSP branding" width="2448" height="150" loading="lazy" decoding="async" />
+        </div>
+      </figure>
+
+      <div class="story-band container" aria-label="Core capabilities">
+        <ul class="story-band-list">
+          <li><span class="story-band-key">Modes</span><span class="story-band-val">9 independent engines</span></li>
+          <li><span class="story-band-key">Space</span><span class="story-band-val">4 reverb + freeze models</span></li>
+          <li><span class="story-band-key">Shimmer</span><span class="story-band-val">5 pitch-feedback models</span></li>
+          <li><span class="story-band-key">Formats</span><span class="story-band-val">VST3 · macOS &amp; Windows</span></li>
+        </ul>
+      </div>
+
+      <section class="story-moment container" aria-labelledby="aura-character-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span>Character</span></p>
+          <h3 id="aura-character-title" class="story-moment-title">Shimmer and space for the mix.</h3>
+          <p class="story-moment-body">Aura is built for harmonic reverberation, evolving ambience, and deep spatial sound design  -  octave-up shimmer, dual-voice stereo bloom, dark evolving reverbs, frozen beds, metallic clouds, and downward-shifted cinematic tails without a modular maze.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="aura-space-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span>Space models</span></p>
+          <h3 id="aura-space-title" class="story-moment-title">Four independent spatial engines.</h3>
+          <p class="story-moment-body">Long Space opens a clean, wide synthetic hall. Dark Bloom grows denser behind the source. Freeze Wash holds incoming sound as a continuous atmospheric layer. Metallic Cloud sits between reverb, resonator, and diffused digital texture. Each mode has its own tank, diffusion, feedback, and stereo behaviour  -  not a minor preset variation.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="aura-shimmer-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span>Shimmer models</span></p>
+          <h3 id="aura-shimmer-title" class="story-moment-title">Five pitch-shifted feedback modes.</h3>
+          <p class="story-moment-body">Octave Halo and Dual Halo raise clear modern harmonics inside the reverb structure. Deep Shift adds controlled downward weight. Classic Shimmer and Classic Dual give warmer, denser traditional bloom with broader stereo return. Shifted sound recirculates through the tank instead of sitting as a simple pitch effect after the wet signal.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="aura-engine-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span>Engine</span></p>
+          <h3 id="aura-engine-title" class="story-moment-title">Algorithmic space, not impulse responses.</h3>
+          <p class="story-moment-body">Aura is built from reverberation networks, pitch transformation, diffusion, filtering, modulation, and stereo projection. Keep a subtle halo around the source, or push into dense, unstable, highly artificial environments that become part of the composition.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="aura-controls-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span>Controls</span></p>
+          <h3 id="aura-controls-title" class="story-moment-title">One panel across all nine modes.</h3>
+          <p class="story-moment-body">Mix, Decay, Bloom, Motion, Pitch, Feedback, Tank, Tone, Width, and Output stay consistent while each mode reinterprets the architecture underneath. Motion, Bloom, diffusion, and pitch feedback keep long tails evolving instead of freezing into a static wash.</p>
+        </div>
+      </section>
+
+      <section class="story-release-band" aria-labelledby="aura-features-title">
+        <div class="container">
+          <div class="story-release-inner">
+            <p class="story-index"><span>Key features</span><span data-i18n="home.aurashimmer.storyIndex">v1.1.1</span></p>
+            <h2 id="aura-features-title" class="story-chapter-title">Built for depth and harmonic bloom.</h2>
+            <div class="story-release-copy">
+              <p>Nine independent engines, recirculating pitch-feedback architecture, freeze and metallic processing, controllable bloom and stereo motion, tonal and low-cut shaping, smooth automation, factory presets, a resizable modern interface, and clean VST3 packages for macOS and Windows.</p>
+              <p>Made for ambient, techno, experimental electronic music, cinematic sound design, drone, IDM, industrial, dub techno, vocals, synthesizers, guitar ambience, percussion, transitions, and spatial layers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-release-band" aria-labelledby="aura-release-validation-title">
+        <div class="container">
+          <div class="story-release-inner">
+            <p class="story-index"><span>Release Validation</span><span>Quality checks</span></p>
+            <h2 id="aura-release-validation-title" class="story-chapter-title">Release Validation</h2>
+            <div class="story-release-copy">
+              <p>Every MontroneDSP release is checked through automated validation, internal signal analysis, stress testing, and human musical testing.</p>
+              <p>Validation includes <strong>pluginval correctness level 10</strong>, sample-rate testing up to <strong>192 kHz</strong>, automation stress tests, repeated load/unload checks, multi-instance sessions, save/reload verification, preset recall, rapid parameter changes, offline rendering, and internal monitoring for signal integrity.</p>
+              <p>Aura is additionally tested for mode switching across all nine engines, freeze and shimmer feedback behaviour, long-tail stability, Wet Lock operation, license activation, and real-world usability inside actual DAW projects.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-release-band" aria-labelledby="aura-ownership-title">
+        <div class="container">
+          <div class="story-release-inner">
+            <p class="story-index"><span>Ownership</span><span>Formats · Install · Activation</span></p>
+            <h2 id="aura-ownership-title" class="story-chapter-title" data-i18n="home.aurashimmer.ownershipTitle">VST3 on macOS, Windows, and Linux.</h2>
+            <div class="story-release-copy">
+              <p data-i18n="home.aurashimmer.ownershipBody1" data-i18n-html>Aura ships as 64-bit VST3 only  -  no standalone application. macOS includes a .pkg installer, or copy the MontroneDSP VST3 folder into your system or user plugin directory. On Windows, place it in your VST3 folder (typically <code>C:\Program Files\Common Files\VST3</code>). On Linux, use your system or user VST3 directory, then rescan in your DAW.</p>
+              <p data-i18n="home.aurashimmer.ownershipBody2">After checkout, your license key appears on the Aura download page. Open Aura, paste the key in License or About, and activate. Each perpetual license covers up to three machines.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+    <div class="plugin-story" data-product-only="swara" aria-label="Swara XT product story" data-i18n-aria="home.swara.storyAria">
+
+      <section class="story-open-band" aria-labelledby="swara-intro-title">
+        <div class="container">
+          <div class="story-open-grid">
+            <figure class="story-open-shot">
+              <img src="assets/screenshots/swara/swara-xt-jungle.png" alt="Swara XT Jungle skin full interface" data-i18n-alt="home.swara.openShotAlt" width="2786" height="1304" loading="eager" decoding="async" />
+            </figure>
+            <div class="story-open-copy">
+              <p class="story-index"><span>Swara XT</span><span data-i18n="home.swara.storyIndex">v1.2.0</span></p>
+              <h2 id="swara-intro-title" class="story-chapter-title" data-i18n="home.swara.introTitle">A large monosynth with hardware-like sound.</h2>
+              <p class="story-chapter-lede" data-i18n="home.swara.introLede">Deep modulation and an immediate hands-on architecture.</p>
+              <p class="story-open-body" data-i18n="home.swara.introBody">SWARA XT is a full-scale monophonic synthesizer built around a powerful engine, a characterful filter, extensive modulation, and a direct hardware-inspired layout. Oscillators, filter, envelopes, animation, and sequencing sit in one instrument that can move from precise to saturated and highly animated. Bass lines have weight, resonant sequences stay physical, leads can get sharp and expressive, and sustained sounds keep movement.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-release-band" aria-labelledby="swara-release-title">
+        <div class="container">
+          <div class="story-release-inner">
+            <p class="story-index"><span data-i18n="home.swara.releaseIndex">Update</span><span data-i18n="home.swara.storyIndex">v1.2.0</span></p>
+            <h2 id="swara-release-title" class="story-chapter-title" data-i18n="home.swara.releaseTitle">What's new in 1.2.0</h2>
+            <div class="story-release-copy">
+              <p data-i18n="home.swara.releaseLead">The sequencer, in the instrument.</p>
+              <p data-i18n="home.swara.releaseIntro">SWARA XT 1.2.0 is now available. This release brings an integrated sequencer, so repeating melodic and modulation patterns live inside the instrument.</p>
+              <p data-i18n="home.swara.releaseLibrary">Use it for bass lines, performance loops, filter-driven phrases, and more experimental sequences, with the same direct, hardware-like feel as the rest of the panel.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-release-band" aria-labelledby="swara-next-title">
+        <div class="container">
+          <div class="story-release-inner">
+            <p class="story-index"><span data-i18n="home.swara.releaseNextIndex">Roadmap</span></p>
+            <h2 id="swara-next-title" class="story-chapter-title" data-i18n="home.swara.releaseNextTitle">What's coming next</h2>
+            <div class="story-release-copy">
+              <p data-i18n="home.swara.releaseNextBody">A second filter personality and onboard effects are planned for future updates, without compromising SWARA XT's hardware-like, direct character.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="story-band container" aria-label="Core capabilities" data-i18n-aria="home.swara.capabilitiesAria">
+        <ul class="story-band-list">
+          <li><span class="story-band-key" data-i18n="home.swara.bandOsc">Oscillators</span><span class="story-band-val" data-i18n="home.swara.bandOscVal">Two independent sections</span></li>
+          <li><span class="story-band-key" data-i18n="home.swara.bandFilter">Filter</span><span class="story-band-val" data-i18n="home.swara.bandFilterVal">Characterful, resonant</span></li>
+          <li><span class="story-band-key" data-i18n="home.swara.bandMod">Modulation</span><span class="story-band-val" data-i18n="home.swara.bandModVal">2 LFOs, 2 envelopes, matrix</span></li>
+          <li><span class="story-band-key" data-i18n="home.swara.bandSeq">Sequencer</span><span class="story-band-val" data-i18n="home.swara.bandSeqVal">Integrated patterns</span></li>
+          <li><span class="story-band-key" data-i18n="home.swara.bandSkins">Skins</span><span class="story-band-val" data-i18n="home.swara.bandSkinsVal">5 complete GUIs</span></li>
+          <li><span class="story-band-key" data-i18n="home.swara.bandFormats">Format</span><span class="story-band-val" data-i18n="home.swara.bandFormatsVal">64-bit VST3</span></li>
+        </ul>
+      </div>
+
+      <section class="story-moment container" aria-labelledby="swara-uses-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.swara.usesIndex">Use it for</span></p>
+          <h3 id="swara-uses-title" class="story-moment-title" data-i18n="home.swara.usesTitle">Electronic music, sequencing, and detailed sound design.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.usesBody">Heavy basses, resonant sequences, aggressive mono leads, acid-style lines, synthetic percussion, sharp plucks, drones, metallic tones, evolving sequences, and hardware-style mono patches. Also at home in techno, electro, industrial, IDM, ambient, drone, and bass music.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="swara-osc-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.swara.oscIndex">Oscillators</span></p>
+          <h3 id="swara-osc-title" class="story-moment-title" data-i18n="home.swara.oscTitle">Two sources, shaped before the filter.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.oscBody">Each main oscillator has independent model, pitch, and waveform variation, so the raw sound is already decided before mixer and filter. Clean fundamentals, dense harmonics, sharper digital structures, unstable tones, octave layering, and strongly animated waveforms. The mixer is part of the sound: balance changes how the filter responds, can reinforce the fundamental, or thicken the source.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="swara-filter-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.swara.filterIndex">Filter</span></p>
+          <h3 id="swara-filter-title" class="story-moment-title" data-i18n="home.swara.filterTitle">Cutoff and resonance as performance.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.filterBody">Move from rounded low-frequency weight to sharp resonant tones and strongly articulated sequences. Envelope and modulation let the filter ride with the patch: heavy filtered bass, self-emphasised harmonics, envelope sweeps, rhythmic filtering, and slowly evolving tonal movement.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="swara-motion-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.swara.motionIndex">Motion</span></p>
+          <h3 id="swara-motion-title" class="story-moment-title" data-i18n="home.swara.motionTitle">Envelopes, LFOs, and a readable panel.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.motionBody">Two envelopes shape amplitude, filtering, and modulation, from tight physical attacks to longer unfolding. Two LFOs cover vibrato, filter movement, waveform animation, slow drift, and more obvious cyclic behaviour. Dedicated visualisers keep envelope and LFO shapes readable while you program.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="swara-matrix-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.swara.matrixIndex">Matrix and sequencer</span></p>
+          <h3 id="swara-matrix-title" class="story-moment-title" data-i18n="home.swara.matrixTitle">Routes and patterns on the instrument.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.matrixBody">The modulation matrix connects sources to destinations without leaving the main panel, so a patch can develop internally. The integrated sequencer adds repeating melodic and modulation patterns, from bass lines and performance loops to filter-driven phrases and more experimental sequences.</p>
+        </div>
+      </section>
+
+      <section class="story-moment story-moment--shot container swara-colours-moment" aria-labelledby="swara-colours-title">
+        <div class="story-moment-layout story-moment-layout--shot">
+          <div class="story-moment-copy">
+            <p class="story-index"><span data-i18n="home.swara.coloursIndex">Skins</span></p>
+            <h3 id="swara-colours-title" class="story-moment-title" data-i18n="home.swara.coloursTitle">Five complete skins.</h3>
+            <p class="story-moment-body" data-i18n="home.swara.coloursBody">Pastel, Neon Cobalt, Jungle, Rosso Corsa, and Midnight Gold. Each skin changes the look of the panel and keeps the same layout and workflow. Browse and save presets from the main panel, including user presets.</p>
+          </div>
+          <figure class="story-frame story-frame--inline">
+            <img src="assets/screenshots/swara/swara-xt-decoration-jungle.png" alt="Swara XT Pastel skin with PCB-trace decoration dividers" data-i18n-alt="home.swara.decorationAlt" width="2786" height="1304" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </section>
+
+      <figure class="story-frame story-frame--strip swara-skin-strip">
+        <div class="container">
+          <img src="assets/screenshots/swara/swara-xt-neon-cobalt-medium.png" alt="Swara XT Neon Cobalt panel" data-i18n-alt="home.swara.neonMediumAlt" width="2786" height="1304" loading="lazy" decoding="async" />
+        </div>
+      </figure>
+
+      <section class="story-moment container" aria-labelledby="swara-format-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.swara.formatIndex">Format</span></p>
+          <h3 id="swara-format-title" class="story-moment-title" data-i18n="home.swara.formatTitle">64-bit VST3, plus standalone.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.formatBody">The official Linux package includes the VST3 plugin and a standalone application. Other official builds are on the store. Copy Swara XT.vst3 into your VST3 folder and rescan in the DAW. On Windows a typical location is C:\Program Files\Common Files\VST3. On Linux, use your system or user VST3 directory.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container swara-linux-moment" aria-labelledby="swara-linux-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.swara.linuxIndex">Linux</span></p>
+          <h3 id="swara-linux-title" class="story-moment-title" data-i18n="home.swara.linuxTitle">Built for Linux and open-source software.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.linuxLead1">At MontroneDSP, we are strong believers in Linux and open-source software.</p>
+          <p class="story-moment-body" data-i18n="home.swara.linuxLead2">Linux has become an increasingly capable platform for music production, offering excellent performance, flexibility, and a growing ecosystem of professional audio tools. We actively support Linux and test our plugins on a selection of commonly used distributions and desktop environments.</p>
+
+          <h4 class="story-moment-subhead" data-i18n="home.swara.linuxTestedTitle">Tested environments</h4>
+          <p class="story-moment-body" data-i18n="home.swara.linuxTestedIntro">Our Linux builds are tested on:</p>
+
+          <article class="swara-linux-env" aria-labelledby="swara-linux-ubuntu-title">
+            <figure class="swara-linux-env-logo swara-linux-env-logo--ubuntu">
+              <img src="assets/branding/linux/ubuntu-logo-white.svg" alt="Ubuntu" data-i18n-alt="home.swara.linuxUbuntuLogoAlt" width="120" height="28" loading="lazy" decoding="async" />
+            </figure>
+            <div class="swara-linux-env-copy">
+              <h5 id="swara-linux-ubuntu-title" class="story-moment-subhead story-moment-subhead--minor" data-i18n="home.swara.linuxUbuntuTitle">Ubuntu LTS</h5>
+              <p class="story-moment-body" data-i18n="home.swara.linuxUbuntuBody">A stable and widely supported choice for audio production. Ubuntu LTS is our primary reference environment and is a good option for users who want a conventional Linux desktop with long-term support.</p>
+            </div>
+          </article>
+
+          <article class="swara-linux-env swara-linux-env--dual" aria-labelledby="swara-linux-steam-title">
+            <div class="swara-linux-env-logos">
+              <figure class="swara-linux-env-logo swara-linux-env-logo--steamos">
+                <img src="assets/branding/linux/steamos-wordmark-white.svg" alt="SteamOS" data-i18n-alt="home.swara.linuxSteamLogoAlt" width="140" height="37" loading="lazy" decoding="async" />
+              </figure>
+              <figure class="swara-linux-env-logo swara-linux-env-logo--kde">
+                <img src="assets/branding/linux/kde-logo.svg" alt="KDE Plasma" data-i18n-alt="home.swara.linuxKdeLogoAlt" width="48" height="48" loading="lazy" decoding="async" />
+              </figure>
+            </div>
+            <div class="swara-linux-env-copy">
+              <h5 id="swara-linux-steam-title" class="story-moment-subhead story-moment-subhead--minor" data-i18n="home.swara.linuxSteamTitle">SteamOS — tested alternative</h5>
+              <p class="story-moment-body" data-i18n="home.swara.linuxSteamBody1">A stable, polished option for users who prefer a preconfigured KDE-based environment. Best suited to Flatpak-based DAWs such as Bitwig and user-installed plug-ins. Because SteamOS uses an immutable system image, advanced system-level audio modifications may require additional setup.</p>
+              <p class="story-moment-body story-moment-body--caution" data-i18n="home.swara.linuxSteamCaution">Caution: the SteamOS installer can wipe existing disk data. Follow the correct install procedure carefully, and always back up important files first.</p>
+            </div>
+          </article>
+
+          <h4 class="story-moment-subhead" data-i18n="home.swara.linuxRecTitle">Our recommendation</h4>
+          <p class="story-moment-body" data-i18n="home.swara.linuxRecBody1">If you are new to Linux and want the most straightforward, conventional setup for music production, Ubuntu LTS remains an excellent starting point.</p>
+          <p class="story-moment-body" data-i18n="home.swara.linuxRecBody2">For a preconfigured KDE desktop and Flatpak-based DAWs, SteamOS is a tested alternative — with the caveats noted above, including the installer disk-wipe risk.</p>
+          <p class="story-moment-body" data-i18n="home.swara.linuxRecBody3">Linux audio setups can vary considerably between distributions, audio servers, DAWs, drivers, and system configurations. For this reason, we recommend keeping your system updated and using the current version of your DAW and plugin host whenever possible.</p>
+
+          <h4 class="story-moment-subhead" data-i18n="home.swara.linuxFormatsTitle">Plugin formats</h4>
+          <p class="story-moment-body" data-i18n="home.swara.linuxFormatsBody1">Our Linux plugins are distributed in VST3 format.</p>
+          <p class="story-moment-body" data-i18n="home.swara.linuxFormatsBody2">When installing manually, make sure your DAW is configured to scan the directory containing the plugin. After installation, restarting or rescanning your DAW may be required before the plugin appears.</p>
+
+          <article class="swara-linux-env swara-linux-env--open" aria-labelledby="swara-linux-open-title">
+            <figure class="swara-linux-env-logo swara-linux-env-logo--gpl">
+              <a href="swara-license.html">
+                <img src="assets/branding/linux/gplv3-logo.svg" alt="GNU General Public License version 3" data-i18n-alt="home.swara.linuxGplLogoAlt" width="96" height="48" loading="lazy" decoding="async" />
+              </a>
+            </figure>
+            <div class="swara-linux-env-copy">
+              <h4 id="swara-linux-open-title" class="story-moment-subhead" data-i18n="home.swara.linuxOpenTitle">Open source</h4>
+              <p class="story-moment-body" data-i18n="home.swara.linuxOpenBody1">Open source is an important part of the MontroneDSP philosophy.</p>
+              <p class="story-moment-body" data-i18n="home.swara.linuxOpenBody2">Where possible, we contribute to and build upon open technologies, and several of our projects are made available publicly so that musicians, developers, and curious users can explore, learn from, modify, and contribute to the software.</p>
+              <p class="story-moment-body" data-i18n="home.swara.shruthiCredit">Parts of the synthesis engine are derived from the Mutable Instruments Shruthi-1 firmware by Émilie Gillet.</p>
+              <p class="story-moment-body" data-i18n="home.swara.linuxOpenBody3">We believe Linux and open-source development can play an important role in keeping music technology accessible, transparent, and open to experimentation.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="swara-machines-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.swara.machinesIndex">System</span></p>
+          <h3 id="swara-machines-title" class="story-moment-title" data-i18n="home.swara.machinesTitle">A substantial real-time engine.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.machinesBody">SWARA XT can be CPU intensive with complex patches or multiple instances. Filter Quality modes (since 1.1.0) add High, Normal, and Eco from the right-click menu so you can trade CPU for the same filter character when needed. Minimum is a modern 64-bit VST3 host, 8 GB RAM, 200 MB disk, and Intel Core i7 / AMD Ryzen 5 or equivalent. On Mac, Intel Core i7 or Apple Silicon with comparable multicore performance. On Linux, x86_64.</p>
+          <label class="swara-license-accept">
+            <input type="checkbox" class="swara-license-accept-input" data-swara-license-accept />
+            <span class="swara-license-accept-copy" data-i18n="home.swara.linuxLicenseAccept" data-i18n-html>I have read and accept the <a href="swara-license.html">GNU General Public License v3</a> for Swara XT Linux before downloading. You can also read the <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer">official GPL text at gnu.org</a>.</span>
+          </label>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-disabled" href="assets/SwaraXT-Linux-x86_64-v1.2.0.tar.gz" download="SwaraXT-Linux-x86_64-v1.2.0.tar.gz" data-swara-linux-download data-i18n="home.swara.downloadLinux" aria-disabled="true" tabindex="-1">Download Linux · Official</a>
+            <a class="btn btn-secondary" href="https://store.montronedsp.com/l/swara" target="_blank" rel="noopener noreferrer" data-i18n="home.swara.officialBuilds">Official builds</a>
+            <a class="btn btn-secondary" href="swara-xt-manual.html" data-i18n="home.swara.manual" data-i18n-swara-manual>User Manual</a>
+          </div>
+          <div class="swara-linux-install" aria-label="Linux install options" data-i18n-aria="home.swara.linuxInstallAria">
+            <p class="swara-linux-install-label" data-i18n="home.swara.linuxInstallLabel">Linux x86_64 · VST3 + Standalone · Free</p>
+            <pre class="swara-linux-install-cmd" tabindex="0"><code>curl -fsSL https://raw.githubusercontent.com/montronedsp/SWARAXT/main/scripts/install-linux.sh | bash</code></pre>
+          </div>
+          <p class="hero-download-checksum"><span data-i18n="home.swara.sha256Label">SHA-256</span>: <code data-i18n="home.swara.linuxSha256">7b70c61e46e163b8992f1ee43782835f8715d2e02c35db193a8996785fc1974b</code></p>
+        </div>
+      </section>
+
+    </div>
+
+
+    <div class="plugin-story" data-product-only="laya" aria-label="Laya product story" data-i18n-aria="home.laya.storyAria">
+
+      <section class="story-open-band" aria-labelledby="laya-intro-title">
+        <div class="container">
+          <div class="story-open-grid story-open-grid--laya">
+            <figure class="story-open-shot">
+              <div class="screenshot-placeholder" role="img" aria-label="Screenshots coming soon"><span>Screenshots coming soon</span></div>
+            </figure>
+            <div class="story-open-copy">
+              <p class="story-index"><span>Laya</span><span data-i18n="home.laya.storyIndex">Preview</span></p>
+              <h2 id="laya-intro-title" class="story-chapter-title" data-i18n="home.laya.introTitle">Rhythms that evolve, mutate, and stay playable.</h2>
+              <p class="story-chapter-lede" data-i18n="home.laya.introLede">Lo-fi drums and a performance sequencer built for ideas that move. All Laya builds will be free.</p>
+              <p class="story-open-body" data-i18n="home.laya.introBody">Laya brings together a curated collection of selected, experimental and previously unreleased drum-sequencing algorithms in a single instrument. Its sequencing engines range from focused techno and drum & bass generators to more exploratory rhythmic systems, with an emphasis on patterns that feel playable, mutable and alive rather than simply random.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="laya-interface-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.laya.interfaceIndex">Interface</span></p>
+          <h3 id="laya-interface-title" class="story-moment-title" data-i18n="home.laya.releaseMacTitle">Two ways to work, one instrument.</h3>
+          <p class="story-moment-body" data-i18n="home.laya.releaseMacBody">Laya can be operated through a traditional GUI, a fast command-line interface, or both at the same time. Generate, mutate, lock, randomize and reshape rhythms in real time, then use its internal drum voices or send the resulting MIDI directly to external instruments and drum racks.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="laya-core-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.laya.coreIndex">Core</span></p>
+          <h3 id="laya-core-title" class="story-moment-title" data-i18n="home.laya.releaseNextTitle">Repetition and variation, by design.</h3>
+          <p class="story-moment-body" data-i18n="home.laya.releaseNextBody">At its core, Laya is a powerful performance sequencer: deterministic when needed, unpredictable when invited, and designed to move continuously between repetition and variation.</p>
+        </div>
+      </section>
+
+      <section class="story-release-band" aria-labelledby="laya-join-title">
+        <div class="container">
+          <div class="story-release-inner">
+            <p class="story-index"><span data-i18n="home.laya.joinIndex">Contribute</span></p>
+            <h2 id="laya-join-title" class="story-chapter-title" data-i18n="home.laya.joinTitle">Join Laya Development</h2>
+            <div class="story-release-copy">
+              <p data-i18n="home.laya.joinLede">Have your own idea for a sequencer?</p>
+              <p data-i18n="home.laya.joinBody1">We’re open to integrating new rule-based generative sequencers into Laya. If you have an original sequencing concept, algorithm, probability system, pattern generator, or performance logic you think belongs in the project, write us an email and tell us about it.</p>
+              <p data-i18n="home.laya.joinBody2">We are specifically interested in deterministic, algorithmic, stochastic, and rule-based generative systems that can run efficiently as part of the instrument.</p>
+              <p data-i18n="home.laya.joinBody3">We do not accept generative-AI, inference-based, neural-network, cloud-compute, or GPU-dependent workflows.</p>
+              <p data-i18n="home.laya.joinBody4">If your idea can be expressed as musical rules, mathematics, state machines, probability, pattern transformation, or other lightweight algorithmic logic, we’d be happy to hear from you.</p>
+              <p><a class="btn btn-secondary" href="mailto:giulia@montronedsp.com">giulia@montronedsp.com</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-moment container swara-linux-moment" aria-labelledby="laya-linux-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.swara.linuxIndex">Linux</span></p>
+          <h3 id="laya-linux-title" class="story-moment-title" data-i18n="home.swara.linuxTitle">Built for Linux and open-source software.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.linuxLead1">At MontroneDSP, we are strong believers in Linux and open-source software.</p>
+          <p class="story-moment-body" data-i18n="home.swara.linuxLead2">Linux has become an increasingly capable platform for music production, offering excellent performance, flexibility, and a growing ecosystem of professional audio tools. We actively support Linux and test our plugins on a selection of commonly used distributions and desktop environments.</p>
+
+          <h4 class="story-moment-subhead" data-i18n="home.swara.linuxTestedTitle">Tested environments</h4>
+          <p class="story-moment-body" data-i18n="home.swara.linuxTestedIntro">Our Linux builds are tested on:</p>
+
+          <article class="swara-linux-env" aria-labelledby="laya-linux-ubuntu-title">
+            <figure class="swara-linux-env-logo swara-linux-env-logo--ubuntu">
+              <img src="assets/branding/linux/ubuntu-logo-white.svg" alt="Ubuntu" data-i18n-alt="home.swara.linuxUbuntuLogoAlt" width="120" height="28" loading="lazy" decoding="async" />
+            </figure>
+            <div class="swara-linux-env-copy">
+              <h5 id="laya-linux-ubuntu-title" class="story-moment-subhead story-moment-subhead--minor" data-i18n="home.swara.linuxUbuntuTitle">Ubuntu LTS</h5>
+              <p class="story-moment-body" data-i18n="home.swara.linuxUbuntuBody">A stable and widely supported choice for audio production. Ubuntu LTS is our primary reference environment and is a good option for users who want a conventional Linux desktop with long-term support.</p>
+            </div>
+          </article>
+
+          <article class="swara-linux-env swara-linux-env--dual" aria-labelledby="laya-linux-steam-title">
+            <div class="swara-linux-env-logos">
+              <figure class="swara-linux-env-logo swara-linux-env-logo--steamos">
+                <img src="assets/branding/linux/steamos-wordmark-white.svg" alt="SteamOS" data-i18n-alt="home.swara.linuxSteamLogoAlt" width="140" height="37" loading="lazy" decoding="async" />
+              </figure>
+              <figure class="swara-linux-env-logo swara-linux-env-logo--kde">
+                <img src="assets/branding/linux/kde-logo.svg" alt="KDE Plasma" data-i18n-alt="home.swara.linuxKdeLogoAlt" width="48" height="48" loading="lazy" decoding="async" />
+              </figure>
+            </div>
+            <div class="swara-linux-env-copy">
+              <h5 id="laya-linux-steam-title" class="story-moment-subhead story-moment-subhead--minor" data-i18n="home.swara.linuxSteamTitle">SteamOS — tested alternative</h5>
+              <p class="story-moment-body" data-i18n="home.swara.linuxSteamBody1">A stable, polished option for users who prefer a preconfigured KDE-based environment. Best suited to Flatpak-based DAWs such as Bitwig and user-installed plug-ins. Because SteamOS uses an immutable system image, advanced system-level audio modifications may require additional setup.</p>
+              <p class="story-moment-body story-moment-body--caution" data-i18n="home.swara.linuxSteamCaution">Caution: the SteamOS installer can wipe existing disk data. Follow the correct install procedure carefully, and always back up important files first.</p>
+            </div>
+          </article>
+
+          <h4 class="story-moment-subhead" data-i18n="home.swara.linuxRecTitle">Our recommendation</h4>
+          <p class="story-moment-body" data-i18n="home.swara.linuxRecBody1">If you are new to Linux and want the most straightforward, conventional setup for music production, Ubuntu LTS remains an excellent starting point.</p>
+          <p class="story-moment-body" data-i18n="home.swara.linuxRecBody2">For a preconfigured KDE desktop and Flatpak-based DAWs, SteamOS is a tested alternative — with the caveats noted above, including the installer disk-wipe risk.</p>
+          <p class="story-moment-body" data-i18n="home.swara.linuxRecBody3">Linux audio setups can vary considerably between distributions, audio servers, DAWs, drivers, and system configurations. For this reason, we recommend keeping your system updated and using the current version of your DAW and plugin host whenever possible.</p>
+
+          <h4 class="story-moment-subhead" data-i18n="home.swara.linuxFormatsTitle">Plugin formats</h4>
+          <p class="story-moment-body" data-i18n="home.swara.linuxFormatsBody1">Our Linux plugins are distributed in VST3 format.</p>
+          <p class="story-moment-body" data-i18n="home.swara.linuxFormatsBody2">When installing manually, make sure your DAW is configured to scan the directory containing the plugin. After installation, restarting or rescanning your DAW may be required before the plugin appears.</p>
+
+          <article class="swara-linux-env swara-linux-env--open" aria-labelledby="laya-linux-open-title">
+            <figure class="swara-linux-env-logo swara-linux-env-logo--gpl">
+              <a href="swara-license.html">
+                <img src="assets/branding/linux/gplv3-logo.svg" alt="GNU General Public License version 3" data-i18n-alt="home.swara.linuxGplLogoAlt" width="96" height="48" loading="lazy" decoding="async" />
+              </a>
+            </figure>
+            <div class="swara-linux-env-copy">
+              <h4 id="laya-linux-open-title" class="story-moment-subhead" data-i18n="home.swara.linuxOpenTitle">Open source</h4>
+              <p class="story-moment-body" data-i18n="home.swara.linuxOpenBody1">Open source is an important part of the MontroneDSP philosophy.</p>
+              <p class="story-moment-body" data-i18n="home.swara.linuxOpenBody2">Where possible, we contribute to and build upon open technologies, and several of our projects are made available publicly so that musicians, developers, and curious users can explore, learn from, modify, and contribute to the software.</p>
+              <p class="story-moment-body" data-i18n="home.swara.linuxOpenBody3">We believe Linux and open-source development can play an important role in keeping music technology accessible, transparent, and open to experimentation.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+
+    <div class="plugin-story" data-product-only="galleria" aria-label="Galleria product story" data-i18n-aria="home.galleria.storyAria">
+
+      <section class="story-open-band" aria-labelledby="galleria-intro-title">
+        <div class="container">
+          <div class="story-open-copy">
+            <p class="story-index"><span>Galleria</span><time datetime="2026-09-01">01 September 2026</time></p>
+            <h2 id="galleria-intro-title" class="story-chapter-title" data-i18n="home.galleria.introTitle">Walk the gallery.</h2>
+            <p class="story-chapter-lede" data-i18n="home.galleria.introLede">Immersive spatial processing built around bright hall reflections, hybrid delay, and motion-driven 3D placement.</p>
+            <p class="story-open-body" data-i18n="home.galleria.introBody">Galleria is a spectral gallery reverb  -  not a static room preset. Shape space, delay, orbit, and texture in one focused panel, from dry public architecture to long tails that move through the field.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-statement-band" aria-label="Galleria philosophy" data-i18n-aria="home.galleria.philosophyAria">
+        <div class="container">
+          <blockquote class="story-statement story-statement--inline">
+            <p data-i18n="home.galleria.statement">Galleria is a spatial instrument where reflections, delay, and motion are composed together  -  bright, smooth, and deliberately placed.</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <div class="story-band container" aria-label="Core capabilities" data-i18n-aria="home.galleria.capabilitiesAria">
+        <ul class="story-band-list">
+          <li><span class="story-band-key" data-i18n="home.galleria.bandSpace">Space</span><span class="story-band-val" data-i18n="home.galleria.bandSpaceVal">Reverb engine</span></li>
+          <li><span class="story-band-key" data-i18n="home.galleria.bandDelay">Delay</span><span class="story-band-val" data-i18n="home.galleria.bandDelayVal">Hybrid, sync, ping-pong</span></li>
+          <li><span class="story-band-key" data-i18n="home.galleria.bandMotion">Motion</span><span class="story-band-val" data-i18n="home.galleria.bandMotionVal">3D orbit + drift</span></li>
+          <li><span class="story-band-key" data-i18n="home.galleria.bandTexture">Texture</span><span class="story-band-val" data-i18n="home.galleria.bandTextureVal">Chorus + diffusion</span></li>
+        </ul>
+      </div>
+
+      <section class="story-moment container" aria-labelledby="galleria-space-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.galleria.spaceIndex">Spatial engine</span></p>
+          <h3 id="galleria-space-title" class="story-moment-title" data-i18n="home.galleria.spaceTitle">Public space, sculpted tail.</h3>
+          <p class="story-moment-body" data-i18n="home.galleria.spaceBody">Classic and spatial reverb modes with independent early/late balance, density, and diffusion. Filter the space, freeze the tail, and push reflections into motion without losing clarity.</p>
+        </div>
+      </section>
+
+      <section class="story-moment container" aria-labelledby="galleria-motion-title">
+        <div class="story-moment-copy">
+          <p class="story-index"><span data-i18n="home.galleria.motionIndex">3D motion</span></p>
+          <h3 id="galleria-motion-title" class="story-moment-title" data-i18n="home.galleria.motionTitle">Place the source. Move the field.</h3>
+          <p class="story-moment-body" data-i18n="home.galleria.motionBody">Source X/Y/Z placement, orbit rate and depth, width, doppler, occlusion, and air  -  with a live spatial radar for performance-led positioning. Delay and space follow the same motion logic for cohesive immersion.</p>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="social-section" aria-labelledby="social-title">
+      <div class="container social-section-inner">
+        <h2 id="social-title" class="social-title" data-i18n="social.title">Follow us on social</h2>
+        <nav class="social-nav" aria-label="Social media" data-i18n-aria="social.navAria">
+          <a class="social-link" href="https://www.instagram.com/montronedsp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <picture>
+              <source srcset="assets/instagram-white-transparent.svg" type="image/svg+xml" />
+              <img class="social-icon" src="assets/instagram-white-transparent-256.png" alt="" width="64" height="64" loading="lazy" decoding="async" />
+            </picture>
+          </a>
+          <a class="social-link" href="https://soundcloud.com/montronedsp" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
+            <picture>
+              <source srcset="assets/soundcloud-white-transparent.svg" type="image/svg+xml" />
+              <img class="social-icon" src="assets/soundcloud-white-transparent-256.png" alt="" width="64" height="64" loading="lazy" decoding="async" />
+            </picture>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy" data-i18n="footer.copy">© {year} MontroneDSP. MontroneDSP is a registered trademark.</p>
+        <nav class="footer-nav" aria-label="Footer navigation" data-i18n-aria="footer.navAria">
+          <a href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="footer.store">Store</a>
+          <a href="dawless.html" data-i18n="footer.dawless">DAWLESS</a>
+          <a href="about.html" data-i18n="footer.about">About</a>
+          <a href="contact.html" data-i18n="footer.contact">Contact</a>
+          <a href="free.html" data-i18n="footer.free">Free</a>
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <div class="product-wheel" id="product-wheel" aria-hidden="true">
+    <button type="button" class="product-wheel-backdrop" aria-label="Close product switcher" tabindex="-1" data-i18n-aria="wheel.closeAria"></button>
+    <div class="product-wheel-stage" role="dialog" aria-modal="true" aria-label="Switch product" data-i18n-aria="wheel.switchAria">
+      <div class="product-wheel-ring" aria-hidden="true">
+          <svg class="product-wheel-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="product-wheel-svg-track" cx="120" cy="120" r="108" />
+            <circle class="product-wheel-svg-glow" cx="120" cy="120" r="92" />
+            <path class="product-wheel-svg-divider" d="M12 120 L228 120" />
+            <path class="product-wheel-svg-divider" d="M120 12 L120 228" />
+          </svg>
+          <div class="product-wheel-wedge product-wheel-wedge--martello" data-wheel-wedge="martello"></div>
+          <div class="product-wheel-wedge product-wheel-wedge--membrana" data-wheel-wedge="membrana"></div>
+          <div class="product-wheel-wedge product-wheel-wedge--aurashimmer" data-wheel-wedge="aurashimmer"></div>
+          <div class="product-wheel-wedge product-wheel-wedge--swara" data-wheel-wedge="swara"></div>
+          <div class="product-wheel-wedge product-wheel-wedge--laya" data-wheel-wedge="laya"></div>
+          <div class="product-wheel-wedge product-wheel-wedge--galleria" data-wheel-wedge="galleria" hidden></div>
+        </div>
+        <button type="button" class="product-wheel-segment" data-product="martello" data-product-control data-product-surface="wheel" data-wheel-label="Drum Synthesizer">
+          <span class="product-wheel-segment-name">Martello</span>
+          <span class="product-wheel-segment-type" data-i18n="products.martello.short">Drums</span>
+        </button>
+        <button type="button" class="product-wheel-segment" data-product="membrana" data-product-control data-product-surface="wheel" data-wheel-label="Multimodal Synth">
+          <span class="product-wheel-segment-name">Membrana</span>
+          <span class="product-wheel-segment-type" data-i18n="products.membrana.short">Multimodal</span>
+        </button>
+        <button type="button" class="product-wheel-segment is-active" data-product="aurashimmer" data-product-control data-product-surface="wheel" data-wheel-label="Reverb">
+          <span class="product-wheel-segment-name">Aura Shimmer</span>
+          <span class="product-wheel-segment-type" data-i18n="products.aurashimmer.short">Reverb</span>
+        </button>
+        <button type="button" class="product-wheel-segment" data-product="swara" data-product-control data-product-surface="wheel" data-wheel-label="Hybrid Monosynth">
+          <span class="product-wheel-segment-name">Swara XT</span>
+          <span class="product-wheel-segment-type" data-i18n="products.swara.short">Mono</span>
+        </button>
+        <button type="button" class="product-wheel-segment" data-product="laya" data-product-control data-product-surface="wheel" data-wheel-label="Performance Drum">
+          <span class="product-wheel-segment-name">Laya</span>
+          <span class="product-wheel-segment-type" data-i18n="products.laya.short">Drums</span>
+        </button>
+        <button type="button" class="product-wheel-segment product-wheel-segment--top" data-product="galleria" data-product-control data-product-surface="wheel" data-wheel-label="Environmental Processor" hidden>
+          <span class="product-wheel-segment-name">Galleria</span>
+          <span class="product-wheel-segment-type" data-i18n="products.galleria.short">Space</span>
+        </button>
+      <div class="product-wheel-hub" aria-live="polite">
+        <p class="product-wheel-hub-kicker" data-i18n="wheel.selected">Selected</p>
+        <p class="product-wheel-hub-name" data-wheel-hub-name>Aura Shimmer</p>
+        <p class="product-wheel-hub-type" data-wheel-hub-type>Reverb</p>
+      </div>
+      <p class="product-wheel-hint" data-i18n="wheel.hint">Tap a product to switch</p>
+    </div>
+  </div>
+
+  <button type="button" class="product-wheel-trigger" id="product-wheel-trigger" aria-expanded="false" aria-controls="product-wheel" aria-haspopup="dialog" aria-label="Open product switcher" data-i18n-aria="wheel.openAria">
+    <span class="product-wheel-trigger-core" aria-hidden="true"></span>
+    <span class="product-wheel-trigger-name" data-wheel-trigger-name>Aura Shimmer</span>
+    <span class="product-wheel-trigger-hint" data-i18n="wheel.switch">Switch</span>
+  </button>
+  <script src="i18n.js"></script>
+  <script src="product-selector.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

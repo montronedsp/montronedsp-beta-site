@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" data-i18n-page="free" data-product="site" class="page-free">
+<head>
+  <meta charset="utf-8" />
+  <script>if(!/Android/i.test(navigator.userAgent||'')&&(/Linux/i.test(navigator.platform||'')||/Linux/i.test(navigator.userAgent||'')))document.documentElement.classList.add('is-linux');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free tools | MontroneDSP</title>
+  <meta name="description" content="Free audio tools from MontroneDSP, including a batch sample-rate converter and MP3 encoder." />
+  <link rel="canonical" href="https://www.montronedsp.com/free.html" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MontroneDSP" />
+  <meta property="og:title" content="Free tools | MontroneDSP" />
+  <meta property="og:description" content="Free audio tools from MontroneDSP, including a batch sample-rate converter and MP3 encoder." />
+  <meta property="og:url" content="https://www.montronedsp.com/free.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Free tools | MontroneDSP" />
+  <meta name="twitter:description" content="Free audio tools from MontroneDSP, including a batch sample-rate converter and MP3 encoder." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0b0d" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="preload" href="assets/fonts/u001/u001-reg.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="assets/fonts/u001/u001-bol.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /*
+      Free tools page: scoped override.
+      The shared stylesheet themes everything through --accent / --hero-grid-* /
+      --border tokens per product. Rather than hand-color individual rules (which
+      drifts out of sync every time style.css changes), this just redefines those
+      tokens to grayscale for .free-tools-page, so every component that already
+      reads them (buttons, eyebrows, card borders, hero grid texture) goes
+      monochrome automatically. Tool blocks below are self-contained cards sized
+      around a natural-width header lockup and a fixed action footer.
+    */
+    html.page-free {
+      --font-src: var(--font-body);
+    }
+
+    /* Free tools page inherits [data-product="site"] tokens.
+       Dark overrides keep card backgrounds subtle. */
+    .free-tools-page {
+      --tool-block-pad: clamp(1.35rem, 2.8vw, 1.75rem);
+    }
+
+    .free-tools-page .free-tools-hero h1 {
+      font-family: var(--font-src);
+      font-weight: 500;
+      color: var(--text-strong);
+    }
+
+    .free-tools-page .free-tools-section {
+      display: grid;
+      gap: 1rem;
+      padding-bottom: 5rem;
+    }
+
+    .free-tools-page .tool-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: var(--surface);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .free-tools-page .tool-block--featured {
+      border-color: var(--border-strong);
+      background: var(--surface-raised);
+    }
+
+    .free-tools-page .tool-block-header {
+      padding: var(--tool-block-pad) var(--tool-block-pad) 0;
+    }
+
+    .free-tools-page .tool-block-lockup {
+      display: grid;
+      grid-template-columns: 56px 1px minmax(0, 1fr);
+      align-items: center;
+      column-gap: clamp(0.85rem, 2vw, 1.25rem);
+      min-height: 56px;
+    }
+
+    .free-tools-page .tool-block-mark {
+      width: 56px;
+      height: 56px;
+    }
+
+    .free-tools-page .tool-block-lockup-divider {
+      width: 1px;
+      height: 44px;
+      background: var(--border-strong);
+      justify-self: center;
+    }
+
+    .free-tools-page .tool-block-lockup-name {
+      margin: 0;
+      min-width: 0;
+      font-family: var(--font-src);
+      font-weight: 700;
+      font-size: clamp(1.35rem, 2.4vw, 1.875rem);
+      line-height: 1.05;
+      letter-spacing: 0.01em;
+      color: var(--text-strong);
+    }
+
+    .free-tools-page .tool-block-body {
+      display: grid;
+      gap: 0.85rem;
+      padding: 1.15rem var(--tool-block-pad) 1.35rem;
+      max-width: 58ch;
+    }
+
+    .free-tools-page .tool-block-body > p {
+      margin: 0;
+      color: var(--muted-strong);
+      line-height: 1.65;
+    }
+
+    .free-tools-page .tool-block--featured .tool-block-body > p,
+    .free-tools-page .tool-block--featured .tool-block-body .detail-list {
+      font-family: var(--font-src);
+      font-weight: 400;
+    }
+
+    .free-tools-page .tool-block-body .detail-list {
+      margin: 0.15rem 0 0;
+    }
+
+    .free-tools-page .tool-block-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+      padding: 0.95rem var(--tool-block-pad) 1.15rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface-soft);
+    }
+
+    .free-tools-page .tool-block--note {
+      background: var(--bg-deep);
+      box-shadow: none;
+    }
+
+    .free-tools-page .tool-block--note .tool-block-body {
+      padding-top: var(--tool-block-pad);
+      padding-bottom: var(--tool-block-pad);
+      max-width: none;
+    }
+
+    .free-tools-page .tool-block--note .tool-block-body h2 {
+      margin: 0;
+      font-family: var(--font-src);
+      font-weight: 500;
+      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+      line-height: 1.2;
+      color: var(--text-strong);
+    }
+
+    .free-tools-page .tool-block--note .tool-block-body > p {
+      font-family: var(--font-src);
+      font-weight: 400;
+    }
+
+    .free-tools-page .tool-block--note .tool-block-footer {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 720px) {
+      .free-tools-page .tool-block-lockup {
+        grid-template-columns: 48px 1px minmax(0, 1fr);
+        align-items: start;
+        min-height: 48px;
+      }
+
+      .free-tools-page .tool-block-mark {
+        width: 48px;
+        height: 48px;
+      }
+
+      .free-tools-page .tool-block-lockup-divider {
+        height: 32px;
+        margin-top: 0.9rem;
+      }
+
+      .free-tools-page .tool-block-lockup-name {
+        padding-top: 0.9rem;
+        font-size: clamp(1.05rem, 4.2vw, 1.35rem);
+        line-height: 1.1;
+      }
+
+      .free-tools-page .tool-block-footer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand brand-logo-stack" href="./" aria-label="MontroneDSP home" data-i18n-aria="nav.homeAria">
+          <picture class="brand-logo brand-logo-variant brand-logo--full" data-logo="martello"><img src="assets/branding/montrone_dsp_logo_header_martello.svg" alt="" width="190" height="29" style="image-rendering: -webkit-optimize-contrast;" /></picture>
+          <picture class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="martello"><img src="assets/branding/montrone_dsp_logo_header_martello_mobile.svg" alt="" width="120" height="19" aria-hidden="true" style="image-rendering: -webkit-optimize-contrast;" /></picture>
+          <img class="brand-logo brand-logo-variant brand-logo--mobile is-active" data-logo="aurashimmer" src="assets/branding/montrone_dsp_logo_header_aura_mobile.svg" alt="" width="120" height="19" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--full is-active" data-logo="aurashimmer" src="assets/branding/montrone_dsp_logo_header_aura.svg" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--full" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara.svg" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara_mobile.svg" alt="" width="120" height="19" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant" data-logo="membrana" src="assets/branding/montrone_dsp_logo_header_aura.svg" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="membrana" src="assets/branding/montrone_dsp_logo_header_aura_mobile.svg" alt="" width="120" height="19" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant" data-logo="galleria" src="assets/branding/montrone_dsp_logo_header_galleria.svg" alt="" width="168" height="28" aria-hidden="true" />
+          <span class="sr-only">MontroneDSP</span>
+        </a>
+        <div class="product-selector-group">
+          <span class="product-selector-label" aria-hidden="true" data-i18n="products.label">Products</span>
+          <div class="product-selector-desktop" data-product-selector-desktop>
+            <button type="button" class="product-selector-desktop-trigger" id="product-selector-desktop-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="product-selector-desktop-list" data-desktop-selector-trigger data-i18n-aria="products.desktopOpenAria">
+              <span class="product-selector-desktop-current">
+                <span class="product-selector-desktop-name" data-desktop-selector-name>Aura Shimmer</span>
+                <span class="product-selector-desktop-type" data-desktop-selector-type data-i18n="products.aurashimmer.type">Reverb</span>
+              </span>
+              <span class="product-selector-desktop-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="product-selector-desktop-panel" id="product-selector-desktop-list" role="listbox" aria-label="Choose product" data-i18n-aria="products.chooseAria" hidden>
+              <button type="button" class="product-selector-option" role="option" data-product="martello" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">Martello</span>
+                <span class="product-selector-option-type" data-i18n="products.martello.type">Drum Synthesizer</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="membrana" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">Membrana</span>
+                <span class="product-selector-option-type" data-i18n="products.membrana.type">Multimodal Synth</span>
+              </button>
+              <button type="button" class="product-selector-option is-active" role="option" aria-selected="true" data-product="aurashimmer" data-product-control data-product-surface="desktop">
+                <span class="product-selector-option-name">Aura Shimmer</span>
+                <span class="product-selector-option-type" data-i18n="products.aurashimmer.type">Reverb</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="swara" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">Swara XT</span>
+                <span class="product-selector-option-type" data-i18n="products.swara.type">Hybrid Monosynth</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="laya" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">Laya</span>
+                <span class="product-selector-option-type" data-i18n="products.laya.type">Performance Drum</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="galleria" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
+                <span class="product-selector-option-name">Galleria</span>
+                <span class="product-selector-option-type" data-i18n="products.galleria.type">Environmental Processor</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria">
+          <a class="nav-link" href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a class="nav-link" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.store">Store</a>
+          <a class="nav-link" href="free.html" aria-current="page" data-i18n="nav.free">Free</a>
+          <label class="site-lang">
+            <span class="sr-only" data-i18n="lang.label">Language</span>
+            <select class="site-lang-select" aria-label="Language" data-i18n-aria="lang.aria"></select>
+          </label>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main free-tools-page">
+      <section class="hero free-tools-hero" aria-labelledby="free-tools-title">
+        <div class="container">
+          <div class="hero-copy">
+            <p class="story-index"><span data-i18n="free.eyebrowFree">Free</span><span data-i18n="free.eyebrowTools">Tools</span></p>
+            <h1 id="free-tools-title" data-i18n="free.title">Simple free utilities for audio work.</h1>
+            <p class="hero-lead" data-i18n="free.lead">A small set of practical tools designed to fit into everyday production and mastering workflows.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container free-tools-section" aria-label="Free tools" data-i18n-aria="free.sectionAria">
+        <article class="tool-block tool-block--featured">
+          <header class="tool-block-header">
+            <div class="tool-block-lockup">
+              <img class="tool-block-mark" src="assets/branding/src-icon.svg" alt="" width="56" height="56" decoding="async" aria-hidden="true" />
+              <span class="tool-block-lockup-divider" aria-hidden="true"></span>
+              <p class="tool-block-lockup-name" data-i18n="free.toolName">Batch Sample Rate Converter</p>
+            </div>
+          </header>
+          <div class="tool-block-body">
+            <p data-i18n="free.toolBody">Convert whole folders of audio files to a chosen sample rate, export MP3 versions, and keep the process straightforward for production, archive, and delivery work.</p>
+            <ul class="detail-list">
+              <li data-i18n="free.toolLi1">Batch conversion for folders of files</li>
+              <li data-i18n="free.toolLi2">Sample-rate conversion with consistent output</li>
+              <li data-i18n="free.toolLi3">MP3 encoding for sharing and delivery</li>
+              <li data-i18n="free.toolLi4">Simple workflow for everyday audio tasks</li>
+            </ul>
+          </div>
+          <footer class="tool-block-footer">
+            <a class="btn btn-secondary" href="contact.html" data-i18n="free.requestAccess">Request access</a>
+          </footer>
+        </article>
+
+        <article class="tool-block tool-block--note">
+          <div class="tool-block-body">
+            <h2 data-i18n="free.ideasTitle">Share ideas and requests</h2>
+            <p data-i18n="free.ideasBody">If you have a small audio utility you would like to see here, reach out and we can shape the next release around it.</p>
+          </div>
+          <footer class="tool-block-footer">
+            <a class="btn btn-primary" href="contact.html" data-i18n="common.contactUs">Contact us</a>
+          </footer>
+        </article>
+      </section>
+    </main>
+
+    <section class="social-section" aria-labelledby="social-title">
+      <div class="container social-section-inner">
+        <h2 id="social-title" class="social-title" data-i18n="social.title">Follow us on social</h2>
+        <nav class="social-nav" aria-label="Social media" data-i18n-aria="social.navAria">
+          <a class="social-link" href="https://www.instagram.com/montronedsp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <picture>
+              <source srcset="assets/instagram-white-transparent.svg" type="image/svg+xml" />
+              <img class="social-icon" src="assets/instagram-white-transparent-256.png" alt="" width="64" height="64" loading="lazy" decoding="async" />
+            </picture>
+          </a>
+          <a class="social-link" href="https://soundcloud.com/montronedsp" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
+            <picture>
+              <source srcset="assets/soundcloud-white-transparent.svg" type="image/svg+xml" />
+              <img class="social-icon" src="assets/soundcloud-white-transparent-256.png" alt="" width="64" height="64" loading="lazy" decoding="async" />
+            </picture>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy" data-i18n="footer.copy">© {year} MontroneDSP. MontroneDSP is a registered trademark.</p>
+        <nav class="footer-nav" aria-label="Footer navigation" data-i18n-aria="footer.navAria">
+          <a href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="footer.store">Store</a>
+          <a href="dawless.html" data-i18n="footer.dawless">DAWLESS</a>
+          <a href="about.html" data-i18n="footer.about">About</a>
+          <a href="contact.html" data-i18n="footer.contact">Contact</a>
+          <a href="free.html" data-i18n="footer.free">Free</a>
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="product-selector.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

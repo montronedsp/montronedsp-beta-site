@@ -1,0 +1,93 @@
+# Deploy static site via GitHub Actions (Node 24 action runtime).
+# Repo Settings > Pages > Build and deployment > Source must be "GitHub Actions".
+name: Deploy and verify Pages
+
+on:
+  push:
+    branches: [website, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Serialize Pages deployments
+        uses: softprops/turnstyle@v3
+        with:
+          poll-interval-seconds: 10
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Validate site assets
+        run: |
+          set -euo pipefail
+          node scripts/validate-site.mjs
+          test -f index.html
+          test -f CNAME
+          test -f assets/SwaraXT-Linux-x86_64-v1.2.0.tar.gz
+          python3 - <<'PY'
+          import hashlib
+          from pathlib import Path
+          linux = Path("assets/SwaraXT-Linux-x86_64-v1.2.0.tar.gz")
+          expected = "7b70c61e46e163b8992f1ee43782835f8715d2e02c35db193a8996785fc1974b"
+          digest = hashlib.sha256(linux.read_bytes()).hexdigest()
+          if digest != expected:
+              raise SystemExit(f"Swara XT Linux checksum mismatch: {digest}")
+          print(f"Swara XT Linux checksum ok: {digest}")
+          PY
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Prepare Pages artifact
+        run: |
+          set -euo pipefail
+          mkdir -p pages-site
+          rsync -a \
+            --exclude '.git/' \
+            --exclude 'assets/downloads/' \
+            ./ pages-site/
+          printf '%s\n' "$GITHUB_SHA" > pages-site/deploy-sha.txt
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: pages-site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+        with:
+          timeout: 900000
+          error_count: 15
+          reporting_interval: 10000
+
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Confirm live site serves this commit
+        env:
+          LIVE_SITE_URL: https://www.montronedsp.com
+          EXPECTED_SHA: ${{ github.sha }}
+        run: bash scripts/verify-live-pages.sh

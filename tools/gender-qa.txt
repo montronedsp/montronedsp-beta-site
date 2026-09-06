@@ -1,0 +1,8 @@
+it: Provalo prima di acquistarlo. | intro: Nato per il groove.
+es: Pruébalo antes de comprarlo. | intro: Nacido para el groove.
+fr: Essayez-le avant de l'acheter. | intro: Conçu pour le groove.
+de: Teste ihn, bevor du kaufst. | intro: Für den Groove gebaut.
+ru: Сначала попробуйте его. | intro: Под грув.
+uk: Спочатку спробуйте його. | intro: Під грув.
+fr ideas: Un petit utilitaire audio vous manque ici ? Écrivez-nous — on peut en tenir compte pour la suite.
+bad leftovers: none

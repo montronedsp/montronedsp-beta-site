@@ -1,0 +1,27 @@
+# MontroneDSP
+
+MontroneDSP is an independent audio software brand focused on drum synthesis and creative DSP tools for electronic music production.
+
+## Public website
+https://www.montronedsp.com/
+
+## Store
+https://store.montronedsp.com/
+
+## Products currently promoted on the website
+- Martello  -  a three-voice synthesized drum instrument (VST3)
+- MartelloX2  -  a dual-engine Martello instrument with six voices and multi-output routing (VST3)
+- Martello + MartelloX2 bundle  -  sold through the MontroneDSP store
+
+## Plugin formats listed on the website
+- macOS VST3/AU
+- Windows VST3
+- Linux VST3
+
+## Social
+- Instagram: https://www.instagram.com/montronedsp/
+- SoundCloud: https://soundcloud.com/montronedsp
+
+## Notes for crawlers
+- The public homepage is the primary indexable product landing page.
+- Privacy pages are not intended for search indexing.

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 64" width="60" height="64">
+  <defs>
+    <linearGradient id="markGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2f2f2"/>
+      <stop offset="1" stop-color="#b8b8b8"/>
+    </linearGradient>
+    <clipPath id="markClip">
+      <rect x="0" y="4" width="56" height="56" rx="8"/>
+    </clipPath>
+    <style>
+      .mark-letter {
+        font-family: 'Futura', 'Century Gothic', 'Avenir Next', sans-serif;
+        font-style: italic;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+
+  <!-- compact square, mini marionette icon: strings, joints, wilder tilted letters -->
+  <rect x="0" y="4" width="56" height="56" rx="8" fill="none" stroke="#444" stroke-width="1"/>
+
+  <g clip-path="url(#markClip)">
+    <!-- thin strings, muted, dropping from the top edge at sharper angles -->
+    <line x1="10" y1="4" x2="4" y2="20" stroke="#888" stroke-width=".5" opacity=".5"/>
+    <line x1="26" y1="4" x2="33" y2="10" stroke="#888" stroke-width=".5" opacity=".5"/>
+    <line x1="46" y1="4" x2="39" y2="24" stroke="#888" stroke-width=".5" opacity=".5"/>
+    <line x1="2" y1="4" x2="54" y2="4" stroke="#888" stroke-width=".5" opacity=".3"/>
+
+    <!-- flat letters, bigger swings, uneven baselines, slight overlap for tension -->
+    <g fill="url(#markGrad)">
+      <text class="mark-letter" x="4" y="46" font-size="26" transform="rotate(-16 4 46)">S</text>
+      <text class="mark-letter" x="18" y="30" font-size="26" transform="rotate(11 18 30)">R</text>
+      <text class="mark-letter" x="34" y="50" font-size="26" transform="rotate(-13 34 50)">C</text>
+    </g>
+
+    <!-- joint dots -->
+    <circle cx="4" cy="20" r="1" fill="#888"/>
+    <circle cx="33" cy="10" r="1" fill="#888"/>
+    <circle cx="39" cy="24" r="1" fill="#888"/>
+  </g>
+</svg>
