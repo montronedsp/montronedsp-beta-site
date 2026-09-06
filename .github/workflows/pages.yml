@@ -44,7 +44,7 @@ jobs:
           import hashlib
           from pathlib import Path
           linux = Path("assets/SwaraXT-Linux-x86_64-v1.2.0.tar.gz")
-          expected = "7b70c61e46e163b8992f1ee43782835f8715d2e02c35db193a8996785fc1974b"
+          expected = "aba1a4d90dff3f9f2cd48f6643b623e559500da9297ab3604de7e5110621c820"
           digest = hashlib.sha256(linux.read_bytes()).hexdigest()
           if digest != expected:
               raise SystemExit(f"Swara XT Linux checksum mismatch: {digest}")

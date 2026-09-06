@@ -274,7 +274,7 @@
       "specStore": "Official builds · Store",
       "specLicense": "Open source · GPLv3",
       "sha256Label": "SHA-256",
-      "linuxSha256": "7b70c61e46e163b8992f1ee43782835f8715d2e02c35db193a8996785fc1974b",
+      "linuxSha256": "aba1a4d90dff3f9f2cd48f6643b623e559500da9297ab3604de7e5110621c820",
       "machinesIndex": "System",
       "machinesTitle": "A substantial real-time engine.",
       "machinesBody": "SWARA XT can be CPU intensive with complex patches or multiple instances. Filter Quality modes (since 1.1.0) add High, Normal, and Eco from the right-click menu so you can trade CPU for the same filter character when needed. Minimum is a modern 64-bit VST3 host, 8 GB RAM, 200 MB disk, and Intel Core i7 / AMD Ryzen 5 or equivalent. On Mac, Intel Core i7 or Apple Silicon with comparable multicore performance. On Linux, x86_64.",
