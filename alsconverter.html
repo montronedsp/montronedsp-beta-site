@@ -5,9 +5,8 @@
   <script>if(!/Android/i.test(navigator.userAgent||'')&&(/Linux/i.test(navigator.platform||'')||/Linux/i.test(navigator.userAgent||'')))document.documentElement.classList.add('is-linux');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ALS Converter | MontroneDSP</title>
-  <meta name="description" content="Ableton Live Set downgrader. Convert Live 12 Sets for older Live 11 builds in your browser." />
-  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
-  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+  <meta name="description" content="Ableton Live Set downgrader. Convert Live 12 Sets for older Live 11 builds in your browser. Open source MIT." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.montronedsp.com/alsconverter.html" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -186,6 +185,33 @@
       max-width: 62ch;
     }
 
+    .als-license-accept {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 0.35rem 0 0;
+      max-width: 48rem;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--muted-strong);
+      cursor: pointer;
+    }
+
+    .als-license-accept-input {
+      margin-top: 0.2em;
+      flex-shrink: 0;
+      width: 1rem;
+      height: 1rem;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .als-license-accept-copy a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+
     @media (max-width: 720px) {
       .als-actions {
         flex-direction: column;
@@ -232,7 +258,7 @@
             <h2 class="als-card-title">Downgrade Set</h2>
           </header>
           <div class="als-card-body">
-            <p>Drop an <code>.als</code> file here. The tool inspects version metadata, applies evidence-based Live 12 → 11 transforms when needed, and downloads a new file such as <code>Session_Live11_downgraded.als</code>.</p>
+            <p>Drop an <code>.als</code> file here. The tool analyzes version metadata, applies evidence-based Live 12 → 11 transforms when needed, and downloads a new file such as <code>Session_Live11_downgraded.als</code>.</p>
             <div class="als-drop" data-als-drop tabindex="0" role="button" aria-label="Drop Ableton Live Set here">
               <p class="als-drop-title">Drop .als here</p>
               <p class="als-drop-hint">or browse from disk</p>
@@ -267,7 +293,7 @@
             </ul>
           </div>
           <footer class="als-actions">
-            <button type="button" class="btn btn-secondary" data-als-inspect>Inspect</button>
+            <button type="button" class="btn btn-secondary" data-als-analyze>Analyze</button>
             <button type="button" class="btn btn-primary" data-als-convert>Downgrade to Live 11</button>
           </footer>
         </article>
@@ -290,7 +316,30 @@
             <p>Original Sets are never overwritten. The tool only creates a new downgraded copy for download.</p>
             <p>This tool is <strong>open source</strong> (MIT). Source code:</p>
             <p><a href="https://github.com/montronedsp/alsconverter" target="_blank" rel="noopener noreferrer">https://github.com/montronedsp/alsconverter</a></p>
+            <p><strong>No guarantee.</strong> Provided as-is, without warranty of any kind. Converted Sets may fail to open, lose features, or behave unexpectedly. Always keep backups. Not affiliated with Ableton AG.</p>
           </div>
+        </article>
+
+        <article class="als-card" id="windows-download">
+          <header class="als-card-header">
+            <h2 class="als-card-title">Windows app</h2>
+          </header>
+          <div class="als-card-body">
+            <p>Portable Windows x64 build of the same open-source converter. Runs fully offline. Accept the MIT License to unlock the download.</p>
+            <ul class="als-list">
+              <li>No installer — unzip and run <code>ALSConverter.exe</code></li>
+              <li>No data collection / no cloud upload</li>
+              <li>NO WARRANTY — experimental tool, use at your own risk</li>
+            </ul>
+            <label class="als-license-accept">
+              <input type="checkbox" class="als-license-accept-input" data-als-license-accept />
+              <span class="als-license-accept-copy">I have read and accept the <a href="https://github.com/montronedsp/alsconverter/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>. I understand there is <strong>no guarantee</strong> the conversion will work for every Set or Live version.</span>
+            </label>
+          </div>
+          <footer class="als-actions">
+            <a class="btn btn-primary btn-disabled" href="https://github.com/montronedsp/alsconverter/releases/download/v0.1.0/ALSConverter-Windows-x64-v0.1.0.zip" data-als-windows-download aria-disabled="true" tabindex="-1">Download Windows app</a>
+            <a class="btn btn-secondary" href="https://github.com/montronedsp/alsconverter" target="_blank" rel="noopener noreferrer">Source on GitHub</a>
+          </footer>
         </article>
       </section>
     </main>
@@ -300,6 +349,8 @@
         <p class="footer-copy">© <span data-year></span> MontroneDSP. MontroneDSP is a registered trademark.</p>
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="./">Home</a>
+          <a href="free.html">Free</a>
+          <a href="alsconverter.html" aria-current="page">ALS Converter</a>
           <a href="privacy.html">Privacy</a>
         </nav>
       </div>

@@ -5,7 +5,7 @@
     browse: document.querySelector("[data-als-browse]"),
     target: document.querySelector("[data-als-target]"),
     mode: document.querySelector("[data-als-mode]"),
-    inspectBtn: document.querySelector("[data-als-inspect]"),
+    analyzeBtn: document.querySelector("[data-als-analyze]"),
     convertBtn: document.querySelector("[data-als-convert]"),
     report: document.querySelector("[data-als-report]"),
     meta: document.querySelector("[data-als-meta]"),
@@ -29,7 +29,7 @@
   }
 
   function setBusy(busy) {
-    [els.inspectBtn, els.convertBtn, els.browse, els.mode, els.target].forEach((el) => {
+    [els.analyzeBtn, els.convertBtn, els.browse, els.mode, els.target].forEach((el) => {
       if (el) el.disabled = busy;
     });
   }
@@ -46,7 +46,7 @@
     }
     selectedFile = file;
     setMeta(file);
-    setReport("Ready. Inspect or Downgrade — the source file on disk stays untouched.");
+    setReport("Ready. Analyze or Downgrade — the source file on disk stays untouched.");
   }
 
   async function readFileBytes(file) {
@@ -59,7 +59,6 @@
       "Outcome: " + (report.outcome || "OK"),
       outName ? "Downloaded: " + outName : "",
       "ORIGINAL FILE IS NEVER MODIFIED",
-      "Real Ableton Live opening test: NOT YET VERIFIED",
       "",
       "Source Creator: " + (report.source_creator || ""),
       "Target: Live " + (report.target_label || "11"),
@@ -89,10 +88,12 @@
       lines.push("Reason:");
       lines.push(report.reason);
     }
+    lines.push("");
+    lines.push("NO GUARANTEE — experimental conversion; verify in your Live version.");
     return lines.join("\n");
   }
 
-  async function onInspect() {
+  async function onAnalyze() {
     if (!selectedFile) {
       setReport("Choose an .als file first.");
       return;
@@ -102,17 +103,17 @@
       return;
     }
     setBusy(true);
-    setReport("Inspecting…");
+    setReport("Analyzing…");
     try {
       const bytes = await readFileBytes(selectedFile);
       const data = await window.AlsConverterEngine.inspectAls(bytes, selectedFile.name);
       if (!data.ok) {
-        setReport("Inspect failed: " + (data.error || "unknown error"));
+        setReport("Analyze failed: " + (data.error || "unknown error"));
         return;
       }
       setReport(data.report_text || JSON.stringify(data, null, 2));
     } catch (err) {
-      setReport("Inspect error: " + (err.message || err));
+      setReport("Analyze error: " + (err.message || err));
     } finally {
       setBusy(false);
     }
@@ -206,12 +207,75 @@
         pickFile(f);
       });
 
-    els.inspectBtn && els.inspectBtn.addEventListener("click", onInspect);
+    els.analyzeBtn && els.analyzeBtn.addEventListener("click", onAnalyze);
     els.convertBtn && els.convertBtn.addEventListener("click", onConvert);
+  }
+
+  function initMitDownloadGate() {
+    const STORAGE_KEY = "montronedsp.als.mit.accepted";
+    const checkboxes = Array.from(document.querySelectorAll("[data-als-license-accept]"));
+    const downloads = Array.from(document.querySelectorAll("[data-als-windows-download]"));
+    if (!checkboxes.length || !downloads.length) return;
+
+    function setEnabled(enabled) {
+      downloads.forEach(function (link) {
+        if (enabled) {
+          link.classList.remove("btn-disabled");
+          link.removeAttribute("aria-disabled");
+          link.removeAttribute("tabindex");
+        } else {
+          link.classList.add("btn-disabled");
+          link.setAttribute("aria-disabled", "true");
+          link.setAttribute("tabindex", "-1");
+        }
+      });
+    }
+
+    function sync(source) {
+      const accepted = checkboxes.some(function (cb) {
+        return cb.checked;
+      });
+      setEnabled(accepted);
+      checkboxes.forEach(function (cb) {
+        if (cb !== source) cb.checked = accepted;
+      });
+      try {
+        if (accepted) sessionStorage.setItem(STORAGE_KEY, "1");
+        else sessionStorage.removeItem(STORAGE_KEY);
+      } catch (_) {}
+    }
+
+    let restored = false;
+    try {
+      restored = sessionStorage.getItem(STORAGE_KEY) === "1";
+    } catch (_) {}
+    if (restored) {
+      checkboxes.forEach(function (cb) {
+        cb.checked = true;
+      });
+      setEnabled(true);
+    } else {
+      setEnabled(false);
+    }
+
+    checkboxes.forEach(function (cb) {
+      cb.addEventListener("change", function () {
+        sync(cb);
+      });
+    });
+
+    downloads.forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        if (link.classList.contains("btn-disabled") || link.getAttribute("aria-disabled") === "true") {
+          e.preventDefault();
+        }
+      });
+    });
   }
 
   wireUi();
   setMeta(null);
+  initMitDownloadGate();
   if (!engineReady()) {
     setReport("Converter engine failed to load. Refresh the page.");
   }

@@ -206,6 +206,64 @@
   });
 })();
 
+(function initAlsMitLicenseAcceptance() {
+  const STORAGE_KEY = 'montronedsp.als.mit.accepted';
+  const checkboxes = Array.from(document.querySelectorAll('[data-als-license-accept]'));
+  const downloads = Array.from(document.querySelectorAll('[data-als-windows-download]'));
+  if (!checkboxes.length || !downloads.length) return;
+
+  function setEnabled(enabled) {
+    downloads.forEach(function (link) {
+      if (enabled) {
+        link.classList.remove('btn-disabled');
+        link.removeAttribute('aria-disabled');
+        link.removeAttribute('tabindex');
+      } else {
+        link.classList.add('btn-disabled');
+        link.setAttribute('aria-disabled', 'true');
+        link.setAttribute('tabindex', '-1');
+      }
+    });
+  }
+
+  function syncFromCheckboxes(source) {
+    const accepted = checkboxes.some(function (cb) { return cb.checked; });
+    setEnabled(accepted);
+    checkboxes.forEach(function (cb) {
+      if (cb !== source) cb.checked = accepted;
+    });
+    try {
+      if (accepted) sessionStorage.setItem(STORAGE_KEY, '1');
+      else sessionStorage.removeItem(STORAGE_KEY);
+    } catch (_) {}
+  }
+
+  let restored = false;
+  try {
+    restored = sessionStorage.getItem(STORAGE_KEY) === '1';
+  } catch (_) {}
+  if (restored) {
+    checkboxes.forEach(function (cb) { cb.checked = true; });
+    setEnabled(true);
+  } else {
+    setEnabled(false);
+  }
+
+  checkboxes.forEach(function (cb) {
+    cb.addEventListener('change', function () {
+      syncFromCheckboxes(cb);
+    });
+  });
+
+  downloads.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      if (link.classList.contains('btn-disabled') || link.getAttribute('aria-disabled') === 'true') {
+        e.preventDefault();
+      }
+    });
+  });
+})();
+
 (function initSwaraLicensePage() {
   if (document.documentElement.getAttribute('data-i18n-page') !== 'swaraLicense') return;
   const blocks = document.querySelectorAll('[data-license-src]');
