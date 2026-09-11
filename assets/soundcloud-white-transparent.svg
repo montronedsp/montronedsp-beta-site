@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SoundCloud icon">
+  <title>SoundCloud</title>
+  <g fill="#FFFFFF">
+    <rect x="8" y="34" width="3" height="13" rx="1.5"/>
+    <rect x="13" y="30" width="3" height="17" rx="1.5"/>
+    <rect x="18" y="27" width="3" height="20" rx="1.5"/>
+    <rect x="23" y="24" width="3" height="23" rx="1.5"/>
+    <rect x="28" y="21" width="3" height="26" rx="1.5"/>
+    <path d="M33 47H51.2C57.1 47 62 42.2 62 36.3C62 30.7 57.7 26 52.2 25.6C50.2 18.8 43.9 14 36.7 14C35.4 14 34.2 14.1 33 14.4V47Z"/>
+  </g>
+</svg>
