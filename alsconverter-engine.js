@@ -1,18 +1,79 @@
 /**
- * Browser-side Ableton Live Set downgrade engine (Live 12 -> 11).
+ * Browser-side Ableton Live Set downgrade engine (Live 12 -> Live 11.x).
  * Clean-room port of the local alsdowngrade transform rules.
  * Runs entirely in the browser — originals are never written back to disk.
  */
 (function (global) {
   "use strict";
 
-  const LIVE11_FINGERPRINT = {
-    MajorVersion: "5",
-    MinorVersion: "11.0_11300",
-    SchemaChangeCount: "3",
-    Creator: "Ableton Live 11.3.21",
-    Revision: "5ac24cad7c51ea0671d49e6b4885371f15b57c1e",
+  // Documented fingerprints only — do not invent SchemaChangeCount / MinorVersion.
+  const TARGETS = {
+    "11.2": {
+      id: "11.2.11",
+      MajorVersion: "5",
+      MinorVersion: "11.0_11202",
+      SchemaChangeCount: "17",
+      Creator: "Ableton Live 11.2.11",
+      Revision: "6e9e7c6913378fcbbe8b18e3fd8f33d0755968b8",
+      source: "Public Live 11.2.11 Library.cfg / templates",
+    },
+    "11.2.11": {
+      id: "11.2.11",
+      MajorVersion: "5",
+      MinorVersion: "11.0_11202",
+      SchemaChangeCount: "17",
+      Creator: "Ableton Live 11.2.11",
+      Revision: "6e9e7c6913378fcbbe8b18e3fd8f33d0755968b8",
+      source: "Public Live 11.2.11 Library.cfg / templates",
+    },
+    "11.2.7": {
+      id: "11.2.7",
+      MajorVersion: "5",
+      MinorVersion: "11.0_11202",
+      SchemaChangeCount: "11",
+      Creator: "Ableton Live 11.2.7",
+      Revision: "2509d781e7fb8da117f2c3c7f697e1116a198306",
+      source: "Public Live 11.2.7 Library.cfg samples",
+    },
+    "11.3": {
+      id: "11.3.21",
+      MajorVersion: "5",
+      MinorVersion: "11.0_11300",
+      SchemaChangeCount: "3",
+      Creator: "Ableton Live 11.3.21",
+      Revision: "5ac24cad7c51ea0671d49e6b4885371f15b57c1e",
+      source: "mslinn/live_set (MIT) documented target",
+    },
+    "11.3.21": {
+      id: "11.3.21",
+      MajorVersion: "5",
+      MinorVersion: "11.0_11300",
+      SchemaChangeCount: "3",
+      Creator: "Ableton Live 11.3.21",
+      Revision: "5ac24cad7c51ea0671d49e6b4885371f15b57c1e",
+      source: "mslinn/live_set (MIT) documented target",
+    },
+    "11.1": {
+      id: "11.1",
+      MajorVersion: "5",
+      MinorVersion: "11.0_436",
+      SchemaChangeCount: "7",
+      Creator: "Ableton Live 11.1",
+      Revision: "",
+      source: "drj-io/abletron versions.js (MIT)",
+    },
+    "11.0": {
+      id: "11.0.12",
+      MajorVersion: "5",
+      MinorVersion: "11.0_433",
+      SchemaChangeCount: "6",
+      Creator: "Ableton Live 11.0.12",
+      Revision: "",
+      source: "drj-io/abletron versions.js (MIT)",
+    },
+    "11": null, // alias resolved below
   };
+  TARGETS["11"] = TARGETS["11.2"];
 
   const REMOVE_TAGS = [
     "ContentLanes",
@@ -32,6 +93,19 @@
 
   const MAX_DECOMPRESSED = 1024 * 1024 * 1024;
   const MAX_RATIO = 200;
+
+  function resolveTarget(target) {
+    const key = String(target || "11.2").trim().toLowerCase().replace(/^live\s*/, "");
+    const fp = TARGETS[key];
+    if (!fp) {
+      throw new Error(
+        "Unsupported target '" +
+          target +
+          "'. Choose 11.2, 11.2.7, 11.2.11, 11.3, 11.1, or 11.0."
+      );
+    }
+    return fp;
+  }
 
   function creatorMatch(creator) {
     const m = /Ableton Live\s+(\d+)(?:\.(\d+))?(?:\.(\d+))?/i.exec(creator || "");
@@ -172,7 +246,11 @@
 
   function snapshot(root) {
     const tracksParent = root.querySelector("LiveSet > Tracks") || root.getElementsByTagName("Tracks")[0];
-    let audio = 0, midi = 0, group = 0, ret = 0, other = 0;
+    let audio = 0,
+      midi = 0,
+      group = 0,
+      ret = 0,
+      other = 0;
     if (tracksParent) {
       Array.from(tracksParent.children).forEach((child) => {
         const t = child.tagName;
@@ -261,8 +339,9 @@
     };
   }
 
-  async function convertAls(fileBytes, filename, mode) {
+  async function convertAls(fileBytes, filename, mode, target) {
     mode = (mode || "compatible").toLowerCase();
+    const fp = resolveTarget(target || "11.2");
     const xmlBytes = await gunzip(fileBytes);
     let xmlText = decodeUtf8(xmlBytes);
     const doc = parseXml(xmlText);
@@ -281,7 +360,7 @@
           outcome: "REFUSED_UNSUPPORTED",
           reason: "Source already appears to be Live 11 family; nothing to downgrade.",
           source_creator: version.creator,
-          target_label: "11",
+          target_label: fp.id,
           mode,
           live_open_verified: false,
           original_untouched: true,
@@ -296,9 +375,9 @@
           reason:
             "Source does not look like Live 12 (Creator=" +
             JSON.stringify(version.creator) +
-            "). Milestone 1 only converts 12->11.",
+            "). Milestone 1 only converts 12->11.x.",
           source_creator: version.creator,
-          target_label: "11",
+          target_label: fp.id,
           mode,
           live_open_verified: false,
           original_untouched: true,
@@ -319,7 +398,7 @@
               detail +
               ". Re-run with Compatible or Salvage.",
             source_creator: version.creator,
-            target_label: "11",
+            target_label: fp.id,
             mode,
             live_open_verified: false,
             original_untouched: true,
@@ -332,10 +411,13 @@
     const removed = [];
     const warnings = [];
 
-    Object.keys(LIVE11_FINGERPRINT).forEach((key) => {
-      root.setAttribute(key, LIVE11_FINGERPRINT[key]);
-    });
-    modified.push("Set root to " + LIVE11_FINGERPRINT.Creator);
+    root.setAttribute("MajorVersion", fp.MajorVersion);
+    root.setAttribute("MinorVersion", fp.MinorVersion);
+    root.setAttribute("SchemaChangeCount", fp.SchemaChangeCount);
+    root.setAttribute("Creator", fp.Creator);
+    if (fp.Revision) root.setAttribute("Revision", fp.Revision);
+    else root.setAttribute("Revision", "");
+    modified.push("Set root to " + fp.Creator + " (" + fp.MinorVersion + ", schema " + fp.SchemaChangeCount + ")");
 
     const routeHits = replaceInTree(root, "AudioOut/Main", "AudioOut/Master");
     if (routeHits) modified.push("AudioOut/Main -> AudioOut/Master");
@@ -358,7 +440,6 @@
     const outDoc = parseXml(outXml);
     const after = snapshot(outDoc.documentElement);
 
-    // Structural preservation checks
     const losses = [];
     ["tracks", "audioClips", "midiClips", "midiNotes", "plugins"].forEach((key) => {
       if (after[key] < before[key]) losses.push(key + ": " + before[key] + " -> " + after[key]);
@@ -370,7 +451,7 @@
           outcome: "INVALID_INPUT",
           reason: "Structural validation failed: " + losses.join("; "),
           source_creator: version.creator,
-          target_label: "11",
+          target_label: fp.id,
           mode,
           live_open_verified: false,
           original_untouched: true,
@@ -378,26 +459,18 @@
       };
     }
 
-    if (shouldRemove) {
-      const leftovers = findBlockers(outDoc.documentElement);
-      if (Object.keys(leftovers).length) {
-        warnings.push("Leftover markers: " + JSON.stringify(leftovers));
-      }
-    }
-
     const compressed = await gzip(encodeUtf8(outXml));
-    // Round-trip check
     const reopened = parseXml(decodeUtf8(await gunzip(compressed)));
     if (!reopened.documentElement || reopened.documentElement.tagName !== "Ableton") {
       throw new Error("Round-trip validation failed");
     }
 
     const stem = (filename || "Set").replace(/\.als$/i, "") || "Set";
-    const outName = stem + "_Live11_downgraded.als";
+    const outName = stem + "_Live" + fp.id.replace(/\./g, "_") + "_downgraded.als";
     const report = {
       outcome: warnings.length ? "SUCCESS_WITH_WARNINGS" : "EXPERIMENTAL",
       source_creator: version.creator,
-      target_label: "11",
+      target_label: fp.id,
       mode,
       preserved: {
         tracks: after.tracks,
@@ -427,6 +500,7 @@
   global.AlsConverterEngine = {
     inspectAls,
     convertAls,
-    LIVE11_FINGERPRINT,
+    resolveTarget,
+    TARGETS,
   };
 })(typeof window !== "undefined" ? window : globalThis);

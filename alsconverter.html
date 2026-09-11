@@ -252,7 +252,7 @@
           <div class="hero-copy">
             <p class="story-index"><span>Tools</span><span>ALS Converter</span></p>
             <h1 id="als-title">Ableton Live Set Downgrader</h1>
-            <p class="hero-lead">Create a new Live 11-targeted copy of a Live 12 Set. Experimental schema-aware conversion — not a Creator-string hack.</p>
+            <p class="hero-lead">Create a new Live 11.x-targeted copy of a Live 12 Set. Choose the exact Live 11 point release you run — 11.3 metadata will not open in 11.2.</p>
           </div>
         </div>
       </section>
@@ -281,16 +281,20 @@
                 </select>
               </div>
               <div class="als-field">
-                <label for="als-target">Target</label>
-                <select id="als-target" disabled>
-                  <option value="11" selected>Live 11 (experimental)</option>
+                <label for="als-target">Target Live build</label>
+                <select id="als-target" data-als-target>
+                  <option value="11.2" selected>Live 11.2.11 (recommended for 11.2.x)</option>
+                  <option value="11.2.7">Live 11.2.7 (older 11.2)</option>
+                  <option value="11.3">Live 11.3.21</option>
+                  <option value="11.1">Live 11.1</option>
+                  <option value="11.0">Live 11.0.12</option>
                 </select>
               </div>
             </div>
             <ul class="als-list">
+              <li>Pick the Live 11 point release you actually run (11.3 Sets will not open in 11.2).</li>
               <li>Default output is a new download — source project stays read-only.</li>
-              <li>Static XML validation ≠ confirmed open in Ableton Live 11.</li>
-              <li>Same-major Live 12 point downgrade is not implemented yet.</li>
+              <li>Static XML validation ≠ confirmed open in Ableton Live.</li>
             </ul>
           </div>
           <footer class="als-actions">

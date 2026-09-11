@@ -4,6 +4,7 @@
     drop: document.querySelector("[data-als-drop]"),
     file: document.querySelector("[data-als-file]"),
     browse: document.querySelector("[data-als-browse]"),
+    target: document.querySelector("[data-als-target]"),
     mode: document.querySelector("[data-als-mode]"),
     inspectBtn: document.querySelector("[data-als-inspect]"),
     convertBtn: document.querySelector("[data-als-convert]"),
@@ -35,7 +36,7 @@
   }
 
   function setBusy(busy) {
-    [els.inspectBtn, els.convertBtn, els.browse, els.mode].forEach((el) => {
+    [els.inspectBtn, els.convertBtn, els.browse, els.mode, els.target].forEach((el) => {
       if (el) el.disabled = busy;
     });
   }
@@ -149,8 +150,14 @@
     setReport("Converting… writing a NEW downgraded copy only.");
     try {
       const mode = (els.mode && els.mode.value) || "compatible";
+      const target = (els.target && els.target.value) || "11.2";
       const bytes = await readFileBytes(selectedFile);
-      const result = await window.AlsConverterEngine.convertAls(bytes, selectedFile.name, mode);
+      const result = await window.AlsConverterEngine.convertAls(
+        bytes,
+        selectedFile.name,
+        mode,
+        target
+      );
 
       if (!result.ok) {
         setReport(formatConvertReport(result.report || { outcome: "REFUSED_UNSUPPORTED", reason: result.error }));
