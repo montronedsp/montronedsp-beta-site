@@ -1,6 +1,5 @@
 (() => {
   const els = {
-    status: document.querySelector("[data-als-status]"),
     drop: document.querySelector("[data-als-drop]"),
     file: document.querySelector("[data-als-file]"),
     browse: document.querySelector("[data-als-browse]"),
@@ -14,12 +13,6 @@
 
   let selectedFile = null;
   let lastDownloadUrl = null;
-
-  function setStatus(kind, text) {
-    if (!els.status) return;
-    els.status.dataset.state = kind;
-    els.status.textContent = text;
-  }
 
   function setReport(text) {
     if (els.report) els.report.textContent = text || "";
@@ -43,18 +36,6 @@
 
   function engineReady() {
     return !!(window.AlsConverterEngine && window.AlsConverterEngine.convertAls);
-  }
-
-  function initStatus() {
-    if (engineReady()) {
-      setStatus(
-        "ok",
-        "Ready · in-browser converter (unlisted page · not in site navigation · files stay on your device)"
-      );
-      return true;
-    }
-    setStatus("err", "Converter engine failed to load. Refresh the page.");
-    return false;
   }
 
   function pickFile(file) {
@@ -231,5 +212,7 @@
 
   wireUi();
   setMeta(null);
-  initStatus();
+  if (!engineReady()) {
+    setReport("Converter engine failed to load. Refresh the page.");
+  }
 })();

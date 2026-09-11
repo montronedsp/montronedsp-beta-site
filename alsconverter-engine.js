@@ -312,7 +312,7 @@
     }
     lines.push("");
     lines.push("ORIGINAL FILE IS NEVER MODIFIED by inspect.");
-    lines.push("Engine: in-browser (published unlisted page)");
+    lines.push("Engine: in-browser");
     return lines.join("\n");
   }
 
