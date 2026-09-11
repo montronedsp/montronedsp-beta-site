@@ -2,5 +2,9 @@ User-agent: *
 Allow: /
 Disallow: /privacy.html
 Disallow: /deploy-sha.txt
+Disallow: /alsconverter.html
+Disallow: /alsconverter.js
+Disallow: /alsconverter-engine.js
+Disallow: /tools/
 
 Sitemap: https://www.montronedsp.com/sitemap.xml

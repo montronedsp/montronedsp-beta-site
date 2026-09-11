@@ -61,6 +61,8 @@ jobs:
           rsync -a \
             --exclude '.git/' \
             --exclude 'assets/downloads/' \
+            --exclude 'node_modules/' \
+            --exclude 'tools/' \
             ./ pages-site/
           printf '%s\n' "$GITHUB_SHA" > pages-site/deploy-sha.txt
 

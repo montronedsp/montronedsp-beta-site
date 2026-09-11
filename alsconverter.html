@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en" data-product="site" class="page-alsconverter">
+<head>
+  <meta charset="utf-8" />
+  <script>if(!/Android/i.test(navigator.userAgent||'')&&(/Linux/i.test(navigator.platform||'')||/Linux/i.test(navigator.userAgent||'')))document.documentElement.classList.add('is-linux');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALS Converter (unlisted) | MontroneDSP</title>
+  <meta name="description" content="Unlisted Ableton Live Set downgrader. Not linked from site navigation." />
+  <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+  <meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex" />
+  <link rel="canonical" href="https://www.montronedsp.com/alsconverter.html" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0b0d" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="preload" href="assets/fonts/u001/u001-reg.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="assets/fonts/u001/u001-bol.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html.page-alsconverter {
+      --font-src: var(--font-body);
+    }
+
+    .als-page {
+      --tool-block-pad: clamp(1.35rem, 2.8vw, 1.75rem);
+      padding-bottom: 4rem;
+    }
+
+    .als-private-banner {
+      margin: 0 0 1.25rem;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-strong);
+      border-radius: 0.75rem;
+      background: var(--surface-soft);
+      color: var(--text-strong);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .als-private-banner strong {
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    .als-status {
+      margin: 0 0 1rem;
+      padding: 0.65rem 0.9rem;
+      border-radius: 0.65rem;
+      border: 1px solid var(--border);
+      font-size: 0.88rem;
+      line-height: 1.45;
+      color: var(--muted-strong);
+      background: var(--surface);
+    }
+
+    .als-status[data-state="ok"] {
+      border-color: rgba(80, 180, 120, 0.45);
+      color: var(--text-strong);
+    }
+
+    .als-status[data-state="err"] {
+      border-color: rgba(220, 80, 80, 0.5);
+      color: var(--text-strong);
+    }
+
+    .als-hero h1 {
+      font-family: var(--font-src);
+      font-weight: 500;
+      color: var(--text-strong);
+    }
+
+    .als-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .als-card {
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    .als-card-header {
+      padding: var(--tool-block-pad) var(--tool-block-pad) 0;
+    }
+
+    .als-card-title {
+      margin: 0;
+      font-family: var(--font-src);
+      font-weight: 700;
+      font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+      line-height: 1.1;
+      color: var(--text-strong);
+    }
+
+    .als-card-body {
+      display: grid;
+      gap: 0.9rem;
+      padding: 1.1rem var(--tool-block-pad) 1.35rem;
+    }
+
+    .als-card-body > p {
+      margin: 0;
+      color: var(--muted-strong);
+      line-height: 1.65;
+      max-width: 62ch;
+    }
+
+    .als-drop {
+      display: grid;
+      place-items: center;
+      gap: 0.55rem;
+      min-height: 9.5rem;
+      padding: 1.25rem;
+      border: 1px dashed var(--border-strong);
+      border-radius: 0.85rem;
+      background: var(--surface-soft);
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .als-drop.is-drag {
+      border-color: var(--accent);
+      background: var(--bg-deep);
+    }
+
+    .als-drop-title {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-strong);
+    }
+
+    .als-drop-hint {
+      margin: 0;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .als-meta {
+      margin: 0;
+      font-size: 0.84rem;
+      color: var(--muted-strong);
+      word-break: break-all;
+    }
+
+    .als-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: end;
+    }
+
+    .als-field {
+      display: grid;
+      gap: 0.35rem;
+      min-width: 10rem;
+    }
+
+    .als-field label {
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .als-field select {
+      appearance: none;
+      border: 1px solid var(--border);
+      border-radius: 0.55rem;
+      background: var(--bg-deep);
+      color: var(--text-strong);
+      padding: 0.55rem 0.75rem;
+      font: inherit;
+    }
+
+    .als-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      padding: 0.95rem var(--tool-block-pad) 1.15rem;
+      border-top: 1px solid var(--border);
+      background: var(--surface-soft);
+    }
+
+    .als-report {
+      margin: 0;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      background: var(--bg-deep);
+      color: var(--text);
+      font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+      font-size: 0.78rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 28rem;
+      overflow: auto;
+    }
+
+    .als-list {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--muted-strong);
+      line-height: 1.55;
+    }
+
+    @media (max-width: 720px) {
+      .als-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand brand-logo-stack" href="./" aria-label="MontroneDSP home">
+          <picture class="brand-logo brand-logo-variant brand-logo--full" data-logo="martello"><img src="assets/branding/montrone_dsp_logo_header_martello.svg" alt="" width="190" height="29" /></picture>
+          <picture class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="martello"><img src="assets/branding/montrone_dsp_logo_header_martello_mobile.svg" alt="" width="120" height="19" aria-hidden="true" /></picture>
+          <img class="brand-logo brand-logo-variant brand-logo--mobile is-active" data-logo="aurashimmer" src="assets/branding/montrone_dsp_logo_header_aura_mobile.svg" alt="" width="120" height="19" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--full is-active" data-logo="aurashimmer" src="assets/branding/montrone_dsp_logo_header_aura.svg" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--full" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara.svg" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara_mobile.svg" alt="" width="120" height="19" aria-hidden="true" />
+          <span class="sr-only">MontroneDSP</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="nav-link" href="privacy.html">Privacy</a>
+          <a class="nav-link" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer">Store</a>
+          <a class="nav-link" href="free.html">Free</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main als-page">
+      <section class="hero als-hero" aria-labelledby="als-title">
+        <div class="container">
+          <p class="als-private-banner">
+            <strong>Published · unlisted</strong><br />
+            This page is live but intentionally omitted from site navigation and search indexing. Conversion runs in your browser — Sets are not uploaded to MontroneDSP servers, and originals are never overwritten.
+          </p>
+          <p class="als-status" data-als-status data-state="err">Loading converter…</p>
+          <div class="hero-copy">
+            <p class="story-index"><span>Tools</span><span>ALS Converter</span></p>
+            <h1 id="als-title">Ableton Live Set Downgrader</h1>
+            <p class="hero-lead">Create a new Live 11-targeted copy of a Live 12 Set. Experimental schema-aware conversion — not a Creator-string hack.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container als-grid" aria-label="ALS converter">
+        <article class="als-card">
+          <header class="als-card-header">
+            <h2 class="als-card-title">Downgrade Set</h2>
+          </header>
+          <div class="als-card-body">
+            <p>Drop an <code>.als</code> file here. The tool inspects version metadata, applies evidence-based Live 12 → 11 transforms when needed, and downloads a new file such as <code>Session_Live11_downgraded.als</code>.</p>
+            <div class="als-drop" data-als-drop tabindex="0" role="button" aria-label="Drop Ableton Live Set here">
+              <p class="als-drop-title">Drop .als here</p>
+              <p class="als-drop-hint">or browse from disk</p>
+              <button type="button" class="btn btn-secondary" data-als-browse>Browse…</button>
+              <input type="file" accept=".als,application/gzip,application/octet-stream" hidden data-als-file />
+            </div>
+            <p class="als-meta" data-als-meta>No file selected.</p>
+            <div class="als-controls">
+              <div class="als-field">
+                <label for="als-mode">Mode</label>
+                <select id="als-mode" data-als-mode>
+                  <option value="compatible" selected>Compatible (recommended)</option>
+                  <option value="conservative">Conservative</option>
+                  <option value="salvage">Salvage</option>
+                </select>
+              </div>
+              <div class="als-field">
+                <label for="als-target">Target</label>
+                <select id="als-target" disabled>
+                  <option value="11" selected>Live 11 (experimental)</option>
+                </select>
+              </div>
+            </div>
+            <ul class="als-list">
+              <li>Default output is a new download — source project stays read-only.</li>
+              <li>Static XML validation ≠ confirmed open in Ableton Live 11.</li>
+              <li>Same-major Live 12 point downgrade is not implemented yet.</li>
+            </ul>
+          </div>
+          <footer class="als-actions">
+            <button type="button" class="btn btn-secondary" data-als-inspect>Inspect</button>
+            <button type="button" class="btn btn-primary" data-als-convert>Downgrade to Live 11</button>
+          </footer>
+        </article>
+
+        <article class="als-card">
+          <header class="als-card-header">
+            <h2 class="als-card-title">Report</h2>
+          </header>
+          <div class="als-card-body">
+            <pre class="als-report" data-als-report>Waiting for a Set…</pre>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy">© <span data-year></span> MontroneDSP. Unlisted tool — not linked in navigation.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="./">Home</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll("[data-year]").forEach(function (el) {
+      el.textContent = String(new Date().getFullYear());
+    });
+  </script>
+  <script src="alsconverter-engine.js"></script>
+  <script src="alsconverter.js"></script>
+</body>
+</html>
