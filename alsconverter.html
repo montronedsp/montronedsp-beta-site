@@ -174,6 +174,18 @@
       line-height: 1.55;
     }
 
+    .als-card a {
+      color: var(--text-strong);
+      text-underline-offset: 0.15em;
+    }
+
+    .als-privacy p {
+      margin: 0;
+      color: var(--muted-strong);
+      line-height: 1.65;
+      max-width: 62ch;
+    }
+
     @media (max-width: 720px) {
       .als-actions {
         flex-direction: column;
@@ -266,6 +278,18 @@
           </header>
           <div class="als-card-body">
             <pre class="als-report" data-als-report>Waiting for a Set…</pre>
+          </div>
+        </article>
+
+        <article class="als-card als-privacy">
+          <header class="als-card-header">
+            <h2 class="als-card-title">Privacy</h2>
+          </header>
+          <div class="als-card-body">
+            <p>We do not collect any data. Conversion runs entirely in your browser on this device. Your <code>.als</code> files are not uploaded to MontroneDSP servers, and we do not use analytics, accounts, or cloud processing for this tool.</p>
+            <p>Original Sets are never overwritten. The tool only creates a new downgraded copy for download.</p>
+            <p>This tool is <strong>open source</strong> (MIT). Source code:</p>
+            <p><a href="https://github.com/montronedsp/alsconverter" target="_blank" rel="noopener noreferrer">https://github.com/montronedsp/alsconverter</a></p>
           </div>
         </article>
       </section>
