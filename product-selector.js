@@ -65,7 +65,7 @@
   });
 
   const productMeta = {
-    martello: { name: 'Martello', type: 'Drum Synthesizer' },
+    martello: { name: 'MX2', type: 'Drum Synthesizer' },
     aurashimmer: { name: 'Aura Shimmer', type: 'Reverb' },
     swara: { name: 'Swara XT', type: 'Hybrid Monosynth' },
     galleria: { name: 'Galleria', type: 'Environmental Processor' },
