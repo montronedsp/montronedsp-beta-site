@@ -766,7 +766,8 @@ html[data-product="swara"] .social-section .social-link {
   background: var(--surface);
 }
 
-/* Swara + Laya logos: dark SVG — show as-is in light mode, always */
+/* Swara + Laya logos: dark SVG on desktop — invert for dark UI.
+   Mobile uses a dedicated light-on-dark crisp SVG (filter forced off). */
 .brand-logo-variant[data-logo="swara"],
 .brand-logo-variant[data-logo="laya"] {
   filter: invert(1) brightness(1.1);
