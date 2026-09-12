@@ -623,8 +623,11 @@ html[data-product="site"] .brand-logo-variant[data-logo="martello"] {
   image-rendering: crisp-edges;
 }
 
+/* Soft CSS shadow only — SVG feSpecular/feDropShadow break on Safari/macOS */
 html[data-product="aurashimmer"] .hero-panel[data-hero-panel="aurashimmer"] .hero-logo {
-  filter: none;
+  filter: drop-shadow(0 12px 28px rgba(4, 18, 31, 0.38));
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 html[data-product="aurashimmer"] .social-section .social-icon {

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="10.672 0 2109.428 480" width="2109" height="480">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10.672 0 2109.428 480" width="2109" height="480" overflow="visible" shape-rendering="geometricPrecision">
     <defs>
 <linearGradient id="auraBaseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
         <stop offset="0%" stop-color="#2B1240"/>
@@ -9,7 +9,7 @@
       </linearGradient>
 
       <linearGradient id="auraSheenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"/>
         <stop offset="20%" stop-color="#FFFFFF" stop-opacity="0.25"/>
         <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0"/>
         <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
@@ -20,22 +20,7 @@
         <stop offset="25%" stop-color="#FFDFA6" stop-opacity="0"/>
         <stop offset="100%" stop-color="#FFDFA6" stop-opacity="0"/>
       </linearGradient>
-
-      <filter id="auraDropShadow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#04121F" flood-opacity="0.45"/>
-      </filter>
-
-      <filter id="auraGlossLight" x="-30%" y="-30%" width="160%" height="160%">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="blur"/>
-        <feSpecularLighting in="blur" surfaceScale="6" specularConstant="0.9" specularExponent="18" lighting-color="#FFFFFF" result="spec">
-          <fePointLight x="-300" y="-747" z="1680"/>
-        </feSpecularLighting>
-        <feComposite in="spec" in2="SourceAlpha" operator="in" result="specClipped"/>
-        <feComposite in="SourceGraphic" in2="specClipped" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
-      </filter>
-
-
-      <mask id="auraLetterMask" maskUnits="userSpaceOnUse" x="0" y="0" width="2500" height="480">
+<mask id="auraLetterMask" maskUnits="userSpaceOnUse" x="0" y="0" width="2500" height="480">
         <rect x="0" y="0" width="2500" height="480" fill="#fff"/>
         <circle cx="1457.6" cy="213.2" r="19" fill="#000"/>
       </mask>
@@ -43,7 +28,7 @@
 
     <g id="aura-original-outlines" mask="url(#auraLetterMask)">
 
-    <g filter="url(#auraDropShadow)">
+    <g>
       <g fill="#04121F">
       <path transform="translate(60.000,367.000) scale(0.376000,-0.376000)" d="M-78 0H165L170 16C110 23 64 34 176 222L186 240H422L438 99C447 39 428 24 370 16L365 0H681L685 16C632 26 624 50 615 121L533 765H529C504 738 461 723 424 716L100 188C10 43 -14 27 -74 16ZM386 574 417 286H214Z"/>
       <path transform="translate(334.480,367.000) scale(0.376000,-0.376000)" d="M108 360 68 220C18 46 77 -13 152 -13C247 -13 295 86 338 195C328 161 323 131 321 106C317 18 364 -13 440 -13C501 -13 558 34 615 145L600 154C568 103 525 54 489 54C464 54 462 82 470 115L578 538H427L400 441C349 258 273 72 228 72C209 72 197 100 223 196L319 547L68 476L64 460C130 457 133 447 108 360Z"/>
@@ -52,7 +37,7 @@
     </g>
     </g>
 
-    <g filter="url(#auraGlossLight)">
+    <g>
       <g fill="url(#auraBaseGrad)">
       <path transform="translate(60.000,367.000) scale(0.376000,-0.376000)" d="M-78 0H165L170 16C110 23 64 34 176 222L186 240H422L438 99C447 39 428 24 370 16L365 0H681L685 16C632 26 624 50 615 121L533 765H529C504 738 461 723 424 716L100 188C10 43 -14 27 -74 16ZM386 574 417 286H214Z"/>
       <path transform="translate(334.480,367.000) scale(0.376000,-0.376000)" d="M108 360 68 220C18 46 77 -13 152 -13C247 -13 295 86 338 195C328 161 323 131 321 106C317 18 364 -13 440 -13C501 -13 558 34 615 145L600 154C568 103 525 54 489 54C464 54 462 82 470 115L578 538H427L400 441C349 258 273 72 228 72C209 72 197 100 223 196L319 547L68 476L64 460C130 457 133 447 108 360Z"/>
@@ -61,7 +46,7 @@
     </g>
     </g>
 
-    <g fill="url(#auraBounceGrad)" opacity="0.7">
+    <g fill="url(#auraBounceGrad)" opacity="0.45">
       <g>
       <path transform="translate(60.000,367.000) scale(0.376000,-0.376000)" d="M-78 0H165L170 16C110 23 64 34 176 222L186 240H422L438 99C447 39 428 24 370 16L365 0H681L685 16C632 26 624 50 615 121L533 765H529C504 738 461 723 424 716L100 188C10 43 -14 27 -74 16ZM386 574 417 286H214Z"/>
       <path transform="translate(334.480,367.000) scale(0.376000,-0.376000)" d="M108 360 68 220C18 46 77 -13 152 -13C247 -13 295 86 338 195C328 161 323 131 321 106C317 18 364 -13 440 -13C501 -13 558 34 615 145L600 154C568 103 525 54 489 54C464 54 462 82 470 115L578 538H427L400 441C349 258 273 72 228 72C209 72 197 100 223 196L319 547L68 476L64 460C130 457 133 447 108 360Z"/>
@@ -79,7 +64,7 @@
     </g>
     </g>
 
-    <g filter="url(#auraDropShadow)">
+    <g>
       <g fill="#04121F">
       <path transform="translate(1120.000,367.000) scale(0.220000,-0.220000)" d="M584 240C584 322 519 368 427 431L325 502C288 528 266 558 266 597C266 685 355 703 423 703C551 703 564 581 573 489H593L647 703C596 728 498 742 431 742C283 742 115 672 115 514C115 440 164 384 246 328L338 264C394 226 426 191 426 144C426 41 316 26 240 26C82 26 77 165 73 281H54L-5 40C49 10 124 -13 230 -13C396 -13 584 59 584 240Z"/>
       <path transform="translate(1265.200,367.000) scale(0.220000,-0.220000)" d="M259 339 320 579C345 679 366 751 380 803L128 732L124 716C190 713 189 704 167 616L13 0H174L196 93C240 278 323 462 365 462C388 462 394 419 371 338L331 199C284 38 336 -13 432 -13C493 -13 558 34 615 145L600 154C568 103 525 54 489 54C463 54 462 80 471 115L527 314C576 484 524 547 444 547C349 547 301 449 259 339Z"/>
@@ -91,7 +76,7 @@
     </g>
     </g>
 
-    <g filter="url(#auraGlossLight)">
+    <g>
       <g fill="url(#auraBaseGrad)">
       <path transform="translate(1120.000,367.000) scale(0.220000,-0.220000)" d="M584 240C584 322 519 368 427 431L325 502C288 528 266 558 266 597C266 685 355 703 423 703C551 703 564 581 573 489H593L647 703C596 728 498 742 431 742C283 742 115 672 115 514C115 440 164 384 246 328L338 264C394 226 426 191 426 144C426 41 316 26 240 26C82 26 77 165 73 281H54L-5 40C49 10 124 -13 230 -13C396 -13 584 59 584 240Z"/>
       <path transform="translate(1265.200,367.000) scale(0.220000,-0.220000)" d="M259 339 320 579C345 679 366 751 380 803L128 732L124 716C190 713 189 704 167 616L13 0H174L196 93C240 278 323 462 365 462C388 462 394 419 371 338L331 199C284 38 336 -13 432 -13C493 -13 558 34 615 145L600 154C568 103 525 54 489 54C463 54 462 80 471 115L527 314C576 484 524 547 444 547C349 547 301 449 259 339Z"/>
@@ -103,7 +88,7 @@
     </g>
     </g>
 
-    <g fill="url(#auraBounceGrad)" opacity="0.7">
+    <g fill="url(#auraBounceGrad)" opacity="0.45">
       <g>
       <path transform="translate(1120.000,367.000) scale(0.220000,-0.220000)" d="M584 240C584 322 519 368 427 431L325 502C288 528 266 558 266 597C266 685 355 703 423 703C551 703 564 581 573 489H593L647 703C596 728 498 742 431 742C283 742 115 672 115 514C115 440 164 384 246 328L338 264C394 226 426 191 426 144C426 41 316 26 240 26C82 26 77 165 73 281H54L-5 40C49 10 124 -13 230 -13C396 -13 584 59 584 240Z"/>
       <path transform="translate(1265.200,367.000) scale(0.220000,-0.220000)" d="M259 339 320 579C345 679 366 751 380 803L128 732L124 716C190 713 189 704 167 616L13 0H174L196 93C240 278 323 462 365 462C388 462 394 419 371 338L331 199C284 38 336 -13 432 -13C493 -13 558 34 615 145L600 154C568 103 525 54 489 54C463 54 462 80 471 115L527 314C576 484 524 547 444 547C349 547 301 449 259 339Z"/>
@@ -130,9 +115,9 @@
     </g>
 
     <g id="aura-geometric-i-dot">
-      <path d="M1457.6 194.2 L1476.6 213.2 L1457.6 232.2 L1438.6 213.2 Z" fill="#04121F" filter="url(#auraDropShadow)"/>
-      <path d="M1457.6 194.2 L1476.6 213.2 L1457.6 232.2 L1438.6 213.2 Z" fill="url(#auraBaseGrad)" filter="url(#auraGlossLight)"/>
-      <path d="M1457.6 194.2 L1476.6 213.2 L1457.6 232.2 L1438.6 213.2 Z" fill="url(#auraSheenGrad)" opacity="0.82"/>
+      <path d="M1457.6 194.2 L1476.6 213.2 L1457.6 232.2 L1438.6 213.2 Z" fill="#04121F"/>
+      <path d="M1457.6 194.2 L1476.6 213.2 L1457.6 232.2 L1438.6 213.2 Z" fill="url(#auraBaseGrad)"/>
+      <path d="M1457.6 194.2 L1476.6 213.2 L1457.6 232.2 L1438.6 213.2 Z" fill="url(#auraSheenGrad)" opacity="0.65"/>
     </g>
 
 </svg>
