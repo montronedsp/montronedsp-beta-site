@@ -3545,7 +3545,7 @@ html[data-product="galleria"] .hero::before {
   overflow: visible;
 }
 
-/* Galleria lockup: true wordmark viewBox (1027Ã—136.7), tagline centered to glyph width */
+/* Galleria lockup: true wordmark viewBox (1027×136.7), tagline centered to glyph width */
 .hero-panel[data-hero-panel="galleria"] .hero-mark-lockup--galleria {
   display: flex;
   flex-direction: column;
