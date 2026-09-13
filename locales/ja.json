@@ -273,10 +273,10 @@
     "swaraProduct": "Product page",
     "scenaName": "INLINE",
     "scenaKicker": "MIDI Workstation for Linux",
-    "scenaBody": "A focused MIDI workstation for Linux — sequencing and performance without a full traditional DAW. Free Linux build in development.",
-    "scenaLi1": "MIDI workstation for Linux",
-    "scenaLi2": "Sequencing and performance-oriented workflow",
-    "scenaLi3": "Free Linux build planned"
+    "scenaBody": "A focused MIDI workstation for Linux built around a curated set of internal instruments  -  no external plugins. Up to 16 channels for sequencing and performance without a full traditional DAW. Free Linux build in development.",
+    "scenaLi1": "Focused selection of internal instruments",
+    "scenaLi2": "No external plugins",
+    "scenaLi3": "Max 16 channels"
   },
   "privacy": {
     "meta": {
