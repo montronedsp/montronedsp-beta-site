@@ -501,9 +501,9 @@
   "free": {
     "meta": {
       "title": "Free tools | MontroneDSP",
-      "description": "Free Linux builds and audio tools from MontroneDSP, including Swara XT, INLINE, and a batch sample-rate converter.",
+      "description": "Free Linux builds and audio tools from MontroneDSP, including Swara XT, and a batch sample-rate converter.",
       "ogTitle": "Free tools | MontroneDSP",
-      "ogDescription": "Free Linux builds and audio tools from MontroneDSP, including Swara XT, INLINE, and a batch sample-rate converter.",
+      "ogDescription": "Free Linux builds and audio tools from MontroneDSP, including Swara XT, and a batch sample-rate converter.",
       "ogImageAlt": "MontroneDSP free Linux builds and audio tools"
     },
     "eyebrowFree": "Free",
@@ -519,12 +519,6 @@
     "swaraLi3": "Free under GPLv3",
     "swaraLi4": "Official Windows and macOS builds on the store",
     "swaraProduct": "Product page",
-    "scenaName": "INLINE",
-    "scenaKicker": "MIDI Workstation for Linux",
-    "scenaBody": "A focused MIDI workstation for Linux built around a curated set of internal instruments  -  no external plugins. Up to 16 channels for sequencing and performance without a full traditional DAW. Free Linux build in development.",
-    "scenaLi1": "Focused selection of internal instruments",
-    "scenaLi2": "No external plugins",
-    "scenaLi3": "Max 16 channels",
     "toolName": "Batch Sample Rate Converter",
     "toolBody": "Convert whole folders of audio files to a chosen sample rate, export MP3 versions, and keep the process straightforward for production, archive, and delivery work.",
     "toolLi1": "Batch conversion for folders of files",

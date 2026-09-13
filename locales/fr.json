@@ -244,9 +244,9 @@
   "free": {
     "meta": {
       "title": "Outils gratuits | MontroneDSP",
-      "description": "Free Linux builds and audio tools from MontroneDSP, including Swara XT, INLINE, and a batch sample-rate converter.",
+      "description": "Free Linux builds and audio tools from MontroneDSP, including Swara XT, and a batch sample-rate converter.",
       "ogTitle": "Outils gratuits | MontroneDSP",
-      "ogDescription": "Free Linux builds and audio tools from MontroneDSP, including Swara XT, INLINE, and a batch sample-rate converter.",
+      "ogDescription": "Free Linux builds and audio tools from MontroneDSP, including Swara XT, and a batch sample-rate converter.",
       "ogImageAlt": "MontroneDSP free Linux builds and audio tools"
     },
     "eyebrowFree": "Gratuit",
@@ -270,13 +270,7 @@
     "swaraLi2": "Version 1.2.2",
     "swaraLi3": "Free under GPLv3",
     "swaraLi4": "Official Windows and macOS builds on the store",
-    "swaraProduct": "Product page",
-    "scenaName": "INLINE",
-    "scenaKicker": "MIDI Workstation for Linux",
-    "scenaBody": "A focused MIDI workstation for Linux built around a curated set of internal instruments  -  no external plugins. Up to 16 channels for sequencing and performance without a full traditional DAW. Free Linux build in development.",
-    "scenaLi1": "Focused selection of internal instruments",
-    "scenaLi2": "No external plugins",
-    "scenaLi3": "Max 16 channels"
+    "swaraProduct": "Product page"
   },
   "privacy": {
     "meta": {
