@@ -784,11 +784,10 @@ html[data-product="swara"] .social-section .social-link {
   background: var(--surface);
 }
 
-/* Swara + Laya logos: dark SVG on desktop â€” invert for dark UI.
-   Mobile uses a dedicated light-on-dark crisp SVG (filter forced off). */
+/* Swara + Laya: white monochrome lockup — no invert (matches Martello/Aura dark UI). */
 .brand-logo-variant[data-logo="swara"],
 .brand-logo-variant[data-logo="laya"] {
-  filter: invert(1) brightness(1.1);
+  filter: none;
 }
 
 html[data-product="swara"] .hero {
