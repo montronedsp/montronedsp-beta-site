@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "MontroneDSP  -  鼓合成与实验性声音的音频插件",
     "description": "MontroneDSP 为电子音乐制作开发聚焦型音频插件，包括 Martello 与 MartelloX2 鼓合成器，支持 Mac、Windows 与 Linux VST3。",
@@ -138,7 +138,7 @@
       "skinAluminum": "Light Aluminum",
       "skinDarkAlt": "MartelloX2 v1.3.0 预览 — Dark 皮肤",
       "skinAluminumAlt": "MartelloX2 v1.3.0 预览 — Light Aluminum 皮肤",
-      "title": "Mark coming soon",
+      "title": "MX2",
       "screenshotsSoon": "Screenshots coming soon",
       "screenshotsSoonAria": "Screenshots coming soon"
     },

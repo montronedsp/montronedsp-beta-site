@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "MontroneDSP  -  Аудіоплагіни для синтезу ударних та експериментального звуку",
     "description": "MontroneDSP робить аудіоплагіни для електронної музики — зокрема драм-синтезатори Martello та MartelloX2 для Mac, Windows і Linux VST3.",
@@ -138,7 +138,7 @@
       "skinAluminum": "Light Aluminum",
       "skinDarkAlt": "Прев’ю MartelloX2 v1.3.0 — Dark",
       "skinAluminumAlt": "Прев’ю MartelloX2 v1.3.0 — Light Aluminum",
-      "title": "Mark coming soon",
+      "title": "MX2",
       "screenshotsSoon": "Screenshots coming soon",
       "screenshotsSoonAria": "Screenshots coming soon"
     },

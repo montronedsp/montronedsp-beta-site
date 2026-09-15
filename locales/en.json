@@ -1,4 +1,4 @@
-{
+﻿{
   "meta": {
     "title": "MontroneDSP  -  Audio Plugins for Drum Synthesis and Experimental Sound",
     "description": "MontroneDSP creates focused audio plugins for electronic music production, including Martello and MartelloX2 synthesized drum instruments for Mac, Windows, and Linux VST3.",
@@ -182,7 +182,7 @@
       "skinAluminum": "Light Aluminum",
       "skinDarkAlt": "Preview of MartelloX2 v1.3.0 — Dark skin",
       "skinAluminumAlt": "Preview of MartelloX2 v1.3.0 — Light Aluminum skin",
-      "title": "Mark coming soon",
+      "title": "MX2",
       "screenshotsSoon": "Screenshots coming soon",
       "screenshotsSoonAria": "Screenshots coming soon"
     },
