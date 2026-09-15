@@ -6332,6 +6332,7 @@ html:not(.product-booted) .brand-logo-variant {
 }
 
 html:not(.product-booted)[data-product="aurashimmer"] .brand-logo-variant[data-logo="aurashimmer"]:not(.brand-logo--mobile),
+html:not(.product-booted)[data-product="site"] .brand-logo-variant[data-logo="aurashimmer"]:not(.brand-logo--mobile),
 html:not(.product-booted)[data-product="martello"] .brand-logo-variant[data-logo="martello"]:not(.brand-logo--mobile),
 html:not(.product-booted)[data-product="swara"] .brand-logo-variant[data-logo="swara"]:not(.brand-logo--mobile) {
   opacity: 1;
@@ -6340,6 +6341,7 @@ html:not(.product-booted)[data-product="swara"] .brand-logo-variant[data-logo="s
 }
 
 html:not(.product-booted)[data-product="aurashimmer"] .brand-logo-variant:not([data-logo="aurashimmer"]),
+html:not(.product-booted)[data-product="site"] .brand-logo-variant:not([data-logo="aurashimmer"]),
 html:not(.product-booted)[data-product="martello"] .brand-logo-variant:not([data-logo="martello"]),
 html:not(.product-booted)[data-product="swara"] .brand-logo-variant:not([data-logo="swara"]) {
   opacity: 0;
@@ -6347,6 +6349,7 @@ html:not(.product-booted)[data-product="swara"] .brand-logo-variant:not([data-lo
 }
 
 html.is-linux:not(.product-booted)[data-product="aurashimmer"] .brand-logo-variant[data-logo="aurashimmer"].brand-logo--mobile,
+html.is-linux:not(.product-booted)[data-product="site"] .brand-logo-variant[data-logo="aurashimmer"].brand-logo--mobile,
 html.is-linux:not(.product-booted)[data-product="martello"] .brand-logo-variant[data-logo="martello"].brand-logo--mobile,
 html.is-linux:not(.product-booted)[data-product="swara"] .brand-logo-variant[data-logo="swara"].brand-logo--mobile {
   opacity: 1;
@@ -6355,6 +6358,7 @@ html.is-linux:not(.product-booted)[data-product="swara"] .brand-logo-variant[dat
 }
 
 html.is-linux:not(.product-booted)[data-product="aurashimmer"] .brand-logo-variant[data-logo="aurashimmer"]:not(.brand-logo--mobile),
+html.is-linux:not(.product-booted)[data-product="site"] .brand-logo-variant[data-logo="aurashimmer"]:not(.brand-logo--mobile),
 html.is-linux:not(.product-booted)[data-product="martello"] .brand-logo-variant[data-logo="martello"]:not(.brand-logo--mobile),
 html.is-linux:not(.product-booted)[data-product="swara"] .brand-logo-variant[data-logo="swara"]:not(.brand-logo--mobile) {
   opacity: 0;
@@ -6474,6 +6478,7 @@ html.is-linux.theme-animating .brand-logo-variant.is-active {
   }
 
   html:not(.product-booted)[data-product="aurashimmer"] .brand-logo-variant[data-logo="aurashimmer"].brand-logo--mobile,
+  html:not(.product-booted)[data-product="site"] .brand-logo-variant[data-logo="aurashimmer"].brand-logo--mobile,
   html:not(.product-booted)[data-product="martello"] .brand-logo-variant[data-logo="martello"].brand-logo--mobile,
   html:not(.product-booted)[data-product="swara"] .brand-logo-variant[data-logo="swara"].brand-logo--mobile {
     display: block !important;
@@ -6481,6 +6486,7 @@ html.is-linux.theme-animating .brand-logo-variant.is-active {
   }
 
   html:not(.product-booted)[data-product="aurashimmer"] .brand-logo-variant:not([data-logo="aurashimmer"]),
+  html:not(.product-booted)[data-product="site"] .brand-logo-variant:not([data-logo="aurashimmer"]),
   html:not(.product-booted)[data-product="martello"] .brand-logo-variant:not([data-logo="martello"]),
   html:not(.product-booted)[data-product="swara"] .brand-logo-variant:not([data-logo="swara"]) {
     display: none !important;
