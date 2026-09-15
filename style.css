@@ -694,8 +694,7 @@ html[data-product="martello"] .social-section .social-link {
 }
 
 /* Martello logo: original mark, no filter in any mode */
-html[data-product="martello"] .brand-logo-variant[data-logo="martello"],
-html[data-product="martello"] .hero-panel[data-hero-panel="martello"] .hero-logo {
+html[data-product="martello"] .brand-logo-variant[data-logo="martello"] {
   filter: none;
 }
 
