@@ -1,77 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="20 15 1000 310">
-  <title>MontroneDSP aura lockup - mobile, crisp (no glow/blur/halo)</title>
-  <desc>MontroneDSP icon and wordmark lockup, unified aura palette, no glow/blur/halo for crisp mobile</desc>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="20 15 1000 310">  <title>MontroneDSP aura lockup - mobile, crisp diamond</title>
+  <desc>MontroneDSP diamond icon and wordmark lockup, crisp mobile (no glow/blur/halo)</desc>
 
   <defs>
 </defs>
-  <g transform="translate(60.896,45.896) scale(1.61384)">
-
-
-<defs>
-    <style>
-      .st0 {
-        stroke: #2a0f26;
-        stroke-linecap: round;
-        stroke-width: 6px;
-        opacity: 1;
-      }
-
-      .st1 {
-        fill: #9b4f9e;
-        isolation: isolate;
-        stroke: #9b4f9e;
-        stroke-width: 6px;
-        opacity: 1;
-      }
-
-      .st5 {
-        stroke: url(#glowGrad);
-        stroke-width: 10px;
-        stroke-linecap: round;
-        opacity: .2;
-        filter: url(#softBlur);
-      }
-    </style>
-
-    <!-- Waveform core: hot blood-red -->
-    <linearGradient id="Sfumatura_senza_nome_4" data-name="Sfumatura senza nome 4" x1="90" y1="-16.8" x2="91.5" y2="-16.8" gradientTransform="translate(-26793 1726.6) scale(296 98)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#e3a8e0"/>
-      <stop offset=".35" stop-color="#9b4f9e"/>
-      <stop offset=".65" stop-color="#9b4f9e"/>
-      <stop offset="1" stop-color="#e3a8e0"/>
+  <defs>
+    <linearGradient id="iconGradLavender" x1="261.42999999999995" y1="117.88" x2="261.42999999999995" y2="233.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".5" stop-color="#f5e9fb"/>
+      <stop offset="1" stop-color="#d9c3e8"/>
     </linearGradient>
-
-    <!-- Frame: dried-blood rust, low sheen -->
-    <linearGradient id="ringGrad" x1="45.21" y1="45.21" x2="114.79" y2="114.79" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#c9a0d9"/>
-      <stop offset=".5" stop-color="#5c2350"/>
-      <stop offset="1" stop-color="#c9a0d9"/>
+    <linearGradient id="iconGradLilac" x1="261.42999999999995" y1="117.88" x2="261.42999999999995" y2="233.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ddb6ea"/>
+      <stop offset=".5" stop-color="#c9a0d9"/>
+      <stop offset="1" stop-color="#a074b3"/>
     </linearGradient>
-
-    <!-- Ember glow underlay -->
-    <linearGradient id="glowGrad" x1="90" y1="-16.8" x2="91.5" y2="-16.8" gradientTransform="translate(-26793 1726.6) scale(296 98)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#e3a8e0"/>
+    <linearGradient id="iconGradOrchid" x1="261.42999999999995" y1="117.88" x2="261.42999999999995" y2="233.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#bf72c2"/>
       <stop offset=".5" stop-color="#9b4f9e"/>
-      <stop offset="1" stop-color="#e3a8e0"/>
+      <stop offset="1" stop-color="#6c3570"/>
+    </linearGradient>
+    <linearGradient id="iconGradAubergine" x1="261.42999999999995" y1="117.88" x2="261.42999999999995" y2="233.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4a1f45"/>
+      <stop offset=".5" stop-color="#2a0f26"/>
+      <stop offset="1" stop-color="#150712"/>
     </linearGradient>
 </defs>
-
-  <g transform="translate(21,22.0488) scale(0.541601)">
-    <g transform="translate(-34.041481,336.164011) scale(0.100000,-0.100000)" stroke="#2a0f26" stroke-width="8" stroke-linejoin="round">
-      <path fill="#C9A0D9" d="M563 2561 c-112 -115 -208 -222 -214 -238 -24 -65 -11 -84 209 -305
-113 -115 210 -208 214 -208 4 0 8 216 8 480 0 264 -3 480 -8 480 -4 0 -98 -94
--209 -209z"/>
-      <path fill="#9B4F9E" d="M1183 3188 l-173 -173 0 -725 0 -725 170 -170 c93 -93 172 -167 175
--164 3 3 4 484 3 1067 l-3 1062 -172 -172z"/>
-      <path fill="#7A3B7D" d="M1500 2289 c0 -590 3 -1069 8 -1065 4 3 85 84 179 179 l173 172 0
-712 c0 391 -3 718 -6 726 -3 8 -84 90 -180 182 l-174 167 0 -1073z"/>
-      <path fill="#5C2350" d="M2080 2283 l0 -486 68 65 c37 36 133 133 214 214 218 221 220 204
--60 486 -113 114 -209 208 -214 208 -4 0 -8 -219 -8 -487z"/>
-    </g>
+<g id="icon-diamond">
+    <path d="M 208.241,171.064 L 207.823,171.525 L 207.452,172.025 L 207.132,172.559 L 206.866,173.122 L 206.656,173.708 L 206.505,174.312 L 206.413,174.928 L 206.383,175.550 L 206.413,176.172 L 206.505,176.788 L 206.656,177.392 L 206.866,177.978 L 207.132,178.541 L 207.452,179.075 L 207.823,179.575 L 208.241,180.036 L 231.612,203.407 L 231.612,147.693 Z" fill="url(#iconGradLavender)"/>
+    <path d="M 260.192,120.625 L 259.588,120.776 L 259.002,120.986 L 258.439,121.252 L 257.905,121.572 L 257.405,121.943 L 256.944,122.361 L 233.573,145.732 L 233.573,205.368 L 256.944,228.739 L 257.405,229.157 L 257.905,229.528 L 258.439,229.848 L 259.002,230.114 L 259.588,230.324 L 260.192,230.475 L 260.450,230.513 L 260.450,120.587 Z" fill="url(#iconGradLilac)"/>
+    <path d="M 265.455,121.943 L 264.955,121.572 L 264.421,121.252 L 263.858,120.986 L 263.272,120.776 L 262.668,120.625 L 262.410,120.587 L 262.410,230.513 L 262.668,230.475 L 263.272,230.324 L 263.858,230.114 L 264.421,229.848 L 264.955,229.528 L 265.455,229.157 L 265.916,228.739 L 289.287,205.368 L 289.287,145.732 L 265.916,122.361 Z" fill="url(#iconGradOrchid)"/>
+    <path d="M 314.619,180.036 L 315.037,179.575 L 315.408,179.075 L 315.728,178.541 L 315.994,177.978 L 316.204,177.392 L 316.355,176.788 L 316.447,176.172 L 316.477,175.550 L 316.447,174.928 L 316.355,174.312 L 316.204,173.708 L 315.994,173.122 L 315.728,172.559 L 315.408,172.025 L 315.037,171.525 L 314.619,171.064 L 291.248,147.693 L 291.248,203.407 Z" fill="url(#iconGradAubergine)"/>
+    <path d="M 264.812,123.520 L 264.438,123.181 L 264.065,122.904 L 263.666,122.665 L 263.245,122.466 L 262.807,122.309 L 262.355,122.196 L 261.895,122.128 L 261.430,122.105 L 260.965,122.128 L 260.505,122.196 L 260.053,122.309 L 259.615,122.466 L 259.194,122.665 L 258.795,122.904 L 258.422,123.181 L 258.048,123.520 L 209.400,172.168 L 209.061,172.542 L 208.784,172.915 L 208.545,173.314 L 208.346,173.735 L 208.189,174.173 L 208.076,174.625 L 208.008,175.085 L 207.985,175.550 L 208.008,176.015 L 208.076,176.475 L 208.189,176.927 L 208.346,177.365 L 208.545,177.786 L 208.784,178.185 L 209.061,178.558 L 209.400,178.932 L 258.048,227.580 L 258.422,227.919 L 258.795,228.196 L 259.194,228.435 L 259.615,228.634 L 260.053,228.791 L 260.505,228.904 L 260.965,228.972 L 261.430,228.995 L 261.895,228.972 L 262.355,228.904 L 262.807,228.791 L 263.245,228.634 L 263.666,228.435 L 264.065,228.196 L 264.438,227.919 L 264.812,227.580 L 313.460,178.932 L 313.799,178.558 L 314.076,178.185 L 314.315,177.786 L 314.514,177.365 L 314.671,176.927 L 314.784,176.475 L 314.852,176.015 L 314.875,175.550 L 314.852,175.085 L 314.784,174.625 L 314.671,174.173 L 314.514,173.735 L 314.315,173.314 L 314.076,172.915 L 313.799,172.542 L 313.460,172.168 Z" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.6"/>
   </g>
 
-  </g>
   <g transform="translate(360.947,120.947) scale(1.36842)">
 
   <defs>
