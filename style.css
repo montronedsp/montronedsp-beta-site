@@ -719,6 +719,10 @@ html[data-product="martello"] .hero-panel[data-hero-panel="martello"] .hero-logo
   filter: none;
 }
 
+html[data-product="martello"] .hero-panel[data-hero-panel="martello"] .hero-lead {
+  color: #fff;
+}
+
 html[data-product="martello"] .btn-secondary {
   border-color: var(--border-strong);
   color: var(--text);
