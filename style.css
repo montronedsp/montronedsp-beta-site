@@ -699,8 +699,8 @@ html[data-product="martello"] .brand-logo-variant[data-logo="martello"] {
 }
 
 html[data-product="martello"] .hero-panel[data-hero-panel="martello"] h1:has(.hero-logo) {
-  margin: 0 0 0.55em;
-  width: clamp(222px, 49.5vw, 360px);
+  margin: 0.55em 0 0.7em;
+  width: clamp(168px, 36vw, 268px);
   max-width: 100%;
   aspect-ratio: 1272 / 433;
   line-height: 0;
@@ -708,6 +708,7 @@ html[data-product="martello"] .hero-panel[data-hero-panel="martello"] h1:has(.he
   align-items: flex-end;
   justify-content: flex-start;
   overflow: visible;
+  transform: translateY(0.35em);
 }
 
 html[data-product="martello"] .hero-panel[data-hero-panel="martello"] .hero-logo {
