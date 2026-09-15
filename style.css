@@ -623,6 +623,12 @@ html[data-product="site"] .brand-logo-variant[data-logo="martello"] {
   image-rendering: crisp-edges;
 }
 
+/* Aura header lockups use SVG filters/gradients — crisp-edges breaks Safari/macOS rendering */
+html[data-product="site"] .brand-logo-variant[data-logo="aurashimmer"].brand-logo--full,
+html[data-product="aurashimmer"] .brand-logo-variant[data-logo="aurashimmer"].brand-logo--full {
+  image-rendering: auto;
+}
+
 /* Soft CSS shadow only â€” SVG feSpecular/feDropShadow break on Safari/macOS */
 html[data-product="aurashimmer"] .hero-panel[data-hero-panel="aurashimmer"] .hero-logo {
   filter: drop-shadow(0 12px 28px rgba(4, 18, 31, 0.38));

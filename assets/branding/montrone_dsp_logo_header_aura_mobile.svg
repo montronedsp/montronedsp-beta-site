@@ -30,6 +30,7 @@
         stroke-width: 10px;
         stroke-linecap: round;
         opacity: .2;
+        filter: url(#softBlur);
       }
     </style>
 
