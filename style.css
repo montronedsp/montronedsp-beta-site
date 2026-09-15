@@ -6029,7 +6029,7 @@ footer p {
 
   .brand-logo {
     width: 100%;
-    max-height: 28px;
+    max-height: 32px;
   }
 
   .detail-grid,
@@ -6538,8 +6538,8 @@ html.is-linux.theme-animating .brand-logo-variant.is-active {
   .brand-logo-stack {
     flex: 0 1 auto;
     min-width: 0;
-    width: min(132px, 34vw);
-    height: 28px;
+    width: min(148px, 38vw);
+    height: 32px;
   }
 
   .brand-logo,
@@ -6547,7 +6547,7 @@ html.is-linux.theme-animating .brand-logo-variant.is-active {
   picture.brand-logo--mobile,
   picture.brand-logo--mobile img {
     width: 100%;
-    max-height: 28px;
+    max-height: 32px;
     height: auto;
   }
 
