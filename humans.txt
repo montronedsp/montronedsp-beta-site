@@ -1,0 +1,8 @@
+/* TEAM */
+Brand: MontroneDSP
+Role: Audio software and DSP instruments
+
+/* SITE */
+Website: https://www.montronedsp.com
+Store: https://store.montronedsp.com/
+Location: Italy

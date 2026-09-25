@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" data-i18n-page="security" data-product="site">
+<head>
+  <meta charset="utf-8" />
+  <script>if(!/Android/i.test(navigator.userAgent||'')&&(/Linux/i.test(navigator.platform||'')||/Linux/i.test(navigator.userAgent||'')))document.documentElement.classList.add('is-linux');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Store security  -  MontroneDSP</title>
+  <meta name="description" content="How MontroneDSP handles purchases: product pages on this site, checkout powered by Gumroad, and payment data processed by specialised commerce infrastructure." />
+  <link rel="canonical" href="https://www.montronedsp.com/security.html" />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0b0d" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="preload" href="assets/fonts/roboto/Roboto-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand brand-logo-stack" href="./" aria-label="MontroneDSP home" data-i18n-aria="nav.homeAria">
+          <picture class="brand-logo brand-logo-variant brand-logo--full" data-logo="martello"><img src="assets/branding/montrone_dsp_logo_header_martello.svg?v=native-lockup" alt="" width="190" height="29" style="image-rendering: -webkit-optimize-contrast;" /></picture>
+          <picture class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="martello"><img src="assets/branding/montrone_dsp_logo_header_mobile_noeffect.svg" alt="" width="120" height="19" aria-hidden="true" style="image-rendering: -webkit-optimize-contrast;" /></picture>
+          <img class="brand-logo brand-logo-variant brand-logo--mobile is-active" data-logo="aurashimmer" src="assets/branding/montrone_dsp_logo_header_aura_mobile.svg?v=diamond-lockup" alt="" width="120" height="19" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--full is-active" data-logo="aurashimmer" src="assets/branding/montrone_dsp_logo_header_aura.svg?v=diamond-lockup" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--full" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara.svg?v=mono-white" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara_mobile.svg?v=mono-white" alt="" width="120" height="19" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant" data-logo="membrana" src="assets/branding/montrone_dsp_logo_header_aura.svg?v=diamond-lockup" alt="" width="190" height="29" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="membrana" src="assets/branding/montrone_dsp_logo_header_aura_mobile.svg?v=diamond-lockup" alt="" width="120" height="19" aria-hidden="true" />
+          <img class="brand-logo brand-logo-variant" data-logo="galleria" src="assets/branding/montrone_dsp_logo_header_galleria.svg" alt="" width="168" height="28" aria-hidden="true" />
+          <span class="sr-only">MontroneDSP</span>
+        </a>
+        <div class="product-selector-group">
+          <span class="product-selector-label" aria-hidden="true" data-i18n="products.label">Products</span>
+          <div class="product-selector-desktop" data-product-selector-desktop>
+            <button type="button" class="product-selector-desktop-trigger" id="product-selector-desktop-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="product-selector-desktop-list" data-desktop-selector-trigger data-i18n-aria="products.desktopOpenAria">
+              <span class="product-selector-desktop-current">
+                <span class="product-selector-desktop-name" data-desktop-selector-name>Aura Shimmer</span>
+                <span class="product-selector-desktop-type" data-desktop-selector-type data-i18n="products.aurashimmer.type">Reverb</span>
+              </span>
+              <span class="product-selector-desktop-chevron" aria-hidden="true"></span>
+            </button>
+            <div class="product-selector-desktop-panel" id="product-selector-desktop-list" role="listbox" aria-label="Choose product" data-i18n-aria="products.chooseAria" hidden>
+              <button type="button" class="product-selector-option" role="option" data-product="martello" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">MX2</span>
+                <span class="product-selector-option-type" data-i18n="products.martello.type">Drum Synthesizer</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="membrana" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
+                <span class="product-selector-option-name">Membrana</span>
+                <span class="product-selector-option-type" data-i18n="products.membrana.type">Multimodal Synth</span>
+              </button>
+              <button type="button" class="product-selector-option is-active" role="option" aria-selected="true" data-product="aurashimmer" data-product-control data-product-surface="desktop">
+                <span class="product-selector-option-name">Aura Shimmer</span>
+                <span class="product-selector-option-type" data-i18n="products.aurashimmer.type">Reverb</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="swara" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">Swara XT</span>
+                <span class="product-selector-option-type" data-i18n="products.swara.type">Hybrid Monosynth</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="gardenia" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
+                <span class="product-selector-option-name">Gardenia</span>
+                <span class="product-selector-option-type" data-i18n="products.gardenia.type">Polyphonic Synthesizer</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="quadrante" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
+                <span class="product-selector-option-name">Quadrante</span>
+                <span class="product-selector-option-type" data-i18n="products.quadrante.type">FM Synthesizer</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="seneca" data-product-control data-product-surface="desktop" tabindex="-1">
+                <span class="product-selector-option-name">Seneca</span>
+                <span class="product-selector-option-type" data-i18n="products.seneca.type">Kick Rumble Generator</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="laya" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
+                <span class="product-selector-option-name">Laya</span>
+                <span class="product-selector-option-type" data-i18n="products.laya.type">Performance Drum</span>
+              </button>
+              <button type="button" class="product-selector-option" role="option" data-product="galleria" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
+                <span class="product-selector-option-name">Galleria</span>
+                <span class="product-selector-option-type" data-i18n="products.galleria.type">Environmental Processor</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria">
+          <a class="nav-link" href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a class="nav-link" href="security.html" aria-current="page" data-i18n="nav.security">Security</a>
+          <label class="site-lang">
+            <span class="sr-only" data-i18n="lang.label">Language</span>
+            <select class="site-lang-select" aria-label="Language" data-i18n-aria="lang.aria"></select>
+          </label>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="page-shell">
+        <header class="hero">
+          <h1 data-i18n="security.title">Store security</h1>
+          <p class="hero-copy" data-i18n="security.lead">You evaluate instruments on MontroneDSP. When you choose to purchase, checkout is completed through Gumroad  -  a dedicated commerce platform  -  so payment is handled by specialised infrastructure rather than by this website.</p>
+        </header>
+
+        <section class="card agreement-card privacy-card">
+          <div class="privacy-body">
+            <p class="privacy-meta" data-i18n="security.updated" data-i18n-html><strong>Last updated: 25 September 2026</strong></p>
+            <p class="privacy-highlight" data-i18n="security.intro">MontroneDSP is an independent studio. We do not operate our own payment gateway. The store is powered by Gumroad so that cards, receipts, and delivery sit with a provider built for that work.</p>
+
+            <div class="privacy-section">
+              <h2 data-i18n="security.h1">How a purchase works</h2>
+              <p data-i18n="security.h1p1">Product pages, sound examples, manuals, and technical detail live on montronedsp.com. That is the studio site: the place to understand an instrument before you buy it.</p>
+              <p data-i18n="security.h1p2">When you select Buy, checkout is opened through Gumroad. Gumroad is the commerce layer: it takes the order, processes payment, issues the receipt, and delivers the files or license associated with that purchase.</p>
+              <p data-i18n="security.h1p3">This separation is deliberate. We keep the catalogue, writing, and product experience here. Payment stays with a platform whose purpose is secure retail.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h2 data-i18n="security.h2">Why Gumroad</h2>
+              <p data-i18n="security.h2p1">Gumroad is an established digital-commerce provider used by independent software makers and publishers. It is not a decorative storefront we ask you to browse first; it is the checkout that sits behind the Buy action on each product page.</p>
+              <p data-i18n="security.h2p2">Using Gumroad means card data is processed in an environment designed for that task, with encrypted connections and payment partners who operate under industry card-handling standards. MontroneDSP does not run its own card terminal, and we do not receive or store your payment card numbers.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h2 data-i18n="security.h3">What you can expect</h2>
+              <ul>
+                <li data-i18n="security.h3li1">Encrypted checkout over HTTPS</li>
+                <li data-i18n="security.h3li2">Payment processed by Gumroad and its banking and card partners  -  not entered into a form on this website</li>
+                <li data-i18n="security.h3li3">A purchase receipt from the store, with access to your files and license from your Gumroad library</li>
+                <li data-i18n="security.h3li4">A seven-day money-back guarantee on store purchases</li>
+              </ul>
+              <p data-i18n="security.h3p1">No checkout is risk-free in the abstract. What we can state clearly is that we do not ask you to send card details by email, and we do not keep a copy of your card on our servers.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h2 data-i18n="security.h4">What MontroneDSP receives</h2>
+              <p data-i18n="security.h4p1">After an order, we may receive the information needed to fulfil it and to support you afterwards: typically the product bought, the date, the email used at checkout, and any license or download details attached to that sale.</p>
+              <p data-i18n="security.h4p2">That record exists so we can help with installation, activation, and refunds. It is not a second copy of your card.</p>
+            </div>
+
+            <div class="privacy-section">
+              <h2 data-i18n="security.h5">Privacy and further reading</h2>
+              <p data-i18n="security.h5p1" data-i18n-html>How Gumroad handles purchase and payment data is described in <a href="https://gumroad.com/privacy" target="_blank" rel="noopener noreferrer">Gumroad’s Privacy Policy</a>. How MontroneDSP treats personal data more broadly  -  including licenses and support  -  is in our <a href="privacy.html">Privacy Policy</a>.</p>
+              <p data-i18n="security.h5p2" data-i18n-html>If something about an order looks wrong, write to <a href="mailto:support@montronedsp.com">support@montronedsp.com</a>. We would rather hear from you than leave a doubt unattended.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <section class="social-section" aria-labelledby="social-title">
+      <div class="container social-section-inner">
+        <h2 id="social-title" class="social-title" data-i18n="social.title">Follow us on social</h2>
+        <nav class="social-nav" aria-label="Social media" data-i18n-aria="social.navAria">
+          <a class="social-link" href="https://www.instagram.com/montronedsp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <picture>
+              <source srcset="assets/instagram-white-transparent.svg" type="image/svg+xml" />
+              <img class="social-icon" src="assets/instagram-white-transparent-256.png" alt="" width="64" height="64" loading="lazy" decoding="async" />
+            </picture>
+          </a>
+          <a class="social-link" href="https://soundcloud.com/montronedsp" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
+            <picture>
+              <source srcset="assets/soundcloud-white-transparent.svg" type="image/svg+xml" />
+              <img class="social-icon" src="assets/soundcloud-white-transparent-256.png" alt="" width="64" height="64" loading="lazy" decoding="async" />
+            </picture>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy" data-i18n="footer.copy">© {year} MontroneDSP. MontroneDSP is a registered trademark.</p>
+        <nav class="footer-nav" aria-label="Footer navigation" data-i18n-aria="footer.navAria">
+          <a href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="footer.store">Store</a>
+          <a href="about.html" data-i18n="footer.about">About</a>
+          <a href="contact.html" data-i18n="footer.contact">Contact</a>
+          <a href="versione.html">VERSIONE</a>
+          <a href="alsconverter.html">ALS Converter</a>
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+          <a href="security.html" aria-current="page" data-i18n="footer.security">Security</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="product-selector.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

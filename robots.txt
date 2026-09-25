@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /alsconverter
+Allow: /alsconverter.html
+Allow: /versione.html
+Disallow: /privacy.html
+Disallow: /deploy-sha.txt
+Disallow: /tools/
+Disallow: /swara-license.html
+
+Sitemap: https://www.montronedsp.com/sitemap.xml
