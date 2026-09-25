@@ -242,8 +242,8 @@
   });
 
   function headerLogoProduct(product) {
-    /* Seneca and Laya share Swara’s monochrome white header lockup. */
-    if (product === 'seneca' || product === 'laya' || product === 'gardenia' || product === 'quadrante') return 'swara';
+    /* Swara, Seneca, and Laya share Aura’s diamond header lockup. */
+    if (product === 'swara' || product === 'seneca' || product === 'laya' || product === 'gardenia' || product === 'quadrante') return 'aurashimmer';
     return product;
   }
 

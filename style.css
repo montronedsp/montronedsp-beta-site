@@ -815,7 +815,7 @@ html[data-product="swara"] .social-section .social-link {
   background: var(--surface);
 }
 
-/* Swara + Laya + Seneca: white monochrome lockup — no invert (matches Martello/Aura dark UI). */
+/* Swara + Laya + Seneca share Aura’s diamond lockup — no invert. */
 .brand-logo-variant[data-logo="swara"],
 .brand-logo-variant[data-logo="laya"],
 html[data-product="seneca"] .brand-logo-variant[data-logo="swara"] {
