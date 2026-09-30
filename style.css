@@ -3720,9 +3720,11 @@ html[data-product="swara"] .btn-disabled {
   html[data-product="swara"] .hero,
   html[data-product="membrana"] .hero,
   html[data-product="laya"] .hero,
-  html[data-product="seneca"] .hero {
+  html[data-product="seneca"] .hero,
+  html[data-product="modi"] .hero,
+  html[data-product="quadrante"] .hero {
     min-height: 0;
-    padding: clamp(28px, 5vh, 40px) 0 calc(28px + 72px + env(safe-area-inset-bottom, 0px));
+    padding: clamp(56px, 9vh, 80px) 0 calc(32px + 72px + env(safe-area-inset-bottom, 0px));
   }
 
   html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-art.swara-skin-carousel {
@@ -6574,7 +6576,7 @@ footer p {
   }
 
   .hero {
-    padding: clamp(34px, 7vh, 52px) 0 40px;
+    padding: clamp(56px, 9vh, 80px) 0 40px;
     min-width: 0;
     max-width: 100%;
   }
@@ -6693,10 +6695,10 @@ footer p {
     align-self: flex-start;
   }
 
-  /* Swara XT â€” mobile (must follow general .hero rules above) */
+  /* Swara XT — mobile (must follow general .hero rules above) */
   html[data-product="swara"] .hero {
     min-height: 0;
-    padding: clamp(28px, 5vh, 40px) 0 calc(28px + 72px + env(safe-area-inset-bottom, 0px));
+    padding: clamp(56px, 9vh, 80px) 0 calc(32px + 72px + env(safe-area-inset-bottom, 0px));
   }
 
   html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-layout,
