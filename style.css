@@ -2063,7 +2063,9 @@ html {
   color-scheme: dark;
   scroll-behavior: smooth;
   max-width: 100%;
-  overflow-x: hidden;
+  /* clip avoids the overflow-x:hidden → overflow-y:auto pairing that creates dual page scrollbars */
+  overflow-x: clip;
+  overflow-y: scroll;
   font-family: var(--font-ui);
 }
 
@@ -2071,7 +2073,8 @@ body {
   margin: 0;
   min-height: 100vh;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   background:
     linear-gradient(118deg, rgba(var(--cool-rgb), 0.1), transparent 28%),
     linear-gradient(180deg, var(--bg-deep) 0%, var(--bg) 34%, var(--bg-warm) 100%);
@@ -3268,7 +3271,7 @@ body.product-wheel-open .product-wheel-trigger {
   padding: clamp(62px, 9vh, 104px) 0 clamp(48px, 7vh, 72px);
   min-width: 0;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   overflow-y: visible;
 }
 
@@ -4384,7 +4387,7 @@ html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-copy
   padding-bottom: clamp(56px, 9vh, 96px);
   min-width: 0;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .story-open-band {
@@ -4429,7 +4432,7 @@ html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-copy
   position: relative;
   justify-self: start;
   width: 100%;
-  overflow: hidden;
+  overflow: clip;
   border-radius: 4px;
 }
 
@@ -6973,7 +6976,7 @@ html.is-linux.theme-animating .brand-logo-variant.is-active {
   display: none;
   min-width: 0;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
