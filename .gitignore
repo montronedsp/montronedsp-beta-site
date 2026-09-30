@@ -1,0 +1,6 @@
+assets/audio/
+deploy-sha.txt
+
+# Unused local Helvetica cut (not in live stack)
+assets/fonts/helvetica-neue/
+
