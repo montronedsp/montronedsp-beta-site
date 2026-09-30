@@ -101,8 +101,9 @@
   <meta name="color-scheme" content="dark" />
   <link rel="preload" href="assets/fonts/frutiger-neue-condensed/FrutigerNeueLTW1G-CnBold.otf" as="font" type="font/otf" crossorigin />
   <link rel="preload" href="assets/fonts/neue-frutiger/NeueFrutigerWorld-Regular.otf" as="font" type="font/otf" crossorigin />
-  <link rel="preload" href="assets/fonts/roboto/Roboto-Variable.ttf" as="font" type="font/ttf" crossorigin />
-  <link rel="stylesheet" href="style.css?v=scrollFix1" />
+  <link rel="preload" href="assets/fonts/univers-next-pro/UniversNextPro-Bold.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="preload" href="assets/fonts/univers-next-pro/UniversNextPro-MediumCond.ttf" as="font" type="font/ttf" crossorigin />
+  <link rel="stylesheet" href="style.css?v=n90type1" />
   <!-- Store domain: point store CNAME to domains.gumroad.com in Aruba DNS -->
   <script src="https://gumroad.com/js/gumroad.js" defer></script>
 </head>
@@ -547,16 +548,42 @@
           </ul>
         </div>
 
-        <section class="story-moment story-moment--shot container" aria-labelledby="story-models-title">
-          <div class="story-moment-layout story-moment-layout--shot">
+        <section class="story-moment story-moment--shot story-moment--models container" aria-labelledby="story-models-title">
+          <div class="story-moment-layout story-moment-layout--models">
             <div class="story-moment-copy">
               <p class="story-index"><span data-i18n="home.martello.modelIndex">Model engine</span></p>
               <h3 id="story-models-title" class="story-moment-title" data-i18n="home.martello.modelTitle">Every voice chooses its own physics.</h3>
-              <p class="story-moment-body" data-i18n="home.martello.modelBody">Classic, Classic Extended, Classic Hats, Digital, Analog, Digital+, Toms, Clap, Wood, Ride, Cymbal, Cowbell, Low Bongo, Mid Bongo, High Bongo, Glass Clave, Tambourine, Maracas, Open Percussion Extension, Charlie, Metallic, Robots, Robots Expert, and the available Expert variants. Switch modes and the control panel instantly reconfigures to expose the parameters of the selected engine.</p>
+              <p class="story-moment-body" data-i18n="home.martello.modelBody">Switch modes and the control panel instantly reconfigures to expose the parameters of the selected engine.</p>
             </div>
-            <figure class="story-frame story-frame--inline story-frame--model-popup">
+            <figure class="story-frame story-frame--model-popup">
               <img src="assets/screenshots/martello/mx2-model-selector-families.png?v=polished1" alt="MX2 model selector showing all four model families" data-i18n-alt="home.martello.modelShotAlt" width="663" height="2802" loading="lazy" decoding="async" />
             </figure>
+            <ul class="story-model-list" aria-label="Available models" data-i18n-aria="home.martello.modelListAria">
+              <li>Classic</li>
+              <li>Classic Extended</li>
+              <li>Classic Hats</li>
+              <li>Digital</li>
+              <li>Analog</li>
+              <li>Digital+</li>
+              <li>Toms</li>
+              <li>Clap</li>
+              <li>Wood</li>
+              <li>Ride</li>
+              <li>Cymbal</li>
+              <li>Cowbell</li>
+              <li>Low Bongo</li>
+              <li>Mid Bongo</li>
+              <li>High Bongo</li>
+              <li>Glass Clave</li>
+              <li>Tambourine</li>
+              <li>Maracas</li>
+              <li>Open Percussion Extension</li>
+              <li>Charlie</li>
+              <li>Metallic</li>
+              <li>Robots</li>
+              <li>Robots Expert</li>
+              <li class="story-model-list__note" data-i18n="home.martello.modelExpertNote">+ Expert variants</li>
+            </ul>
           </div>
         </section>
 
