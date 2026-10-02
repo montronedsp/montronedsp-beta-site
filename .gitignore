@@ -1,0 +1,16 @@
+assets/audio/
+deploy-sha.txt
+
+# Unused local Helvetica cut (not in live stack)
+assets/fonts/helvetica-neue/
+
+# Local Cursor / agent instruction files — never publish
+.cursor/
+AGENTS.md
+agents.md
+.cursorrules
+.cursorignore
+**/.cursor/
+**/AGENTS.md
+**/agents.md
+
