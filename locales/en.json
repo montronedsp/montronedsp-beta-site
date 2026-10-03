@@ -354,7 +354,7 @@
       "listenCopy": "A listening playlist will land here at launch."
     },
     "swara": {
-      "punchline": "In Sanskrit, svara means voice. Give yours a new one.",
+      "punchline": "Deep modulation. Immediate response.",
       "planned": "Coming soon",
       "buy": "Buy Mac & Windows · 70% off",
       "downloadLinux": "Download Linux · Free",
@@ -362,8 +362,8 @@
       "officialBuilds": "Buy Mac & Windows · 70% off",
       "source": "Source on GitHub",
       "manual": "User Manual",
-      "offerNote": "70% off Mac & Windows on the store (code SWARA50). Linux VST3 is free under GPLv3.",
-      "linuxLicenseAccept": "I have read and accept the <a href=\"swara-license.html\">GNU General Public License v3</a> for Swara XT Linux before downloading. You can also read the <a href=\"https://www.gnu.org/licenses/gpl-3.0.html\" target=\"_blank\" rel=\"noopener noreferrer\">official GPL text at gnu.org</a>.",
+      "offerNote": "70% off · Mac & Windows · Linux GPLv3.",
+      "linuxLicenseAccept": "I accept the <a href=\"swara-license.html\">GNU GPLv3 license</a> for Swara XT Linux.",
       "linuxInstallAria": "Linux install options",
       "linuxInstallLabel": "Linux x86_64 · VST3 + Standalone · Free",
       "notify": "Get notified",
