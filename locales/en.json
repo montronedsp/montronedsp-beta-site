@@ -224,9 +224,9 @@
     },
     "aurashimmer": {
       "storyIndex": "v1.2.0",
-      "specMac": "Mac",
-      "specWin": "Win",
-      "specLinux": "Linux",
+      "specMac": "Mac VST3",
+      "specWin": "Windows VST3",
+      "specLinux": "Linux VST3",
       "ownershipTitle": "VST3 on macOS, Windows, and Linux.",
       "ownershipBody1": "Aura ships as 64-bit VST3 only  -  no standalone application. macOS includes a .pkg installer, or copy the MontroneDSP VST3 folder into your system or user plugin directory. On Windows, place it in your VST3 folder (typically <code>C:\\Program Files\\Common Files\\VST3</code>). On Linux, use your system or user VST3 directory, then rescan in your DAW.",
       "ownershipBody2": "After checkout, your license key appears on the Aura download page. Open Aura, paste the key in License or About, and activate. Each perpetual license covers up to three machines.",

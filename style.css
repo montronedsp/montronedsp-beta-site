@@ -429,7 +429,7 @@ html[data-product="aurashimmer"] .hero-specs li {
 
 html[data-product="aurashimmer"] .hero-panel[data-hero-panel="aurashimmer"] .hero-specs {
   flex-wrap: nowrap;
-  gap: 5px;
+  gap: 8px;
   max-width: 100%;
   overflow-x: auto;
   scrollbar-width: none;
@@ -441,18 +441,6 @@ html[data-product="aurashimmer"] .hero-panel[data-hero-panel="aurashimmer"] .her
 
 html[data-product="aurashimmer"] .hero-panel[data-hero-panel="aurashimmer"] .hero-specs li {
   flex: 0 0 auto;
-  min-height: 28px;
-  padding: 4px 7px;
-  border: 2px solid var(--n90-rim);
-  border-radius: 4px;
-  background: rgba(var(--cool-rgb), 0.1);
-  font-size: 0.56rem;
-  letter-spacing: 0.04em;
-  line-height: 1;
-  text-transform: uppercase;
-  box-shadow:
-    var(--n90-hard-sm),
-    inset 1px 1px 0 var(--n90-hilite);
   white-space: nowrap;
 }
 
