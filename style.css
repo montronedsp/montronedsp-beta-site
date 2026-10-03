@@ -5680,6 +5680,17 @@ footer p {
   .hero-specs li {
     flex: 1 1 calc(50% - 6px);
   }
+
+  html[data-product="aurashimmer"] .hero-panel[data-hero-panel="aurashimmer"] .hero-specs {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  html[data-product="aurashimmer"] .hero-panel[data-hero-panel="aurashimmer"] .hero-specs li {
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    justify-content: center;
+  }
 }
 
 /* Product theme panels */
