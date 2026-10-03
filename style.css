@@ -21,10 +21,10 @@
   --max-width: 1080px;
   --header-height: 84px;
   --radius: 4px;
-  /* Fira typography trial; Geist Mono remains restricted to technical data. */
-  --font-display: "Fira Sans Condensed", sans-serif;
-  --font-body: "Fira Sans", sans-serif;
-  --font-nav: "Fira Sans", sans-serif;
+  /* Frutiger for communication; Geist Mono only for technical data. */
+  --font-display: "Frutiger Neue Condensed", "Neue Frutiger", sans-serif;
+  --font-body: "Neue Frutiger", sans-serif;
+  --font-nav: var(--font-body);
   --font-ui: var(--font-nav);
   --font-sans: var(--font-body);
   --font-emphasis: var(--font-display);
