@@ -93,7 +93,7 @@
 
   function loadLocale(code) {
     if (cache[code]) return Promise.resolve(cache[code]);
-    return fetch('locales/' + code + '.json', { credentials: 'same-origin' })
+    return fetch('locales/' + code + '.json?v=compactAuraChips1', { credentials: 'same-origin' })
       .then(function (res) {
         if (!res.ok) throw new Error('locale ' + code + ' missing');
         return res.arrayBuffer();
