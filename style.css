@@ -21,9 +21,9 @@
   --max-width: 1080px;
   --header-height: 84px;
   --radius: 4px;
-  /* Barlow for communication; Geist Mono only for technical data. */
-  --font-display: "Barlow", sans-serif;
-  --font-body: "Barlow", sans-serif;
+  /* Frutiger for communication; Geist Mono only for technical data. */
+  --font-display: "Frutiger Neue Condensed", "Neue Frutiger", sans-serif;
+  --font-body: "Neue Frutiger", sans-serif;
   --font-nav: var(--font-body);
   --font-ui: var(--font-nav);
   --font-sans: var(--font-body);
