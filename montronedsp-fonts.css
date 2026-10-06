@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Adriatica Next";
+  src: url("assets/fonts/adriatica-next/AdriaticaNext-Medium.woff2") format("woff2"),
+       url("assets/fonts/adriatica-next/AdriaticaNext-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adriatica Next Condensed";
+  src: url("assets/fonts/adriatica-next/AdriaticaNext-CondensedRegular.woff2") format("woff2"),
+       url("assets/fonts/adriatica-next/AdriaticaNext-CondensedRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adriatica Next Condensed";
+  src: url("assets/fonts/adriatica-next/AdriaticaNext-CondensedItalic.woff2") format("woff2"),
+       url("assets/fonts/adriatica-next/AdriaticaNext-CondensedItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adriatica Next Condensed";
+  src: url("assets/fonts/adriatica-next/AdriaticaNext-CondensedMedium.woff2") format("woff2"),
+       url("assets/fonts/adriatica-next/AdriaticaNext-CondensedMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adriatica Next Condensed";
+  src: url("assets/fonts/adriatica-next/AdriaticaNext-CondensedBold.woff2") format("woff2"),
+       url("assets/fonts/adriatica-next/AdriaticaNext-CondensedBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Adriatica Next Condensed";
+  src: url("assets/fonts/adriatica-next/AdriaticaNext-CondensedBoldItalic.woff2") format("woff2"),
+       url("assets/fonts/adriatica-next/AdriaticaNext-CondensedBoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
