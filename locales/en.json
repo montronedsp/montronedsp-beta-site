@@ -473,6 +473,8 @@
       "openssfCaption": "Open source, independently reviewed",
       "macosTrustAria": "macOS: Signed and Notarized, Universal binary",
       "macosTrustAlt": "Signed & Notarized · Universal",
+      "macosTrustLabel": "macOS",
+      "macosTrustValue": "Signed & Notarized · Universal",
       "sonarRowAria": "SWARA XT security and quality badges",
       "sonarSecurityAria": "SWARA XT: SonarCloud security rating",
       "sonarSecurityAlt": "Security Rating",
