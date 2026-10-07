@@ -3490,11 +3490,41 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-bad
   color: var(--muted-strong);
 }
 
+.hero-trust-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+}
+
+.hero-trust-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-trust-icon-link:hover .hero-trust-icon,
+.hero-trust-icon-link:focus-visible .hero-trust-icon {
+  transform: translateY(-2px);
+}
+
+.hero-trust-icon,
+.openssf-icon,
+.sonarcloud-icon {
+  display: block;
+  width: 72px;
+  height: 72px;
+  transition: transform 140ms ease;
+}
+
 .hero-trust-lockups {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 12px 16px;
+  align-items: center;
+  gap: 10px 12px;
 }
 
 .trust-lockup,
@@ -3502,7 +3532,7 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-bad
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 0;
   padding: 0;
   border: 0;
   background: transparent;
@@ -3511,30 +3541,16 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-bad
   color: inherit;
 }
 
-.trust-lockup:hover .trust-lockup__icon,
-.trust-lockup:focus-visible .trust-lockup__icon,
-.openssf-lockup:hover .openssf-icon,
-.openssf-lockup:focus-visible .openssf-icon {
-  transform: translateY(-1px);
-}
-
-.trust-lockup__icon,
-.openssf-icon {
-  width: 32px;
-  height: 32px;
-  transition: transform 140ms ease;
-}
-
 .trust-lockup__badge,
 .openssf-badge-img {
   display: block;
-  height: 20px;
+  height: 28px;
   width: auto;
 }
 
 .trust-lockup--badge-only {
-  justify-content: flex-end;
-  min-height: calc(32px + 4px + 20px);
+  justify-content: center;
+  min-height: 0;
 }
 
 .openssf-caption {

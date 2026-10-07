@@ -487,6 +487,8 @@
       "sonarSecurityAlt": "Security Rating",
       "sonarReliabilityAria": "SWARA XT: rating di affidabilità SonarCloud",
       "sonarReliabilityAlt": "Reliability Rating",
+      "sonarQualityAria": "SWARA XT: stato quality gate SonarCloud",
+      "sonarQualityAlt": "Quality gate status",
       "heroSpecOsc": "35 modelli di oscillatore",
       "heroSpecSeq": "Step · Arp · Sequence",
       "heroSpecRand": "5 generatori casuali",
