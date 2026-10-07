@@ -146,11 +146,11 @@
   );
 })();
 
-(function initSwaraLicenseAcceptance() {
+(function initSwaraFreeDownloads() {
   const STORAGE_KEY = 'montronedsp.swara.gpl3.accepted';
+  const RELEASE_API = 'https://api.github.com/repos/montronedsp/SWARAXT/releases/latest';
   const checkboxes = Array.from(document.querySelectorAll('[data-swara-license-accept]'));
-  const downloads = Array.from(document.querySelectorAll('[data-swara-linux-download]'));
-  if (!checkboxes.length || !downloads.length) return;
+  const downloads = Array.from(document.querySelectorAll('[data-swara-free-download], [data-swara-linux-download]'));
 
   function setEnabled(enabled) {
     downloads.forEach(function (link) {
@@ -178,22 +178,84 @@
     } catch (_) {}
   }
 
-  let restored = false;
-  try {
-    restored = sessionStorage.getItem(STORAGE_KEY) === '1';
-  } catch (_) {}
-  if (restored) {
-    checkboxes.forEach(function (cb) { cb.checked = true; });
-    setEnabled(true);
-  } else {
-    setEnabled(false);
+  if (checkboxes.length && downloads.length) {
+    let restored = false;
+    try {
+      restored = sessionStorage.getItem(STORAGE_KEY) === '1';
+    } catch (_) {}
+    if (restored) {
+      checkboxes.forEach(function (cb) { cb.checked = true; });
+      setEnabled(true);
+    } else {
+      setEnabled(false);
+    }
+
+    checkboxes.forEach(function (cb) {
+      cb.addEventListener('change', function () {
+        syncFromCheckboxes(cb);
+      });
+    });
   }
 
-  checkboxes.forEach(function (cb) {
-    cb.addEventListener('change', function () {
-      syncFromCheckboxes(cb);
+  function pickAsset(assets, platform) {
+    if (!Array.isArray(assets)) return null;
+    var patterns = platform === 'windows'
+      ? [/windows/i, /\.zip$/i]
+      : [/linux/i, /\.tar\.gz$/i];
+    return assets.find(function (asset) {
+      var name = asset && asset.name ? String(asset.name) : '';
+      return patterns.every(function (re) { return re.test(name); });
+    }) || null;
+  }
+
+  function applyLatestRelease(release) {
+    if (!release || !Array.isArray(release.assets)) return;
+    downloads.forEach(function (link) {
+      var platform = link.getAttribute('data-swara-download-platform');
+      if (!platform && link.hasAttribute('data-swara-linux-download')) platform = 'linux';
+      if (!platform) return;
+      var asset = pickAsset(release.assets, platform);
+      if (!asset || !asset.browser_download_url) return;
+      link.href = asset.browser_download_url;
+      link.removeAttribute('download');
     });
-  });
+  }
+
+  function applyChecksums(text) {
+    if (!text) return;
+    String(text).split(/\r?\n/).forEach(function (line) {
+      var match = line.match(/^([a-fA-F0-9]{64})\s+(\S+)/);
+      if (!match) return;
+      var hash = match[1].toLowerCase();
+      var name = match[2];
+      var platform = /windows/i.test(name) ? 'windows' : (/linux/i.test(name) ? 'linux' : null);
+      if (!platform) return;
+      document.querySelectorAll('[data-swara-checksum="' + platform + '"]').forEach(function (el) {
+        el.textContent = hash;
+      });
+    });
+  }
+
+  fetch(RELEASE_API, { headers: { Accept: 'application/vnd.github+json' } })
+    .then(function (res) {
+      if (!res.ok) throw new Error('release lookup failed');
+      return res.json();
+    })
+    .then(function (release) {
+      applyLatestRelease(release);
+      var sums = (release.assets || []).find(function (asset) {
+        return asset && /sha256sums/i.test(asset.name || '');
+      });
+      if (!sums || !sums.browser_download_url) return null;
+      return fetch(sums.browser_download_url).then(function (res) {
+        if (!res.ok) throw new Error('checksum lookup failed');
+        return res.text();
+      });
+    })
+    .then(function (text) {
+      if (text) applyChecksums(text);
+    })
+    .catch(function () {});
 })();
 
 (function initAlsMitLicenseAcceptance() {

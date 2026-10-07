@@ -371,9 +371,11 @@
                 </h1>
                 <p class="hero-punchline" data-i18n="home.swara.punchline">Hybrid monosynth and sequencer. Two oscillators, thirty-five models, one resonant four-pole filter, and sequences you can program, transform or generate.</p>
               </div>
-              <p class="hero-offer-note" data-i18n="home.swara.offerNote">70% off · Mac &amp; Windows · Linux GPLv3.</p>
-              <div class="hero-actions">
-                <a class="btn btn-primary gumroad-button" href="https://store.montronedsp.com/l/swara?wanted=true" data-gumroad-overlay-checkout="true" data-i18n="home.swara.buy">Buy Mac &amp; Windows · 70% off</a>
+              <p class="hero-offer-note" data-i18n="home.swara.offerNote">70% off · Mac only · Windows &amp; Linux free GPLv3.</p>
+              <div class="hero-actions hero-actions--swara">
+                <a class="btn btn-primary gumroad-button" href="https://store.montronedsp.com/l/swara?wanted=true" data-gumroad-overlay-checkout="true" data-i18n="home.swara.buy">Buy Mac · 70% off</a>
+                <a class="btn btn-secondary" href="#swara-downloads" data-i18n="home.swara.downloadWindowsJump">Download Windows · Free</a>
+                <a class="btn btn-secondary" href="#swara-downloads" data-i18n="home.swara.downloadLinuxJump">Download Linux · Free</a>
                 <a class="openssf-lockup" href="https://www.bestpractices.dev/projects/15241" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.openssfAria" aria-label="SWARA XT: OpenSSF Best Practices, 100 percent passing">
                   <img class="openssf-icon" src="assets/branding/openssf-best-practices.svg" alt="" width="44" height="44" loading="lazy" decoding="async" />
                   <img class="openssf-badge-img" src="https://www.bestpractices.dev/projects/15241/badge" alt="" loading="lazy" decoding="async" />
@@ -1097,8 +1099,8 @@
       <section class="story-moment container" aria-labelledby="swara-format-title">
         <div class="story-moment-copy">
           <p class="story-index"><span data-i18n="home.swara.formatIndex">Formats</span></p>
-          <h3 id="swara-format-title" class="story-moment-title" data-i18n="home.swara.formatTitle">VST3 and Standalone everywhere. AU on macOS.</h3>
-          <p class="story-moment-body" data-i18n="home.swara.formatBody">macOS ships as VST3, AU and Standalone. Windows x64 and Linux x86_64 ship as VST3 and Standalone. The Mac build is a universal binary from macOS 11 and runs on Apple Silicon and Intel. To install manually, copy Swara XT.vst3 into your VST3 folder and rescan the DAW — on Windows a typical location is C:\Program Files\Common Files\VST3; on Mac and Linux, use your system or user VST3 directory.</p>
+          <h3 id="swara-format-title" class="story-moment-title" data-i18n="home.swara.formatTitle">VST3 and Standalone on Windows and Linux. AU on macOS.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.formatBody">Windows x64 and Linux x86_64 ship free as VST3 and Standalone under GPLv3. macOS ships as VST3, AU and Standalone from the store. To install manually, copy Swara XT.vst3 into your VST3 folder and rescan the DAW — on Windows a typical location is C:\Program Files\Common Files\VST3; on Mac and Linux, use your system or user VST3 directory.</p>
         </div>
       </section>
 
@@ -1146,14 +1148,17 @@
           <h4 class="story-moment-subhead" data-i18n="home.swara.linuxFormatsTitle">Plugin formats</h4>
           <p class="story-moment-body" data-i18n="home.swara.linuxFormatsBody1">Our Linux plugins are distributed in VST3 format.</p>
           <p class="story-moment-body" data-i18n="home.swara.linuxFormatsBody2">When installing manually, make sure your DAW is configured to scan the directory containing the plugin. After installation, restarting or rescanning your DAW may be required before the plugin appears.</p>
-          <label class="swara-license-accept">
+          <label class="swara-license-accept" id="swara-downloads">
             <input type="checkbox" class="swara-license-accept-input" data-swara-license-accept />
-            <span class="swara-license-accept-copy" data-i18n="home.swara.linuxLicenseAccept" data-i18n-html>I accept the <a href="swara-license.html">GNU GPLv3 license</a> for Swara XT Linux.</span>
+            <span class="swara-license-accept-copy" data-i18n="home.swara.linuxLicenseAccept" data-i18n-html>I accept the <a href="swara-license.html">GNU GPLv3 license</a> for Swara XT Windows and Linux.</span>
           </label>
-          <div class="hero-actions">
-            <a class="btn btn-primary btn-disabled" href="assets/SwaraXT-Linux-x86_64-v1.2.2.tar.gz" download="SwaraXT-Linux-x86_64-v1.2.2.tar.gz" data-swara-linux-download data-i18n="home.swara.downloadLinux" aria-disabled="true" tabindex="-1">Download Linux · Free</a>
+          <div class="hero-actions hero-actions--swara">
+            <a class="btn btn-primary btn-disabled" href="https://github.com/montronedsp/SWARAXT/releases/download/v1.2.3/SwaraXT-Windows-x64-v1.2.3.zip" data-swara-free-download data-swara-download-platform="windows" data-i18n="home.swara.downloadWindows" aria-disabled="true" tabindex="-1" rel="noopener noreferrer">Download Windows · Free</a>
+            <a class="btn btn-primary btn-disabled" href="https://github.com/montronedsp/SWARAXT/releases/download/v1.2.3/SwaraXT-Linux-x86_64-v1.2.3.tar.gz" data-swara-free-download data-swara-download-platform="linux" data-swara-linux-download data-i18n="home.swara.downloadLinux" aria-disabled="true" tabindex="-1" rel="noopener noreferrer">Download Linux · Free</a>
+            <a class="btn btn-secondary" href="https://github.com/montronedsp/SWARAXT/releases/latest" target="_blank" rel="noopener noreferrer" data-i18n="home.swara.releasePage">All releases</a>
           </div>
-          <p class="hero-download-checksum"><span data-i18n="home.swara.sha256Label">SHA-256</span>: <code data-i18n="home.swara.linuxSha256">f66e95e9c8ab045fe59b6d0bdaed5b1ab4c31611648cfa2f4b7ede0878d554f6</code></p>
+          <p class="hero-download-checksum"><span data-i18n="home.swara.windowsShaLabel">Windows SHA-256</span>: <code data-i18n="home.swara.windowsSha256" data-swara-checksum="windows">b8b57bad4269d357f587b280e00095a58e27dbfa1af52bd7165bec3389849185</code></p>
+          <p class="hero-download-checksum"><span data-i18n="home.swara.sha256Label">Linux SHA-256</span>: <code data-i18n="home.swara.linuxSha256" data-swara-checksum="linux">908b622a77f97bd6067b0c9dcf29cf4dd0f847af650a0b23f2583630b71c2d07</code></p>
 
           <article class="swara-linux-env swara-linux-env--open" aria-labelledby="swara-linux-open-title">
             <figure class="swara-linux-env-logo swara-linux-env-logo--gpl">
@@ -1700,8 +1705,8 @@
     <span class="product-wheel-trigger-name" data-wheel-trigger-name>Aura Shimmer</span>
     <span class="product-wheel-trigger-hint" data-i18n="wheel.switch">Switch</span>
   </button>
-  <script src="i18n.js?v=swaraHtml1"></script>
+  <script src="i18n.js?v=swaraFreeDl1"></script>
   <script src="product-selector.js?v=stonesPublic1"></script>
-  <script src="script.js"></script>
+  <script src="script.js?v=swaraFreeDl1"></script>
 </body>
 </html>
