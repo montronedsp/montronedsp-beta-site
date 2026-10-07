@@ -3395,17 +3395,47 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--s
   min-height: 0;
 }
 
-html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy > .btn-primary {
+html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-buy-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+}
+
+html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-buy-row > .btn-primary {
   flex: 0 0 auto;
   width: auto;
   min-width: 11.5rem;
+  align-self: stretch;
+}
+
+html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-badge {
+  display: inline-flex;
+  align-items: stretch;
+  flex: 0 0 auto;
+  min-width: 11.5rem;
+  min-height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-badge img {
+  display: block;
+  width: auto;
+  height: 48px;
+  max-width: min(100%, 28rem);
+  object-fit: contain;
+  object-position: left center;
 }
 
 .hero-trust-lockups {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 14px 18px;
+  align-items: center;
+  gap: 8px 10px;
 }
 
 .trust-lockup,
@@ -3413,27 +3443,13 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--s
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 0;
   padding: 0;
   border: 0;
   background: transparent;
   box-shadow: none;
   text-decoration: none;
   color: inherit;
-}
-
-.trust-lockup:hover .trust-lockup__icon,
-.trust-lockup:focus-visible .trust-lockup__icon,
-.openssf-lockup:hover .openssf-icon,
-.openssf-lockup:focus-visible .openssf-icon {
-  transform: translateY(-1px);
-}
-
-.trust-lockup__icon,
-.openssf-icon {
-  width: 32px;
-  height: 32px;
-  transition: transform 140ms ease;
 }
 
 .trust-lockup__badge,
@@ -3444,8 +3460,8 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--s
 }
 
 .trust-lockup--badge-only {
-  justify-content: flex-end;
-  min-height: calc(32px + 4px + 20px);
+  justify-content: center;
+  min-height: 0;
 }
 
 .openssf-caption {
@@ -5719,14 +5735,28 @@ footer p {
     gap: 10px;
   }
 
-  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy > .btn-primary {
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-buy-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-buy-row > .btn-primary,
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-badge {
     width: 100%;
     min-width: 0;
   }
 
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-badge img {
+    width: 100%;
+    height: 48px;
+    max-width: none;
+    object-fit: contain;
+    object-position: left center;
+  }
+
   html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy .hero-trust-lockups {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   html[data-product="swara"] .hero-copy > .hero-actions.hero-actions--swara,
