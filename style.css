@@ -3395,10 +3395,36 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--s
   min-height: 0;
 }
 
-html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy > .btn-primary {
+html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-buy-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 14px;
+  width: 100%;
+}
+
+html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-buy-row > .btn-primary {
   flex: 0 0 auto;
   width: auto;
   min-width: 11.5rem;
+  min-height: 44px;
+}
+
+html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-sonar-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-height: 44px;
+  line-height: 0;
+  text-decoration: none;
+}
+
+html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-sonar-badge img {
+  display: block;
+  height: 28px;
+  width: auto;
+  max-width: min(100%, 220px);
 }
 
 .hero-trust-lockups {
@@ -5714,9 +5740,19 @@ footer p {
     gap: 10px;
   }
 
-  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy > .btn-primary {
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-buy-row {
     width: 100%;
+    align-items: center;
+  }
+
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-buy-row > .btn-primary {
+    width: auto;
     min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-sonar-badge {
+    flex: 0 0 auto;
   }
 
   html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy .hero-trust-lockups {
