@@ -3465,11 +3465,36 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-bad
   white-space: nowrap;
 }
 
+.hero-trust-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  max-width: 36rem;
+  padding: 12px 14px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface-glass);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.hero-trust-frame__lede {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--muted-strong);
+}
+
 .hero-trust-lockups {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 10px;
+  align-items: flex-end;
+  gap: 12px 16px;
 }
 
 .trust-lockup,
@@ -3477,13 +3502,27 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-bad
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
+  gap: 4px;
   padding: 0;
   border: 0;
   background: transparent;
   box-shadow: none;
   text-decoration: none;
   color: inherit;
+}
+
+.trust-lockup:hover .trust-lockup__icon,
+.trust-lockup:focus-visible .trust-lockup__icon,
+.openssf-lockup:hover .openssf-icon,
+.openssf-lockup:focus-visible .openssf-icon {
+  transform: translateY(-1px);
+}
+
+.trust-lockup__icon,
+.openssf-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 140ms ease;
 }
 
 .trust-lockup__badge,
@@ -3494,8 +3533,8 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-bad
 }
 
 .trust-lockup--badge-only {
-  justify-content: center;
-  min-height: 0;
+  justify-content: flex-end;
+  min-height: calc(32px + 4px + 20px);
 }
 
 .openssf-caption {
@@ -5788,6 +5827,11 @@ footer p {
     white-space: normal;
     text-align: center;
     padding: 8px 12px;
+  }
+
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy .hero-trust-frame {
+    max-width: none;
+    width: 100%;
   }
 
   html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy .hero-trust-lockups {
