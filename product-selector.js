@@ -1,5 +1,5 @@
 (function () {
-  const PUBLIC_PRODUCTS = ['aurashimmer', 'galleria', 'martello', 'swara', 'stones'];
+  const PUBLIC_PRODUCTS = ['aurashimmer', 'galleria', 'martello', 'swara'];
   const LOCALHOST_VISIBLE_PRODUCTS = ['aurashimmer', 'galleria', 'martello', 'swara', 'seneca', 'stones'];
   const HIDDEN_SELECTOR_PRODUCTS = ['gardenia', 'laya', 'quadrante', 'membrana'];
   /* Clockwise from top-left quadrant when 4 products (-45° start): Aura, Galleria, Swara, MX2 */

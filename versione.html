@@ -7,7 +7,15 @@
   <title>VERSIONE — Backup and version history for music projects | MontroneDSP</title>
   <meta name="description" content="VERSIONE is an experimental, offline-first backup tool for DAW sessions, recordings, samples, and project files. No VERSIONE cloud. No AI. GPL-3.0-only." />
   <link rel="canonical" href="https://www.montronedsp.com/versione.html" />
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="noindex,nofollow" />
+  <script>
+    (function () {
+      var host = window.location.hostname || '';
+      if (host !== 'localhost' && host !== '127.0.0.1') {
+        window.location.replace('./');
+      }
+    })();
+  </script>
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="MontroneDSP" />
   <meta property="og:title" content="VERSIONE — Backup and version history for music projects" />
@@ -241,7 +249,7 @@
     </footer>
   </div>
   <script src="i18n.js?v=swaraNo70"></script>
-  <script src="product-selector.js?v=stonesPublic1"></script>
+  <script src="product-selector.js?v=hideStonesVersione1"></script>
   <script src="script.js?v=swaraFreeDl1"></script>
 </body>
 </html>

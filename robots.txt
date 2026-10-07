@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Allow: /alsconverter
 Allow: /alsconverter.html
-Allow: /versione.html
+Disallow: /versione.html
 Disallow: /privacy.html
 Disallow: /deploy-sha.txt
 Disallow: /tools/
