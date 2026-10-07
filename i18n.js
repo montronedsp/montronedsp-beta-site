@@ -93,7 +93,7 @@
 
   function loadLocale(code) {
     if (cache[code]) return Promise.resolve(cache[code]);
-    return fetch('locales/' + code + '.json?v=auraChipsStandard1', { credentials: 'same-origin' })
+    return fetch('locales/' + code + '.json?v=swaraHtml1', { credentials: 'same-origin' })
       .then(function (res) {
         if (!res.ok) throw new Error('locale ' + code + ' missing');
         return res.arrayBuffer();
@@ -115,7 +115,7 @@
       var key = el.getAttribute('data-i18n');
       var value = t(key);
       if (!value) return;
-      if (el.hasAttribute('data-i18n-html')) {
+      if (el.hasAttribute('data-i18n-html') || /<\/?[a-z][\s\S]*>/i.test(value)) {
         el.innerHTML = value;
       } else {
         el.textContent = value;

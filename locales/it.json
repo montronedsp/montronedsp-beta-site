@@ -481,7 +481,7 @@
       "seqBody": "Sedici step con lunghezza, rotazione, groove, swing, gate e divisione ritmica. Ogni step porta una nota, uno stato evento — rest, note o tie — una velocity e un valore controller indipendente, così intonazione e modulazione si muovono su corsie separate. Tre modalità coprono il terreno: Step per un pattern fisso, Arp per direzioni up, down, up/down, random e played su quindici pattern e quattro ottave, e Sequence per la riga memorizzata. L’orologio gira libero da 40 a 240 BPM o si blocca sull’host.",
       "seqLi1": "<strong>Step / Arp / Sequence.</strong> Un pattern fisso, un arpeggiatore o la sequenza memorizzata — l’editor a step resta disponibile in tutte e tre.",
       "seqLi2": "<strong>Lunghezza e start.</strong> Accorcia il ciclo a una lunghezza qualsiasi da 1 a 16 step, poi ruota l’offset iniziale perché il pattern si sposti rispetto alla battuta.",
-      "seqLi3": "<strong>Groove.</strong> Sei template di groove — Swing, Shuffle, Push, Lag, Human, Monkey — con above un livello di swing.",
+      "seqLi3": "<strong>Groove.</strong> Sei template di groove — Swing, Shuffle, Push, Lag, Human, Monkey — con un livello di swing in più.",
       "seqLi4": "<strong>Gate e divisione.</strong> Gate dal 5% al 100% e divisione ritmica da 1/1 fino a 1/64, terne incluse.",
       "seqLi5": "<strong>Dettaglio per step.</strong> Nota, stato evento (rest / note / tie), velocity e un valore controller che alimenta le sorgenti di modulazione del sequencer in ogni modalità.",
       "seqLi6": "<strong>Orologio.</strong> Libero da 40 a 240 BPM, oppure host sync perché il pattern segua il trasporto della DAW.",
