@@ -478,6 +478,8 @@
       "openssfCaption": "Open source, revisionato in modo indipendente",
       "macosTrustAria": "macOS: firmato e notarizzato, binario Universal",
       "macosTrustAlt": "Signed & Notarized · Universal",
+      "sonarAria": "SWARA XT: quality gate SonarCloud",
+      "sonarAlt": "Quality gate",
       "heroSpecOsc": "35 modelli di oscillatore",
       "heroSpecSeq": "Step · Arp · Sequence",
       "heroSpecRand": "5 generatori casuali",
