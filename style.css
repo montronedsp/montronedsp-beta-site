@@ -5858,9 +5858,25 @@ footer p {
     gap: 10px;
   }
 
-  /* Temporary: hide Buy Mac + Signed & Notarized on phones */
   html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-buy-row {
-    display: none;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-buy-row > .btn-primary,
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-badge {
+    width: 100%;
+    min-width: 0;
+  }
+
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-badge {
+    font-size: 0.66rem;
+  }
+
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-badge__value {
+    white-space: normal;
+    text-align: center;
+    padding: 8px 12px;
   }
 
   html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy .hero-trust-frame {
