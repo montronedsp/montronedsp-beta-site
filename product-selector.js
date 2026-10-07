@@ -1,7 +1,7 @@
 (function () {
-  const PUBLIC_PRODUCTS = ['aurashimmer', 'galleria', 'martello', 'swara'];
-  const LOCALHOST_VISIBLE_PRODUCTS = ['aurashimmer', 'galleria', 'martello', 'swara', 'seneca', 'stones'];
-  const HIDDEN_SELECTOR_PRODUCTS = ['gardenia', 'laya', 'quadrante', 'membrana'];
+  const PUBLIC_PRODUCTS = ['aurashimmer', 'galleria', 'martello', 'swara', 'membrana'];
+  const LOCALHOST_VISIBLE_PRODUCTS = ['aurashimmer', 'galleria', 'martello', 'swara', 'membrana', 'seneca', 'stones'];
+  const HIDDEN_SELECTOR_PRODUCTS = ['gardenia', 'laya', 'quadrante'];
   /* Clockwise from top-left quadrant when 4 products (-45° start): Aura, Galleria, Swara, MX2 */
   const WHEEL_CLOCKWISE = [
     'aurashimmer',
