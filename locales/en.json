@@ -494,6 +494,8 @@
       "sonarQualityAlt": "Quality gate status",
       "sonarMaintainabilityAria": "SWARA XT: SonarCloud maintainability rating",
       "sonarMaintainabilityAlt": "Maintainability Rating",
+      "reuseAria": "SWARA XT: REUSE status",
+      "reuseAlt": "REUSE status",
       "heroSpecOsc": "35 oscillator models",
       "heroSpecSeq": "Step · Arp · Sequence",
       "heroSpecRand": "5 random generators",
