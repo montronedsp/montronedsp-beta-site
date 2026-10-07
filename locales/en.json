@@ -471,6 +471,8 @@
       "linuxOpenBody3": "We believe Linux and open-source development can play an important role in keeping music technology accessible, transparent, and open to experimentation.",
       "openssfAria": "SWARA XT: OpenSSF Best Practices, 100 percent passing",
       "openssfCaption": "Open source, independently reviewed",
+      "macosTrustAria": "macOS: Signed and Notarized, Universal binary",
+      "macosTrustAlt": "Signed & Notarized · Universal",
       "heroSpecOsc": "35 oscillator models",
       "heroSpecSeq": "Step · Arp · Sequence",
       "heroSpecRand": "5 random generators",

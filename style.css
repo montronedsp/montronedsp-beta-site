@@ -3401,6 +3401,14 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--s
   min-width: 11.5rem;
 }
 
+.hero-trust-lockups {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 14px 18px;
+}
+
+.trust-lockup,
 .openssf-lockup {
   display: inline-flex;
   flex-direction: column;
@@ -3414,17 +3422,21 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--s
   color: inherit;
 }
 
+.trust-lockup:hover .trust-lockup__icon,
+.trust-lockup:focus-visible .trust-lockup__icon,
 .openssf-lockup:hover .openssf-icon,
 .openssf-lockup:focus-visible .openssf-icon {
   transform: translateY(-1px);
 }
 
+.trust-lockup__icon,
 .openssf-icon {
   width: 32px;
   height: 32px;
   transition: transform 140ms ease;
 }
 
+.trust-lockup__badge,
 .openssf-badge-img {
   display: block;
   height: 20px;
@@ -5707,8 +5719,9 @@ footer p {
     min-width: 0;
   }
 
-  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy .openssf-lockup {
-    align-self: center;
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy .hero-trust-lockups {
+    width: 100%;
+    justify-content: center;
   }
 
   html[data-product="swara"] .hero-copy > .hero-actions.hero-actions--swara,
