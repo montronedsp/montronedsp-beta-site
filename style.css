@@ -3469,10 +3469,10 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-bad
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
-  max-width: 36rem;
-  padding: 12px 14px 14px;
+  max-width: 42rem;
+  padding: 10px 12px 12px;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   background: var(--surface-glass);
@@ -3490,18 +3490,19 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-bad
   color: var(--muted-strong);
 }
 
-.hero-trust-pair {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 14px 18px;
-}
-
+.hero-trust-row,
 .hero-trust-lockups {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 10px 12px;
+  gap: 8px 10px;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.hero-trust-row > .trust-lockup--badge-only {
+  flex: 0 0 auto;
 }
 
 .trust-lockup,
@@ -5869,6 +5870,7 @@ footer p {
     width: 100%;
   }
 
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy .hero-trust-row,
   html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy .hero-trust-lockups {
     width: 100%;
     justify-content: flex-start;
