@@ -3443,6 +3443,11 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--s
   width: auto;
 }
 
+.trust-lockup--badge-only {
+  justify-content: flex-end;
+  min-height: calc(32px + 4px + 20px);
+}
+
 .openssf-caption {
   font-family: var(--font-ui);
   font-weight: 500;
