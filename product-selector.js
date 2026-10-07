@@ -1,19 +1,19 @@
 (function () {
-  const PUBLIC_PRODUCTS = ['aurashimmer', 'galleria', 'martello', 'swara', 'membrana'];
-  const LOCALHOST_VISIBLE_PRODUCTS = ['aurashimmer', 'galleria', 'martello', 'swara', 'membrana', 'seneca', 'stones'];
+  const PUBLIC_PRODUCTS = ['aurashimmer', 'galleria', 'membrana', 'martello', 'swara'];
+  const LOCALHOST_VISIBLE_PRODUCTS = ['aurashimmer', 'galleria', 'membrana', 'martello', 'swara', 'seneca', 'stones'];
   const HIDDEN_SELECTOR_PRODUCTS = ['gardenia', 'laya', 'quadrante'];
   /* Clockwise from top-left quadrant when 4 products (-45° start): Aura, Galleria, Swara, MX2 */
   const WHEEL_CLOCKWISE = [
     'aurashimmer',
     'galleria',
+    'membrana',
     'swara',
     'martello',
     'seneca',
     'stones',
     'gardenia',
     'quadrante',
-    'laya',
-    'membrana'
+    'laya'
   ];
   const isLocalHost = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
   const VALID_PRODUCTS = isLocalHost ? LOCALHOST_VISIBLE_PRODUCTS.slice() : PUBLIC_PRODUCTS.slice();
