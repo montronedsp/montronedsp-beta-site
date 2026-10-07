@@ -3386,33 +3386,42 @@ html[data-product="swara"] .btn-disabled {
   min-height: 44px;
 }
 
+html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 14px;
+  min-height: 0;
+}
+
+html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy > .btn-primary {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 11.5rem;
+}
+
 .openssf-lockup {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 10px 14px 8px;
-  border: 2px solid var(--n90-rim);
-  border-radius: 6px;
-  background: rgba(var(--cool-rgb), 0.1);
-  box-shadow: var(--n90-hard-sm);
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
   text-decoration: none;
   color: inherit;
-  transition: background-color 140ms ease, transform 140ms ease;
 }
 
-.openssf-lockup:hover,
-.openssf-lockup:focus-visible {
-  background: rgba(var(--cool-rgb), 0.2);
-}
-
-.openssf-lockup:hover .openssf-icon {
+.openssf-lockup:hover .openssf-icon,
+.openssf-lockup:focus-visible .openssf-icon {
   transform: translateY(-1px);
 }
 
 .openssf-icon {
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   transition: transform 140ms ease;
 }
 
@@ -5687,6 +5696,21 @@ footer p {
   }
 
   /* Swara buy/download CTAs ? compact on phones (desktop scale was too heavy) */
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy {
+    width: 100%;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy > .btn-primary {
+    width: 100%;
+    min-width: 0;
+  }
+
+  html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .hero-actions--swara-buy .openssf-lockup {
+    align-self: center;
+  }
+
   html[data-product="swara"] .hero-copy > .hero-actions.hero-actions--swara,
   html[data-product="swara"] .hero-actions.hero-actions--swara {
     gap: 8px;
