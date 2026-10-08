@@ -1,8 +1,8 @@
 (function () {
-  const PUBLIC_PRODUCTS = ['aurashimmer', 'galleria', 'membrana', 'martello', 'swara'];
-  const LOCALHOST_VISIBLE_PRODUCTS = ['aurashimmer', 'galleria', 'membrana', 'martello', 'swara', 'seneca', 'stones'];
-  const HIDDEN_SELECTOR_PRODUCTS = ['gardenia', 'laya', 'quadrante'];
-  /* Clockwise from top-left quadrant when 4 products (-45° start): Aura, Galleria, Swara, MX2 */
+  const PUBLIC_PRODUCTS = ['aurashimmer', 'membrana', 'martello', 'swara'];
+  const LOCALHOST_VISIBLE_PRODUCTS = ['aurashimmer', 'membrana', 'martello', 'swara', 'seneca', 'stones'];
+  const HIDDEN_SELECTOR_PRODUCTS = ['gardenia', 'laya', 'quadrante', 'galleria'];
+  /* Clockwise from top-left quadrant when 4 products (-45° start): Aura, Membrana, Swara, MX2 */
   const WHEEL_CLOCKWISE = [
     'aurashimmer',
     'galleria',
@@ -20,7 +20,7 @@
   const WHEEL_PRODUCTS = VALID_PRODUCTS.slice();
   const DESKTOP_PRODUCTS = VALID_PRODUCTS.slice();
   const PRODUCT_ORDER = VALID_PRODUCTS.slice();
-  const DEFAULT_PRODUCT = 'aurashimmer';
+  const DEFAULT_PRODUCT = 'swara';
   const WHEEL_LAYOUT_RADIUS = 38;
   const SWITCH_OUT_MS = 160;
   const REVEAL_MS = 220;
