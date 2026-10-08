@@ -18,7 +18,9 @@
 }
 
 :root {
-  --max-width: 1080px;
+  /* Match product presentation columns (Swara/MX2/Aura) so the header
+     Montrone mark lines up with hero product marks site-wide. */
+  --max-width: 1200px;
   --header-height: 84px;
   --radius: 4px;
   /* Adriatica Next for communication; Geist Mono only for technical data. */
@@ -1682,7 +1684,7 @@ button {
 
 /* Layout */
 .container {
-  width: min(var(--max-width), calc(100% - 48px));
+  width: min(var(--max-width), calc(100% - 64px));
   margin: 0 auto;
 }
 
@@ -5115,7 +5117,7 @@ html[data-product="site"] .page-hero.hero {
 
 .page-content,
 .page-shell {
-  width: min(var(--max-width), calc(100% - 48px));
+  width: min(var(--max-width), calc(100% - 64px));
   margin: 0 auto;
   padding: 0 0 clamp(48px, 7vh, 80px);
 }
@@ -7771,7 +7773,7 @@ html.page-versione .site-main.versione-main {
 }
 
 .versione-essay {
-  width: min(var(--max-width), calc(100% - 48px));
+  width: min(var(--max-width), calc(100% - 64px));
   margin: 0 auto;
   padding: clamp(48px, 10vh, 96px) 0 clamp(64px, 12vh, 120px);
 }
