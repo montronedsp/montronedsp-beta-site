@@ -118,6 +118,7 @@
   <script src="https://gumroad.com/js/gumroad.js" defer></script>
   <link rel="stylesheet" href="assets/swara-presentation.css?v=2" />
   <link rel="stylesheet" href="assets/mx2-presentation.css?v=1" />
+  <link rel="stylesheet" href="assets/aura-presentation.css?v=1" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -296,31 +297,32 @@
         </div>
 
         <div class="hero-panel" id="hero-panel-aurashimmer" data-hero-panel="aurashimmer" role="tabpanel" aria-labelledby="product-tab-aurashimmer" aria-hidden="true">
-          <div class="container hero-layout">
+          <div class="container hero-layout aura-hero-layout">
             <div class="hero-copy">
+              <p class="aura-eyebrow" data-i18n="home.aurashimmer.editorialKicker">AURA SHIMMER / 1.2.0 · REVERB · 50% OFF</p>
               <h1 id="hero-title-aurashimmer">
                 <picture>
                   <source media="(max-width: 768px)" srcset="assets/branding/aura_mark_mobile.svg?v=hist1" type="image/svg+xml" />
                   <img class="hero-logo" src="assets/branding/aura_mark.svg?v=hist1" alt="Aura" width="2109" height="480" decoding="async" />
                 </picture>
               </h1>
-              <p class="hero-lead" data-i18n="home.aurashimmer.lead">Shimmer and space processing with depth, motion, and harmonic bloom.</p>
-              <div class="hero-actions">
+              <p class="aura-headline" data-i18n="home.aurashimmer.editorialHeadline">Preserve the source. Let the tail sing.</p>
+              <p class="hero-punchline" data-i18n="home.aurashimmer.punchline">A dedicated shimmer and space processor for expansive reverbs, evolving harmonic tails, and deep atmospheric processing — eight engines in one focused panel.</p>
+            </div>
+            <div class="aura-hero-choices">
+              <p class="aura-eyebrow" data-i18n="home.aurashimmer.editorialListenFirst">Made to be heard. Built to be played.</p>
+              <a class="btn btn-secondary" href="#aura-listen" data-aura-jump="aura-listen" data-i18n="home.aurashimmer.listenCta">Hear Aura</a>
+              <div class="hero-buy-row">
                 <a class="btn btn-primary gumroad-button" href="https://store.montronedsp.com/l/aura?wanted=true" data-gumroad-overlay-checkout="true" data-i18n="home.aurashimmer.buy">Buy — €14.95</a>
               </div>
-              <ul class="hero-specs" aria-label="Product highlights" data-i18n-aria="home.highlightsAria">
-                <li data-i18n="home.aurashimmer.specPrice">€14.95 · 50% off</li>
-                <li data-i18n="home.aurashimmer.storyIndex">v1.2.0</li>
-                <li data-i18n="home.aurashimmer.specMac">Mac VST3</li>
-                <li data-i18n="home.aurashimmer.specWin">Windows VST3</li>
-                <li data-i18n="home.aurashimmer.specLinux">Linux VST3</li>
-              </ul>
+              <p class="hero-offer-note" data-i18n="home.aurashimmer.offerNote">50% off — was €29.90. Get access to all future updates. 7-day money-back guarantee.</p>
             </div>
-            <div class="hero-art">
-              <img class="hero-art-img" src="assets/screenshots/Aura_Visualizer_Active_Pluginval.png" alt="Aura Shimmer interface with Dual Halo mode and active visualizer" data-i18n-alt="home.aurashimmer.artAlt" width="2448" height="1508" decoding="async" />
-            </div>
+            <figure class="aura-hero-photo">
+              <img src="assets/screenshots/Aura_Visualizer_Active_Pluginval.png" alt="Aura Shimmer interface with Dual Halo mode and active visualizer" data-i18n-alt="home.aurashimmer.artAlt" width="2448" height="1508" loading="eager" decoding="async" fetchpriority="high" />
+              <figcaption><span data-i18n="home.aurashimmer.heroCaption">Dual Halo / visualizer · The actual Aura interface</span></figcaption>
+            </figure>
           </div>
-          <div class="container hero-below" aria-label="Aura philosophy" data-i18n-aria="home.aurashimmer.philosophyAria">
+          <div class="container hero-below" id="aura-listen" aria-label="Aura philosophy" data-i18n-aria="home.aurashimmer.philosophyAria">
             <blockquote class="hero-below-quote">
               <p data-i18n="home.aurashimmer.statement">Reverb that behaves like an instrument  -  preserve the source, then let the tail become its own musical element.</p>
             </blockquote>
@@ -812,125 +814,123 @@
 
     </div>
 
-    <div class="plugin-story" data-product-only="aurashimmer" aria-label="Aura product story" data-i18n-aria="home.aurashimmer.storyAria">
+    <div class="plugin-story aura-editorial" data-product-only="aurashimmer" aria-label="Aura product story" data-i18n-aria="home.aurashimmer.storyAria">
 
-      <section class="story-open-band" aria-labelledby="aurashimmer-intro-title">
-        <div class="container">
-          <div class="story-open-grid">
-            <figure class="story-open-shot">
-              <img src="assets/screenshots/Aura_Paid_Authorized_Pluginval.png" alt="Aura Shimmer full interface, licensed and ready" data-i18n-alt="home.aurashimmer.openShotAlt" width="2448" height="1508" loading="eager" decoding="async" />
-            </figure>
-            <div class="story-open-copy">
-              <p class="story-index"><span>Aura</span><span data-i18n="home.aurashimmer.storyIndex">v1.2.0</span></p>
-              <h2 id="aurashimmer-intro-title" class="story-chapter-title" data-i18n="home.aurashimmer.introTitle">Shimmer and space, as an instrument.</h2>
-              <p class="story-chapter-lede" data-i18n="home.aurashimmer.introLede">Shimmer and space processing with depth, motion, and harmonic bloom.</p>
-              <p class="story-open-body" data-i18n="home.aurashimmer.introBody">Aura is a dedicated shimmer and space processor for expansive reverbs, evolving harmonic tails, and deep atmospheric processing without a modular workflow. Long algorithmic spaces, pitch-shifted feedback, dense diffusion, and stereo motion live in one focused panel built for immediate sound shaping.</p>
-            </div>
+      <section class="aura-chapter container" aria-labelledby="aurashimmer-intro-title">
+        <header class="aura-chapter-heading">
+          <span class="aura-chapter-number" aria-hidden="true" data-i18n="home.aurashimmer.chapter1">01 / SPACE</span>
+          <div>
+            <h2 id="aurashimmer-intro-title" data-i18n="home.aurashimmer.introTitle">Shimmer and space, as an instrument.</h2>
+            <p data-i18n="home.aurashimmer.introBody">Aura is a dedicated shimmer and space processor for expansive reverbs, evolving harmonic tails, and deep atmospheric processing without a modular workflow. Long algorithmic spaces, pitch-shifted feedback, dense diffusion, and stereo motion live in one focused panel built for immediate sound shaping.</p>
+          </div>
+        </header>
+        <div class="aura-sound-layout">
+          <figure class="aura-photo">
+            <img src="assets/screenshots/Aura_Paid_Authorized_Pluginval.png" alt="Aura Shimmer full interface, licensed and ready" data-i18n-alt="home.aurashimmer.openShotAlt" width="2448" height="1508" loading="lazy" decoding="async" />
+          </figure>
+          <div class="aura-sound-notes">
+            <h3 data-i18n="home.aurashimmer.introLede">Shimmer and space processing with depth, motion, and harmonic bloom.</h3>
+            <p data-i18n="home.aurashimmer.characterBody">Aura is built for harmonic reverberation, evolving ambience, and deep spatial sound design  -  octave-up shimmer, dual-voice stereo bloom, dark evolving reverbs, metallic clouds, and downward-shifted cinematic tails without a modular maze.</p>
+            <dl class="aura-facts" aria-label="Core capabilities" data-i18n-aria="home.aurashimmer.capabilitiesAria">
+              <div><dt>8</dt><dd data-i18n="home.aurashimmer.bandModesVal">8 independent engines</dd></div>
+              <div><dt>3</dt><dd data-i18n="home.aurashimmer.bandSpaceVal">3 reverb models</dd></div>
+              <div><dt>5</dt><dd data-i18n="home.aurashimmer.bandShimmerVal">5 pitch-feedback models</dd></div>
+            </dl>
+            <details class="aura-spec-detail">
+              <summary data-i18n="home.aurashimmer.featuresIndex">Key features</summary>
+              <ul class="detail-list">
+                <li data-i18n="home.aurashimmer.featuresBody1">Eight independent engines, recirculating pitch-feedback architecture, metallic processing, controllable bloom and stereo motion, tonal and low-cut shaping, smooth automation, factory presets, a resizable modern interface, and clean VST3 packages for macOS and Windows.</li>
+                <li data-i18n="home.aurashimmer.featuresBody2">Made for ambient, techno, experimental electronic music, cinematic sound design, drone, IDM, industrial, dub techno, vocals, synthesizers, guitar ambience, percussion, transitions, and spatial layers.</li>
+              </ul>
+            </details>
           </div>
         </div>
       </section>
 
-      <div class="story-band container" aria-label="Core capabilities" data-i18n-aria="home.aurashimmer.capabilitiesAria">
-        <ul class="story-band-list">
-          <li><span class="story-band-key" data-i18n="home.aurashimmer.bandModes">Modes</span><span class="story-band-val" data-i18n="home.aurashimmer.bandModesVal">8 independent engines</span></li>
-          <li><span class="story-band-key" data-i18n="home.aurashimmer.bandSpace">Space</span><span class="story-band-val" data-i18n="home.aurashimmer.bandSpaceVal">3 reverb models</span></li>
-          <li><span class="story-band-key" data-i18n="home.aurashimmer.bandShimmer">Shimmer</span><span class="story-band-val" data-i18n="home.aurashimmer.bandShimmerVal">5 pitch-feedback models</span></li>
-          <li><span class="story-band-key" data-i18n="home.aurashimmer.bandFormats">Formats</span><span class="story-band-val" data-i18n="home.aurashimmer.bandFormatsVal">VST3 · macOS &amp; Windows</span></li>
-        </ul>
-      </div>
-
-      <section class="story-moment container" aria-labelledby="aura-character-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.aurashimmer.characterIndex">Character</span></p>
-          <h3 id="aura-character-title" class="story-moment-title" data-i18n="home.aurashimmer.characterTitle">Shimmer and space for the mix.</h3>
-          <p class="story-moment-body" data-i18n="home.aurashimmer.characterBody">Aura is built for harmonic reverberation, evolving ambience, and deep spatial sound design  -  octave-up shimmer, dual-voice stereo bloom, dark evolving reverbs, metallic clouds, and downward-shifted cinematic tails without a modular maze.</p>
-        </div>
-      </section>
-
-      <section class="story-moment container" aria-labelledby="aura-space-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.aurashimmer.spaceIndex">Space models</span></p>
-          <h3 id="aura-space-title" class="story-moment-title" data-i18n="home.aurashimmer.spaceTitle">Three independent spatial engines.</h3>
-          <p class="story-moment-body" data-i18n="home.aurashimmer.spaceBody">Long Space opens a clean, wide synthetic hall. Dark Bloom grows denser behind the source. Metallic Cloud sits between reverb, resonator, and diffused digital texture. Each mode has its own tank, diffusion, feedback, and stereo behaviour  -  not a minor preset variation.</p>
-        </div>
-      </section>
-
-      <section class="story-moment container" aria-labelledby="aura-shimmer-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.aurashimmer.shimmerIndex">Shimmer models</span></p>
-          <h3 id="aura-shimmer-title" class="story-moment-title" data-i18n="home.aurashimmer.shimmerTitle">Five pitch-shifted feedback modes.</h3>
-          <p class="story-moment-body" data-i18n="home.aurashimmer.shimmerBody">Octave Halo and Dual Halo raise clear modern harmonics inside the reverb structure. Deep Shift adds controlled downward weight. Classic Shimmer and Classic Dual give warmer, denser traditional bloom with broader stereo return. Shifted sound recirculates through the tank instead of sitting as a simple pitch effect after the wet signal.</p>
-        </div>
-      </section>
-
-      <section class="story-moment container" aria-labelledby="aura-engine-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.aurashimmer.engineIndex">Engine</span></p>
-          <h3 id="aura-engine-title" class="story-moment-title" data-i18n="home.aurashimmer.engineTitle">Algorithmic space, not impulse responses.</h3>
-          <p class="story-moment-body" data-i18n="home.aurashimmer.engineBody">Aura is built from reverberation networks, pitch transformation, diffusion, filtering, modulation, and stereo projection. Keep a subtle halo around the source, or push into dense, unstable, highly artificial environments that become part of the composition.</p>
-        </div>
-      </section>
-
-      <section class="story-moment container" aria-labelledby="aura-controls-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.aurashimmer.controlsIndex">Controls</span></p>
-          <h3 id="aura-controls-title" class="story-moment-title" data-i18n="home.aurashimmer.controlsTitle">One panel across all eight modes.</h3>
-          <p class="story-moment-body" data-i18n="home.aurashimmer.controlsBody">Mix, Decay, Bloom, Motion, Pitch, Feedback, Tank, Tone, Width, and Output stay consistent while each mode reinterprets the architecture underneath. Motion, Bloom, diffusion, and pitch feedback keep long tails evolving instead of freezing into a static wash.</p>
-        </div>
-      </section>
-
-      <section class="story-release-band" aria-labelledby="aura-features-title">
-        <div class="container">
-          <div class="story-release-inner">
-            <p class="story-index"><span data-i18n="home.aurashimmer.featuresIndex">Key features</span><span data-i18n="home.aurashimmer.storyIndex">v1.2.0</span></p>
-            <h2 id="aura-features-title" class="story-chapter-title" data-i18n="home.aurashimmer.featuresTitle">Built for depth and harmonic bloom.</h2>
-            <div class="story-release-copy">
-              <p data-i18n="home.aurashimmer.featuresBody1">Eight independent engines, recirculating pitch-feedback architecture, metallic processing, controllable bloom and stereo motion, tonal and low-cut shaping, smooth automation, factory presets, a resizable modern interface, and clean VST3 packages for macOS and Windows.</p>
-              <p data-i18n="home.aurashimmer.featuresBody2">Made for ambient, techno, experimental electronic music, cinematic sound design, drone, IDM, industrial, dub techno, vocals, synthesizers, guitar ambience, percussion, transitions, and spatial layers.</p>
-            </div>
+      <section class="aura-chapter container" aria-labelledby="aura-space-title">
+        <header class="aura-chapter-heading">
+          <span class="aura-chapter-number" aria-hidden="true" data-i18n="home.aurashimmer.chapter2">02 / MODELS</span>
+          <div>
+            <h2 id="aura-space-title" data-i18n="home.aurashimmer.spaceTitle">Three independent spatial engines.</h2>
+            <p data-i18n="home.aurashimmer.spaceBody">Long Space opens a clean, wide synthetic hall. Dark Bloom grows denser behind the source. Metallic Cloud sits between reverb, resonator, and diffused digital texture. Each mode has its own tank, diffusion, feedback, and stereo behaviour  -  not a minor preset variation.</p>
+          </div>
+        </header>
+        <div class="aura-generation-layout">
+          <figure class="aura-photo">
+            <img src="assets/screenshots/Aura_Header_Detail_Pluginval.png" alt="Aura Shimmer interface detail" data-i18n-alt="home.aurashimmer.detailAlt" width="2448" height="1508" loading="lazy" decoding="async" />
+          </figure>
+          <div class="aura-generation-copy">
+            <ul class="aura-generator-list">
+              <li><strong>SPACE</strong><span data-i18n="home.aurashimmer.bandSpaceVal">3 reverb models</span></li>
+              <li><strong>SHIMMER</strong><span data-i18n="home.aurashimmer.bandShimmerVal">5 pitch-feedback models</span></li>
+              <li><strong>FORMATS</strong><span data-i18n="home.aurashimmer.bandFormatsVal">VST3 · macOS &amp; Windows</span></li>
+            </ul>
           </div>
         </div>
+        <details class="aura-spec-detail">
+          <summary data-i18n="home.aurashimmer.shimmerTitle">Five pitch-shifted feedback modes.</summary>
+          <p data-i18n="home.aurashimmer.shimmerBody">Octave Halo and Dual Halo raise clear modern harmonics inside the reverb structure. Deep Shift adds controlled downward weight. Classic Shimmer and Classic Dual give warmer, denser traditional bloom with broader stereo return. Shifted sound recirculates through the tank instead of sitting as a simple pitch effect after the wet signal.</p>
+        </details>
       </section>
 
-      <section class="story-release-band" aria-labelledby="aura-release-validation-title">
-        <div class="container">
-          <div class="story-release-inner">
-            <p class="story-index"><span data-i18n="home.aurashimmer.validationIndex">Release Validation</span><span data-i18n="home.aurashimmer.validationTag">Quality checks</span></p>
-            <h2 id="aura-release-validation-title" class="story-chapter-title" data-i18n="home.aurashimmer.validationTitle">Release Validation</h2>
-            <div class="story-release-copy">
-              <p data-i18n="home.aurashimmer.validationBody1">Every MontroneDSP release is checked through automated validation, internal signal analysis, stress testing, and human musical testing.</p>
-              <p data-i18n="home.aurashimmer.validationBody2" data-i18n-html>Validation includes <strong>pluginval correctness level 10</strong>, sample-rate testing up to <strong>192 kHz</strong>, automation stress tests, repeated load/unload checks, multi-instance sessions, save/reload verification, preset recall, rapid parameter changes, offline rendering, and internal monitoring for signal integrity.</p>
-              <p data-i18n="home.aurashimmer.validationBody3">Aura is additionally tested for mode switching across all eight engines, shimmer feedback behaviour, long-tail stability, Wet Lock operation, license activation, and real-world usability inside actual DAW projects.</p>
-            </div>
+      <section class="aura-chapter container" aria-labelledby="aura-engine-title">
+        <header class="aura-chapter-heading">
+          <span class="aura-chapter-number" aria-hidden="true" data-i18n="home.aurashimmer.chapter3">03 / ENGINE</span>
+          <div>
+            <h2 id="aura-engine-title" data-i18n="home.aurashimmer.engineTitle">Algorithmic space, not impulse responses.</h2>
+            <p data-i18n="home.aurashimmer.engineBody">Aura is built from reverberation networks, pitch transformation, diffusion, filtering, modulation, and stereo projection. Keep a subtle halo around the source, or push into dense, unstable, highly artificial environments that become part of the composition.</p>
           </div>
-        </div>
+        </header>
+        <details class="aura-spec-detail">
+          <summary data-i18n="home.aurashimmer.controlsTitle">One panel across all eight modes.</summary>
+          <p data-i18n="home.aurashimmer.controlsBody">Mix, Decay, Bloom, Motion, Pitch, Feedback, Tank, Tone, Width, and Output stay consistent while each mode reinterprets the architecture underneath. Motion, Bloom, diffusion, and pitch feedback keep long tails evolving instead of freezing into a static wash.</p>
+        </details>
       </section>
 
-      <section class="story-release-band" aria-labelledby="aura-ownership-title">
-        <div class="container">
-          <div class="story-release-inner">
+      <section class="aura-chapter container" aria-labelledby="aura-release-validation-title">
+        <header class="aura-chapter-heading">
+          <span class="aura-chapter-number" aria-hidden="true" data-i18n="home.aurashimmer.chapter4">04 / VALIDATE</span>
+          <div>
+            <h2 id="aura-release-validation-title" data-i18n="home.aurashimmer.validationTitle">Release Validation</h2>
+            <p data-i18n="home.aurashimmer.validationBody1">Every MontroneDSP release is checked through automated validation, internal signal analysis, stress testing, and human musical testing.</p>
+          </div>
+        </header>
+        <details class="aura-spec-detail">
+          <summary data-i18n="home.aurashimmer.validationTag">Quality checks</summary>
+          <ul class="detail-list">
+            <li data-i18n="home.aurashimmer.validationBody2" data-i18n-html>Validation includes <strong>pluginval correctness level 10</strong>, sample-rate testing up to <strong>192 kHz</strong>, automation stress tests, repeated load/unload checks, multi-instance sessions, save/reload verification, preset recall, rapid parameter changes, offline rendering, and internal monitoring for signal integrity.</li>
+            <li data-i18n="home.aurashimmer.validationBody3">Aura is additionally tested for mode switching across all eight engines, shimmer feedback behaviour, long-tail stability, Wet Lock operation, license activation, and real-world usability inside actual DAW projects.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="aura-chapter container aura-acquire" id="aura-acquire" aria-labelledby="aura-buy-again-title">
+        <header class="aura-chapter-heading">
+          <span class="aura-chapter-number" aria-hidden="true" data-i18n="home.aurashimmer.chapter5">05 / GET AURA</span>
+          <div>
+            <h2 id="aura-buy-again-title" data-i18n="home.aurashimmer.buyAgainTitle">Get Aura.</h2>
+          </div>
+        </header>
+        <div class="aura-support-grid">
+          <article class="aura-support-panel" aria-labelledby="aura-own-title">
             <p class="story-index"><span data-i18n="home.aurashimmer.ownershipIndex">Ownership</span><span data-i18n="home.aurashimmer.ownershipTag">Formats · Install · Activation</span></p>
-            <h2 id="aura-ownership-title" class="story-chapter-title" data-i18n="home.aurashimmer.ownershipTitle">VST3 on macOS, Windows, and Linux.</h2>
-            <div class="story-release-copy">
-              <p data-i18n="home.aurashimmer.ownershipBody1" data-i18n-html>Aura ships as 64-bit VST3 only  -  no standalone application. macOS includes a .pkg installer, or copy the MontroneDSP VST3 folder into your system or user plugin directory. On Windows, place it in your VST3 folder (typically <code>C:\Program Files\Common Files\VST3</code>). On Linux, use your system or user VST3 directory, then rescan in your DAW.</p>
-              <p data-i18n="home.aurashimmer.ownershipBody2">After checkout, your license key appears on the Aura download page. Open Aura, paste the key in License or About, and activate. Each perpetual license covers up to three machines.</p>
+            <h3 id="aura-own-title" class="story-moment-title" data-i18n="home.aurashimmer.ownershipTitle">VST3 on macOS, Windows, and Linux.</h3>
+            <p class="story-moment-body" data-i18n="home.aurashimmer.ownershipBody1" data-i18n-html>Aura ships as 64-bit VST3 only  -  no standalone application. macOS includes a .pkg installer, or copy the MontroneDSP VST3 folder into your system or user plugin directory. On Windows, place it in your VST3 folder (typically <code>C:\Program Files\Common Files\VST3</code>). On Linux, use your system or user VST3 directory, then rescan in your DAW.</p>
+            <p class="story-moment-body" data-i18n="home.aurashimmer.ownershipBody2">After checkout, your license key appears on the Aura download page. Open Aura, paste the key in License or About, and activate. Each perpetual license covers up to three machines.</p>
+          </article>
+          <article class="aura-support-panel" aria-labelledby="aura-buy-panel-title">
+            <p class="story-index"><span>Aura</span><span data-i18n="home.aurashimmer.specPrice">€14.95 · 50% off</span></p>
+            <h3 id="aura-buy-panel-title" class="story-moment-title" data-i18n="home.aurashimmer.buyAgainTitle">Get Aura.</h3>
+            <p class="story-moment-body" data-i18n="home.aurashimmer.buyAgainCopy">50% off — perpetual license for macOS, Windows, and Linux VST3. Was €29.90.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary gumroad-button" href="https://store.montronedsp.com/l/aura?wanted=true" data-gumroad-overlay-checkout="true" data-i18n="home.aurashimmer.buy">Buy — €14.95</a>
             </div>
-          </div>
+          </article>
         </div>
+        <a class="aura-text-link" href="#aura-listen" data-aura-jump="aura-listen" data-i18n="home.aurashimmer.listenCta">Hear Aura</a>
       </section>
 
     </div>
-
-    <section class="story-close" data-product-only="aurashimmer" aria-labelledby="aura-buy-again-title">
-      <div class="container">
-        <p class="story-index"><span>Aura</span><span data-i18n="home.aurashimmer.specPrice">€14.95 · 50% off</span></p>
-        <h2 id="aura-buy-again-title" class="story-moment-title" data-i18n="home.aurashimmer.buyAgainTitle">Get Aura.</h2>
-        <p class="story-close-copy" data-i18n="home.aurashimmer.buyAgainCopy">50% off — perpetual license for macOS, Windows, and Linux VST3. Was €29.90.</p>
-        <div class="story-close-actions">
-          <a class="btn btn-primary gumroad-button" href="https://store.montronedsp.com/l/aura?wanted=true" data-gumroad-overlay-checkout="true" data-i18n="home.aurashimmer.buy">Buy — €14.95</a>
-        </div>
-      </div>
-    </section>
 
 
     <div class="plugin-story swara-editorial" data-product-only="swara" aria-label="Swara XT product story" data-i18n-aria="home.swara.storyAria">
@@ -1661,5 +1661,6 @@
   <script src="script.js?v=swaraEditorial1"></script>
   <script src="assets/swara-presentation.js?v=1"></script>
   <script src="assets/mx2-presentation.js?v=1"></script>
+  <script src="assets/aura-presentation.js?v=1"></script>
 </body>
 </html>
