@@ -116,6 +116,7 @@
   <link rel="stylesheet" href="style.css?v=restoreBuyMobile1" />
   <!-- Store domain: point store CNAME to domains.gumroad.com in Aruba DNS -->
   <script src="https://gumroad.com/js/gumroad.js" defer></script>
+  <link rel="stylesheet" href="assets/swara-presentation.css?v=2" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -363,85 +364,31 @@
         </div>
 
         <div class="hero-panel" id="hero-panel-swara" data-hero-panel="swara" role="tabpanel" aria-labelledby="product-tab-swara" aria-hidden="true">
-          <div class="container hero-layout">
-            <div class="hero-copy">
-              <div class="hero-mark-lockup hero-mark-lockup--swara">
-                <h1 id="hero-title-swara">
-                  <img class="hero-logo" src="assets/branding/swara_mark.svg" alt="Swara XT" width="1100" height="220" decoding="async" />
-                </h1>
-                <p class="hero-punchline" data-i18n="home.swara.punchline">Hybrid monosynth and sequencer. Two oscillators, thirty-five models, one resonant four-pole filter, and sequences you can program, transform or generate.</p>
-              </div>
-              <p class="hero-offer-note" data-i18n="home.swara.offerNote">Mac from the store · Windows &amp; Linux free GPLv3.</p>
-              <div class="hero-actions hero-actions--swara-buy">
-                <div class="hero-buy-row">
+ <div class="container hero-layout swara-hero-layout">
+  <div class="hero-copy">
+   <p class="swara-eyebrow" data-i18n="home.swara.editorialKicker">SWARA XT / 1.2.3 · HYBRID MONOSYNTH + SEQUENCER</p>
+   <h1 id="hero-title-swara"><img class="hero-logo" src="assets/branding/swara-hero-outlined.svg" alt="SWARA XT" width="5626" height="944" decoding="async" /></h1>
+   <p class="swara-headline" data-i18n="home.swara.editorialHeadline">Build the sound. Shape the sequence.</p>
+   <p class="hero-punchline" data-i18n="home.swara.punchline">A hybrid monosynth and sequencer for expressive basslines, resonant leads and experimental patterns. Explore 35 oscillator choices, shape them with a Classic four-pole filter, and turn a note into movement.</p>
+  </div>
+  <div class="swara-hero-choices">
+   <p class="swara-eyebrow" data-i18n="home.swara.editorialListenFirst">Made to be heard. Built to be played.</p>
+   <a class="btn btn-secondary" href="#swara-listen" data-swara-jump="swara-listen" data-i18n="home.swara.listenCta">Hear SWARA XT</a>
+   <div class="hero-buy-row">
                   <a class="btn btn-primary gumroad-button" href="https://store.montronedsp.com/l/swara?wanted=true" data-gumroad-overlay-checkout="true" data-i18n="home.swara.buy">Buy Mac</a>
                   <span class="macos-trust-badge" data-i18n-aria="home.swara.macosTrustAria" role="img" aria-label="macOS: Signed and Notarized, Universal binary">
                     <span class="macos-trust-badge__label" data-i18n="home.swara.macosTrustLabel">macOS</span>
                     <span class="macos-trust-badge__value" data-i18n="home.swara.macosTrustValue">Signed &amp; Notarized · Universal</span>
                   </span>
                 </div>
-                <div class="hero-trust-frame" data-i18n-aria="home.swara.sonarRowAria" aria-label="SWARA XT security and quality badges">
-                  <p class="hero-trust-frame__lede" data-i18n="home.swara.openssfCaption">Open source, independently reviewed</p>
-                  <div class="hero-trust-pair">
-                    <a class="hero-trust-icon-link openssf-icon-link" href="https://www.bestpractices.dev/projects/15241" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.openssfAria" aria-label="SWARA XT: OpenSSF Best Practices, 100 percent passing">
-                      <img class="trust-lockup__icon openssf-icon" src="assets/branding/openssf-best-practices.svg" alt="" width="88" height="88" loading="lazy" decoding="async" />
-                    </a>
-                    <a class="trust-gate" href="https://sonarcloud.io/summary/new_code?id=montronedsp_SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.sonarAria" aria-label="SWARA XT: SonarCloud quality gate">
-                      <img class="trust-gate__img" src="https://sonarcloud.io/api/project_badges/quality_gate?project=montronedsp_SWARAXT" alt="Quality gate" data-i18n-alt="home.swara.sonarAlt" width="88" height="88" loading="lazy" decoding="async" />
-                    </a>
-                  </div>
-                  <div class="hero-trust-lockups">
-                    <a class="trust-lockup trust-lockup--badge-only" href="https://www.bestpractices.dev/projects/15241" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.openssfAria" aria-label="SWARA XT: OpenSSF Best Practices, 100 percent passing">
-                      <img class="trust-lockup__badge openssf-badge-img" src="https://www.bestpractices.dev/projects/15241/badge" alt="OpenSSF Best Practices badge" loading="lazy" decoding="async" />
-                    </a>
-                    <a class="trust-lockup trust-lockup--badge-only" href="https://sonarcloud.io/summary/new_code?id=montronedsp_SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.sonarSecurityAria" aria-label="SWARA XT: SonarCloud security rating">
-                      <img class="trust-lockup__badge" src="https://sonarcloud.io/api/project_badges/measure?project=montronedsp_SWARAXT&amp;metric=security_rating" alt="Security Rating" data-i18n-alt="home.swara.sonarSecurityAlt" height="28" loading="lazy" decoding="async" />
-                    </a>
-                    <a class="trust-lockup trust-lockup--badge-only" href="https://sonarcloud.io/summary/new_code?id=montronedsp_SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.sonarReliabilityAria" aria-label="SWARA XT: SonarCloud reliability rating">
-                      <img class="trust-lockup__badge" src="https://sonarcloud.io/api/project_badges/measure?project=montronedsp_SWARAXT&amp;metric=reliability_rating" alt="Reliability Rating" data-i18n-alt="home.swara.sonarReliabilityAlt" height="28" loading="lazy" decoding="async" />
-                    </a>
-                    <a class="trust-lockup trust-lockup--badge-only" href="https://sonarcloud.io/summary/new_code?id=montronedsp_SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.sonarQualityAria" aria-label="SWARA XT: SonarCloud quality gate status">
-                      <img class="trust-lockup__badge" src="https://sonarcloud.io/api/project_badges/measure?project=montronedsp_SWARAXT&amp;metric=alert_status" alt="Quality gate status" data-i18n-alt="home.swara.sonarQualityAlt" height="28" loading="lazy" decoding="async" />
-                    </a>
-                    <a class="trust-lockup trust-lockup--badge-only" href="https://sonarcloud.io/summary/new_code?id=montronedsp_SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.sonarMaintainabilityAria" aria-label="SWARA XT: SonarCloud maintainability rating">
-                      <img class="trust-lockup__badge" src="https://sonarcloud.io/api/project_badges/measure?project=montronedsp_SWARAXT&amp;metric=sqale_rating" alt="Maintainability Rating" data-i18n-alt="home.swara.sonarMaintainabilityAlt" height="28" loading="lazy" decoding="async" />
-                    </a>
-                    <a class="trust-lockup trust-lockup--badge-only" href="https://api.reuse.software/info/github.com/montronedsp/SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.reuseAria" aria-label="SWARA XT: REUSE status">
-                      <img class="trust-lockup__badge" src="https://api.reuse.software/badge/github.com/montronedsp/SWARAXT" alt="REUSE status" data-i18n-alt="home.swara.reuseAlt" height="28" loading="lazy" decoding="async" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <ul class="hero-specs" aria-label="Product highlights" data-i18n-aria="home.highlightsAria">
-                <li data-i18n="home.swara.heroSpecOsc">35 oscillator models</li>
-                <li data-i18n="home.swara.heroSpecSeq">Step · Arp · Sequence</li>
-                <li data-i18n="home.swara.heroSpecRand">5 random generators</li>
-                <li data-i18n="home.swara.heroSpecFmt">VST3 · AU · Standalone</li>
-                <li data-i18n="home.swara.storyIndex">v1.2.3</li>
-              </ul>
-            </div>
-            <div class="hero-art swara-skin-carousel" data-swara-skins aria-roledescription="carousel" aria-label="Swara XT colour skins" data-i18n-aria="home.swara.skinsCarouselAria">
-              <div class="swara-skin-stage">
-                <img class="swara-skin-slide is-active" src="assets/screenshots/swara/swara-xt-legacy-pastel.png" alt="Swara XT Pastel skin" data-i18n-alt="home.swara.skinPastelAlt" data-skin="pastel" width="2782" height="1302" decoding="async" />
-                <img class="swara-skin-slide" src="assets/screenshots/swara/swara-xt-legacy-midnight.png" alt="Swara XT Midnight Gold skin" data-i18n-alt="home.swara.skinMidnightAlt" data-skin="midnight" width="2782" height="1302" loading="lazy" decoding="async" aria-hidden="true" />
-                <img class="swara-skin-slide" src="assets/screenshots/swara/swara-xt-legacy-jungle.png" alt="Swara XT Jungle skin" data-i18n-alt="home.swara.skinJungleAlt" data-skin="jungle" width="2782" height="1302" loading="lazy" decoding="async" aria-hidden="true" />
-                <img class="swara-skin-slide" src="assets/screenshots/swara/swara-xt-legacy-neon.png" alt="Swara XT Neon Cobalt skin" data-i18n-alt="home.swara.skinNeonAlt" data-skin="neon" width="2782" height="1302" loading="lazy" decoding="async" aria-hidden="true" />
-                <img class="swara-skin-slide" src="assets/screenshots/swara/swara-xt-legacy-rosso.png" alt="Swara XT Rosso Corsa skin" data-i18n-alt="home.swara.skinRossoAlt" data-skin="rosso" width="2782" height="1302" loading="lazy" decoding="async" aria-hidden="true" />
-              </div>
-              <div class="swara-skin-controls" role="tablist" aria-label="Choose a colour skin" data-i18n-aria="home.swara.skinsTabsAria">
-                <button type="button" class="swara-skin-tab is-active" role="tab" aria-selected="true" data-skin-tab="pastel" data-i18n="home.swara.skinPastel">Pastel</button>
-                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="midnight" data-i18n="home.swara.skinMidnight">Midnight Gold</button>
-                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="jungle" data-i18n="home.swara.skinJungle">Jungle</button>
-                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="neon" data-i18n="home.swara.skinNeon">Neon Cobalt</button>
-                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="rosso" data-i18n="home.swara.skinRosso">Rosso Corsa</button>
-              </div>
-            </div>
-          </div>
-          <div class="container hero-swara-below hero-below" aria-label="Swara XT philosophy" data-i18n-aria="home.swara.philosophyAria">
-            <blockquote class="hero-swara-quote hero-below-quote">
-              <p data-i18n="home.swara.statement">स्वर  -  tone as an instrument. Hybrid monosynth and sequencer: synthesis and sequencing in one workflow.</p>
-            </blockquote>
-            <aside class="swara-listen-card hero-listen-card" aria-label="Swara XT sound previews" data-i18n-aria="home.swara.listenAria">
+   <a class="btn btn-secondary" href="#swara-downloads" data-swara-jump="swara-downloads" data-i18n="home.swara.freeCta">Windows / Linux · Free downloads</a>
+   <p class="hero-offer-note" data-i18n="home.swara.offerNote">Mac from the store · Windows &amp; Linux free under GPLv3.</p>
+  </div>
+  <figure class="swara-hero-photo"><img class="" src="assets/screenshots/swara/editorial/hero-jungle-2400.webp" srcset="assets/screenshots/swara/editorial/hero-jungle-800.webp 800w, assets/screenshots/swara/editorial/hero-jungle-1600.webp 1600w, assets/screenshots/swara/editorial/hero-jungle-2400.webp 2400w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="2782" height="1302" alt="SWARA XT in Jungle: two oscillators, filter, mixer and modulation matrix" data-i18n-alt="home.swara.photoHeroJungle" loading="eager" decoding="async" fetchpriority="high" /><figcaption><span data-i18n="home.swara.heroCaption">Jungle / PCB Trace · The actual SWARA XT interface</span></figcaption></figure>
+ </div>
+ <div class="container hero-swara-below hero-below" id="swara-listen">
+  <blockquote class="hero-swara-quote hero-below-quote"><p data-i18n="home.swara.statement">Sound. Shape. Sequence. Generate. Perform.</p></blockquote>
+  <aside class="swara-listen-card hero-listen-card" aria-label="Swara XT sound previews" data-i18n-aria="home.swara.listenAria">
               <iframe
                 class="soundcloud-embed soundcloud-embed--playlist-compact"
                 title="SWARA XT - Hybrid Monosynth SoundCloud playlist"
@@ -459,8 +406,8 @@
                 <span data-i18n="home.swara.audioLink">Open playlist on SoundCloud</span>
               </a>
             </aside>
-          </div>
-        </div>
+ </div>
+</div>
 
         <div class="hero-panel" id="hero-panel-laya" data-hero-panel="laya" role="tabpanel" aria-labelledby="product-tab-laya" aria-hidden="true">
           <div class="container hero-layout">
@@ -989,44 +936,64 @@
     </section>
 
 
-    <div class="plugin-story" data-product-only="swara" aria-label="Swara XT product story" data-i18n-aria="home.swara.storyAria">
-
-      <section class="story-open-band" aria-labelledby="swara-intro-title">
-        <div class="container">
-          <div class="story-open-grid">
-            <figure class="story-open-shot">
-              <img src="assets/screenshots/swara/swara-xt-jungle.png" alt="Swara XT Jungle skin full interface" data-i18n-alt="home.swara.openShotAlt" width="2786" height="1304" loading="eager" decoding="async" />
-            </figure>
-            <div class="story-open-copy">
-              <p class="story-index"><span>Swara XT</span><span data-i18n="home.swara.storyIndex">v1.2.3</span></p>
-              <h2 id="swara-intro-title" class="story-chapter-title" data-i18n="home.swara.introTitle">Hybrid monosynth and sequencer.</h2>
-              <p class="story-chapter-lede" data-i18n="home.swara.introLede">Broad oscillator engine, resonant four-pole filter, deep modulation — and a pattern generator that proposes the next line.</p>
-              <p class="story-open-body" data-i18n="home.swara.introBody">SWARA XT is a monophonic electronic instrument built for bass lines, sequences and animated sound design. Two oscillator sections choose from thirty-five models. A Classic IR3109 four-pole low-pass filter gives them weight and edge. Two envelopes, two LFOs and a twelve-slot modulation matrix keep everything moving. And the integrated sequencer turns any of it into a performance without leaving the patch. Program a bass, sync the pattern to the DAW, add swing, generate a variation, keep the one that works.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="story-band container" aria-label="Core capabilities" data-i18n-aria="home.swara.capabilitiesAria">
-        <ul class="story-band-list">
-          <li><span class="story-band-key" data-i18n="home.swara.bandOsc">Oscillators</span><span class="story-band-val" data-i18n="home.swara.bandOscVal">35 models · dual engine</span></li>
-          <li><span class="story-band-key" data-i18n="home.swara.bandFilter">Filter</span><span class="story-band-val" data-i18n="home.swara.bandFilterVal">Classic IR3109 · 4-pole LPF</span></li>
-          <li><span class="story-band-key" data-i18n="home.swara.bandMod">Modulation</span><span class="story-band-val" data-i18n="home.swara.bandModVal">2 ENV · 2 LFO · 12 slots</span></li>
-          <li><span class="story-band-key" data-i18n="home.swara.bandSeq">Sequencer</span><span class="story-band-val" data-i18n="home.swara.bandSeqVal">Step · Arp · Sequence</span></li>
-          <li><span class="story-band-key" data-i18n="home.swara.bandRand">Generate</span><span class="story-band-val" data-i18n="home.swara.bandRandVal">5 selective randomisers</span></li>
-          <li><span class="story-band-key" data-i18n="home.swara.bandFormats">Format</span><span class="story-band-val" data-i18n="home.swara.bandFormatsVal">VST3 · AU · Standalone</span></li>
-        </ul>
-      </div>
-
-      <section class="story-moment container" aria-labelledby="swara-uses-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.usesIndex">Use it for</span></p>
-          <h3 id="swara-uses-title" class="story-moment-title" data-i18n="home.swara.usesTitle">Bass, sequences, and animated monophonic sound.</h3>
-          <p class="story-moment-body" data-i18n="home.swara.usesBody">Acid-adjacent lines, techno bass, electro sequences, EBM stabs, IDM gestures, synthetic percussion, plucks, drones and long evolving tones. It is a sequencer synth first: the pattern is the instrument, and the oscillators decide how it sounds.</p>
-        </div>
-      </section>
-
-      <section class="story-feedback-band" aria-labelledby="swara-feedback-title">
+    <div class="plugin-story swara-editorial" data-product-only="swara" aria-label="Swara XT product story" data-i18n-aria="home.swara.storyAria">
+<section class="swara-chapter container " aria-labelledby="swara-sound-title">
+ <header class="swara-chapter-heading"><span class="swara-chapter-number" aria-hidden="true" data-i18n="home.swara.chapter1">01 / SOUND</span><div><h2 id="swara-sound-title" data-i18n="home.swara.swara-sound-titleHeading">A compact instrument. An expansive sonic vocabulary.</h2><p data-i18n="home.swara.swara-sound-titleBody">Start with two oscillator sections: analog shapes, phase distortion, FM, wavetables, noise and formants. Then decide how they meet. Ring, Sync, XOR, Fold and the other operators turn a simple mix into a sound-design decision.</p></div></header>
+ <div class="swara-sound-layout"><figure class="swara-photo swara-osc-photo"><img class="" src="assets/screenshots/swara/editorial/oscillators-865.webp" srcset="assets/screenshots/swara/editorial/oscillators-600.webp 600w, assets/screenshots/swara/editorial/oscillators-865.webp 865w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="865" height="1220" alt="The real oscillator menu, with analog, CZ, FM and wavetable choices" data-i18n-alt="home.swara.photoOscillators" loading="lazy" decoding="async" /></figure><div class="swara-sound-notes"><h3 data-i18n="home.swara.soundNoteTitle">Choose a character. Find its edge.</h3><p data-i18n="home.swara.soundNoteBody">The Timbre control follows the selected model. Add a sub oscillator and noise for body and texture, then shape the result with the filter and envelopes.</p><dl class="swara-facts"><div><dt>35</dt><dd data-i18n="home.swara.choicesLabel">oscillator choices, including None</dd></div><div><dt>14</dt><dd data-i18n="home.swara.operatorsLabel">mix operators</dd></div><div><dt>2 + 2</dt><dd data-i18n="home.swara.motionLabel">envelopes + LFOs</dd></div></dl><details class="swara-spec-detail"><summary data-i18n="home.swara.oscDetails">Explore the sound engine</summary><ul class="detail-list">
+            <li data-i18n="home.swara.oscLi1" data-i18n-html><strong>Analog fundamentals.</strong> Analog Saw, Analog Square, Analog Triangle.</li>
+            <li data-i18n="home.swara.oscLi2" data-i18n-html><strong>Phase distortion.</strong> CZ Saw, CZ Resonant, CZ Triangle, CZ Pulse, CZ Sync.</li>
+            <li data-i18n="home.swara.oscLi3" data-i18n-html><strong>Digital and hybrid.</strong> Quad Saw Pad, Linear FM, 18 wavetables plus a user wavetable slot.</li>
+            <li data-i18n="home.swara.oscLi4" data-i18n-html><strong>Degraded and physical.</strong> 8-bit Land, Crushed Sine, Dirty PWM, Filtered Noise, Vowel.</li>
+            <li data-i18n="home.swara.oscLi5" data-i18n-html><strong>Operators.</strong> Sum, Sync, Ring, XOR, Fuzz, Crush 4, Crush 8, Fold, Bits, Duo, Ping 2, Ping 4, Ping 8, Ping Seq.</li>
+            <li data-i18n="home.swara.oscLi6" data-i18n-html><strong>Sub shapes.</strong> Square −1, Triangle −1, Pulse −1, Square −2, Triangle −2, Pulse −2, Click, Glitch, Blow, Metallic, Pop.</li>
+          </ul></details></div></div>
+</section><section class="swara-chapter container " aria-labelledby="swara-shape-title">
+ <header class="swara-chapter-heading"><span class="swara-chapter-number" aria-hidden="true" data-i18n="home.swara.chapter2">02 / SHAPE</span><div><h2 id="swara-shape-title" data-i18n="home.swara.swara-shape-titleHeading">Motion is part of the sound.</h2><p data-i18n="home.swara.swara-shape-titleBody">A circuit-derived Classic IR3109 four-pole low-pass filter shapes the voice. ENV and LFO directly control the native filter depths; the 12-slot matrix opens up independent routes for animation and expression.</p></div></header>
+ <div class="swara-detail-pair"><figure class="swara-photo"><img class="" src="assets/screenshots/swara/editorial/filter-850.webp" srcset="assets/screenshots/swara/editorial/filter-600.webp 600w, assets/screenshots/swara/editorial/filter-850.webp 850w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="850" height="355" alt="Classic filter controls: Cutoff, Resonance, ENV, Key Track and LFO" data-i18n-alt="home.swara.photoFilter" loading="lazy" decoding="async" /><figcaption><span data-i18n="home.swara.filterCaption">Classic IR3109 / dedicated ENV 1 and LFO 2 depths</span></figcaption></figure><figure class="swara-photo"><img class="" src="assets/screenshots/swara/editorial/matrix-900.webp" srcset="assets/screenshots/swara/editorial/matrix-600.webp 600w, assets/screenshots/swara/editorial/matrix-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="900" height="505" alt="Modulation matrix, showing the first three of twelve routes" data-i18n-alt="home.swara.photoMatrix" loading="lazy" decoding="async" /><figcaption><span data-i18n="home.swara.matrixCaption">12 modulation slots / three routes per page</span></figcaption></figure></div><p data-i18n="home.swara.effectsEditorial">Follow it with the optional DSP-board effects: 16 programs plus Off, from distortion and comb filtering to delays, looper and pitch.</p>
+</section><section class="swara-chapter container swara-sequence-chapter" aria-labelledby="swara-seq-title">
+ <header class="swara-chapter-heading"><span class="swara-chapter-number" aria-hidden="true" data-i18n="home.swara.chapter3">03 / SEQUENCE</span><div><h2 id="swara-seq-title" data-i18n="home.swara.swara-seq-titleHeading">From a note to a living pattern.</h2><p data-i18n="home.swara.swara-seq-titleBody">Program a bassline, play an arpeggio, or build a stored sequence. Sixteen steps, swing, gate and rhythmic division put the groove in your hands. Run freely or follow the host clock; keep notes, events, velocity and controller values within reach.</p></div></header>
+ <figure class="swara-photo swara-sequence-photo"><picture><source media="(max-width: 700px)" srcset="assets/screenshots/swara/editorial/sequence-detail-600.webp 600w, assets/screenshots/swara/editorial/sequence-detail-890.webp 890w" sizes="calc(100vw - 32px)" width="890" height="990" /><img class="" src="assets/screenshots/swara/editorial/sequence-2400.webp" srcset="assets/screenshots/swara/editorial/sequence-800.webp 800w, assets/screenshots/swara/editorial/sequence-1600.webp 1600w, assets/screenshots/swara/editorial/sequence-2400.webp 2400w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="2782" height="1302" alt="SWARA XT Sequence workspace with host sync, sixteen steps and selective generation" data-i18n-alt="home.swara.photoSequence" loading="lazy" decoding="async" /></picture><figcaption><span data-i18n="home.swara.seqCaption">One workspace / playback, pattern and variation</span></figcaption></figure><div class="swara-mode-grid"><figure class="swara-photo"><img class="" src="assets/screenshots/swara/editorial/mode-step-900.webp" srcset="assets/screenshots/swara/editorial/mode-step-600.webp 600w, assets/screenshots/swara/editorial/mode-step-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="900" height="522" alt="STEP mode in the real sequencer" data-i18n-alt="home.swara.photoModeStep" loading="lazy" decoding="async" /><figcaption><strong>STEP</strong> <span data-i18n="home.swara.modeSTEP">Explore the step lane.</span></figcaption></figure><figure class="swara-photo"><img class="" src="assets/screenshots/swara/editorial/mode-arp-900.webp" srcset="assets/screenshots/swara/editorial/mode-arp-600.webp 600w, assets/screenshots/swara/editorial/mode-arp-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="900" height="522" alt="ARP mode in the real sequencer" data-i18n-alt="home.swara.photoModeArp" loading="lazy" decoding="async" /><figcaption><strong>ARP</strong> <span data-i18n="home.swara.modeARP">Shape the notes you play.</span></figcaption></figure><figure class="swara-photo"><img class="" src="assets/screenshots/swara/editorial/mode-sequence-900.webp" srcset="assets/screenshots/swara/editorial/mode-sequence-600.webp 600w, assets/screenshots/swara/editorial/mode-sequence-900.webp 900w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="900" height="522" alt="SEQUENCE mode in the real sequencer" data-i18n-alt="home.swara.photoModeSequence" loading="lazy" decoding="async" /><figcaption><strong>SEQUENCE</strong> <span data-i18n="home.swara.modeSEQUENCE">Develop your stored line.</span></figcaption></figure></div><details class="swara-spec-detail"><summary data-i18n="home.swara.seqDetails">Inside the sequencer</summary><ul class="detail-list">
+            <li data-i18n="home.swara.seqLi1" data-i18n-html><strong>Step / Arp / Sequence.</strong> A fixed pattern, an arpeggiator, or the stored sequence — the step editor stays available in all three.</li>
+            <li data-i18n="home.swara.seqLi2" data-i18n-html><strong>Length and start.</strong> Shorten the cycle to any length from 1 to 16 steps, then rotate the start offset so the pattern shifts against the bar.</li>
+            <li data-i18n="home.swara.seqLi3" data-i18n-html><strong>Groove.</strong> Six groove templates — Swing, Shuffle, Push, Lag, Human, Monkey — with a swing amount on top.</li>
+            <li data-i18n="home.swara.seqLi4" data-i18n-html><strong>Gate and division.</strong> Gate from 5% to 100%, and rhythmic division from 1/1 down to 1/64 including triplets.</li>
+            <li data-i18n="home.swara.seqLi5" data-i18n-html><strong>Per-step detail.</strong> Note, event state (rest / note / tie), velocity, and a controller value that feeds the sequencer modulation sources in every mode.</li>
+            <li data-i18n="home.swara.seqLi6" data-i18n-html><strong>Clock.</strong> Free at 40–240 BPM, or host sync so the pattern follows the DAW transport.</li>
+          </ul></details>
+</section><section class="swara-chapter container " aria-labelledby="swara-gen-title">
+ <header class="swara-chapter-heading"><span class="swara-chapter-number" aria-hidden="true" data-i18n="home.swara.chapter4">04 / GENERATE</span><div><h2 id="swara-gen-title" data-i18n="home.swara.swara-gen-titleHeading">Unexpected ideas. Intentional control.</h2><p data-i18n="home.swara.swara-gen-titleBody">Change the notes and keep the rhythm. Vary the velocity, introduce rests and ties, or move the controller lane. Five selective generators let you choose what changes. LOCK holds the pattern and Seq/Arp settings while you audition another preset.</p></div></header>
+ <div class="swara-generation-layout"><figure class="swara-photo"><img class="" src="assets/screenshots/swara/editorial/generators-865.webp" srcset="assets/screenshots/swara/editorial/generators-600.webp 600w, assets/screenshots/swara/editorial/generators-865.webp 865w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="865" height="550" alt="Random Notes, Random Velocity, Random Event, Random Value and Random Seq in the actual interface" data-i18n-alt="home.swara.photoGenerators" loading="lazy" decoding="async" /></figure><div class="swara-generation-copy"><ul class="swara-generator-list"><li><strong>NOTES</strong><span data-i18n="home.swara.generatorNotes">Pitch only. Keep events and dynamics.</span></li><li><strong>VELOCITY</strong><span data-i18n="home.swara.generatorVelocity">Dynamics only. Keep the line.</span></li><li><strong>EVENT</strong><span data-i18n="home.swara.generatorEvent">Note, rest and tie states.</span></li><li><strong>VALUE</strong><span data-i18n="home.swara.generatorValue">The controller lane, independently.</span></li><li><strong>SEQ</strong><span data-i18n="home.swara.generatorSeq">Regenerate the step data together.</span></li></ul></div></div><details class="swara-spec-detail"><summary data-i18n="home.swara.genDetails">Generation and note range</summary><ul class="detail-list">
+            <li data-i18n="home.swara.genLi1" data-i18n-html><strong>Random notes</strong> — change pitches only. Events, velocities and controller values are preserved.</li>
+            <li data-i18n="home.swara.genLi2" data-i18n-html><strong>Random velocity</strong> — change velocity only. Pitches, events and controller values are preserved.</li>
+            <li data-i18n="home.swara.genLi3" data-i18n-html><strong>Random event</strong> — change note, rest and tie structure only. Pitches, velocities and values are preserved.</li>
+            <li data-i18n="home.swara.genLi4" data-i18n-html><strong>Random value</strong> — change controller values only, independently of pitch.</li>
+            <li data-i18n="home.swara.genLi5" data-i18n-html><strong>Random sequence</strong> — new notes, velocities, rests and ties, and controller values. Playback settings are preserved.</li>
+            <li data-i18n="home.swara.genLi6" data-i18n-html><strong>Type 1 generation</strong> — pentatonic notes from step 1 across a range of −48 to +48 semitones. The mode keeps it constrained rather than arbitrary.</li>
+            <li data-i18n="home.swara.genLi7" data-i18n-html><strong>Lock</strong> — hold sequencer settings and the pattern across preset changes, so auditioning sounds never costs you the line.</li>
+          </ul></details>
+</section><section class="swara-chapter container " aria-labelledby="swara-perf-title">
+ <header class="swara-chapter-heading"><span class="swara-chapter-number" aria-hidden="true" data-i18n="home.swara.chapter5">05 / PERFORM</span><div><h2 id="swara-perf-title" data-i18n="home.swara.swara-perf-titleHeading">Keep the line. Explore the instrument.</h2><p data-i18n="home.swara.swara-perf-titleBody">Glide between notes, choose legato or retrigger, and browse 57 factory programs. Save your own sounds from the front panel. From an insistent bassline to a slowly evolving drone, the synthesis and sequence stay in the same workflow.</p></div></header>
+ <a class="swara-text-link" href="#swara-listen" data-swara-jump="swara-listen" data-i18n="home.swara.listenCta">Hear SWARA XT</a>
+</section><section class="swara-chapter container " aria-labelledby="swara-colours-title">
+ <header class="swara-chapter-heading"><span class="swara-chapter-number" aria-hidden="true" data-i18n="home.swara.chapter6">06 / FINISH</span><div><h2 id="swara-colours-title" data-i18n="home.swara.swara-colours-titleHeading">Your instrument. Your finish.</h2><p data-i18n="home.swara.swara-colours-titleBody">Five skins, the same instrument. Choose Pastel, Midnight Gold, Jungle, Neon Cobalt or Rosso Corsa without changing the layout. Panel decorations add another layer of character; below, Legacy and PCB Trace share the same Jungle patch.</p></div></header>
+ <div class="swara-skin-carousel" data-swara-skins aria-roledescription="carousel" aria-label="Swara XT colour skins" data-i18n-aria="home.swara.skinsCarouselAria">
+              <div class="swara-skin-stage">
+                <img class="swara-skin-slide" src="assets/screenshots/swara/editorial/skin-pastel-1600.webp" srcset="assets/screenshots/swara/editorial/skin-pastel-800.webp 800w, assets/screenshots/swara/editorial/skin-pastel-1600.webp 1600w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="2782" height="1302" alt="SWARA XT — Pastel skin, MontroneDSP mark" data-i18n-alt="home.swara.photoSkinPastel" data-skin="pastel" aria-hidden="true" loading="lazy" decoding="async" />
+                <img class="swara-skin-slide" src="assets/screenshots/swara/editorial/skin-midnight-gold-1600.webp" srcset="assets/screenshots/swara/editorial/skin-midnight-gold-800.webp 800w, assets/screenshots/swara/editorial/skin-midnight-gold-1600.webp 1600w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="2782" height="1302" alt="SWARA XT — Midnight Gold skin, MontroneDSP mark" data-i18n-alt="home.swara.photoSkinMidnightGold" data-skin="midnight" aria-hidden="true" loading="lazy" decoding="async" />
+                <img class="swara-skin-slide is-active" src="assets/screenshots/swara/editorial/skin-jungle-1600.webp" srcset="assets/screenshots/swara/editorial/skin-jungle-800.webp 800w, assets/screenshots/swara/editorial/skin-jungle-1600.webp 1600w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="2782" height="1302" alt="SWARA XT — Jungle skin, MontroneDSP mark" data-i18n-alt="home.swara.photoSkinJungle" data-skin="jungle" aria-hidden="false" loading="lazy" decoding="async" />
+                <img class="swara-skin-slide" src="assets/screenshots/swara/editorial/skin-neon-cobalt-1600.webp" srcset="assets/screenshots/swara/editorial/skin-neon-cobalt-800.webp 800w, assets/screenshots/swara/editorial/skin-neon-cobalt-1600.webp 1600w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="2782" height="1302" alt="SWARA XT — Neon Cobalt skin, MontroneDSP mark" data-i18n-alt="home.swara.photoSkinNeonCobalt" data-skin="neon" aria-hidden="true" loading="lazy" decoding="async" />
+                <img class="swara-skin-slide" src="assets/screenshots/swara/editorial/skin-rosso-corsa-1600.webp" srcset="assets/screenshots/swara/editorial/skin-rosso-corsa-800.webp 800w, assets/screenshots/swara/editorial/skin-rosso-corsa-1600.webp 1600w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="2782" height="1302" alt="SWARA XT — Rosso Corsa skin, MontroneDSP mark" data-i18n-alt="home.swara.photoSkinRossoCorsa" data-skin="rosso" aria-hidden="true" loading="lazy" decoding="async" />
+              </div>
+              <div class="swara-skin-controls" role="tablist" aria-label="Choose a colour skin" data-i18n-aria="home.swara.skinsTabsAria">
+                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="pastel" data-i18n="home.swara.skinPastel">Pastel</button>
+                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="midnight" data-i18n="home.swara.skinMidnight">Midnight Gold</button>
+                <button type="button" class="swara-skin-tab is-active" role="tab" aria-selected="true" data-skin-tab="jungle" data-i18n="home.swara.skinJungle">Jungle</button>
+                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="neon" data-i18n="home.swara.skinNeon">Neon Cobalt</button>
+                <button type="button" class="swara-skin-tab" role="tab" aria-selected="false" data-skin-tab="rosso" data-i18n="home.swara.skinRosso">Rosso Corsa</button>
+              </div>
+            </div><div class="swara-decoration-grid"><figure class="swara-photo"><img class="" src="assets/screenshots/swara/editorial/decoration-legacy-1420.webp" srcset="assets/screenshots/swara/editorial/decoration-legacy-800.webp 800w, assets/screenshots/swara/editorial/decoration-legacy-1420.webp 1420w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="1420" height="665" alt="Legacy decoration on the same Jungle patch" data-i18n-alt="home.swara.photoDecorationLegacy" loading="lazy" decoding="async" /><figcaption>Legacy</figcaption></figure><figure class="swara-photo"><img class="" src="assets/screenshots/swara/editorial/decoration-pcb-trace-1420.webp" srcset="assets/screenshots/swara/editorial/decoration-pcb-trace-800.webp 800w, assets/screenshots/swara/editorial/decoration-pcb-trace-1420.webp 1420w" sizes="(max-width: 700px) calc(100vw - 32px), (max-width: 1200px) 90vw, 1200px" width="1420" height="665" alt="PCB Trace decoration on the same Jungle patch" data-i18n-alt="home.swara.photoDecorationPcbTrace" loading="lazy" decoding="async" /><figcaption>PCB Trace</figcaption></figure></div>
+</section>
+<section class="story-feedback-band" aria-labelledby="swara-feedback-title">
         <div class="container">
           <p class="story-index"><span data-i18n="home.swara.feedbackIndex">Feedback</span><span data-i18n="home.swara.feedbackSub">From the field</span></p>
           <h2 id="swara-feedback-title" class="story-chapter-title" data-i18n="home.swara.feedbackTitle">What artists are saying.</h2>
@@ -1057,118 +1024,13 @@
           </div>
         </div>
       </section>
-
-      <section class="story-moment container" aria-labelledby="swara-seq-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.seqIndex">Sequencer</span></p>
-          <h3 id="swara-seq-title" class="story-moment-title" data-i18n="home.swara.seqTitle">Program it. Play it. Keep the pattern.</h3>
-          <p class="story-moment-body" data-i18n="home.swara.seqBody">Sixteen steps with length, rotation, groove, swing, gate and rhythmic division. Each step carries a note, an event state — rest, note or tie — a velocity, and an independent controller value, so pitch and modulation can move on separate lanes. Three modes cover the ground: Step for a fixed pattern, Arp for up, down, up/down, random and played directions across fifteen patterns and four octaves, and Sequence for the stored line. Run the clock free at 40–240 BPM or lock it to the host.</p>
-          <ul class="detail-list">
-            <li data-i18n="home.swara.seqLi1" data-i18n-html><strong>Step / Arp / Sequence.</strong> A fixed pattern, an arpeggiator, or the stored sequence — the step editor stays available in all three.</li>
-            <li data-i18n="home.swara.seqLi2" data-i18n-html><strong>Length and start.</strong> Shorten the cycle to any length from 1 to 16 steps, then rotate the start offset so the pattern shifts against the bar.</li>
-            <li data-i18n="home.swara.seqLi3" data-i18n-html><strong>Groove.</strong> Six groove templates — Swing, Shuffle, Push, Lag, Human, Monkey — with a swing amount on top.</li>
-            <li data-i18n="home.swara.seqLi4" data-i18n-html><strong>Gate and division.</strong> Gate from 5% to 100%, and rhythmic division from 1/1 down to 1/64 including triplets.</li>
-            <li data-i18n="home.swara.seqLi5" data-i18n-html><strong>Per-step detail.</strong> Note, event state (rest / note / tie), velocity, and a controller value that feeds the sequencer modulation sources in every mode.</li>
-            <li data-i18n="home.swara.seqLi6" data-i18n-html><strong>Clock.</strong> Free at 40–240 BPM, or host sync so the pattern follows the DAW transport.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="story-moment container" aria-labelledby="swara-gen-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.genIndex">Generate</span></p>
-          <h3 id="swara-gen-title" class="story-moment-title" data-i18n="home.swara.genTitle">Don't randomise the patch. Randomise the decision.</h3>
-          <p class="story-moment-body" data-i18n="home.swara.genBody">Five generators, each acting on one aspect of the pattern instead of the whole thing. Generate the notes and keep the rhythm. Keep the pitches and regenerate velocity. Keep the groove and let rests and ties change. Move the controller lane on its own. Or regenerate the complete sequence and keep the playback settings. Notes are drawn pentatonically from the first step across a range you set, so what comes back stays in key and stays usable.</p>
-          <ul class="detail-list">
-            <li data-i18n="home.swara.genLi1" data-i18n-html><strong>Random notes</strong> — change pitches only. Events, velocities and controller values are preserved.</li>
-            <li data-i18n="home.swara.genLi2" data-i18n-html><strong>Random velocity</strong> — change velocity only. Pitches, events and controller values are preserved.</li>
-            <li data-i18n="home.swara.genLi3" data-i18n-html><strong>Random event</strong> — change note, rest and tie structure only. Pitches, velocities and values are preserved.</li>
-            <li data-i18n="home.swara.genLi4" data-i18n-html><strong>Random value</strong> — change controller values only, independently of pitch.</li>
-            <li data-i18n="home.swara.genLi5" data-i18n-html><strong>Random sequence</strong> — new notes, velocities, rests and ties, and controller values. Playback settings are preserved.</li>
-            <li data-i18n="home.swara.genLi6" data-i18n-html><strong>Type 1 generation</strong> — pentatonic notes from step 1 across a range of −48 to +48 semitones. The mode keeps it constrained rather than arbitrary.</li>
-            <li data-i18n="home.swara.genLi7" data-i18n-html><strong>Lock</strong> — hold sequencer settings and the pattern across preset changes, so auditioning sounds never costs you the line.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="story-moment container" aria-labelledby="swara-osc-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.oscIndex">Sound engine</span></p>
-          <h3 id="swara-osc-title" class="story-moment-title" data-i18n="home.swara.oscTitle">Two oscillators. Thirty-five models. One mix decision.</h3>
-          <p class="story-moment-body" data-i18n="home.swara.oscBody">Each oscillator section picks a model, a pitch offset across four octaves, and a timbre macro that behaves the way that generator should. The list runs from clean analog saw, square and triangle through phase-distortion CZ shapes, a four-saw pad, linear FM, eighteen wavetables plus a user slot, and deliberately broken material: 8-bit Land, Crushed Sine, Dirty PWM, filtered noise and a vowel formant source. The mix is a second instrument. Fourteen operators decide how the two sections actually combine — Sum, Sync, Ring, XOR, Fuzz, Crush 4, Crush 8, Fold, Bits, Duo and four ping modes. Underneath sit an eleven-shape sub oscillator and a noise channel.</p>
-          <ul class="detail-list">
-            <li data-i18n="home.swara.oscLi1" data-i18n-html><strong>Analog fundamentals.</strong> Analog Saw, Analog Square, Analog Triangle.</li>
-            <li data-i18n="home.swara.oscLi2" data-i18n-html><strong>Phase distortion.</strong> CZ Saw, CZ Resonant, CZ Triangle, CZ Pulse, CZ Sync.</li>
-            <li data-i18n="home.swara.oscLi3" data-i18n-html><strong>Digital and hybrid.</strong> Quad Saw Pad, Linear FM, 18 wavetables plus a user wavetable slot.</li>
-            <li data-i18n="home.swara.oscLi4" data-i18n-html><strong>Degraded and physical.</strong> 8-bit Land, Crushed Sine, Dirty PWM, Filtered Noise, Vowel.</li>
-            <li data-i18n="home.swara.oscLi5" data-i18n-html><strong>Operators.</strong> Sum, Sync, Ring, XOR, Fuzz, Crush 4, Crush 8, Fold, Bits, Duo, Ping 2, Ping 4, Ping 8, Ping Seq.</li>
-            <li data-i18n="home.swara.oscLi6" data-i18n-html><strong>Sub shapes.</strong> Square −1, Triangle −1, Pulse −1, Square −2, Triangle −2, Pulse −2, Click, Glitch, Blow, Metallic, Pop.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="story-moment container" aria-labelledby="swara-filter-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.filterIndex">Filter</span></p>
-          <h3 id="swara-filter-title" class="story-moment-title" data-i18n="home.swara.filterTitle">Classic IR3109. Four poles. Real weight.</h3>
-          <p class="story-moment-body" data-i18n="home.swara.filterBody">The low-pass is a circuit-derived Classic IR3109 four-pole design: a resonant ladder that keeps low-end weight as you close it and self-emphasises harmonics as you push it. Cutoff, resonance, key tracking, envelope amount and LFO amount sit in front of you, and the modulation matrix can move all of them. Basses stay heavy under movement, resonant sequences articulate, and sweeps stay musical because the poles behave like a circuit rather than a formula.</p>
-          <h4 class="story-moment-subhead" data-i18n="home.swara.dspTitle">After the filter: the DSP board</h4>
-          <p class="story-moment-body" data-i18n="home.swara.dspBody">An optional effects board sits after the Classic filter and the post-mixer trim, with sixteen programs and two controls: distortion, crush, comb plus and minus, ring modulation, delay with feedback and dub variants, crushed delay feedback, tempo-synced delay divisions from 1/16 to 3/16, a looper, and pitch. It is the difference between a clean line and a finished one.</p>
-        </div>
-      </section>
-
-      <section class="story-moment container" aria-labelledby="swara-motion-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.motionIndex">Modulation</span></p>
-          <h3 id="swara-motion-title" class="story-moment-title" data-i18n="home.swara.motionTitle">Two envelopes, two LFOs, twelve routes.</h3>
-          <p class="story-moment-body" data-i18n="home.swara.motionBody">Each LFO has twenty-one waveforms: triangle, square, sample and hold, ramp, a step-sequencer wave, and sixteen user waves. Retrigger behaviour is selectable — free phase, retrigger, envelope master, or one-shot — and timing runs free or synchronised to the host from 1/32 up to 4/1. That is enough for vibrato, rhythmic filtering, stepped modulation and slow evolving movement without reaching for a second plugin. The twelve-slot modulation matrix connects twenty-eight sources to twenty-five destinations with signed amounts, so envelopes, LFOs, velocity, aftertouch, mod wheel, pitch bend, noise, audio rate and the sequencer value lane can all drive the patch from inside.</p>
-          <ul class="detail-list">
-            <li data-i18n="home.swara.modLi1" data-i18n-html><strong>21 LFO waveforms</strong> — triangle, square, sample and hold, ramp, step sequence, Wave 1–16.</li>
-            <li data-i18n="home.swara.modLi2" data-i18n-html><strong>4 retrigger modes</strong> — free phase, retrigger, envelope master, one-shot.</li>
-            <li data-i18n="home.swara.modLi3" data-i18n-html><strong>Free or synced timing</strong> — beat divisions from 1/32 through 4/1, or free-running.</li>
-            <li data-i18n="home.swara.modLi4" data-i18n-html><strong>12 matrix slots</strong> — 28 sources into 25 destinations, each with a signed bipolar amount.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="story-moment container" aria-labelledby="swara-perf-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.perfIndex">Performance</span></p>
-          <h3 id="swara-perf-title" class="story-moment-title" data-i18n="home.swara.perfTitle">Glide, legato, sync, lock.</h3>
-          <p class="story-moment-body" data-i18n="home.swara.perfBody">Portamento for slides and tied bass notes. Legato or retriggering voice behaviour. Per-channel MIDI or omni, and a master level. With the sequencer in host sync the pattern follows the transport exactly; left free it runs its own clock from 40 to 240 BPM. Fifty-seven factory programs ship with the instrument, and user presets can be saved from the main panel.</p>
-        </div>
-      </section>
-
-      <section class="story-moment story-moment--shot container swara-colours-moment" aria-labelledby="swara-colours-title">
-        <div class="story-moment-layout story-moment-layout--shot">
-          <div class="story-moment-copy">
-            <p class="story-index"><span data-i18n="home.swara.coloursIndex">Skins</span></p>
-            <h3 id="swara-colours-title" class="story-moment-title" data-i18n="home.swara.coloursTitle">Five complete skins</h3>
-            <p class="story-moment-body" data-i18n="home.swara.coloursBody">Pastel, Neon Cobalt, Jungle, Rosso Corsa and Midnight Gold, plus panel decorations and two manufacturer marks. Every skin keeps the same layout and workflow, and the interface scales to three sizes. Presets are browsed and saved from the main panel.</p>
-          </div>
-          <figure class="story-frame story-frame--inline">
-            <img src="assets/screenshots/swara/swara-xt-decoration-jungle.png" alt="Swara XT Pastel skin with PCB-trace decoration dividers" data-i18n-alt="home.swara.decorationAlt" width="2786" height="1304" loading="lazy" decoding="async" />
-          </figure>
-        </div>
-      </section>
-
-      <figure class="story-frame story-frame--strip swara-skin-strip">
-        <div class="container">
-          <img src="assets/screenshots/swara/swara-xt-neon-cobalt-medium.png" alt="Swara XT Neon Cobalt panel" data-i18n-alt="home.swara.neonMediumAlt" width="2786" height="1304" loading="lazy" decoding="async" />
-        </div>
-      </figure>
-
-      <section class="story-moment container" aria-labelledby="swara-format-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.formatIndex">Formats</span></p>
-          <h3 id="swara-format-title" class="story-moment-title" data-i18n="home.swara.formatTitle">VST3 and Standalone on Windows and Linux. AU on macOS.</h3>
-          <p class="story-moment-body" data-i18n="home.swara.formatBody">Windows x64 and Linux x86_64 ship free as VST3 and Standalone under GPLv3. macOS ships as VST3, AU and Standalone from the store. To install manually, copy Swara XT.vst3 into your VST3 folder and rescan the DAW — on Windows a typical location is C:\Program Files\Common Files\VST3; on Mac and Linux, use your system or user VST3 directory.</p>
-        </div>
-      </section>
-
-      <section class="story-moment container" id="swara-downloads" aria-labelledby="swara-downloads-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.downloadsIndex">Downloads</span></p>
+      <section class="swara-chapter container swara-acquire" aria-labelledby="swara-acquire-title">
+<header class="swara-chapter-heading"><span class="swara-chapter-number" aria-hidden="true" data-i18n="home.swara.chapter7">07 / GET SWARA</span><div><h2 id="swara-acquire-title" data-i18n="home.swara.acquireHeading">Bring SWARA into your studio.</h2></div></header>
+<div class="swara-support-grid">
+<article class="swara-support-panel" aria-labelledby="swara-format-title"><p class="story-index"><span data-i18n="home.swara.formatIndex">Formats</span></p>
+          <h3 id="swara-format-title" class="story-moment-title" data-i18n="home.swara.formatTitle">Choose your platform.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.formatBody">Windows x64 and Linux x86_64 ship free as VST3 and Standalone under GPLv3. macOS ships as VST3, AU and Standalone from the store. To install manually, copy Swara XT.vst3 into your VST3 folder and rescan the DAW — on Windows a typical location is C:\Program Files\Common Files\VST3; on Mac and Linux, use your system or user VST3 directory.</p><a class="swara-text-link" href="https://store.montronedsp.com/l/swara?wanted=true" data-i18n="home.swara.macStoreLink">macOS · Visit the store</a></article>
+<article class="swara-support-panel" id="swara-downloads" aria-labelledby="swara-downloads-title"><p class="story-index"><span data-i18n="home.swara.downloadsIndex">Downloads</span></p>
           <h3 id="swara-downloads-title" class="story-moment-title" data-i18n="home.swara.downloadsTitle">Windows and Linux · Free under GPLv3</h3>
           <p class="story-moment-body" data-i18n="home.swara.downloadsBody">Official free builds from the latest GitHub release. Accept the license, then download Windows or Linux.</p>
           <label class="swara-license-accept">
@@ -1180,22 +1042,49 @@
             <a class="btn btn-primary btn-disabled" href="https://github.com/montronedsp/SWARAXT/releases/download/v1.2.3/SwaraXT-Linux-x86_64-v1.2.3.tar.gz" data-swara-free-download data-swara-download-platform="linux" data-swara-linux-download data-i18n="home.swara.downloadLinux" aria-disabled="true" tabindex="-1" rel="noopener noreferrer">Download Linux · Free</a>
             <a class="btn btn-secondary" href="https://github.com/montronedsp/SWARAXT/releases/latest" target="_blank" rel="noopener noreferrer" data-i18n="home.swara.releasePage">All releases</a>
           </div>
-          <p class="hero-download-checksum"><span data-i18n="home.swara.windowsShaLabel">Windows SHA-256</span>: <code data-i18n="home.swara.windowsSha256" data-swara-checksum="windows">b8b57bad4269d357f587b280e00095a58e27dbfa1af52bd7165bec3389849185</code></p>
-          <p class="hero-download-checksum"><span data-i18n="home.swara.sha256Label">Linux SHA-256</span>: <code data-i18n="home.swara.linuxSha256" data-swara-checksum="linux">908b622a77f97bd6067b0c9dcf29cf4dd0f847af650a0b23f2583630b71c2d07</code></p>
-        </div>
-      </section>
-
-      <section class="story-moment container swara-linux-moment" aria-labelledby="swara-linux-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.linuxIndex">Linux</span></p>
+          <details class="swara-spec-detail"><summary data-i18n="home.swara.verifyDownloads">Verify your download · SHA-256</summary><p class="hero-download-checksum"><span data-i18n="home.swara.windowsShaLabel">Windows SHA-256</span>: <code data-i18n="home.swara.windowsSha256" data-swara-checksum="windows">b8b57bad4269d357f587b280e00095a58e27dbfa1af52bd7165bec3389849185</code></p>
+          <p class="hero-download-checksum"><span data-i18n="home.swara.sha256Label">Linux SHA-256</span>: <code data-i18n="home.swara.linuxSha256" data-swara-checksum="linux">908b622a77f97bd6067b0c9dcf29cf4dd0f847af650a0b23f2583630b71c2d07</code></p></details></article>
+</div><div class="swara-project-trust"><div class="hero-trust-frame" data-i18n-aria="home.swara.sonarRowAria" aria-label="SWARA XT security and quality badges">
+                  <p class="hero-trust-frame__lede" data-i18n="home.swara.openssfCaption">Open source, independently reviewed</p>
+                  <div class="hero-trust-pair">
+                    <a class="hero-trust-icon-link openssf-icon-link" href="https://www.bestpractices.dev/projects/15241" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.openssfAria" aria-label="SWARA XT: OpenSSF Best Practices, 100 percent passing">
+                      <img class="trust-lockup__icon openssf-icon" src="assets/branding/openssf-best-practices.svg" alt="" width="88" height="88" loading="lazy" decoding="async" />
+                    </a>
+                    <a class="trust-gate" href="https://sonarcloud.io/summary/new_code?id=montronedsp_SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.sonarAria" aria-label="SWARA XT: SonarCloud quality gate">
+                      <img class="trust-gate__img" src="https://sonarcloud.io/api/project_badges/quality_gate?project=montronedsp_SWARAXT" alt="Quality gate" data-i18n-alt="home.swara.sonarAlt" width="88" height="88" loading="lazy" decoding="async" />
+                    </a>
+                  </div>
+                  <div class="hero-trust-lockups">
+                    <a class="trust-lockup trust-lockup--badge-only" href="https://www.bestpractices.dev/projects/15241" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.openssfAria" aria-label="SWARA XT: OpenSSF Best Practices, 100 percent passing">
+                      <img class="trust-lockup__badge openssf-badge-img" src="https://www.bestpractices.dev/projects/15241/badge" alt="OpenSSF Best Practices badge" loading="lazy" decoding="async" />
+                    </a>
+                    <a class="trust-lockup trust-lockup--badge-only" href="https://sonarcloud.io/summary/new_code?id=montronedsp_SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.sonarSecurityAria" aria-label="SWARA XT: SonarCloud security rating">
+                      <img class="trust-lockup__badge" src="https://sonarcloud.io/api/project_badges/measure?project=montronedsp_SWARAXT&amp;metric=security_rating" alt="Security Rating" data-i18n-alt="home.swara.sonarSecurityAlt" height="28" loading="lazy" decoding="async" />
+                    </a>
+                    <a class="trust-lockup trust-lockup--badge-only" href="https://sonarcloud.io/summary/new_code?id=montronedsp_SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.sonarReliabilityAria" aria-label="SWARA XT: SonarCloud reliability rating">
+                      <img class="trust-lockup__badge" src="https://sonarcloud.io/api/project_badges/measure?project=montronedsp_SWARAXT&amp;metric=reliability_rating" alt="Reliability Rating" data-i18n-alt="home.swara.sonarReliabilityAlt" height="28" loading="lazy" decoding="async" />
+                    </a>
+                    <a class="trust-lockup trust-lockup--badge-only" href="https://sonarcloud.io/summary/new_code?id=montronedsp_SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.sonarQualityAria" aria-label="SWARA XT: SonarCloud quality gate status">
+                      <img class="trust-lockup__badge" src="https://sonarcloud.io/api/project_badges/measure?project=montronedsp_SWARAXT&amp;metric=alert_status" alt="Quality gate status" data-i18n-alt="home.swara.sonarQualityAlt" height="28" loading="lazy" decoding="async" />
+                    </a>
+                    <a class="trust-lockup trust-lockup--badge-only" href="https://sonarcloud.io/summary/new_code?id=montronedsp_SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.sonarMaintainabilityAria" aria-label="SWARA XT: SonarCloud maintainability rating">
+                      <img class="trust-lockup__badge" src="https://sonarcloud.io/api/project_badges/measure?project=montronedsp_SWARAXT&amp;metric=sqale_rating" alt="Maintainability Rating" data-i18n-alt="home.swara.sonarMaintainabilityAlt" height="28" loading="lazy" decoding="async" />
+                    </a>
+                    <a class="trust-lockup trust-lockup--badge-only" href="https://api.reuse.software/info/github.com/montronedsp/SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n-aria="home.swara.reuseAria" aria-label="SWARA XT: REUSE status">
+                      <img class="trust-lockup__badge" src="https://api.reuse.software/badge/github.com/montronedsp/SWARAXT" alt="REUSE status" data-i18n-alt="home.swara.reuseAlt" height="28" loading="lazy" decoding="async" />
+                    </a>
+                  </div>
+                </div></div>
+</section>
+<section class="swara-chapter container swara-support" aria-labelledby="swara-support-title">
+<header class="swara-chapter-heading"><span class="swara-chapter-number" aria-hidden="true" data-i18n="home.swara.chapter8">08 / YOUR SETUP</span><div><h2 id="swara-support-title" data-i18n="home.swara.supportHeading">At home in your studio.</h2></div></header>
+<div class="swara-support-intro"><p class="story-index"><span data-i18n="home.swara.linuxIndex">Linux</span></p>
           <h3 id="swara-linux-title" class="story-moment-title" data-i18n="home.swara.linuxTitle">Built for Linux and open-source software</h3>
           <p class="story-moment-body" data-i18n="home.swara.linuxLead1">At MontroneDSP, we are strong believers in Linux and open-source software.</p>
           <p class="story-moment-body" data-i18n="home.swara.linuxLead2">Linux has become an increasingly capable platform for music production, offering excellent performance, flexibility, and a growing ecosystem of professional audio tools. We actively support Linux and test our plugins on a selection of commonly used distributions and desktop environments.</p>
 
-          <h4 class="story-moment-subhead" data-i18n="home.swara.linuxTestedTitle">Tested environments</h4>
-          <p class="story-moment-body" data-i18n="home.swara.linuxTestedIntro">Our Linux builds are tested on:</p>
-
-          <article class="swara-linux-env" aria-labelledby="swara-linux-ubuntu-title">
+          </div>
+<div class="swara-environment-grid"><article class="swara-linux-env" aria-labelledby="swara-linux-ubuntu-title">
             <figure class="swara-linux-env-logo swara-linux-env-logo--ubuntu">
               <img src="assets/branding/linux/ubuntu-logo-white.svg" alt="Ubuntu" data-i18n-alt="home.swara.linuxUbuntuLogoAlt" width="120" height="28" loading="lazy" decoding="async" />
             </figure>
@@ -1221,7 +1110,8 @@
             </div>
           </article>
 
-          <h4 class="story-moment-subhead" data-i18n="home.swara.linuxRecTitle">Our recommendation</h4>
+          </div>
+<details class="swara-spec-detail swara-linux-guidance"><summary data-i18n="home.swara.linuxGuidance">Linux recommendations and installation</summary><div class="swara-guidance-copy"><h4 class="story-moment-subhead" data-i18n="home.swara.linuxRecTitle">Our recommendation</h4>
           <p class="story-moment-body" data-i18n="home.swara.linuxRecBody1">If you are new to Linux and want the most straightforward, conventional setup for music production, Ubuntu LTS remains an excellent starting point.</p>
           <p class="story-moment-body" data-i18n="home.swara.linuxRecBody2">For a preconfigured KDE desktop and Flatpak-based DAWs, SteamOS is a tested alternative — with the caveats noted above, including the installer disk-wipe risk.</p>
           <p class="story-moment-body" data-i18n="home.swara.linuxRecBody3">Linux audio setups can vary considerably between distributions, audio servers, DAWs, drivers, and system configurations. For this reason, we recommend keeping your system updated and using the current version of your DAW and plugin host whenever possible.</p>
@@ -1230,7 +1120,14 @@
           <p class="story-moment-body" data-i18n="home.swara.linuxFormatsBody1">Our Linux plugins are distributed in VST3 format.</p>
           <p class="story-moment-body" data-i18n="home.swara.linuxFormatsBody2">When installing manually, make sure your DAW is configured to scan the directory containing the plugin. After installation, restarting or rescanning your DAW may be required before the plugin appears.</p>
 
-          <article class="swara-linux-env swara-linux-env--open" aria-labelledby="swara-linux-open-title">
+          </div></details>
+<div class="swara-support-grid swara-system-grid"><article class="swara-support-panel" aria-labelledby="swara-machines-title"><p class="story-index"><span data-i18n="home.swara.machinesIndex">System</span></p>
+          <h3 id="swara-machines-title" class="story-moment-title" data-i18n="home.swara.machinesTitle">A substantial real-time engine.</h3>
+          <p class="story-moment-body" data-i18n="home.swara.machinesBody">Minimum is a 64-bit processor, 4 GB of RAM and 100 MB of free disk, with a VST3-capable host. For comfortable real-time use we recommend a modern multicore CPU — Intel Core i7 or AMD Ryzen 5 or better — and 8 GB of RAM. Very small audio buffers at high sample rates cost real CPU. Host sample rates from 8 kHz to 384 kHz are supported. Filter processing quality is selectable from the right-click menu as High, Normal or Eco; Eco trades oversampling for CPU without changing the circuit.</p>
+          <div class="swara-linux-install" aria-label="Linux install options" data-i18n-aria="home.swara.linuxInstallAria">
+            <p class="swara-linux-install-label" data-i18n="home.swara.linuxInstallLabel">Linux x86_64 · VST3 + Standalone · Free</p>
+            <pre class="swara-linux-install-cmd" tabindex="0"><code>curl -fsSL https://raw.githubusercontent.com/montronedsp/SWARAXT/main/scripts/install-linux.sh | bash</code></pre>
+          </div></article><div class="swara-support-panel"><article class="swara-linux-env swara-linux-env--open" aria-labelledby="swara-linux-open-title">
             <figure class="swara-linux-env-logo swara-linux-env-logo--gpl">
               <a href="swara-license.html">
                 <img src="assets/branding/linux/gplv3-logo.svg" alt="GNU General Public License version 3" data-i18n-alt="home.swara.linuxGplLogoAlt" width="96" height="48" loading="lazy" decoding="async" />
@@ -1244,21 +1141,8 @@
               <p class="story-moment-body" data-i18n="home.swara.linuxOpenBody3">We believe Linux and open-source development can play an important role in keeping music technology accessible, transparent, and open to experimentation.</p>
               <p class="story-moment-body"><a href="https://github.com/montronedsp/SWARAXT" target="_blank" rel="noopener noreferrer" data-i18n="home.swara.source">Source on GitHub</a></p>
             </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="story-moment container" aria-labelledby="swara-machines-title">
-        <div class="story-moment-copy">
-          <p class="story-index"><span data-i18n="home.swara.machinesIndex">System</span></p>
-          <h3 id="swara-machines-title" class="story-moment-title" data-i18n="home.swara.machinesTitle">A substantial real-time engine.</h3>
-          <p class="story-moment-body" data-i18n="home.swara.machinesBody">Minimum is a 64-bit processor, 4 GB of RAM and 100 MB of free disk, with a VST3-capable host. For comfortable real-time use we recommend a modern multicore CPU — Intel Core i7 or AMD Ryzen 5 or better — and 8 GB of RAM. Very small audio buffers at high sample rates cost real CPU. Host sample rates from 8 kHz to 384 kHz are supported. Filter processing quality is selectable from the right-click menu as High, Normal or Eco; Eco trades oversampling for CPU without changing the circuit.</p>
-          <div class="swara-linux-install" aria-label="Linux install options" data-i18n-aria="home.swara.linuxInstallAria">
-            <p class="swara-linux-install-label" data-i18n="home.swara.linuxInstallLabel">Linux x86_64 · VST3 + Standalone · Free</p>
-            <pre class="swara-linux-install-cmd" tabindex="0"><code>curl -fsSL https://raw.githubusercontent.com/montronedsp/SWARAXT/main/scripts/install-linux.sh | bash</code></pre>
-          </div>
-        </div>
-      </section>
+          </article></div></div>
+</section>
 
     </div>
 
@@ -1775,8 +1659,9 @@
     <span class="product-wheel-trigger-name" data-wheel-trigger-name>Aura Shimmer</span>
     <span class="product-wheel-trigger-hint" data-i18n="wheel.switch">Switch</span>
   </button>
-  <script src="i18n.js?v=reuseBadge1"></script>
+  <script src="i18n.js?v=swaraEditorial1"></script>
   <script src="product-selector.js?v=membranaOrder1"></script>
-  <script src="script.js?v=swaraFreeDl1"></script>
+  <script src="script.js?v=swaraEditorial1"></script>
+  <script src="assets/swara-presentation.js?v=1"></script>
 </body>
 </html>

@@ -87,7 +87,7 @@
 
     function restartTimer() {
       stopTimer();
-      if (reduceMotion || paused || !isProductActive() || slides.length < 2) return;
+      if (productId === 'swara' || reduceMotion || paused || !isProductActive() || slides.length < 2) return;
       timer = window.setInterval(function () {
         showSkin(index + 1, false);
       }, AUTO_MS);
