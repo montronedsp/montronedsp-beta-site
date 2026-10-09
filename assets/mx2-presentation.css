@@ -53,7 +53,7 @@ html[data-product="martello"] #hero-panel-martello .hero-below-quote p { font-si
 .mx2-editorial .mx2-generator-list strong { font-family: var(--font-display); font-weight: 700; color: #e8b4bc; letter-spacing: .025em; }
 .mx2-editorial .mx2-text-link { display: inline-block; padding: 12px 0; border-bottom: 1px solid #c45a6a; font-size: 18px; color: #ead8dc; }
 .mx2-editorial .mx2-skin-carousel { width: 100%; margin: 0 0 36px; }
-.mx2-editorial .mx2-skin-stage { position: relative; width: 100%; aspect-ratio: 3600 / 2715; overflow: hidden; border-radius: 2px; box-shadow: none; border: 1px solid #5a3038; background: #12080a; }
+.mx2-editorial .mx2-skin-stage { position: relative; width: 100%; aspect-ratio: 1920 / 1448; overflow: hidden; border-radius: 2px; box-shadow: none; border: 1px solid #5a3038; background: #12080a; }
 .mx2-editorial .mx2-skin-slide { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; object-position: center top; opacity: 0; transition: opacity .55s ease; pointer-events: none; }
 .mx2-editorial .mx2-skin-slide.is-active { opacity: 1; z-index: 1; }
 .mx2-editorial .mx2-skin-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
@@ -175,3 +175,63 @@ html[data-product="martello"] #hero-panel-martello a.btn.btn-primary.gumroad-but
 html[data-product="martello"] .mx2-editorial .mx2-environment-grid :is(.mx2-linux-env-logo,.mx2-linux-env-logos) { height: 64px; min-height: 64px; margin: 0 0 22px; }
 html[data-product="martello"] .mx2-editorial .mx2-environment-grid .mx2-linux-env-logos { display: flex; flex-direction: row; gap: 24px; align-items: center; justify-content: center; }
 html[data-product="martello"] .mx2-editorial .mx2-environment-grid .mx2-linux-env-logos figure { height: auto; min-height: 0; margin: 0; }
+/* MX2: real control details and family menus, sized for inspection. */
+.mx2-editorial .mx2-engine-summary { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px;align-items:center;margin:0 0 36px; }
+.mx2-editorial .mx2-engine-summary h3 { max-width:20ch; }
+.mx2-editorial .mx2-facts { justify-content:space-between;gap:24px; }
+.mx2-editorial .mx2-voice-pair { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px; }
+.mx2-editorial .mx2-voice-pair figcaption { font:400 11px/1.6 var(--font-mono);letter-spacing:.03em; }
+.mx2-editorial .mx2-mod-details { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px; }
+.mx2-editorial .mx2-mod-details .mx2-photo:last-child { grid-column:1 / -1;width:calc(50% - 14px);margin:auto; }
+.mx2-editorial .mx2-spec-detail .mx2-photo { margin-top:24px; }
+.mx2-editorial .mx2-family-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px; }
+.mx2-editorial .mx2-family-grid h3 { font-size:24px;margin-bottom:12px; }
+.mx2-editorial .mx2-family-grid p { font-size:15px;min-height:100px; }
+.mx2-editorial .mx2-family-grid img { display:block;width:100%;height:auto;margin-top:24px; }
+.mx2-editorial .mx2-capture-caption, .mx2-editorial .mx2-inspect-hint { font-size:12px;color:#b89a9e;margin-top:22px; }
+.mx2-editorial .mx2-workflow-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px; }
+.mx2-editorial .mx2-workflow-grid article { border-top:1px solid #80505a;padding-top:25px; }
+.mx2-editorial .mx2-workflow-grid h3 { font-size:26px; }
+.mx2-editorial .mx2-workflow-grid p { font-size:16px; }
+.mx2-editorial .mx2-formats { margin-top:32px;font:400 12px/1.8 var(--font-mono);color:#d5bcbf; }
+.mx2-editorial .mx2-feedback-context { color:#b89a9e;max-width:66ch;margin:0 0 28px;line-height:1.6; }
+.mx2-editorial [aria-labelledby="mx2-origin-title"] > p + p { margin-top:20px; }
+.mx2-editorial .mx2-photo a { display:block; }
+@media(max-width:1024px) {
+ .mx2-editorial .mx2-family-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:36px; }
+ .mx2-editorial .mx2-family-grid p { min-height:0; }
+ .mx2-editorial .mx2-engine-summary { gap:30px; }
+}
+@media(max-width:700px) {
+ .mx2-editorial .mx2-engine-summary, .mx2-editorial .mx2-voice-pair, .mx2-editorial .mx2-mod-details, .mx2-editorial .mx2-workflow-grid { grid-template-columns:minmax(0,1fr);gap:30px; }
+ .mx2-editorial .mx2-mod-details .mx2-photo:last-child { width:100%; }
+ .mx2-editorial .mx2-family-grid { grid-template-columns:minmax(0,1fr);gap:40px; }
+ .mx2-editorial .mx2-family-grid img { max-width:360px; }
+ .mx2-editorial .mx2-family-grid p { max-width:36ch; }
+ .mx2-editorial .mx2-voice-pair .mx2-photo, .mx2-editorial .mx2-mod-details .mx2-photo { min-width:0; }
+ .mx2-editorial .mx2-voice-pair .mx2-photo a, .mx2-editorial .mx2-mod-details .mx2-photo a { overflow-x:auto;overscroll-behavior-x:contain; }
+ .mx2-editorial .mx2-voice-pair img, .mx2-editorial .mx2-mod-details img { width:560px;max-width:none; }
+ .mx2-editorial .mx2-facts { margin:0; }
+}
+/* Final optical pass: quieter captions and tighter family-to-menu spacing. */
+.mx2-editorial .mx2-chapter .mx2-inspect-hint, .mx2-editorial .mx2-chapter .mx2-capture-caption { font-size:12px;line-height:1.6;color:#b89a9e;margin-top:22px; }
+.mx2-editorial .mx2-family-grid p { min-height:76px; }
+.mx2-editorial .mx2-chapter .mx2-family-grid p { font-size:15px;line-height:1.6; }
+.mx2-editorial .mx2-chapter .mx2-workflow-grid p { font-size:16px; }
+.mx2-editorial .mx2-chapter .mx2-formats { font:400 12px/1.8 var(--font-mono);color:#d5bcbf;margin-top:32px; }
+@media(max-width:1024px) { .mx2-editorial .mx2-family-grid p { min-height:0; } }
+@media(max-width:700px) { .mx2-editorial .mx2-mod-details .mx2-photo a, .mx2-editorial .mx2-voice-pair .mx2-photo a { border-right:2px solid #80505a; } }
+/* Keep the closing purchase controls consistent with the hero, including Gumroad's injected CSS. */
+html[data-product="martello"] #mx2-acquire a.btn,
+html[data-product="martello"] #mx2-acquire a.btn:link,
+html[data-product="martello"] #mx2-acquire a.btn:visited {
+ border:1px solid #a85a66 !important;border-radius:2px !important;background:#1a0e12 !important;
+ background-image:none !important;box-shadow:none !important;color:#ead8dc !important;
+ -webkit-text-fill-color:#ead8dc !important;text-shadow:none !important;
+}
+html[data-product="martello"] #mx2-acquire a.btn.btn-primary { background:#e0334f !important;border-color:#e0334f !important;color:#fff !important;-webkit-text-fill-color:#fff !important; }
+html[data-product="martello"] #mx2-acquire a.btn:hover { background:#4a1f28 !important; }
+html[data-product="martello"] #mx2-acquire a.btn.btn-primary:hover { background:#f0556d !important; }
+.mx2-editorial .mx2-workflow-tips { display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:24px; }
+.mx2-editorial .mx2-chapter .mx2-workflow-tips p { font-size:16px; }
+@media(max-width:700px) { .mx2-editorial .mx2-workflow-tips { grid-template-columns:1fr;gap:20px; } }
