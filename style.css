@@ -3749,16 +3749,24 @@ html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] h1:has(.he
   width: clamp(300px, 62vw, 480px);
   aspect-ratio: 2083 / 427;
   align-items: center;
+  overflow: visible;
 }
 
 html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-logo--membrana {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
   object-fit: contain;
   object-position: left center;
   /* Mark already carries neon layers — no extra glow filter */
   filter: none;
+  -webkit-filter: none;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   image-rendering: auto;
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (max-width: 768px) {
