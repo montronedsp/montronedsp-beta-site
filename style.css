@@ -3747,7 +3747,7 @@ html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-copy
 
 html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] h1:has(.hero-logo) {
   width: clamp(300px, 62vw, 480px);
-  aspect-ratio: 2083 / 427;
+  aspect-ratio: 1985 / 408;
   align-items: center;
   overflow: visible;
 }
