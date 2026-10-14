@@ -3715,6 +3715,28 @@ html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-copy
   max-width: min(640px, 100%);
 }
 
+html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] h1:has(.hero-logo) {
+  width: clamp(280px, 58vw, 440px);
+  aspect-ratio: 2144 / 532;
+  align-items: center;
+}
+
+html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-logo--membrana {
+  object-fit: contain;
+  object-position: left center;
+  /* Neon layers carry their own glow; keep a soft ambient only. */
+  filter: drop-shadow(0 12px 28px rgba(10, 8, 18, 0.55));
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  image-rendering: auto;
+}
+
+@media (max-width: 768px) {
+  html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] h1:has(.hero-logo) {
+    width: min(100%, 360px);
+  }
+}
+
 .audio-examples-band {
   margin: 0;
   padding: clamp(52px, 9vh, 88px) 0;
