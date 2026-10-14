@@ -1,0 +1,357 @@
+(function () {
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  const martelloAudioPlayers = document.querySelectorAll('.martello-audio-examples .martello-audio-player');
+  martelloAudioPlayers.forEach(function (player) {
+    player.addEventListener('play', function () {
+      martelloAudioPlayers.forEach(function (other) {
+        if (other !== player) {
+          other.pause();
+        }
+      });
+    });
+  });
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealRoots = document.querySelectorAll('.plugin-story[data-product-only="martello"] > section, .plugin-story[data-product-only="martello"] > div');
+  if (!reduceMotion && 'IntersectionObserver' in window && revealRoots.length) {
+    const revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+
+    revealRoots.forEach(function (node, index) {
+      node.classList.add('js-reveal');
+      node.style.transitionDelay = Math.min(index * 40, 160) + 'ms';
+      revealObserver.observe(node);
+    });
+  }
+
+  document.querySelectorAll('[data-feedback-carousel]').forEach(function (carousel) {
+    const slides = carousel.querySelectorAll('[data-feedback-slide]');
+    const controls = carousel.querySelector('[data-feedback-controls]');
+    if (controls) controls.hidden = true;
+    slides.forEach(function (slide) {
+      slide.setAttribute('aria-hidden', 'false');
+      slide.removeAttribute('aria-roledescription');
+    });
+  });
+
+  function initProductSkinCarousel(root, productId, slideSelector, tabSelector) {
+    if (!root) return;
+    const slides = Array.from(root.querySelectorAll(slideSelector));
+    const tabs = Array.from(root.querySelectorAll(tabSelector));
+    if (!slides.length || !tabs.length) return;
+
+    const AUTO_MS = 4200;
+    let index = Math.max(0, slides.findIndex(function (slide) {
+      return slide.classList.contains('is-active');
+    }));
+    let timer = null;
+    let paused = false;
+
+    function isProductActive() {
+      return document.documentElement.dataset.product === productId;
+    }
+
+    function showSkin(nextIndex, userDriven) {
+      if (!slides.length) return;
+      index = ((nextIndex % slides.length) + slides.length) % slides.length;
+
+      slides.forEach(function (slide, i) {
+        const active = i === index;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+
+      tabs.forEach(function (tab, i) {
+        const active = i === index;
+        tab.classList.toggle('is-active', active);
+        tab.setAttribute('aria-selected', active ? 'true' : 'false');
+        tab.tabIndex = active ? 0 : -1;
+      });
+
+      if (userDriven) restartTimer();
+    }
+
+    function stopTimer() {
+      if (timer) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function restartTimer() {
+      stopTimer();
+      if (productId === 'swara' || reduceMotion || paused || !isProductActive() || slides.length < 2) return;
+      timer = window.setInterval(function () {
+        showSkin(index + 1, false);
+      }, AUTO_MS);
+    }
+
+    function syncPlayback() {
+      if (isProductActive() && !paused) restartTimer();
+      else stopTimer();
+    }
+
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () {
+        showSkin(i, true);
+      });
+    });
+
+    root.addEventListener('mouseenter', function () {
+      paused = true;
+      stopTimer();
+    });
+    root.addEventListener('mouseleave', function () {
+      paused = false;
+      syncPlayback();
+    });
+    root.addEventListener('focusin', function () {
+      paused = true;
+      stopTimer();
+    });
+    root.addEventListener('focusout', function (event) {
+      if (root.contains(event.relatedTarget)) return;
+      paused = false;
+      syncPlayback();
+    });
+
+    const productObserver = new MutationObserver(syncPlayback);
+    productObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-product']
+    });
+
+    showSkin(index, false);
+    syncPlayback();
+  }
+
+  initProductSkinCarousel(
+    document.querySelector('[data-swara-skins]'),
+    'swara',
+    '.swara-skin-slide',
+    '[data-skin-tab]'
+  );
+  initProductSkinCarousel(
+    document.querySelector('[data-martello-skins]'),
+    'martello',
+    '.martello-skin-slide',
+    '[data-skin-tab]'
+  );
+})();
+
+(function initSwaraFreeDownloads() {
+  const STORAGE_KEY = 'montronedsp.swara.gpl3.accepted';
+  const RELEASE_API = 'https://api.github.com/repos/montronedsp/SWARAXT/releases/latest';
+  const checkboxes = Array.from(document.querySelectorAll('[data-swara-license-accept]'));
+  const downloads = Array.from(document.querySelectorAll('[data-swara-free-download], [data-swara-linux-download]'));
+
+  function setEnabled(enabled) {
+    downloads.forEach(function (link) {
+      if (enabled) {
+        link.classList.remove('btn-disabled');
+        link.removeAttribute('aria-disabled');
+        link.removeAttribute('tabindex');
+      } else {
+        link.classList.add('btn-disabled');
+        link.setAttribute('aria-disabled', 'true');
+        link.setAttribute('tabindex', '-1');
+      }
+    });
+  }
+
+  function syncFromCheckboxes(source) {
+    const accepted = checkboxes.some(function (cb) { return cb.checked; });
+    setEnabled(accepted);
+    checkboxes.forEach(function (cb) {
+      if (cb !== source) cb.checked = accepted;
+    });
+    try {
+      if (accepted) sessionStorage.setItem(STORAGE_KEY, '1');
+      else sessionStorage.removeItem(STORAGE_KEY);
+    } catch (_) {}
+  }
+
+  if (checkboxes.length && downloads.length) {
+    let restored = false;
+    try {
+      restored = sessionStorage.getItem(STORAGE_KEY) === '1';
+    } catch (_) {}
+    if (restored) {
+      checkboxes.forEach(function (cb) { cb.checked = true; });
+      setEnabled(true);
+    } else {
+      setEnabled(false);
+    }
+
+    checkboxes.forEach(function (cb) {
+      cb.addEventListener('change', function () {
+        syncFromCheckboxes(cb);
+      });
+    });
+  }
+
+  function pickAsset(assets, platform) {
+    if (!Array.isArray(assets)) return null;
+    var patterns = platform === 'windows'
+      ? [/windows/i, /\.zip$/i]
+      : [/linux/i, /\.tar\.gz$/i];
+    return assets.find(function (asset) {
+      var name = asset && asset.name ? String(asset.name) : '';
+      return patterns.every(function (re) { return re.test(name); });
+    }) || null;
+  }
+
+  function applyLatestRelease(release) {
+    if (!release || !Array.isArray(release.assets)) return;
+    downloads.forEach(function (link) {
+      var platform = link.getAttribute('data-swara-download-platform');
+      if (!platform && link.hasAttribute('data-swara-linux-download')) platform = 'linux';
+      if (!platform) return;
+      var asset = pickAsset(release.assets, platform);
+      if (!asset || !asset.browser_download_url) return;
+      link.href = asset.browser_download_url;
+      link.removeAttribute('download');
+    });
+  }
+
+  function applyChecksums(text) {
+    if (!text) return;
+    String(text).split(/\r?\n/).forEach(function (line) {
+      var match = line.match(/^([a-fA-F0-9]{64})\s+(\S+)/);
+      if (!match) return;
+      var hash = match[1].toLowerCase();
+      var name = match[2];
+      var platform = /windows/i.test(name) ? 'windows' : (/linux/i.test(name) ? 'linux' : null);
+      if (!platform) return;
+      document.querySelectorAll('[data-swara-checksum="' + platform + '"]').forEach(function (el) {
+        el.textContent = hash;
+      });
+    });
+  }
+
+  fetch(RELEASE_API, { headers: { Accept: 'application/vnd.github+json' } })
+    .then(function (res) {
+      if (!res.ok) throw new Error('release lookup failed');
+      return res.json();
+    })
+    .then(function (release) {
+      applyLatestRelease(release);
+      var sums = (release.assets || []).find(function (asset) {
+        return asset && /sha256sums/i.test(asset.name || '');
+      });
+      if (!sums || !sums.browser_download_url) return null;
+      return fetch(sums.browser_download_url).then(function (res) {
+        if (!res.ok) throw new Error('checksum lookup failed');
+        return res.text();
+      });
+    })
+    .then(function (text) {
+      if (text) applyChecksums(text);
+    })
+    .catch(function () {});
+})();
+
+(function initAlsMitLicenseAcceptance() {
+  const STORAGE_KEY = 'montronedsp.als.mit.accepted';
+  const checkboxes = Array.from(document.querySelectorAll('[data-als-license-accept]'));
+  const downloads = Array.from(document.querySelectorAll('[data-als-windows-download]'));
+  if (!checkboxes.length || !downloads.length) return;
+
+  function setEnabled(enabled) {
+    downloads.forEach(function (link) {
+      if (enabled) {
+        link.classList.remove('btn-disabled');
+        link.removeAttribute('aria-disabled');
+        link.removeAttribute('tabindex');
+      } else {
+        link.classList.add('btn-disabled');
+        link.setAttribute('aria-disabled', 'true');
+        link.setAttribute('tabindex', '-1');
+      }
+    });
+  }
+
+  function syncFromCheckboxes(source) {
+    const accepted = checkboxes.some(function (cb) { return cb.checked; });
+    setEnabled(accepted);
+    checkboxes.forEach(function (cb) {
+      if (cb !== source) cb.checked = accepted;
+    });
+    try {
+      if (accepted) sessionStorage.setItem(STORAGE_KEY, '1');
+      else sessionStorage.removeItem(STORAGE_KEY);
+    } catch (_) {}
+  }
+
+  let restored = false;
+  try {
+    restored = sessionStorage.getItem(STORAGE_KEY) === '1';
+  } catch (_) {}
+  if (restored) {
+    checkboxes.forEach(function (cb) { cb.checked = true; });
+    setEnabled(true);
+  } else {
+    setEnabled(false);
+  }
+
+  checkboxes.forEach(function (cb) {
+    cb.addEventListener('change', function () {
+      syncFromCheckboxes(cb);
+    });
+  });
+
+  downloads.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      if (link.classList.contains('btn-disabled') || link.getAttribute('aria-disabled') === 'true') {
+        e.preventDefault();
+      }
+    });
+  });
+})();
+
+(function initSwaraLicensePage() {
+  if (document.documentElement.getAttribute('data-i18n-page') !== 'swaraLicense') return;
+  const blocks = document.querySelectorAll('[data-license-src]');
+  blocks.forEach(function (el) {
+    const src = el.getAttribute('data-license-src');
+    if (!src) return;
+    fetch(src)
+      .then(function (res) {
+        if (!res.ok) throw new Error('fetch failed');
+        return res.text();
+      })
+      .then(function (text) {
+        el.textContent = text;
+        el.removeAttribute('aria-busy');
+      })
+      .catch(function () {
+        el.textContent = '';
+        el.removeAttribute('aria-busy');
+        const fallback = document.createElement('p');
+        fallback.className = 'license-fetch-fallback';
+        fallback.innerHTML = 'Could not load this document. <a href="' + src + '">Open the text file</a>.';
+        el.parentNode.insertBefore(fallback, el.nextSibling);
+      });
+  });
+})();
+
+(function initNewsletterScaffold() {
+  document.querySelectorAll('[data-newsletter-scaffold]').forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var input = form.querySelector('input[type="email"]');
+      if (input && typeof input.reportValidity === 'function' && !input.reportValidity()) return;
+      form.classList.add('is-submitted');
+      var note = form.querySelector('.newsletter-scaffold-note');
+      if (note) note.textContent = 'Thanks — newsletter wiring comes next.';
+      if (input) input.value = '';
+    });
+  });
+})();
