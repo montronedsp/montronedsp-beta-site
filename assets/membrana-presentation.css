@@ -4,13 +4,13 @@ html[data-product="membrana"] .hero { padding-top: clamp(28px, 4vw, 58px); min-h
 html[data-product="membrana"] #hero-panel-membrana .hero-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(280px, .8fr); align-items: center; gap: 40px 64px; overflow: visible; }
 html[data-product="membrana"] #hero-panel-membrana .hero-copy { max-width: 760px; min-width: 0; overflow: visible; }
 html[data-product="membrana"] #hero-panel-membrana { overflow: visible; }
-/* Full 1600x900 scene plate kept as background; layout box sizes to the words (Swara-like). */
+/* Full scene plate as background; word slot matches cropped-era ~760px letter scale. */
 html[data-product="membrana"] #hero-panel-membrana h1:has(.hero-logo) {
   display: block;
   position: relative;
-  width: min(100%, 560px);
-  max-width: 560px;
-  height: clamp(72px, 9vw, 88px);
+  width: min(100%, 760px);
+  max-width: 760px;
+  height: clamp(96px, 12vw, 120px);
   aspect-ratio: auto;
   margin: 18px 0;
   padding: 0;
@@ -112,7 +112,7 @@ html[data-product="membrana"] #hero-panel-membrana .hero-below .hero-listen-card
  #hero-panel-membrana .container, .membrana-editorial > .container, .membrana-editorial > section > .container { width: calc(100% - 32px); }
  html[data-product="membrana"] #hero-panel-membrana .hero-layout { grid-template-columns: minmax(0,1fr); gap: 28px; }
  html[data-product="membrana"] #hero-panel-membrana .hero-copy { width: 100%; max-width: none; }
- html[data-product="membrana"] #hero-panel-membrana h1:has(.hero-logo) { margin: 18px 0; width: 100%; max-width: none; height: clamp(64px, 18vw, 84px); }
+ html[data-product="membrana"] #hero-panel-membrana h1:has(.hero-logo) { margin: 18px 0; width: 100%; max-width: none; height: clamp(88px, 22vw, 112px); }
  html[data-product="membrana"] #hero-panel-membrana .hero-punchline { font-size: 17px; }
  #hero-panel-membrana .membrana-hero-choices { grid-row: 3; gap: 12px; }
  #hero-panel-membrana .membrana-hero-photo { grid-row: 2; }
