@@ -45,9 +45,14 @@ html[data-product="membrana"] #hero-panel-membrana .hero-punchline { font: 400 1
 #hero-panel-membrana .membrana-hero-photo { grid-column: 1 / -1; margin: 0; }
 #hero-panel-membrana .membrana-hero-photo .screenshot-placeholder { aspect-ratio: 2782 / 1302; min-height: 0; border-radius: 2px; border: 1px dashed #5a4488; }
 #hero-panel-membrana .membrana-hero-photo figcaption { text-align: right; font-size: 12px; color: #a890c4; margin-top: 12px; }
-html[data-product="membrana"] #hero-panel-membrana .hero-below { margin-top: 32px; padding-top: 25px; padding-bottom: 12px; border-color: #342850; gap: 40px; }
-html[data-product="membrana"] #hero-panel-membrana .hero-below-quote { padding-left: 20px; border-color: #7c5ce8; }
-html[data-product="membrana"] #hero-panel-membrana .hero-below-quote p { font-size: clamp(22px, 2.4vw, 34px); font-style: normal; max-width: 20ch; }
+html[data-product="membrana"] #hero-panel-membrana .hero-below {
+  display: block;
+  margin-top: 32px;
+  padding-top: 25px;
+  padding-bottom: 12px;
+  border-color: #342850;
+}
+html[data-product="membrana"] #hero-panel-membrana .hero-below .hero-listen-card { max-width: 640px; }
 .membrana-editorial { --membrana-rule: #342850; --membrana-ink: #ece8f8; }
 .membrana-editorial .membrana-chapter { padding: clamp(48px, 6vw, 90px) 0; border-top: 1px solid var(--membrana-rule); }
 .membrana-editorial .membrana-chapter-heading { display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 36px; align-items: start; margin-bottom: 36px; }
@@ -114,8 +119,7 @@ html[data-product="membrana"] #hero-panel-membrana .hero-below-quote p { font-si
  #hero-panel-membrana .membrana-eyebrow { font-size: 10px; }
  #hero-panel-membrana .membrana-headline { font-size: clamp(27px, 2.7vw, 38px); margin-bottom: 12px; }
  #hero-panel-membrana .membrana-hero-photo figcaption { font-size: 11px; }
- html[data-product="membrana"] #hero-panel-membrana .hero-below { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 28px; }
- html[data-product="membrana"] #hero-panel-membrana .hero-below-quote p { max-width: none; font-size: 24px; }
+ html[data-product="membrana"] #hero-panel-membrana .hero-below { margin-top: 28px; }
  .membrana-editorial .membrana-chapter-heading { display: block; margin-bottom: 26px; }
  .membrana-editorial .membrana-chapter-number { display: block; margin-bottom: 17px; }
  .membrana-editorial .membrana-chapter p { font-size: 17px; }
