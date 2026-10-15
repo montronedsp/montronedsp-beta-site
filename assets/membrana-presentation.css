@@ -27,8 +27,8 @@ html[data-product="membrana"] #hero-panel-membrana .hero-logo {
   object-fit: contain;
   object-position: left center;
   filter: none;
-  /* Word left edge ~290/1600; center vertically on the letter band. */
-  transform: translate(-18.125%, -50%);
+  /* Word left edge ~290/1600; nudge down from vertical center. */
+  transform: translate(-18.125%, calc(-50% + 12px));
   transform-origin: left center;
 }
 #hero-panel-membrana .membrana-eyebrow, .membrana-editorial .membrana-chapter-number { font-family: var(--font-mono); font-size: 11px; font-weight: 400; letter-spacing: .09em; line-height: 1.7; color: #b8a8d4; text-transform: uppercase; }
