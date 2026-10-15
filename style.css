@@ -255,30 +255,30 @@ h1, h2, h3, h4, h5, h6 {
   --logo-accent-1: #9b7bff;
   --logo-accent-2: #7c5ce8;
   --logo-accent-3: #d4c4ff;
-  /* Quieter grid so the neon mark carries the light */
-  --hero-grid-a: rgba(var(--accent-bright-a), 0.035);
-  --hero-grid-b: rgba(var(--cool-rgb), 0.028);
-  --hero-grid-c: rgba(var(--accent-a), 0.1);
-  --hero-grid-d: rgba(var(--cool-rgb), 0.06);
-  --bg-rgb: 5, 3, 12;
-  --bg: #05030c;
-  --bg-deep: #02010a;
-  --bg-warm: #0c0818;
-  --surface: #0e0b18;
-  --surface-soft: #12101f;
-  --surface-raised: #181428;
-  --surface-glass: rgba(14, 11, 24, 0.86);
+  /* Match Estro SVG plate: #241a33 → #14110f → #0c0a09 */
+  --hero-grid-a: rgba(36, 26, 51, 0.04);
+  --hero-grid-b: rgba(20, 17, 15, 0.035);
+  --hero-grid-c: rgba(36, 26, 51, 0.08);
+  --hero-grid-d: rgba(12, 10, 9, 0.05);
+  --bg-rgb: 12, 10, 9;
+  --bg: #0c0a09;
+  --bg-deep: #080706;
+  --bg-warm: #14110f;
+  --surface: #12100f;
+  --surface-soft: #161311;
+  --surface-raised: #1c1718;
+  --surface-glass: rgba(12, 10, 9, 0.88);
   --text: #f8f2ff;
   --text-strong: #ffffff;
   --muted: #8b83a4;
   --muted-strong: #c3b2dc;
-  --border: rgba(138, 99, 255, 0.22);
-  --border-strong: rgba(167, 139, 255, 0.42);
+  --border: rgba(138, 99, 255, 0.18);
+  --border-strong: rgba(167, 139, 255, 0.36);
   --cool: #8a7ab8;
-  --cool-line: rgba(108, 92, 158, 0.28);
+  --cool-line: rgba(108, 92, 158, 0.24);
   --accent: #8a63ff;
   --accent-bright: #a78bff;
-  --accent-text: #05030c;
+  --accent-text: #0c0a09;
   --focus: rgba(138, 99, 255, 0.5);
 }
 
@@ -3709,28 +3709,23 @@ html[data-product="swara"] .hero-panel[data-hero-panel="swara"] .macos-trust-bad
   line-height: 1.35;
 }
 
-/* Membrana hero: deep violet field + bloom behind the neon mark */
+/* Membrana hero: original Estro SVG plate behind the mark */
 html[data-product="membrana"] .hero {
   background:
-    radial-gradient(ellipse 68% 52% at 16% 30%, rgba(138, 99, 255, 0.26), transparent 58%),
-    radial-gradient(ellipse 42% 36% at 58% 12%, rgba(90, 53, 218, 0.14), transparent 62%),
-    radial-gradient(ellipse 55% 40% at 88% 78%, rgba(58, 31, 160, 0.16), transparent 60%),
-    linear-gradient(180deg, #070414 0%, #04020e 52%, #05030c 100%);
+    radial-gradient(circle at 50% 42%, #241a33 0%, #14110f 55%, #0c0a09 100%);
 }
 
 html[data-product="membrana"] .hero::before {
   background:
-    radial-gradient(ellipse 52% 46% at 20% 34%, rgba(180, 156, 255, 0.22), transparent 64%),
-    radial-gradient(ellipse 34% 28% at 42% 22%, rgba(138, 99, 255, 0.1), transparent 72%),
     linear-gradient(90deg, var(--hero-grid-a) 1px, transparent 1px),
     linear-gradient(180deg, var(--hero-grid-b) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 96px 96px, 96px 96px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.92), transparent 86%);
-  opacity: 1;
+  background-size: 96px 96px, 96px 96px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 86%);
+  opacity: 0.45;
 }
 
 html[data-product="membrana"] .site-header {
-  background: linear-gradient(180deg, rgba(4, 2, 12, 0.97), rgba(4, 2, 12, 0.86));
+  background: linear-gradient(180deg, rgba(12, 10, 9, 0.97), rgba(12, 10, 9, 0.86));
 }
 
 html[data-product="membrana"] body {
