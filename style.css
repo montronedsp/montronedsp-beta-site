@@ -3737,38 +3737,12 @@ html[data-product="membrana"] body {
   background: var(--bg);
 }
 
-html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-layout {
-  grid-template-columns: minmax(0, 1fr);
-}
-
-html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-copy {
-  max-width: min(640px, 100%);
-}
-
-html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] h1:has(.hero-logo) {
-  width: clamp(360px, 78vw, 720px);
-  aspect-ratio: 1600 / 900;
-  align-items: center;
-  overflow: visible;
-}
-
 html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-logo--membrana {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: left center;
   filter: none;
   -webkit-filter: none;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   image-rendering: auto;
-}
-
-@media (max-width: 768px) {
-  html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] h1:has(.hero-logo) {
-    width: min(100%, 520px);
-  }
 }
 
 .audio-examples-band {
