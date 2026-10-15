@@ -38,10 +38,9 @@ def main() -> None:
 
     if 'fill="url(#g)"' in text or 'id="g"' in text:
         raise SystemExit("background gradient leftovers remain")
-    if "<g " not in text and "<g>" not in text:
-        raise SystemExit("scene group missing")
-    if text.count("<path") < 5:
-        raise SystemExit("scene paths look incomplete")
+    # Capsbest-v3 is path-only (no scene <g>); earlier marks keep a clipped scene group.
+    if text.count("<path") < 4:
+        raise SystemExit("wordmark paths look incomplete")
 
     DEST.write_text(text, encoding="utf-8", newline="\n")
     print(f"wrote {DEST} ({DEST.stat().st_size} bytes)")
