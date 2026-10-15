@@ -3746,7 +3746,7 @@ html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-copy
 }
 
 html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] h1:has(.hero-logo) {
-  width: clamp(280px, 56vw, 460px);
+  width: clamp(360px, 78vw, 720px);
   aspect-ratio: 1600 / 900;
   align-items: center;
   overflow: visible;
@@ -3767,7 +3767,7 @@ html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] .hero-logo
 
 @media (max-width: 768px) {
   html[data-product="membrana"] .hero-panel[data-hero-panel="membrana"] h1:has(.hero-logo) {
-    width: min(100%, 360px);
+    width: min(100%, 520px);
   }
 }
 
