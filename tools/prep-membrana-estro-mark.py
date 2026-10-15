@@ -4,7 +4,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-SRC = Path(r"D:\users\Cynic Audio\Downloads\membrana-estro-ligature-capsbest (1).svg")
+SRC = Path(r"D:\MontroneDSP_Studio\media\marks\membranafinal\membrana-estro-ligature-capsline.svg")
 DEST = Path(__file__).resolve().parents[1] / "assets" / "branding" / "membrana_mark.svg"
 
 
