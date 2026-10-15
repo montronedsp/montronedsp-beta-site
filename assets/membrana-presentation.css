@@ -20,15 +20,15 @@ html[data-product="membrana"] #hero-panel-membrana .hero-logo {
   position: absolute;
   left: 0;
   top: 50%;
-  /* Capsline word spans ~1000 of 1600; scale so letters fill the h1 width, scene bleeds around. */
-  width: calc(1600 / 1000 * 100%);
+  /* V3 word spans ~1020 of 1600; scale so letters fill the h1 width, scene bleeds around. */
+  width: calc(1600 / 1020 * 100%);
   max-width: none;
   height: auto;
   object-fit: contain;
   object-position: left center;
   filter: none;
-  /* Word left edge ~289/1600; nudge down from vertical center. */
-  transform: translate(-18.06%, calc(-50% + 12px));
+  /* Word left edge ~290/1600; nudge down from vertical center. */
+  transform: translate(-18.125%, calc(-50% + 12px));
   transform-origin: left center;
 }
 #hero-panel-membrana .membrana-eyebrow, .membrana-editorial .membrana-chapter-number { font-family: var(--font-mono); font-size: 11px; font-weight: 400; letter-spacing: .09em; line-height: 1.7; color: #b8a8d4; text-transform: uppercase; }
