@@ -26,6 +26,19 @@ def main() -> None:
         text,
     )
 
+    # Drop top sphere ornament and bottom tagline (keep word + orbital scene).
+    for transform in (
+        r"translate\(57\.5 74\.3\) scale\(0\.0140\)",
+        r"translate\(570\.8 821\.1\) scale\(0\.0178\)",
+    ):
+        text, n = re.subn(
+            rf'<path\b[^>]*\btransform="{transform}"[^>]*/?>',
+            "",
+            text,
+        )
+        if n != 1:
+            raise SystemExit(f"expected 1 path for {transform}, got {n}")
+
     # Normalize opener for web embedding.
     text = re.sub(
         r"^<svg[^>]*>",
