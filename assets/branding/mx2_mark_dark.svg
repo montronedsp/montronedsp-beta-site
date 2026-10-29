@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 536 180" width="536" height="180" role="img" aria-label="MX2">
+  <title>MX2 (dark background variant)</title>
+  <defs>
+        <!-- 80s commercial chrome: stacked gradiented stripes (Galleria fashion, MX2 red) -->
+    <linearGradient id="mx2FillDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A050A"/>
+      <stop offset="6%" stop-color="#2A0810"/>
+      <stop offset="6.5%" stop-color="#4A0C18"/>
+      <stop offset="13%" stop-color="#7A1020"/>
+      <stop offset="13.5%" stop-color="#9A1426"/>
+      <stop offset="20%" stop-color="#C8102E"/>
+      <stop offset="20.5%" stop-color="#D01838"/>
+      <stop offset="27%" stop-color="#DC2448"/>
+      <stop offset="27.5%" stop-color="#E43858"/>
+      <stop offset="34%" stop-color="#E85070"/>
+      <stop offset="34.5%" stop-color="#EC6888"/>
+      <stop offset="41%" stop-color="#F080A0"/>
+      <stop offset="41.5%" stop-color="#F298B0"/>
+      <stop offset="48%" stop-color="#F0B8C4"/>
+      <stop offset="48.5%" stop-color="#F4C8D0"/>
+      <stop offset="55%" stop-color="#F6D4DA"/>
+      <stop offset="55.5%" stop-color="#F8DEE2"/>
+      <stop offset="62%" stop-color="#FAE6E8"/>
+      <stop offset="62.5%" stop-color="#FBECE8"/>
+      <stop offset="70%" stop-color="#FCF1E4"/>
+      <stop offset="70.5%" stop-color="#FEF5EC"/>
+      <stop offset="78%" stop-color="#FEF7EE"/>
+      <stop offset="85%" stop-color="#FFF8EE"/>
+      <stop offset="92%" stop-color="#FFFBF4"/>
+      <stop offset="100%" stop-color="#FFFDF8"/>
+    </linearGradient>
+    <linearGradient id="mx2SheenDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.88"/>
+      <stop offset="4%" stop-color="#FFFFFF" stop-opacity="0.62"/>
+      <stop offset="8%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="16%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="22%" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="26%" stop-color="#FFFFFF" stop-opacity="0.04"/>
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="49%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="62%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="67%" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="72%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mx2BounceDark" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFDFA6" stop-opacity="0.55"/>
+      <stop offset="7%" stop-color="#FFDFA6" stop-opacity="0.28"/>
+      <stop offset="14%" stop-color="#FFDFA6" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FFDFA6" stop-opacity="0"/>
+    </linearGradient>
+    <g id="mx2Glyphs">
+      <!-- M: upright, square terminals, machine stem -->
+      <path d="M12 24h28L100 108l60-84h28v132h-28V60L100 140 40 60v96H12V24z"/>
+      <!-- X: equal bars, no italic -->
+      <path d="M204 24h28L340 156h-28L204 24z"/>
+      <path d="M312 24h28L232 156h-28L312 24z"/>
+      <!-- 2: 7-segment / drum-machine index, even counters -->
+      <path d="M360 24h160v28H360zM492 24h28v80h-28zM360 76h160v28H360zM360 76h28v80H360zM360 128h160v28H360z"/>
+    </g>
+  </defs>
+  <use href="#mx2Glyphs" fill="url(#mx2FillDark)"/>
+  <use href="#mx2Glyphs" fill="url(#mx2BounceDark)" opacity="0.45"/>
+  <use href="#mx2Glyphs" fill="url(#mx2SheenDark)"/>
+</svg>

@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Montrone Sans";
+  src: url("assets/fonts/montrone-sans/MontroneSans-Medium.woff2") format("woff2"),
+       url("assets/fonts/montrone-sans/MontroneSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montrone Sans Condensed";
+  src: url("assets/fonts/montrone-sans/MontroneSansCondensed-Regular.woff2") format("woff2"),
+       url("assets/fonts/montrone-sans/MontroneSansCondensed-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montrone Sans Condensed";
+  src: url("assets/fonts/montrone-sans/MontroneSansCondensed-Italic.woff2") format("woff2"),
+       url("assets/fonts/montrone-sans/MontroneSansCondensed-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montrone Sans Condensed";
+  src: url("assets/fonts/montrone-sans/MontroneSansCondensed-Medium.woff2") format("woff2"),
+       url("assets/fonts/montrone-sans/MontroneSansCondensed-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montrone Sans Condensed";
+  src: url("assets/fonts/montrone-sans/MontroneSansCondensed-Bold.woff2") format("woff2"),
+       url("assets/fonts/montrone-sans/MontroneSansCondensed-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montrone Sans Condensed";
+  src: url("assets/fonts/montrone-sans/MontroneSansCondensed-BoldItalic.woff2") format("woff2"),
+       url("assets/fonts/montrone-sans/MontroneSansCondensed-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
