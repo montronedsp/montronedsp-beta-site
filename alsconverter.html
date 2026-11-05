@@ -202,7 +202,7 @@
   <meta name="theme-color" content="#9b4f9e" />
   <meta name="color-scheme" content="dark" />
   <link rel="stylesheet" href="montronedsp-fonts.css" />
-  <link rel="stylesheet" href="style.css?v=quoteGlare1" />
+  <link rel="stylesheet" href="style.css?v=headerNavigation1" />
   <style>
     html.page-alsconverter {
       --font-src: var(--font-body);
@@ -438,11 +438,9 @@
           <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara_mobile.svg?v=iconFixed1" alt="" width="28" height="28" aria-hidden="true" />
           <span class="sr-only">MontroneDSP</span>
         </a>
-        <nav class="site-nav" aria-label="Main navigation">
-          <a class="nav-link" href="privacy.html">Privacy</a>
-          <a class="nav-link" href="security.html">Security</a>
-        </nav>
+        <div class="site-header-actions"><nav class="site-nav" aria-label="Main navigation"><a class="nav-link nav-link--store" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer">Store</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="contact.html">Contact</a><span class="site-nav-divider" aria-hidden="true"></span><a class="nav-link nav-link--utility" href="privacy.html">Privacy</a><a class="nav-link nav-link--utility" href="security.html">Security</a><a class="nav-link nav-link--utility" href="font.html">Typography</a></nav><button type="button" class="site-menu-toggle" aria-expanded="false" aria-controls="site-mobile-menu" data-site-menu-toggle><span>Menu</span><span class="site-menu-toggle__bars" aria-hidden="true"><span></span><span></span></span></button></div>
       </div>
+    <div class="site-mobile-panel" id="site-mobile-menu" data-site-mobile-menu hidden><div class="container site-mobile-panel__inner"><nav class="site-mobile-nav" aria-label="Main navigation"><span class="site-mobile-nav__label">Explore</span><a class="site-mobile-link" href="./">Products</a><a class="site-mobile-link" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer">Store</a><a class="site-mobile-link" href="about.html">About</a><a class="site-mobile-link" href="contact.html">Contact</a><span class="site-mobile-nav__label site-mobile-nav__label--secondary">Information</span><a class="site-mobile-link" href="privacy.html">Privacy</a><a class="site-mobile-link" href="security.html">Security</a><a class="site-mobile-link" href="font.html">Typography</a></nav></div></div>
     </header>
 
     <main class="site-main als-page">
@@ -570,13 +568,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <p class="footer-copy">© <span data-year></span> MontroneDSP. MontroneDSP is a registered trademark.</p>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer">Store</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="security.html">Security</a>
-        </nav>
+        
       </div>
     </footer>
   </div>
@@ -587,5 +579,6 @@
   </script>
   <script src="alsconverter-engine.js"></script>
   <script src="alsconverter.js"></script>
+  <script src="assets/site-navigation.js?v=1" defer></script>
 </body>
 </html>
