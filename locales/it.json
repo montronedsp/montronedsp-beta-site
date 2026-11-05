@@ -957,18 +957,31 @@
     }
   },
   "contact": {
+    "eyebrow": "MONTRONEDSP / CONTATTI",
+    "title": "Parliamone.",
+    "lead": "Hai una domanda su uno strumento, sulla tua configurazione o su un ordine? Scrivi direttamente allo studio.",
+    "emailLabel": "SCRIVI ALLO STUDIO",
+    "supportIntro": "Assistenza sui prodotti, licenze e informazioni generali.",
+    "responseTitle": "Un piccolo team indipendente.",
+    "responseBody": "Cerchiamo di rispondere entro pochi giorni lavorativi. Le domande che richiedono un approfondimento tecnico possono richiedere un po’ più di tempo.",
+    "includeTitle": "Aiutaci a capire la tua configurazione.",
+    "includeLead": "Qualche dettaglio nella prima email ci aiuta a darti una risposta utile.",
+    "setupTitle": "Strumento e sistema",
+    "setupBody": "Indica il prodotto, la versione e il sistema operativo: macOS, Windows o Linux. Aggiungi nome e versione della DAW o dell’host, oppure specifica se stai usando una versione standalone.",
+    "issueTitle": "Cosa stai cercando di fare",
+    "issueBody": "Descrivi la domanda o il problema, il risultato atteso e quello effettivo. Se il problema è riproducibile, indica i passaggi.",
+    "detailsTitle": "Dettagli utili",
+    "detailsBody": "Allega uno screenshot o il messaggio di errore esatto, se aiutano a spiegare il problema. Per l’installazione, indica il pacchetto e il formato del plugin utilizzati.",
+    "orderTitle": "Ordini e licenze",
+    "orderBody": "Per domande su un ordine o sull’attivazione, indica l’indirizzo email usato per l’acquisto e il nome del prodotto. Il riferimento dell’ordine, se disponibile, ci aiuta a trovare l’acquisto.",
+    "orderCta": "Chiedi informazioni su un ordine",
+    "browseTitle": "Cerchi i dettagli di un prodotto?",
+    "browseBody": "Formati, download, esempi sonori e informazioni sull’installazione si trovano nella pagina di ogni strumento.",
+    "browseCta": "Esplora gli strumenti",
     "meta": {
-      "title": "Contact  -  MontroneDSP",
-      "description": "Contact MontroneDSP for product support, licensing questions, and general inquiries at support@montronedsp.com."
-    },
-    "title": "Contact",
-    "lead": "Questions about Martello, licensing, installation, or your order? Email us and we will get back to you.",
-    "supportTitle": "Support",
-    "supportIntro": "For product support, activation help, and general inquiries:",
-    "includeTitle": "What to include",
-    "includeBody": "Please include your platform (Windows or Linux), DAW name, plugin version if known, and a short description of the issue or question. For license activation problems, include the email address used at checkout.",
-    "responseTitle": "Response time",
-    "responseBody": "We aim to reply within a few business days. Complex technical issues may take longer while we investigate."
+      "title": "Contatti — MontroneDSP",
+      "description": "Contatta MontroneDSP per assistenza sugli strumenti, installazione, licenze e ordini."
+    }
   },
   "privacy": {
     "meta": {

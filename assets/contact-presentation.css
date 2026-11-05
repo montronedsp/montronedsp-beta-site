@@ -1,0 +1,58 @@
+/* Contact follows the studio homepage's canvas, type and content width. */
+html.contact-page {
+  --bg: #101312; --bg-rgb: 16, 19, 18; --bg-deep: #101312;
+  --text: #e9e9e2; --text-strong: #f3f2e9; --muted: #a5aca5; --muted-strong: #b9c0b8;
+  --border: #343b35; --border-strong: #465045;
+}
+.contact-page body, .contact-page .site, .contact-page .contact-main { background: #101312; color: #e9e9e2; }
+.contact-page .site::before, .contact-page .site::after { display: none; }
+.contact-page .container { width: min(1200px, calc(100% - 64px)); }
+.contact-main h1, .contact-main h2, .contact-main h3 { color: #f3f2e9; text-shadow: none; -webkit-text-stroke: 0; text-transform: none; letter-spacing: -.02em; }
+.contact-main p { color: #b9c0b8; font: 400 16px/1.7 var(--font-body); margin: 0; max-width: 64ch; }
+.contact-main .contact-label { font: 400 10px/1.6 var(--font-mono); letter-spacing: .12em; color: #b9c0b8; text-transform: uppercase; }
+.contact-intro { padding: clamp(55px, 7vw, 96px) 0 58px; }
+.contact-intro-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 64px; margin-top: 32px; }
+.contact-intro h1 { font: 500 clamp(56px, 6.6vw, 88px)/1.02 var(--font-display); margin: 0; }
+.contact-intro-grid p { max-width: 42ch; font-size: 18px; }
+.contact-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; padding: 48px 0 62px; border-top: 1px solid #343b35; }
+.contact-direct h2 { margin: 0 0 23px; }
+.contact-address { display: inline-block; max-width: 100%; color: #e9e9e2; text-decoration: none; font: 500 clamp(22px, 2.75vw, 36px)/1.3 var(--font-display); letter-spacing: -.01em; border-bottom: 1px solid #687464; padding-bottom: 8px; overflow-wrap: anywhere; }
+.contact-address:hover { color: #d9dfd2; border-color: #d9dfd2; }
+.contact-main .contact-email-note { margin-top: 20px; font-size: 14px; }
+.contact-response { margin-top: 56px; max-width: 40ch; }
+.contact-response h3 { font: 500 24px/1.25 var(--font-display); margin: 0 0 14px; }
+.contact-main .contact-response p { font-size: 14px; }
+.contact-support > h2 { font: 500 clamp(28px, 3vw, 36px)/1.15 var(--font-display); margin: 0 0 16px; max-width: 22ch; }
+.contact-main .contact-support > p { font-size: 15px; }
+.contact-details { counter-reset: contact-step; list-style: none; margin: 30px 0 0; padding: 0; }
+.contact-details li { counter-increment: contact-step; position: relative; padding: 23px 0 24px 39px; border-top: 1px solid #343b35; }
+.contact-details li::before { content: '0' counter(contact-step); position: absolute; top: 26px; left: 0; color: #8f9d89; font: 400 10px/1.5 var(--font-mono); }
+.contact-details h3 { font: 500 22px/1.25 var(--font-display); margin: 0 0 10px; }
+.contact-main .contact-details p { font-size: 14px; }
+.contact-orders, .contact-browse { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 64px; align-items: center; padding: 42px 0; border-top: 1px solid #343b35; }
+.contact-orders h2, .contact-browse h2 { font: 500 30px/1.2 var(--font-display); margin: 0 0 14px; }
+.contact-main .contact-orders p, .contact-main .contact-browse p { font-size: 15px; }
+.contact-browse { padding-bottom: 70px; }
+.contact-link { justify-self: end; width: fit-content; color: #e9e9e2; font: 500 13px/1.6 var(--font-body); text-decoration: none; border-bottom: 1px solid #687464; padding: 12px 0; }
+.contact-link:hover { border-color: #e9e9e2; }
+.contact-page .social-section, .contact-page .site-footer { background: #101312; border-color: #343b35; border-width: 1px; box-shadow: none; }
+.contact-main :focus-visible { outline: 2px solid #d9dfd2; outline-offset: 5px; }
+@media (max-width: 900px) {
+  .contact-intro-grid, .contact-layout { gap: 38px; }
+  .contact-orders, .contact-browse { gap: 30px; }
+}
+@media (max-width: 700px) {
+  .contact-page .container { width: calc(100% - 32px); }
+  .contact-intro { padding: 48px 0 36px; }
+  .contact-intro-grid, .contact-layout, .contact-orders, .contact-browse { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .contact-intro-grid { margin-top: 25px; }
+  .contact-intro h1 { font-size: clamp(50px, 13vw, 72px); }
+  .contact-intro-grid p { font-size: 16px; }
+  .contact-layout { padding: 32px 0 36px; gap: 42px; }
+  .contact-address { font-size: clamp(23px, 6.4vw, 36px); }
+  .contact-response { margin-top: 30px; }
+  .contact-support > h2 { font-size: 30px; }
+  .contact-orders, .contact-browse { padding: 32px 0; gap: 15px; }
+  .contact-browse { padding-bottom: 48px; }
+  .contact-link { justify-self: start; }
+}
