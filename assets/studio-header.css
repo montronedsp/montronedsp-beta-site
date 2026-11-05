@@ -58,3 +58,16 @@ body:has(> .site-header--studio) .manual-lang-switcher { top: 100px; }
 @media print { html .site-header.site-header--studio { display: none !important; } body:has(> .site-header--studio) { padding-top: 0; } }
 body:has(.site-header--studio.nav-open) .manual-lang-switcher { visibility: hidden; }
 @media (max-width: 768px) { html:has(.site-header--studio) { --header-height: 54px; } }
+html .site-header--studio .studio-product-selector { position: relative; flex: 0 0 auto; margin: 0; padding: 0; border: 0; }
+html .site-header--studio .studio-product-selector summary { display: block; cursor: pointer; list-style: none; margin: 0; padding-right: 0; }
+html .site-header--studio .studio-product-selector summary::-webkit-details-marker { display: none; }
+html .site-header--studio .studio-product-selector > summary::after { content: '⌄'; position: absolute; margin-left: 8px; color: #b9c0b8; }
+html .site-header--studio .studio-product-options { position: absolute; top: 100%; left: -16px; width: 248px; padding: 8px; border: 1px solid #343b35; background: #101312; box-shadow: 0 12px 28px rgba(0,0,0,.24); z-index: 20; }
+html .site-header--studio .studio-product-options a { display: flex; flex-direction: column; gap: 5px; padding: 12px; color: #e9e9e2; text-decoration: none; border-bottom: 1px solid #283029; }
+html .site-header--studio .studio-product-options a:last-child { border-bottom: 0; }
+html .site-header--studio .studio-product-options strong { font: 500 14px/1.3 "Montrone Sans", sans-serif; }
+html .site-header--studio .studio-product-options span { color: #b9c0b8; font: 400 11px/1.4 "Montrone Sans", sans-serif; }
+html .site-header--studio .studio-product-options a:hover { background: #20281f; }
+html .site-header--studio .studio-product-selector--mobile { grid-column: 1 / -1; }
+html .site-header--studio .studio-product-selector--mobile .studio-product-options { position: static; width: 100%; box-shadow: none; margin: 4px 0 12px; }
+@media (max-width: 768px) { html .site-header--studio .header-inner > .studio-product-selector { display: none; } }

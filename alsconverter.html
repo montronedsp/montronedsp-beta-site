@@ -424,14 +424,14 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="assets/studio-header.css?v=1" />
+  <link rel="stylesheet" href="assets/studio-header.css?v=2" />
 </head>
 <body>
   <div class="site">
     <header class="site-header site-header--studio">
       <div class="container header-inner">
         <a class="home-brand" href="./" aria-label="MontroneDSP home" data-i18n-aria="nav.homeAria"><img src="assets/branding/montrone_dsp_logo_header_mono.svg" alt="MontroneDSP" width="727" height="164" /></a>
-        <a class="home-product-link" href="./#instruments" data-i18n="landing.navProducts">Instruments &amp; effects</a>
+        <details class="studio-product-selector"><summary class="home-product-link"><span data-i18n="landing.navProducts">Instruments &amp; effects</span></summary><div class="studio-product-options"><a href="products.html#swara"><strong>SWARA XT</strong><span data-i18n="products.swara.type">Hybrid Monosynth</span></a><a href="products.html#martello"><strong>MX2</strong><span data-i18n="products.martello.type">Drum Synthesizer</span></a><a href="products.html#aurashimmer"><strong>Aura Shimmer</strong><span data-i18n="products.aurashimmer.type">Reverb</span></a><a href="products.html#laya"><strong>Laya</strong><span data-i18n="products.laya.type">Generative Drums</span></a><a href="products.html#membrana"><strong>Membrana</strong><span data-i18n="products.membrana.type">Multimodal Synth</span></a></div></details>
         <div class="site-header-actions">
           <nav class="site-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria">
             <a class="nav-link nav-link--store" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.store">Store</a>
@@ -456,7 +456,7 @@
         <div class="container site-mobile-panel__inner">
           <nav class="site-mobile-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria">
             <span class="site-mobile-nav__label" data-i18n="nav.explore">Explore</span>
-            <a class="site-mobile-link" href="./#instruments" data-i18n="nav.products">Products</a>
+            <details class="studio-product-selector studio-product-selector--mobile"><summary class="site-mobile-link"><span data-i18n="nav.products">Products</span></summary><div class="studio-product-options"><a href="products.html#swara"><strong>SWARA XT</strong><span data-i18n="products.swara.type">Hybrid Monosynth</span></a><a href="products.html#martello"><strong>MX2</strong><span data-i18n="products.martello.type">Drum Synthesizer</span></a><a href="products.html#aurashimmer"><strong>Aura Shimmer</strong><span data-i18n="products.aurashimmer.type">Reverb</span></a><a href="products.html#laya"><strong>Laya</strong><span data-i18n="products.laya.type">Generative Drums</span></a><a href="products.html#membrana"><strong>Membrana</strong><span data-i18n="products.membrana.type">Multimodal Synth</span></a></div></details>
             <a class="site-mobile-link" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.store">Store</a>
             <a class="site-mobile-link" href="about.html" data-i18n="nav.about">About</a>
             <a class="site-mobile-link" href="contact.html" data-i18n="nav.contact">Contact</a>
@@ -604,6 +604,6 @@
   </script>
   <script src="alsconverter-engine.js"></script>
   <script src="alsconverter.js"></script>
-  <script src="assets/site-navigation.js?v=studioHeader1" defer></script>
+  <script src="assets/site-navigation.js?v=studioSelector1" defer></script>
 </body>
 </html>
