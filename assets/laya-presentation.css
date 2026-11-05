@@ -1,0 +1,65 @@
+/* Laya: phosphor palette and panel geometry from the instrument. */
+html[data-product="laya"] {
+  --accent-a: 26, 102, 51; --accent-bright-a: 51, 255, 102; --cool-rgb: 26, 102, 51;
+  --bg-rgb: 0, 0, 0; --bg: #000; --bg-deep: #000; --bg-warm: #050805;
+  --surface: #0a100c; --surface-soft: #0f1812; --surface-raised: #0f1812;
+  --surface-glass: rgba(10, 16, 12, .96); --text: #b8d2be; --text-strong: #33ff66;
+  --muted: #75a380; --muted-strong: #91ba9b; --border: #143322; --border-strong: #1a6633;
+  --accent: #33ff66; --accent-bright: #33ff66; --accent-text: #000; --focus: #55ff88;
+}
+html[data-product="laya"] body { background: #000; }
+html[data-product="laya"] .hero { padding-top: clamp(28px, 4vw, 58px); min-height: 0; background: #000; }
+html[data-product="laya"] .site-header { background: rgba(0, 0, 0, .97); border-bottom: 1px solid #1a6633; box-shadow: none; }
+html[data-product="laya"] .site-header::before { background: #143322; height: 1px; }
+html[data-product="laya"] .site-header .brand-logo { filter: brightness(0) saturate(100%) invert(87%) sepia(68%) saturate(2275%) hue-rotate(69deg) brightness(104%) contrast(104%); }
+#hero-panel-laya .container, .laya-editorial > .container { width: min(1200px, calc(100% - 64px)); }
+html[data-product="laya"] #hero-panel-laya .laya-hero-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(280px, .8fr); align-items: center; gap: 40px 64px; }
+html[data-product="laya"] #hero-panel-laya .hero-copy { max-width: 760px; min-width: 0; }
+html[data-product="laya"] #hero-panel-laya h1:has(.hero-logo) { display: block; width: min(100%, 620px); height: auto; aspect-ratio: 864 / 220; margin: 20px 0; padding: 0; }
+html[data-product="laya"] #hero-panel-laya .hero-logo { display: block; width: 100%; height: auto; transform: none; filter: brightness(0) saturate(100%) invert(87%) sepia(68%) saturate(2275%) hue-rotate(69deg) brightness(104%) contrast(104%); }
+#hero-panel-laya .laya-eyebrow, .laya-editorial .swara-chapter-number { color: #91ba9b; font: 400 11px/1.7 var(--font-mono); letter-spacing: .09em; text-transform: uppercase; }
+#hero-panel-laya .laya-headline { color: #33ff66; font: 700 clamp(27px, 3vw, 42px)/1.12 var(--font-display); margin: 0 0 16px; }
+html[data-product="laya"] #hero-panel-laya .hero-punchline { font: 400 18px/1.55 var(--font-body); max-width: 58ch; color: #b8d2be; margin: 0; }
+#hero-panel-laya .laya-hero-choices { display: flex; flex-direction: column; align-items: stretch; gap: 14px; }
+#hero-panel-laya .laya-hero-choices p { margin: 0; }
+#hero-panel-laya .laya-price, .laya-editorial .laya-price { color: #33ff66; font: 500 clamp(30px, 3.5vw, 44px)/1.2 var(--font-mono); margin: 0 0 12px; }
+#hero-panel-laya .btn { border: 1px solid #1a6633; border-radius: 0; background: #0a100c; color: #33ff66; box-shadow: none; text-shadow: none; min-height: 46px; }
+#hero-panel-laya .btn-primary { background: #33ff66; color: #000; border-color: #33ff66; }
+#hero-panel-laya .btn:hover { background: #66ff99; color: #000; }
+#hero-panel-laya .hero-offer-note { font-size: 13px; color: #91ba9b; }
+#hero-panel-laya .laya-hero-photo { grid-column: 1 / -1; margin: 0 0 24px; }
+#hero-panel-laya figcaption, .laya-editorial .swara-photo figcaption { color: #91ba9b; font-size: 13px; line-height: 1.5; margin-top: 12px; }
+#hero-panel-laya figcaption { text-align: right; }
+.laya-editorial { --swara-rule: #143322; --swara-ink: #33ff66; }
+.laya-editorial .swara-chapter { scroll-margin-top: 110px; }
+.laya-editorial .swara-chapter p { color: #b8d2be; }
+.laya-editorial .swara-facts dt { color: #33ff66; font-family: var(--font-mono); }
+.laya-editorial .swara-facts dd { color: #91ba9b; }
+.laya-editorial .swara-detail-pair { align-items: stretch; }
+.laya-editorial .swara-detail-pair > div { display: flex; flex-direction: column; min-width: 0; }
+.laya-editorial .swara-detail-pair .swara-photo { margin-top: 28px; }
+.laya-editorial .swara-detail-pair p { flex: 1; font-size: 16px; }
+.laya-editorial .swara-chapter .laya-aside { border-left: 1px solid #1a6633; padding-left: 18px; margin-top: 28px; max-width: 76ch; font-size: 16px; }
+.laya-capture-slot { width: 100%; min-height: 210px; aspect-ratio: 920 / 520; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; position: relative; border: 1px solid #1a6633; background: #050805; padding: 56px 24px; text-align: center; }
+.laya-capture-slot::before { content: ''; position: absolute; inset: 12px; border: 1px solid #143322; pointer-events: none; }
+.laya-capture-slot strong { color: #33ff66; font: 500 clamp(15px, 2.2vw, 26px)/1.4 var(--font-mono); max-width: 90%; }
+.laya-capture-label, .laya-capture-status { color: #91ba9b; font: 400 10px/1.6 var(--font-mono); letter-spacing: .08em; }
+.laya-capture-label { position: absolute; top: 26px; left: 28px; }
+.laya-capture-status { position: absolute; bottom: 25px; }
+.laya-editorial .laya-availability { margin-bottom: 32px; }
+.laya-editorial .laya-availability .laya-price { font-size: 44px; color: #33ff66; }
+.laya-editorial .swara-text-link { color: #33ff66; border-color: #1a6633; margin-top: 18px; }
+.laya-editorial .swara-chapter .laya-status { color: #91ba9b; font-size: 14px; }
+html[data-product="laya"] .social-section, html[data-product="laya"] .site-footer { border-color: #1a6633; box-shadow: none; background: #000; }
+html[data-product="laya"] :focus-visible { outline: 2px solid #55ff88; outline-offset: 4px; }
+@media (max-width: 900px) {
+  html[data-product="laya"] #hero-panel-laya .laya-hero-layout { grid-template-columns: 1fr; gap: 32px; }
+  #hero-panel-laya .laya-hero-choices { max-width: 520px; }
+}
+@media (max-width: 700px) {
+  #hero-panel-laya .container, .laya-editorial > .container { width: calc(100% - 32px); }
+  html[data-product="laya"] #hero-panel-laya .hero-punchline { font-size: 16px; }
+  .laya-capture-slot { min-height: 210px; gap: 14px; padding: 56px 20px; }
+  .laya-capture-label { top: 24px; left: 24px; font-size: 9px; }
+  .laya-capture-status { bottom: 24px; font-size: 9px; }
+}

@@ -95,7 +95,7 @@
     quadrante: { name: 'Quadrante', type: 'FM Synthesizer' },
     galleria: { name: 'Galleria', type: 'Environmental Processor' },
     membrana: { name: 'Membrana', type: 'Multimodal Synth' },
-    laya: { name: 'Laya', type: 'Performance Drum' },
+    laya: { name: 'Laya', type: 'Generative Drums' },
     seneca: { name: 'Seneca', type: 'Kick Rumble Generator' },
     stones: { name: 'Stones', type: 'MIDI Workstation · Linux' }
   };
