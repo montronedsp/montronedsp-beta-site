@@ -178,7 +178,7 @@
     if (!themeMeta) return;
     const colors = {
       martello: '#12080a',
-      aurashimmer: '#120818',
+      aurashimmer: '#101312',
       swara: '#101312',
       galleria: '#120818',
       membrana: '#0a0812',
