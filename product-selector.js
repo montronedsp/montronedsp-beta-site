@@ -1,5 +1,5 @@
 (function () {
-  const PUBLIC_PRODUCTS = ['aurashimmer', 'membrana', 'martello', 'swara'];
+  const PUBLIC_PRODUCTS = ['aurashimmer', 'membrana', 'martello', 'swara', 'laya'];
   const LOCALHOST_VISIBLE_PRODUCTS = ['aurashimmer', 'martello', 'swara', 'laya', 'membrana'];
   const HIDDEN_SELECTOR_PRODUCTS = ['gardenia', 'seneca', 'stones', 'quadrante', 'galleria'];
   /* Clockwise from top-left quadrant when 4 products (-45° start): Aura, Membrana, Swara, MX2 */
@@ -182,7 +182,7 @@
       swara: '#080c12',
       galleria: '#120818',
       membrana: '#0a0812',
-      laya: '#080c12',
+      laya: '#000000',
       seneca: '#080c12',
       stones: '#080c12',
       gardenia: '#08120e',
