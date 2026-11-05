@@ -35,77 +35,48 @@
   <meta name="color-scheme" content="dark" />
   <link rel="stylesheet" href="montronedsp-fonts.css" />
   <link rel="stylesheet" href="style.css?v=headerNavigation1" />
+  <link rel="stylesheet" href="assets/studio-header.css?v=1" />
 </head>
 <body>
   <div class="site">
-    <header class="site-header">
+    <header class="site-header site-header--studio">
       <div class="container header-inner">
-        <a class="brand brand-logo-stack" href="./" aria-label="MontroneDSP home" data-i18n-aria="nav.homeAria">
-          <picture class="brand-logo brand-logo-variant brand-logo--full" data-logo="martello"><img src="assets/branding/montrone_dsp_logo_header_martello.svg?v=iconFixed1" alt="" width="36" height="36" style="image-rendering: -webkit-optimize-contrast;" /></picture>
-          <picture class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="martello"><img src="assets/branding/montrone_dsp_logo_header_martello_mobile.svg?v=iconFixed1" alt="" width="28" height="28" aria-hidden="true" style="image-rendering: -webkit-optimize-contrast;" /></picture>
-          <img class="brand-logo brand-logo-variant brand-logo--mobile is-active" data-logo="aurashimmer" src="assets/branding/montrone_dsp_logo_header_aura_mobile.svg?v=iconFixed1" alt="" width="28" height="28" aria-hidden="true" />
-          <img class="brand-logo brand-logo-variant brand-logo--full is-active" data-logo="aurashimmer" src="assets/branding/montrone_dsp_logo_header_aura.svg?v=iconFixed1" alt="" width="36" height="36" aria-hidden="true" />
-          <img class="brand-logo brand-logo-variant brand-logo--full" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara.svg?v=iconFixed1" alt="" width="36" height="36" aria-hidden="true" />
-          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="swara" src="assets/branding/montrone_dsp_logo_header_swara_mobile.svg?v=iconFixed1" alt="" width="28" height="28" aria-hidden="true" />
-          <img class="brand-logo brand-logo-variant" data-logo="membrana" src="assets/branding/montrone_dsp_logo_header_aura.svg?v=iconFixed1" alt="" width="36" height="36" aria-hidden="true" />
-          <img class="brand-logo brand-logo-variant brand-logo--mobile" data-logo="membrana" src="assets/branding/montrone_dsp_logo_header_aura_mobile.svg?v=iconFixed1" alt="" width="28" height="28" aria-hidden="true" />
-          <img class="brand-logo brand-logo-variant" data-logo="galleria" src="assets/branding/montrone_dsp_logo_header_aura.svg?v=iconFixed1" alt="" width="36" height="36" aria-hidden="true" />
-          <span class="sr-only">MontroneDSP</span>
-        </a>
-        <div class="product-selector-group">
-          <span class="product-selector-label" aria-hidden="true" data-i18n="products.label">Products</span>
-          <div class="product-selector-desktop" data-product-selector-desktop>
-            <button type="button" class="product-selector-desktop-trigger" id="product-selector-desktop-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="product-selector-desktop-list" data-desktop-selector-trigger data-i18n-aria="products.desktopOpenAria">
-              <span class="product-selector-desktop-current">
-                <span class="product-selector-desktop-name" data-desktop-selector-name>Swara XT</span>
-                <span class="product-selector-desktop-type" data-desktop-selector-type data-i18n="products.swara.type">Hybrid Monosynth</span>
-              </span>
-              <span class="product-selector-desktop-chevron" aria-hidden="true"></span>
-            </button>
-            <div class="product-selector-desktop-panel" id="product-selector-desktop-list" role="listbox" aria-label="Choose product" data-i18n-aria="products.chooseAria" hidden>
-              <button type="button" class="product-selector-option" role="option" data-product="martello" data-product-control data-product-surface="desktop" tabindex="-1">
-                <span class="product-selector-option-name">MX2</span>
-                <span class="product-selector-option-type" data-i18n="products.martello.type">Drum Synthesizer</span>
-              </button>
-              <button type="button" class="product-selector-option" role="option" aria-selected="false" data-product="aurashimmer" data-product-control data-product-surface="desktop" tabindex="-1">
-                <span class="product-selector-option-name">Aura Shimmer</span>
-                <span class="product-selector-option-type" data-i18n="products.aurashimmer.type">Reverb · 50% off</span>
-              </button>
-              <button type="button" class="product-selector-option" role="option" data-product="galleria" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
-                <span class="product-selector-option-name">Galleria</span>
-                <span class="product-selector-option-type" data-i18n="products.galleria.type">Environmental Processor</span>
-              </button>
-<button type="button" class="product-selector-option" role="option" data-product="membrana" data-product-control data-product-surface="desktop" tabindex="-1">
-                <span class="product-selector-option-name">Membrana</span>
-                <span class="product-selector-option-type" data-i18n="products.membrana.type">Multimodal Synth</span>
-              </button>
-
-              <button type="button" class="product-selector-option is-active" role="option" aria-selected="true" data-product="swara" data-product-control data-product-surface="desktop">
-                <span class="product-selector-option-name">Swara XT</span>
-                <span class="product-selector-option-type" data-i18n="products.swara.type">Hybrid Monosynth</span>
-              </button>
-              <button type="button" class="product-selector-option" role="option" data-product="laya" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
-                <span class="product-selector-option-name">Laya</span>
-                <span class="product-selector-option-type" data-i18n="products.laya.type">Generative Drums</span>
-              </button>
-              <button type="button" class="product-selector-option" role="option" data-product="gardenia" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
-                <span class="product-selector-option-name">Gardenia</span>
-                <span class="product-selector-option-type" data-i18n="products.gardenia.type">Polyphonic Synthesizer</span>
-              </button>
-              <button type="button" class="product-selector-option" role="option" data-product="quadrante" data-product-control data-product-surface="desktop" tabindex="-1" hidden>
-                <span class="product-selector-option-name">Quadrante</span>
-                <span class="product-selector-option-type" data-i18n="products.quadrante.type">FM Synthesizer</span>
-              </button>
-              <button type="button" class="product-selector-option" role="option" data-product="seneca" data-product-control data-product-surface="desktop" tabindex="-1">
-                <span class="product-selector-option-name">Seneca</span>
-                <span class="product-selector-option-type" data-i18n="products.seneca.type">Kick Rumble Generator</span>
-              </button>
-            </div>
-          </div>
+        <a class="home-brand" href="./" aria-label="MontroneDSP home" data-i18n-aria="nav.homeAria"><img src="assets/branding/montrone_dsp_logo_header_mono.svg" alt="MontroneDSP" width="727" height="164" /></a>
+        <a class="home-product-link" href="./#instruments" data-i18n="landing.navProducts">Instruments &amp; effects</a>
+        <div class="site-header-actions">
+          <nav class="site-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria">
+            <a class="nav-link nav-link--store" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.store">Store</a>
+            <a class="nav-link" href="about.html" data-i18n="nav.about">About</a>
+            <a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a>
+            <span class="site-nav-divider" aria-hidden="true"></span>
+            <a class="nav-link nav-link--utility" href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+            <a class="nav-link nav-link--utility" href="security.html" data-i18n="nav.security">Security</a>
+          </nav>
+          <label class="site-lang">
+            <span class="sr-only" data-i18n="lang.label">Language</span>
+            <select class="site-lang-select" aria-label="Language" data-i18n-aria="lang.aria"></select>
+          </label>
+          <button type="button" class="site-menu-toggle" aria-expanded="false" aria-controls="site-mobile-menu" data-site-menu-toggle>
+            <span data-i18n="nav.menu">Menu</span>
+            <span class="site-menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+          </button>
         </div>
-        <div class="site-header-actions"><nav class="site-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria"><a class="nav-link nav-link--store" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.store">Store</a><a class="nav-link" href="about.html" data-i18n="nav.about">About</a><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a><span class="site-nav-divider" aria-hidden="true"></span><a class="nav-link nav-link--utility" href="privacy.html" data-i18n="nav.privacy">Privacy</a><a class="nav-link nav-link--utility" href="security.html" data-i18n="nav.security">Security</a></nav><label class="site-lang"><span class="sr-only" data-i18n="lang.label">Language</span><select class="site-lang-select" aria-label="Language" data-i18n-aria="lang.aria"></select></label><button type="button" class="site-menu-toggle" aria-expanded="false" aria-controls="site-mobile-menu" data-site-menu-toggle><span data-i18n="nav.menu">Menu</span><span class="site-menu-toggle__bars" aria-hidden="true"><span></span><span></span></span></button></div>
       </div>
-    <div class="site-mobile-panel" id="site-mobile-menu" data-site-mobile-menu hidden><div class="container site-mobile-panel__inner"><nav class="site-mobile-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria"><span class="site-mobile-nav__label" data-i18n="nav.explore">Explore</span><a class="site-mobile-link" href="./" data-i18n="nav.products">Products</a><a class="site-mobile-link" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.store">Store</a><a class="site-mobile-link" href="about.html" data-i18n="nav.about">About</a><a class="site-mobile-link" href="contact.html" data-i18n="nav.contact">Contact</a><span class="site-mobile-nav__label site-mobile-nav__label--secondary" data-i18n="nav.information">Information</span><a class="site-mobile-link" href="privacy.html" data-i18n="nav.privacy">Privacy</a><a class="site-mobile-link" href="security.html" data-i18n="nav.security">Security</a></nav></div></div>
+
+      <div class="site-mobile-panel" id="site-mobile-menu" data-site-mobile-menu hidden>
+        <div class="container site-mobile-panel__inner">
+          <nav class="site-mobile-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria">
+            <span class="site-mobile-nav__label" data-i18n="nav.explore">Explore</span>
+            <a class="site-mobile-link" href="./#instruments" data-i18n="nav.products">Products</a>
+            <a class="site-mobile-link" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.store">Store</a>
+            <a class="site-mobile-link" href="about.html" data-i18n="nav.about">About</a>
+            <a class="site-mobile-link" href="contact.html" data-i18n="nav.contact">Contact</a>
+            <span class="site-mobile-nav__label site-mobile-nav__label--secondary" data-i18n="nav.information">Information</span>
+            <a class="site-mobile-link" href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+            <a class="site-mobile-link" href="security.html" data-i18n="nav.security">Security</a>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <main class="site-main versione-main">
@@ -237,9 +208,9 @@
       </div>
     </footer>
   </div>
-  <script src="i18n.js?v=headerNavigation1"></script>
-  <script src="product-selector.js?v=layaGrid1"></script>
+  <script src="i18n.js?v=studioHeader1"></script>
+  <script src="product-selector.js?v=studioHeader1"></script>
   <script src="script.js?v=swaraFreeDl1"></script>
-  <script src="assets/site-navigation.js?v=1" defer></script>
+  <script src="assets/site-navigation.js?v=studioHeader1" defer></script>
 </body>
 </html>

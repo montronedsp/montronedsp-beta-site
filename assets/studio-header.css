@@ -1,0 +1,60 @@
+/* Shared studio navigation, independent of each instrument's colour palette. */
+html .site-header.site-header--studio {
+  --bg-rgb: 16, 19, 18; --text: #e9e9e2; --muted-strong: #b9c0b8; --accent-bright-a: 199, 209, 192;
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(16, 19, 18, .97); color: #e9e9e2;
+  border: 0; border-bottom: 1px solid #343b35; box-shadow: none;
+  font-family: "Montrone Sans", sans-serif; text-align: left;
+}
+html .site-header.site-header--studio::before { display: none; }
+.site-header--studio *, .site-header--studio *::before, .site-header--studio *::after { box-sizing: border-box; }
+html .site-header--studio .container { width: min(1200px, calc(100% - 64px)); margin-left: auto; margin-right: auto; }
+html .site-header--studio .header-inner { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 16px 20px; }
+html .site-header--studio .home-brand { display: block; flex: 0 0 170px; text-decoration: none; }
+html .site-header--studio .home-brand img { display: block; width: 100%; height: auto; max-width: none; margin: 0; filter: none; }
+html .site-header--studio .home-product-link { color: #b9c0b8; font-size: 13px; line-height: 1.5; text-decoration: none; white-space: nowrap; padding: 12px 0; }
+html .site-header--studio .site-header-actions { display: flex; align-items: center; justify-content: flex-end; gap: 16px; min-width: 0; margin-left: auto; }
+html .site-header--studio .site-nav { display: flex; align-items: center; gap: 16px; flex-wrap: nowrap; max-width: none; overflow: visible; }
+html .site-header--studio .nav-link { position: relative; min-height: 44px; display: inline-flex; align-items: center; color: #e9e9e2; font: 500 13px/1.2 "Montrone Sans", sans-serif; text-decoration: none; white-space: nowrap; padding: 0 2px; }
+html .site-header--studio .nav-link--utility { color: #b9c0b8; font-size: 11px; }
+html .site-header--studio .nav-link--store { font-weight: 700; }
+html .site-header--studio .site-nav-divider { height: 20px; width: 1px; background: #343b35; }
+html .site-header--studio .site-lang { display: flex; margin: 0; padding-left: 15px; border: 0; border-left: 1px solid #343b35; }
+html .site-header--studio .site-lang-select { width: auto; min-width: 6.5rem; min-height: 36px; max-width: none; padding: 6px 22px 6px 8px; border: 0; border-radius: 0; box-shadow: none; background-color: #101312; color: #e9e9e2; font: 400 12px/1.4 "Montrone Sans", sans-serif; color-scheme: dark; }
+html .site-header--studio .site-menu-toggle { display: none; flex: 0 0 auto; align-items: center; gap: 11px; min-height: 44px; padding: 8px 12px; background: transparent; border: 1px solid #465045; border-radius: 2px; color: #e9e9e2; font: 500 12px/1 "Montrone Sans", sans-serif; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; box-shadow: none; }
+html .site-header--studio .site-menu-toggle__bars { display: grid; gap: 5px; }
+html .site-header--studio .site-menu-toggle__bars span { width: 17px; height: 1px; display: block; background: #e9e9e2; }
+html .site-header--studio.nav-open .site-menu-toggle__bars span:first-child { transform: translateY(3px) rotate(45deg); }
+html .site-header--studio.nav-open .site-menu-toggle__bars span:last-child { transform: translateY(-3px) rotate(-45deg); }
+html .site-header--studio .site-mobile-panel { position: absolute; top: 100%; left: 0; right: 0; z-index: 15; max-height: calc(100dvh - 84px); overflow-y: auto; background: #101312; border-top: 1px solid #343b35; border-bottom: 1px solid #343b35; box-shadow: 0 18px 32px rgba(0,0,0,.2); }
+html .site-header--studio .site-mobile-panel[hidden] { display: none !important; }
+html .site-header--studio .site-mobile-panel__inner { padding-top: 23px; padding-bottom: 27px; }
+html .site-header--studio .site-mobile-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+html .site-header--studio .site-mobile-nav__label { grid-column: 1 / -1; color: #b9c0b8; font: 400 10px/1.5 "Montrone Sans", sans-serif; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 9px; }
+html .site-header--studio .site-mobile-nav__label--secondary { margin-top: 22px; padding-top: 17px; border-top: 1px solid #343b35; }
+html .site-header--studio .site-mobile-link { display: block; padding: 13px 0 14px; min-height: 44px; border-bottom: 1px solid #343b35; color: #e9e9e2; font: 500 18px/1.2 "Montrone Sans", sans-serif; text-decoration: none; }
+html .site-header--studio [aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+html .site-header--studio :focus-visible { outline: 2px solid #d9dfd2; outline-offset: 4px; }
+html .site-header--studio .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 1240px) {
+  html .site-header--studio .site-nav { display: none; }
+  html .site-header--studio .site-menu-toggle { display: inline-flex; }
+}
+@media (max-width: 768px) {
+  html .site-header.site-header--studio { position: fixed; width: 100%; top: env(safe-area-inset-top, 0px); }
+  html .site-header--studio .container { width: calc(100% - 32px); }
+  html .site-header--studio .header-inner { min-height: 54px; gap: 8px; }
+  html .site-header--studio .home-brand { flex-basis: 100px; }
+  html .site-header--studio .home-product-link { display: none; }
+  html .site-header--studio .site-header-actions { gap: 8px; }
+  html .site-header--studio .site-lang { border: 0; padding: 0; }
+  html .site-header--studio .site-lang-select { min-width: 6rem; font-size: 11px; }
+  html .site-header--studio .site-menu-toggle { min-height: 36px; padding: 7px 9px; gap: 8px; }
+  html .site-header--studio .site-mobile-panel { max-height: calc(100dvh - 54px - env(safe-area-inset-top, 0px)); }
+  html .site-header--studio .site-mobile-nav { grid-template-columns: 1fr; }
+  body:has(> .site-header--studio) { padding-top: 54px; }
+}
+body:has(> .site-header--studio) .manual-lang-switcher { top: 100px; }
+@media print { html .site-header.site-header--studio { display: none !important; } body:has(> .site-header--studio) { padding-top: 0; } }
+body:has(.site-header--studio.nav-open) .manual-lang-switcher { visibility: hidden; }
+@media (max-width: 768px) { html:has(.site-header--studio) { --header-height: 54px; } }

@@ -1,0 +1,84 @@
+/* The studio homepage uses the same type and content width as the instruments. */
+html.home-page {
+  color-scheme: dark;
+  --bg: #101312; --bg-rgb: 16, 19, 18; --bg-deep: #101312;
+  --text: #e9e9e2; --text-strong: #f3f2e9; --muted: #a5aca5; --muted-strong: #b9c0b8;
+  --accent-a: 164, 178, 157; --accent-bright-a: 199, 209, 192; --border: #343b35;
+  --font-display: "Montrone Sans Condensed", sans-serif;
+  scroll-behavior: smooth;
+}
+.home-page body, .home-page .site, .home-page .home-main { background: #101312; color: #e9e9e2; }
+.home-page .container { width: min(1200px, calc(100% - 64px)); }
+.home-page .site::before, .home-page .site::after { display: none; }
+.home-page .home-main a { color: inherit; text-decoration: none; }
+.home-page .home-main h1, .home-page .home-main h2, .home-page .home-main h3 { color: #f3f2e9; text-shadow: none; -webkit-text-stroke: 0; text-transform: none; letter-spacing: -.025em; }
+.home-page .home-main p { margin: 0; font-size: 16px; line-height: 1.7; max-width: 61ch; }
+.home-page .home-main .home-label { font: 400 10px/1.6 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: #b9c0b8; }
+.home-page .home-intro { padding: clamp(55px, 7vw, 105px) 0 0; }
+.home-page .home-intro-grid { display: grid; grid-template-columns: 1.15fr 1fr; align-items: end; gap: 70px; margin: 40px 0 70px; }
+.home-page .home-intro h1 { font-size: clamp(52px, 6.8vw, 94px); line-height: .99; font-weight: 500; max-width: 10ch; margin: 0; }
+.home-page .home-intro-copy > p { font-size: 18px; color: #bdc4bc; }
+.home-page .home-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 30px; }
+.home-page .home-main .home-button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 12px 22px; border: 1px solid #d9dfd2; background: #d9dfd2; color: #101312; font-size: 13px; font-weight: 500; }
+.home-page .home-main .home-button:hover { background: #f3f2e9; }
+.home-page .home-main .home-link { display: inline-block; width: fit-content; color: #e9e9e2; font-size: 13px; padding: 10px 0; border-bottom: 1px solid #687464; }
+.home-page .home-main .home-link:hover { border-bottom-color: #e9e9e2; }
+.home-page .home-collection { padding: 78px 0; scroll-margin-top: 110px; }
+.home-page .home-section-heading { display: grid; grid-template-columns: 1fr 2.15fr; gap: 48px; margin-bottom: 45px; }
+.home-page .home-section-heading > .home-label { padding-top: 11px; }
+.home-page .home-section-heading h2 { margin: 0 0 18px; font-size: clamp(35px, 4vw, 54px); font-weight: 500; line-height: 1.1; max-width: 21ch; }
+.home-page .home-section-heading p { color: #aeb8ae; }
+.home-page .home-instrument { min-width: 0; margin-bottom: 45px; }
+.home-page .home-instrument-image { display: flex; align-items: center; justify-content: center; aspect-ratio: 1.6; background: #0b0f0c; border: 1px solid #303b30; padding: clamp(22px, 3vw, 42px); overflow: hidden; }
+.home-page .home-instrument-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.home-page .home-instrument--swara .home-instrument-image { aspect-ratio: 2.5; padding: 35px 70px; background: #171e15; }
+.home-page .home-instrument--martello .home-instrument-image { background: #1b1114; border-color: #422a30; }
+.home-page .home-instrument--aurashimmer .home-instrument-image { background: #17121f; border-color: #372b45; }
+.home-page .home-instrument-copy { display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; padding: 22px 0 0; }
+.home-page .home-instrument-copy h3 { margin: 7px 0 12px; font: 500 38px/1.1 var(--font-display); }
+.home-page .home-instrument-copy p:not(.home-label) { color: #aeb8ae; font-size: 15px; max-width: 58ch; }
+.home-page .home-instrument-copy > .home-link { flex: 0 0 auto; margin-top: 23px; }
+.home-page .home-product-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.home-page .home-development { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; border-top: 1px solid #343b35; padding-top: 40px; }
+.home-page .home-development article { padding-right: 30px; }
+.home-page .home-development h3 { font: 500 35px/1.2 var(--font-display); margin: 15px 0 4px; }
+.home-page .home-development .home-development-type { color: #c7d1c0; margin-bottom: 15px; font-size: 13px; }
+.home-page .home-development article > p:not(.home-label):not(.home-development-type) { color: #aeb8ae; font-size: 15px; }
+.home-page .home-development .home-link { margin-top: 16px; }
+.home-page .home-approach { padding: 75px 0; border-top: 1px solid #343b35; }
+.home-page .home-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 45px; padding: 12px 0 32px; }
+.home-page .home-principle-number { color: #83947c; font: 400 11px/1.6 var(--font-mono); }
+.home-page .home-principles h3 { font: 500 27px/1.2 var(--font-display); margin: 16px 0 14px; }
+.home-page .home-principles p { color: #aeb8ae; font-size: 15px; }
+.home-page .home-closing { display: flex; align-items: center; justify-content: space-between; gap: 50px; padding: 50px 0 75px; border-top: 1px solid #343b35; }
+.home-page .home-closing h2 { font: 500 45px/1.1 var(--font-display); margin: 0 0 18px; }
+.home-page .home-closing p { color: #aeb8ae; font-size: 15px; max-width: 48ch; }
+.home-page .home-closing .home-actions { flex: 0 0 auto; margin: 0; }
+.home-page .social-section, .home-page .site-footer { background: #101312; border-color: #343b35; border-width: 1px; box-shadow: none; }
+.home-page :focus-visible { outline: 2px solid #d9dfd2; outline-offset: 5px; }
+@media (max-width: 1000px) {
+  .home-page .home-intro-grid { gap: 40px; }
+  .home-page .home-principles { gap: 28px; }
+  .home-page .home-closing { align-items: flex-start; flex-direction: column; gap: 28px; }
+}
+@media (max-width: 700px) {
+  .home-page .container { width: calc(100% - 32px); }
+  .home-page .home-intro-grid, .home-page .home-section-heading, .home-page .home-product-pair, .home-page .home-development, .home-page .home-principles { grid-template-columns: 1fr; gap: 28px; }
+  .home-page .home-intro-grid { margin: 28px 0 45px; }
+  .home-page .home-intro h1 { font-size: clamp(48px, 12vw, 72px); }
+  .home-page .home-intro-copy > p { font-size: 16px; }
+  .home-page .home-actions { gap: 20px; }
+  .home-page .home-brandline { font-size: 18px; }
+  .home-page .home-brandline span { max-width: 15ch; font-size: 9px; text-align: right; }
+  .home-page .home-collection, .home-page .home-approach { padding: 50px 0; }
+  .home-page .home-section-heading { margin-bottom: 30px; gap: 18px; }
+  .home-page .home-instrument--swara .home-instrument-image { aspect-ratio: 1.8; padding: 18px; }
+  .home-page .home-instrument-image { padding: 20px; }
+  .home-page .home-instrument-copy { gap: 18px; }
+  .home-page .home-instrument-copy h3 { font-size: 32px; }
+  .home-page .home-product-pair { gap: 0; }
+  .home-page .home-development article { padding: 0 0 25px; }
+  .home-page .home-principles article { border-top: 1px solid #343b35; padding-top: 22px; }
+  .home-page .home-closing { padding: 40px 0 55px; }
+}
+@media (prefers-reduced-motion: reduce) { html.home-page { scroll-behavior: auto; } }

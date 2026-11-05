@@ -311,8 +311,45 @@
   @media print{.manual-lang-switcher{display:none!important;}}
 
 </style>
+  <link rel="stylesheet" href="montronedsp-fonts.css" />
+  <link rel="stylesheet" href="assets/studio-header.css?v=1" />
 </head>
 <body>
+    <header class="site-header site-header--studio">
+      <div class="container header-inner">
+        <a class="home-brand" href="./" aria-label="MontroneDSP home" data-i18n-aria="nav.homeAria"><img src="assets/branding/montrone_dsp_logo_header_mono.svg" alt="MontroneDSP" width="727" height="164" /></a>
+        <a class="home-product-link" href="./#instruments" data-i18n="landing.navProducts">Instruments &amp; effects</a>
+        <div class="site-header-actions">
+          <nav class="site-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria">
+            <a class="nav-link nav-link--store" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.store">Store</a>
+            <a class="nav-link" href="about.html" data-i18n="nav.about">About</a>
+            <a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a>
+            <span class="site-nav-divider" aria-hidden="true"></span>
+            <a class="nav-link nav-link--utility" href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+            <a class="nav-link nav-link--utility" href="security.html" data-i18n="nav.security">Security</a>
+          </nav>
+          <button type="button" class="site-menu-toggle" aria-expanded="false" aria-controls="site-mobile-menu" data-site-menu-toggle>
+            <span data-i18n="nav.menu">Menu</span>
+            <span class="site-menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="site-mobile-panel" id="site-mobile-menu" data-site-mobile-menu hidden>
+        <div class="container site-mobile-panel__inner">
+          <nav class="site-mobile-nav" aria-label="Main navigation" data-i18n-aria="nav.mainAria">
+            <span class="site-mobile-nav__label" data-i18n="nav.explore">Explore</span>
+            <a class="site-mobile-link" href="./#instruments" data-i18n="nav.products">Products</a>
+            <a class="site-mobile-link" href="https://store.montronedsp.com/" target="_blank" rel="noopener noreferrer" data-i18n="nav.store">Store</a>
+            <a class="site-mobile-link" href="about.html" data-i18n="nav.about">About</a>
+            <a class="site-mobile-link" href="contact.html" data-i18n="nav.contact">Contact</a>
+            <span class="site-mobile-nav__label site-mobile-nav__label--secondary" data-i18n="nav.information">Information</span>
+            <a class="site-mobile-link" href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+            <a class="site-mobile-link" href="security.html" data-i18n="nav.security">Security</a>
+          </nav>
+        </div>
+      </div>
+    </header>
 <nav class="manual-lang-switcher" aria-label="Manual language">
   <span class="manual-lang-label">Language</span>
   <select class="manual-lang-select" aria-label="Manual language">
@@ -922,5 +959,6 @@
 
 </div>
 <script>document.addEventListener('DOMContentLoaded',function(){document.body.classList.add('manual-loaded');var s=document.querySelector('.manual-lang-select');if(s)s.addEventListener('change',function(){if(this.value)window.location.href=this.value;});});</script>
+  <script src="assets/site-navigation.js?v=studioHeader1" defer></script>
 </body>
 </html>

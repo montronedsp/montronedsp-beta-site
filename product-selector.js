@@ -133,7 +133,7 @@
 
   function productDestination(product) {
     if (!isHubPage) {
-      const destination = new URL('./', window.location.href);
+      const destination = new URL('products.html', window.location.href);
       destination.search = window.location.search;
       destination.hash = product;
       return destination.href;
