@@ -56,6 +56,9 @@ html.home-page {
 .home-page .home-closing .home-actions { flex: 0 0 auto; margin: 0; }
 .home-page .social-section, .home-page .site-footer { background: #101312; border-color: #343b35; border-width: 1px; box-shadow: none; }
 .home-page :focus-visible { outline: 2px solid #d9dfd2; outline-offset: 5px; }
+.home-page .home-open-source { padding: 64px 0 76px; border-top: 1px solid #343b35; }
+.home-page .home-open-source .home-section-heading { margin-bottom: 0; }
+.home-page .home-open-source p + p { margin-top: 18px; }
 @media (max-width: 1000px) {
   .home-page .home-intro-grid { gap: 40px; }
   .home-page .home-principles { gap: 28px; }
@@ -80,5 +83,79 @@ html.home-page {
   .home-page .home-development article { padding: 0 0 25px; }
   .home-page .home-principles article { border-top: 1px solid #343b35; padding-top: 22px; }
   .home-page .home-closing { padding: 40px 0 55px; }
+  .home-page .home-open-source { padding: 42px 0 52px; }
 }
 @media (prefers-reduced-motion: reduce) { html.home-page { scroll-behavior: auto; } }
+
+.home-page .home-open-source .home-link { margin-top: 20px; }
+.home-page .home-intro .linux-resource-title { max-width: none; font-size: clamp(44px, 6vw, 76px); margin: 30px 0 24px; }
+.home-page .linux-resource-main .home-intro { padding-bottom: 64px; }
+.home-page .linux-resource-main .home-intro > p:last-child { color: #b9c0b8; font-size: 18px; max-width: 60ch; }
+.home-page .linux-resource-section { padding: 58px 0; border-top: 1px solid #343b35; }
+.home-page .linux-resource-section .home-section-heading { margin-bottom: 0; }
+.home-page .linux-resource-section p + p { margin-top: 20px; }
+.home-page .linux-resource-section .home-link { margin-top: 18px; }
+.home-page .linux-instrument-list { margin-top: 34px; }
+.home-page .linux-instrument-list article { padding: 24px 0; border-top: 1px solid #343b35; }
+.home-page .linux-instrument-list h3 { font-size: 29px; font-weight: 500; margin: 0 0 12px; }
+@media (max-width: 700px) {
+  .home-page .linux-resource-main .home-intro { padding-bottom: 42px; }
+  .home-page .linux-resource-section { padding: 40px 0; }
+}
+
+.home-page .linux-daw-choices { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; margin-top: 36px; }
+.home-page .linux-daw-choices article { padding-top: 22px; border-top: 1px solid #343b35; min-width: 0; }
+.home-page .linux-daw-choices h3, .home-page .linux-ardour h3 { font-size: 32px; font-weight: 500; margin: 13px 0 18px; }
+.home-page .linux-resource-section .linux-daw-choices p:not(.home-label) { font-size: 15px; }
+.home-page .linux-ardour { margin-top: 40px; padding: 28px; background: #171c18; border: 1px solid #343b35; }
+.home-page .linux-ardour-path { margin-top: 25px; }
+.home-page .linux-ardour-path > div { padding: 20px 0; border-top: 1px solid #343b35; }
+.home-page .linux-ardour-path h4 { color: #f3f2e9; font: 500 23px/1.2 var(--font-display); margin: 0 0 12px; text-shadow: none; -webkit-text-stroke: 0; }
+.home-page .linux-resource-section .linux-ardour-path p { font-size: 15px; }
+.home-page .linux-resource-links { display: flex; align-items: start; flex-wrap: wrap; column-gap: 24px; row-gap: 4px; }
+.home-page .linux-resource-links .home-link { font-size: 12px; }
+.home-page .linux-swara-foss .home-label { margin-bottom: 12px; }
+@media (max-width: 700px) {
+  .home-page .linux-daw-choices { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .home-page .linux-ardour { padding: 22px 18px; }
+}
+
+.home-page .home-open-source-identity { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
+.home-page .home-tux { margin: 0; max-width: 190px; }
+.home-page .home-tux img { display: block; width: 128px; height: auto; }
+.home-page .home-tux figcaption { margin-top: 16px; color: #a5aca5; font: 400 10px/1.6 var(--font-body); max-width: 23ch; }
+.home-page .home-tux figcaption a { color: inherit; }
+.home-page .home-tux figcaption a:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 700px) {
+  .home-page .home-open-source-identity { flex-direction: row; justify-content: space-between; align-items: flex-start; gap: 24px; }
+  .home-page .home-tux { flex: 0 0 112px; }
+  .home-page .home-tux img { width: 88px; }
+  .home-page .home-tux figcaption { margin-top: 10px; font-size: 9px; }
+}
+
+.home-page .linux-os-choice { margin-top: 34px; padding-top: 26px; border-top: 1px solid #343b35; min-width: 0; }
+.home-page .linux-os-brand { margin: 24px 0; line-height: 1; }
+.home-page .linux-os-brand img { display: block; max-width: 100%; height: auto; }
+.home-page .linux-os-steam { padding: 28px; background: #171c18; border: 1px solid #343b35; }
+.home-page .linux-os-tradeoffs { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; margin-top: 28px; }
+.home-page .linux-os-tradeoffs > div, .home-page .linux-os-workaround { padding-top: 22px; border-top: 1px solid #343b35; }
+.home-page .linux-os-workaround { margin-top: 28px; }
+.home-page .linux-os-choice h4 { color: #f3f2e9; font: 500 23px/1.2 var(--font-display); margin: 0 0 14px; text-shadow: none; -webkit-text-stroke: 0; }
+.home-page .linux-resource-section .linux-os-choice p:not(.home-label) { font-size: 15px; }
+.home-page .linux-resource-section .linux-os-choice .linux-os-note { font-size: 13px; color: #a5aca5; padding-top: 22px; border-top: 1px solid #343b35; }
+.home-page .linux-foss-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; margin-bottom: 18px; }
+.home-page .linux-foss-heading h3 { margin: 0; }
+.home-page .linux-gpl-badge { display: inline-flex; flex: 0 0 auto; padding: 10px 14px; background: #f3f2e9; border-radius: 3px; }
+.home-page .linux-gpl-badge img { display: block; width: 120px; height: auto; }
+@media (max-width: 700px) {
+  .home-page .linux-os-steam { padding: 22px 18px; }
+  .home-page .linux-os-tradeoffs { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+}
+
+.home-page .linux-platform-performance { margin-top: 30px; padding-top: 26px; border-top: 1px solid #343b35; }
+.home-page .linux-platform-performance h3 { color: #f3f2e9; font: 500 28px/1.2 var(--font-display); margin: 0 0 18px; }
+
+.home-page .linux-upcoming-projects { margin: 30px 0; }
+.home-page .linux-upcoming-projects article { padding: 24px 0; border-bottom: 1px solid #343b35; }
+.home-page .linux-upcoming-projects h3 { color: #f3f2e9; font: 500 28px/1.2 var(--font-display); margin: 0 0 18px; }
+.home-page .linux-upcoming-projects > p:last-child { margin-top: 22px; }

@@ -1,0 +1,8 @@
+Tux — original artwork by Larry Ewing, created with The GIMP.
+Artist contact: lewing@isc.tamu.edu
+Source: https://commons.wikimedia.org/wiki/File:Tux.png
+Downloaded file: https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png
+This PNG is the transparent, cropped conversion of the original artwork documented by Wikimedia Commons, not a vector redraw.
+Artist permits use and modification with acknowledgement to Larry Ewing and The GIMP when asked. See the source page for the permission statement.
+Local changes: none.
+SHA256: e4f4c8010312078a37ca1797a8c9eaa5156d0fec407d7875522ca31a3d78c586
