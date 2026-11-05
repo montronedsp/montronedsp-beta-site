@@ -1322,6 +1322,7 @@
     "converterBody": "We are developing a state-of-the-art sample-rate converter for Linux, with batch workflows and MP3 encoding. A free and open-source tool designed to make preparing and converting audio collections a practical part of your studio workflow.",
     "djTitle": "DJing in every home.",
     "djBody": "Our forthcoming free and open-source DJ application has a simple ambition: to bring DJing into every home, free of charge. We also aim to bring it to Behringer’s forthcoming open DJ hardware, extending the project from the desktop to hands-on performance.",
-    "upcomingStatus": "Both applications are in development. We will share source code, downloads and hardware integration details as they become available."
+    "upcomingStatus": "Both applications are in development. We will share source code, downloads and hardware integration details as they become available.",
+    "heroTuxAlt": "Tux wearing red headphones"
   }
 }

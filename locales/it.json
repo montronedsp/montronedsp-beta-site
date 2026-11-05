@@ -1322,6 +1322,7 @@
     "converterBody": "Stiamo sviluppando un convertitore della frequenza di campionamento all’avanguardia per Linux, con elaborazione in batch e codifica MP3. Uno strumento libero e open source pensato per integrare la preparazione e la conversione di raccolte audio nel lavoro quotidiano in studio.",
     "djTitle": "Il DJing in ogni casa.",
     "djBody": "La nostra prossima applicazione DJ libera e open source nasce con un’ambizione semplice: portare il DJing in ogni casa, gratuitamente. Vogliamo inoltre portarla sul futuro hardware DJ aperto di Behringer, estendendo il progetto dal desktop alla performance con controlli fisici.",
-    "upcomingStatus": "Entrambe le applicazioni sono in sviluppo. Condivideremo codice sorgente, download e dettagli sull’integrazione hardware man mano che saranno disponibili."
+    "upcomingStatus": "Entrambe le applicazioni sono in sviluppo. Condivideremo codice sorgente, download e dettagli sull’integrazione hardware man mano che saranno disponibili.",
+    "heroTuxAlt": "Tux con cuffie rosse"
   }
 }

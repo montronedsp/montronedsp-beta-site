@@ -90,7 +90,7 @@ html.home-page {
 .home-page .home-open-source .home-link { margin-top: 20px; }
 .home-page .home-intro .linux-resource-title { max-width: none; font-size: clamp(44px, 6vw, 76px); margin: 30px 0 24px; }
 .home-page .linux-resource-main .home-intro { padding-bottom: 64px; }
-.home-page .linux-resource-main .home-intro > p:last-child { color: #b9c0b8; font-size: 18px; max-width: 60ch; }
+.home-page .linux-resource-main .home-intro > p:last-child, .home-page .linux-hero-copy > p:last-child { color: #b9c0b8; font-size: 18px; max-width: 60ch; }
 .home-page .linux-resource-section { padding: 58px 0; border-top: 1px solid #343b35; }
 .home-page .linux-resource-section .home-section-heading { margin-bottom: 0; }
 .home-page .linux-resource-section p + p { margin-top: 20px; }
@@ -159,3 +159,12 @@ html.home-page {
 .home-page .linux-upcoming-projects article { padding: 24px 0; border-bottom: 1px solid #343b35; }
 .home-page .linux-upcoming-projects h3 { color: #f3f2e9; font: 500 28px/1.2 var(--font-display); margin: 0 0 18px; }
 .home-page .linux-upcoming-projects > p:last-child { margin-top: 22px; }
+
+.home-page .linux-hero { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); align-items: center; gap: 32px; }
+.home-page .linux-hero-copy { min-width: 0; }
+.home-page .linux-hero-art { margin: 0; width: 100%; max-width: 380px; justify-self: end; }
+.home-page .linux-hero-art img { display: block; width: 100%; height: auto; }
+@media (max-width: 700px) {
+  .home-page .linux-hero { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .home-page .linux-hero-art { max-width: 260px; justify-self: center; }
+}
