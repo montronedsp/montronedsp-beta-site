@@ -16,7 +16,13 @@
     "security": "Security",
     "home": "Home",
     "contact": "Contact",
-    "homeAria": "MontroneDSP home"
+    "homeAria": "MontroneDSP home",
+    "about": "About",
+    "typography": "Typography",
+    "menu": "Menu",
+    "products": "Products",
+    "explore": "Explore",
+    "information": "Information"
   },
   "store": {
     "guarantee": "7-day money-back guarantee on all store purchases."
