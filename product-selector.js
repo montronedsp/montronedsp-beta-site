@@ -179,7 +179,7 @@
     const colors = {
       martello: '#12080a',
       aurashimmer: '#120818',
-      swara: '#080c12',
+      swara: '#101312',
       galleria: '#120818',
       membrana: '#0a0812',
       laya: '#000000',

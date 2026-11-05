@@ -212,3 +212,25 @@ html[data-product="swara"] .swara-editorial .swara-environment-grid .swara-linux
  .swara-editorial .swara-capture-slot__top { top: 18px; left: 18px; }
  .swara-editorial .swara-capture-slot__status { bottom: 18px; }
 }
+
+/* Keep the page canvas consistent with the studio homepage. */
+html[data-product="swara"] {
+  --bg: #101312; --bg-rgb: 16, 19, 18; --bg-deep: #101312; --bg-warm: #101312;
+  --surface: #171c18; --surface-soft: #171c18; --surface-raised: #20281f;
+  --surface-glass: rgba(23, 28, 24, .96);
+  --text: #e9e9e2; --text-strong: #f3f2e9; --muted: #a5aca5; --muted-strong: #b9c0b8;
+  --border: #343b35; --border-strong: #465045;
+}
+html[data-product="swara"] body,
+html[data-product="swara"] .site,
+html[data-product="swara"] .site-main,
+html[data-product="swara"] .hero { background: #101312; }
+html[data-product="swara"] .site::before,
+html[data-product="swara"] .site::after,
+html[data-product="swara"] .hero::before,
+html[data-product="swara"] .hero::after { display: none; }
+html[data-product="swara"] .swara-editorial { --swara-rule: #343b35; }
+html[data-product="swara"] .swara-editorial .story-feedback-band,
+html[data-product="swara"] .swara-editorial footer { background: transparent; }
+html[data-product="swara"] .social-section,
+html[data-product="swara"] .site-footer { background: #101312; border-color: #343b35; border-width: 1px; box-shadow: none; }
