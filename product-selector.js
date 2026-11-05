@@ -177,7 +177,7 @@
   function setThemeColor(product) {
     if (!themeMeta) return;
     const colors = {
-      martello: '#12080a',
+      martello: '#101312',
       aurashimmer: '#101312',
       swara: '#101312',
       galleria: '#120818',
