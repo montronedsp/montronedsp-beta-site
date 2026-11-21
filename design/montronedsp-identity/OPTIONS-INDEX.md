@@ -1,5 +1,8 @@
 # Options index
 
+[Current H3.3 gesture studies · A, B and C](08-original-gesture/NOTES.md)
+
+
 [Phase 3 · Selected H3.3 and R01–R03](07-selected-wordmark-refinement/REVIEW.md) · [Compare the drawings](07-selected-wordmark-refinement/comparison.png)
 
 
