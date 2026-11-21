@@ -1,5 +1,8 @@
 # MontroneDSP identity review
 
+[Phase 3 · Selected H3.3 and R01–R03](07-selected-wordmark-refinement/REVIEW.md) · [Compare the drawings](07-selected-wordmark-refinement/comparison.png)
+
+
 ## Current lettering review
 
 H3.2 had two different rhythms. Its geometrical o’s and nearly vertical n’s alternated with long linking strokes, then DSP arrived as three compressed capitals. The new mixed-case drawing gives the n a rounder shoulder, shortens the r exit and opens the eye of e. D, S and P share a baseline and downstroke angle with the lowercase body. The e turns into D as one rising stroke. The join to S lands on the upper bowl and leaves the lower terminal open.

@@ -1,5 +1,8 @@
 # Options index
 
+[Phase 3 · Selected H3.3 and R01–R03](07-selected-wordmark-refinement/REVIEW.md) · [Compare the drawings](07-selected-wordmark-refinement/comparison.png)
+
+
 [Open the review gallery](REVIEW-GALLERY.html) · [Exact file inventory](FILES.txt) · [Design report](DESIGN-REPORT.md)
 
 H3.3, H3.3-O and K2.3 are the current review drawings. H3.2 and K2.2 are archived. Original identifies the production website artwork. Other IDs are preserved development drawings.
