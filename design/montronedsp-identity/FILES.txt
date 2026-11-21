@@ -429,6 +429,7 @@ design/montronedsp-identity/07-selected-wordmark-refinement/proofs/original-vs-R
 design/montronedsp-identity/07-selected-wordmark-refinement/proofs/original-vs-R02.png
 design/montronedsp-identity/07-selected-wordmark-refinement/proofs/original-vs-R03.png
 design/montronedsp-identity/07-selected-wordmark-refinement/proofs/reverse.png
+design/montronedsp-identity/07-selected-wordmark-refinement/proofs/swara-panel-comparison.png
 design/montronedsp-identity/07-selected-wordmark-refinement/proofs/website-headers.png
 design/montronedsp-identity/07-selected-wordmark-refinement/selected-H3.3/black-2600.png
 design/montronedsp-identity/07-selected-wordmark-refinement/selected-H3.3/black.svg

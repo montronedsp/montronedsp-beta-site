@@ -15,3 +15,13 @@ The inclination is 9.65 degrees. At the design scale of 100 for the M, the R02 f
 In the 100 px header the differences between r terminals are subtle. The larger white-on-dark proofs show their shape more clearly. Use the standalone signature for the header. For a combined identity, the 60-unit icon with 22 units of clearance leaves the M prominent. At 83 the third diamond competes with the opening stroke. The compact 46-unit icon has a smaller aperture at reduction. The single-ink symbol uses the four filled planes of the archived corporate diamond.
 
 Each drawing includes grouped editable outlines, solid display SVGs, transparent 2600 px PNGs, a header proof, and a separate icon-and-wordmark lockup. The website header sheet uses local Edge captures at 1440 and 390 CSS pixels, with the image response set to each candidate. The live local preview shows the selected original.
+
+
+## SWARA XT panel proof
+
+[Selected mark and R01–R03 in the same SWARA XT panel crop](proofs/swara-panel-comparison.png). The screenshot is retained and only the manufacturer mark area is substituted for this comparison.
+
+
+## SWARA XT panel proof
+
+[Selected mark and R01–R03 in the same SWARA XT panel crop](proofs/swara-panel-comparison.png). The screenshot is retained and only the manufacturer mark area is substituted for this comparison.
