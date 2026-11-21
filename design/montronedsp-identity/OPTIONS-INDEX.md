@@ -1,5 +1,8 @@
 # Options index
 
+[The opening M · Crest and Open Return](REVIEW-GALLERY.html#artistic-m)
+
+
 [S–P edge repair](09-sp-edge-repair/NOTES.md)
 
 
