@@ -168,3 +168,11 @@ html.home-page {
   .home-page .linux-hero { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .home-page .linux-hero-art { max-width: 260px; justify-self: center; }
 }
+
+/* Visual & Game Audio bridge: editorial placement before the Linux block. */
+.home-page .home-visual-game { padding: 64px 0 74px; border-top: 1px solid #343b35; }
+.home-page .home-visual-game .home-section-heading { margin-bottom: 0; }
+.home-page .home-visual-game .home-section-heading .home-link { margin-top: 23px; }
+@media (max-width: 700px) {
+  .home-page .home-visual-game { padding: 42px 0 52px; }
+}
