@@ -1,5 +1,8 @@
 # Options index
 
+[The opening M · Crest and Open Return](REVIEW-GALLERY.html#artistic-m)
+
+
 [DSP lettering](10-dsp-lettering/NOTES.md)
 
 
