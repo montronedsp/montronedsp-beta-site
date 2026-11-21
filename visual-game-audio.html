@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="montronedsp-fonts.css?v=letterfit-20261120" />
   <link rel="stylesheet" href="style.css?v=headerNavigation1" />
   <link rel="stylesheet" href="assets/home-presentation.css?v=1" />
-  <link rel="stylesheet" href="assets/visual-game-audio.css?v=1" />
+  <link rel="stylesheet" href="assets/visual-game-audio.css?v=2" />
   <link rel="stylesheet" href="assets/studio-header.css?v=2" />
 </head>
 <body>
@@ -68,13 +68,12 @@
             <a class="home-link" href="#lanterne" data-i18n="visualGameAudio.jump">Meet LANTERNE</a>
           </div>
         </div>
-        <div class="vga-art" role="img" aria-label="Abstract audio-reactive visualization with rings, waves and light" data-i18n-aria="visualGameAudio.artAlt">
-          <div class="vga-art__rings" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-          <div class="vga-art__wave" aria-hidden="true"></div>
-          <span class="vga-art__axis vga-art__axis--x" aria-hidden="true"></span>
-          <span class="vga-art__axis vga-art__axis--y" aria-hidden="true"></span>
-          <p class="vga-art__caption" data-i18n="visualGameAudio.artCaption">AUDIO / IMAGE / INTERACTION</p>
-          <p class="vga-art__side">MONTRONEDSP<br/>VISUAL LAB</p>
+        <div class="vga-art" data-vga-scene role="img" aria-label="Atmospheric visual performance study with drifting particles and color fields" data-i18n-aria="visualGameAudio.artAlt">
+          <div class="vga-art__fallback" aria-hidden="true"></div>
+          <div class="vga-art__interface" aria-hidden="true">
+            <span class="vga-art__label">MONTRONEDSP / VISUAL LAB</span>
+            <span class="vga-art__caption" data-i18n="visualGameAudio.artCaption">PROCEDURAL LIGHT / MOVEMENT</span>
+          </div>
         </div>
       </section>
 
@@ -165,5 +164,6 @@
 
   <script src="i18n.js?v=studioHeader1"></script>
   <script src="assets/site-navigation.js?v=studioSelector1" defer></script>
+  <script src="assets/visual-game-hero.js?v=1" defer></script>
 </body>
 </html>
