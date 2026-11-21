@@ -1,5 +1,8 @@
 # Options index
 
+[S–P edge repair](09-sp-edge-repair/NOTES.md)
+
+
 [Current H3.3 gesture studies · A, B and C](08-original-gesture/NOTES.md)
 
 
