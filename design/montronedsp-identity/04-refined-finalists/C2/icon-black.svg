@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1.23 -10.15 118.92 121.3" role="img" aria-labelledby="title" fill="#000000">
+  <title id="title">MontroneDSP emblem</title>
+  <g id="icon" fill-rule="evenodd">
+    <path id="upper-bridge" d="M55.93 -9H65.45L119 43.955V45.74H88.774L60.69 18.132L32.725 45.74H2.38V43.955L55.93 -9Z" />
+    <path id="lower-bridge" d="M2.38 56.45H32.725L60.69 84.058L88.774 56.45H119V58.235L65.45 110H55.93L2.38 58.235V56.45Z" />
+  </g>
+</svg>
