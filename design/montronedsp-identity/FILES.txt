@@ -484,6 +484,17 @@ design/montronedsp-identity/09-sp-edge-repair/header.svg
 design/montronedsp-identity/09-sp-edge-repair/swara-panel.png
 design/montronedsp-identity/09-sp-edge-repair/white-2600.png
 design/montronedsp-identity/09-sp-edge-repair/white.svg
+design/montronedsp-identity/10-dsp-lettering/NOTES.md
+design/montronedsp-identity/10-dsp-lettering/black-2600.png
+design/montronedsp-identity/10-dsp-lettering/black.svg
+design/montronedsp-identity/10-dsp-lettering/dsp-comparison.png
+design/montronedsp-identity/10-dsp-lettering/editable.svg
+design/montronedsp-identity/10-dsp-lettering/header.svg
+design/montronedsp-identity/10-dsp-lettering/joined-capitals.png
+design/montronedsp-identity/10-dsp-lettering/signature-sizes.png
+design/montronedsp-identity/10-dsp-lettering/swara-panel.png
+design/montronedsp-identity/10-dsp-lettering/white-2600.png
+design/montronedsp-identity/10-dsp-lettering/white.svg
 design/montronedsp-identity/DESIGN-REPORT.md
 design/montronedsp-identity/FILES.txt
 design/montronedsp-identity/OPTIONS-INDEX.md

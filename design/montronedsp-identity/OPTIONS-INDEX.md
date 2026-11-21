@@ -1,5 +1,8 @@
 # Options index
 
+[DSP lettering](10-dsp-lettering/NOTES.md)
+
+
 [S–P edge repair](09-sp-edge-repair/NOTES.md)
 
 
