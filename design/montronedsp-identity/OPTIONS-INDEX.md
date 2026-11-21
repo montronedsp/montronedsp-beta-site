@@ -1,5 +1,8 @@
 # Options index
 
+[Bolder diamond o’s · six signatures](REVIEW-GALLERY.html#bolder-diamonds)
+
+
 [The opening M · Crest and Open Return](REVIEW-GALLERY.html#artistic-m)
 
 
