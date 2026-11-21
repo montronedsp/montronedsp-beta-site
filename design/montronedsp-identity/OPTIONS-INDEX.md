@@ -2,10 +2,13 @@
 
 [Open the review gallery](REVIEW-GALLERY.html) · [Exact file inventory](FILES.txt) · [Design report](DESIGN-REPORT.md)
 
-H3.2 and K2.2 are the two current review masters. Original identifies the production website artwork. Other IDs are preserved development drawings.
+H3.3, H3.3-O and K2.3 are the current review drawings. H3.2 and K2.2 are archived. Original identifies the production website artwork. Other IDs are preserved development drawings.
 
 | ID | Drawing | Editable or display SVG | Description |
 |---|---|---|---|
+| H3.3 | Diamond o | [06-delivery/lettering-review/H3.3/black.svg](06-delivery/lettering-review/H3.3/black.svg) | The two lozenges follow the lowercase body. The looped e rises into a D drawn at the same optical height. |
+| H3.3-O | Round o | [06-delivery/lettering-review/H3.3-O/black.svg](06-delivery/lettering-review/H3.3-O/black.svg) | The same signature with two broad-pen ovals. All other letters and their positions match the diamond drawing. |
+| K2.3 | Concave panel mark | [06-delivery/lettering-review/K2.3/black.svg](06-delivery/lettering-review/K2.3/black.svg) | Curved stems from the SWARA concave candidate run through the capital line. The T foot and the leg of R carry their own rising exits. |
 | H3.2 | Mixed-case signature | [06-delivery/H3.2/lockup-black.svg](06-delivery/H3.2/lockup-black.svg) | Both diamond o’s sit at lowercase height. The t and e carry their exits directly into the following letter. |
 | K2.2 | Panel lockup | [06-delivery/K2.2/lockup-black.svg](06-delivery/K2.2/lockup-black.svg) | The diamond leads into the M. Its wider aperture relieves the heavier joined corner. |
 | Original | Production header | [00-original/original-header-logo.svg](00-original/original-header-logo.svg) | Four faceted planes and an outlined, lowered DSP. |
@@ -37,6 +40,6 @@ H3.2 and K2.2 are the two current review masters. Original identifies the produc
 | H3 | Mixed-case study | [04-refined-finalists/joined-signatures/H3/lockup-black.svg](04-refined-finalists/joined-signatures/H3/lockup-black.svg) | Lowercase rhythm with a full-height M, rising t and two diamond o’s. |
 | H3F | Mixed-case intermediate | [06-delivery/H3F/lockup-black.svg](06-delivery/H3F/lockup-black.svg) | First refinement of the o–n and e–D transitions. |
 
-The two current delivery folders include editable grouped artwork, welded display outlines, an isolated diamond and header-fit artwork. H3.2 uses its diamond inside the name, so its full lockup is also the standalone wordmark. K2.2 includes separate lettering exports. Black and white masters have transparent PNG counterparts. The smaller proof strips in each option folder show the native raster fit.
+The archived H3.2 and K2.2 delivery folders include editable grouped artwork, welded display outlines, an isolated diamond and header-fit artwork. H3.2 uses its diamond inside the name, so its full lockup is also the standalone wordmark. K2.2 includes separate lettering exports. Black and white masters have transparent PNG counterparts. The smaller proof strips in each option folder show the native raster fit.
 
 [Earlier Phase 1 proofs](../montronedsp-wordmark/WORDMARK_REDESIGN_REVIEW.md) · [Original ink separation studies](01-wordmark-phase1/intermediates/spot-separate-facets.svg) · [Combined facet treatment](01-wordmark-phase1/intermediates/spot-combined.svg)

@@ -1,5 +1,17 @@
 # MontroneDSP identity review
 
+## Current lettering review
+
+H3.2 had two different rhythms. Its geometrical o’s and nearly vertical n’s alternated with long linking strokes, then DSP arrived as three compressed capitals. The new mixed-case drawing gives the n a rounder shoulder, shortens the r exit and opens the eye of e. D, S and P share a baseline and downstroke angle with the lowercase body. The e turns into D as one rising stroke. The join to S lands on the upper bowl and leaves the lower terminal open.
+
+H3.3 uses two diamonds. H3.3-O uses ovals in exactly the same positions, with a different exit to suit the round shoulder. The round version reads more readily in the mobile header. The diamond version makes a stronger reference to the emblem at display size.
+
+K2.3 develops the SWARA concave lettering from the Desktop BEST/ACTUAL candidate. Its primary capitals retain the curved sidewalls and oval counters of that drawing. The connection from diamond to M continues through every subsequent letter. The foot of T curls into R, whose leg rises into the second O. The face is a single filled vector silhouette. All three masters have editable grouped outlines and transparent positive and reverse exports.
+
+[Current comparison](06-delivery/lettering-review/three-drawings.png) · [Desktop and mobile headers and SWARA panel study](06-delivery/lettering-review/placement-proofs.png)
+
+## Archived shortlist
+
 **H3.2 is the lead signature. K2.2 is the companion panel direction.** H3.2 suits a large manufacturer signature, a document cover or a splash screen. K2.2 has a familiar block silhouette and gives the letters more separation at small panel sizes. Both remain proposals for visual review. [Compare the finalists](06-delivery/two-finalists.png) · [Compare each with its predecessor](06-delivery/finalists-before-after.png) · [Open the gallery](REVIEW-GALLERY.html)
 
 ## Starting point
